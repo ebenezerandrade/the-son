@@ -2,8 +2,9 @@
 
 \section{Contextualização}
 
-Para as empresas/organizações se tornarem mais competitivas e possuir melhor desempenho organizacional elas estão adotando a utilização de \textit{frameworks} de arquitetura empresarial, conhecidos como EA - {\textit{Enterprise Architecture}} que faz uso da modelagem conceitual e engloba conceitos estratégicos, estruturais e comportamentais \cite{yu2006exploring}.
+Os requisitos não-funcionais (NFRs) e funcionais descrevem as características de um software em "como?" ele deve fazer e "o que?" ele deve fazer \cite{sommerville1997requirements}  dentre os dois tipos de requisitos os NFRs na maioria das vezes são declarados de forma enganosa \cite{eckhardt2016non} e são relatados mais de 114 classes de NFRs diferentes, sendo que dentre elas as mais mencionadas na literatura são: 1º Desempenho, 2º Confiabilidade e  3º Usabilidade \cite{mairiza2010investigation}, quando se trata do contexto industrial as classes de NFRs mais utilizadas nas especificações são: 1º Segurança, 2º Confiabilidade e 3º Usabilidade \cite{eckhardt2016non}.
 
+Em termos de desenvolvimento de software os NFRs tem grande impacto quando se trata dos aspectos de implementação, manutenção, operacionalização e utilização de recursos, esses impactos também influenciam os aspectos arquiteturais de uma aplicação de software, quanto maior e mais complexo for o software mais importante os NFRs. Para realizar o desenvolvimento de um sistema de software deve ser considerado em sua arquitetura os aspectos não funcionais \cite{buschmann1996system}. Dentre os padrões arquiteturais um padrão que é universalmente aceito e utilizado em várias linguagens de programação e frameworks e um dos mais utilizados se tratando em tecnologias web existe o padrão \textit{Model-View-Controler} (MVC) \cite{jailia2016behavior}
 
 \section{Questão de Pesquisa}
 A questão de pesquisa para o desenvolvimento deste trabalho é " \textit{Como pode ser realizado a identificação do requisito funcional e não funcional de forma intencional, com intuito de chegar a uma arquitetura pré-definda pela empresa?}"
@@ -25,19 +26,19 @@ Este trabalho visa alcançar os objetivos, Geral e Específicos, apresentados a 
 
 \subsection{Objetivo Geral}
 
-Realizar o desenvolvimento de uma abordagem utilizando modelagem intencional com foco em requisitos não-funcionais para a arquitetura de software pré-definida. 
+Realizar o desenvolvimento de uma abordagem utilizando o NFR framework para identificar as operacionalizações mais relevantes de acordo com o \textbf{requisito não funcional} para a arquitetura de software MVC \textit{Model-View-Controler}. 
 
 \subsection{Objetivos Específicos}
 
 Com intuito de alcançar o objetivo geral, são considerados relevantes os seguintes objetivos específicos:
 
 \begin{itemize}
-	\item pesquisar modelos intencionais que dão suporte a EA, em nível de arquitetura de dados, arquitetura de tecnologia (capacidades lógicas de software e hardware necessárias para suportar o modelo de negócios);
 	
 	\item Elaborar um catálogo de operações utilizando o NFR para alcançar um \textit{softgoal} específico de acordo coma a intencionalidade de um cliente simulado;
 	
 	\item Identificar e selecionar as ferramentas de modelagem intencional que suportam o NFR Framework;
 	
+	\item Pesquisar e compreender como é o comportamento e a comunicação entre as camadas de do padrão arquitetural 
 \end{itemize}
 
 \chapter{Metodologia}
