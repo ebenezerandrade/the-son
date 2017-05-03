@@ -4,17 +4,19 @@
 
 Os requisitos não-funcionais (NFRs) e funcionais descrevem as características de um software em "como?" ele deve fazer e "o que?" ele deve fazer \cite{sommerville1997requirements}  dentre os dois tipos de requisitos os NFRs na maioria das vezes são declarados de forma enganosa \cite{eckhardt2016non} e são relatados mais de 114 classes de NFRs diferentes, sendo que dentre elas as mais mencionadas na literatura são: 1º Desempenho, 2º Confiabilidade e  3º Usabilidade \cite{mairiza2010investigation}, quando se trata do contexto industrial as classes de NFRs mais utilizadas nas especificações são: 1º Segurança, 2º Confiabilidade e 3º Usabilidade \cite{eckhardt2016non}.
 
-Em termos de desenvolvimento de software os NFRs tem grande impacto quando se trata dos aspectos de implementação, manutenção, operacionalização e utilização de recursos, esses impactos também influenciam os aspectos arquiteturais de uma aplicação de software, quanto maior e mais complexo for o software mais importante os NFRs. Para realizar o desenvolvimento de um sistema de software deve ser considerado em sua arquitetura os aspectos não funcionais \cite{buschmann1996system}. Dentre os padrões arquiteturais um padrão que é universalmente aceito e utilizado em várias linguagens de programação e frameworks e um dos mais utilizados se tratando em tecnologias web existe o padrão \textit{Model-View-Controler} (MVC) \cite{jailia2016behavior}
+Em termos de desenvolvimento de software os NFRs tem grande impacto quando se trata dos aspectos de implementação, manutenção, operacionalização e utilização de recursos, esses impactos também influenciam os aspectos arquiteturais de uma aplicação de software, quanto maior e mais complexo for o software mais importante os NFRs. Para realizar o desenvolvimento de um sistema de software deve ser considerado em sua arquitetura os aspectos não funcionais \cite{buschmann1996system}. Dentre os padrões arquiteturais um padrão que é universalmente aceito e utilizado em várias linguagens de programação e frameworks e um dos mais utilizados se tratando em tecnologias web existe o padrão \textit{Model-View-Controler} (MVC) \cite{jailia2016behavior}.
+
+O MVC é um padrão arquitetural para sistemas interativos, que divide a aplicação em três componentes a \textit{Model} que contém a implementação das funcionalidades principais e os dados da aplicação, a \textit{View} que exibe as informações da aplicaçãSo ao usuário e a \textit{Control} que lidam com as entradas do usuário \cite{buschmann1996system}. 
 
 \section{Questão de Pesquisa}
-A questão de pesquisa para o desenvolvimento deste trabalho é " \textit{Como pode ser realizado a identificação do requisito funcional e não funcional de forma intencional, com intuito de chegar a uma arquitetura pré-definda pela empresa?}"
+A questão de pesquisa para o desenvolvimento deste trabalho é " \textit{Como realizar a modelagem dos NFRs de forma a impactar positivamente as necessidades arquiteturais do MVC de acordo com o atributo de qualidade de segurança?}"
 
 As diretrizes médicas recomendam organizar as questões de pesquisa segundo três visões: \textbf{População}: Que são as pessoas diretamente afetadas pela intervenção. \textbf{Intervenção}: Que usualmente são uma comparação entre dois ou mais tratamentos alternativos. \textbf{Saídas}: A forma como a intervenção vem sendo aplicada. \cite{keele2007guidelines}. Logo, tomando como base essas diretrizes temos que: 
 
 \begin{itemize}
-	\item População: "\textit{..empresas com padrões arquiteturais de software definidos, mas não são/estão implementados de maneira correta..}"
-	\item Intervenção: "\textit{..comparação com resultados de estudos de caso existentes na literatura, que utilizam outros modelos ou até mesmo modelos intencionais..}"
-	\item Saídas: "\textit{..a forma como é aplicada a modelagem intencional cuja meta é a arquitetura de software pré-definida..}
+	\item População: "\textit{..Softwares desenvolvidos utilizando arquitetura MVC..}"
+	\item Intervenção: "S\textit{..utilização do NFR framework para modelar os requisitos não-funcionais de segurança, realizando a decomposição das características de segurança em operacionalizações  ..}"
+	\item Saídas: "\textit{..Um catálogo de operações com as possíveis soluções para serem tratas nas camandas do MVC..}
 \end{itemize}
 \section{Justificativa}
 
