@@ -1,12 +1,14 @@
 \chapter{Introdução}
 
+Neste capítulo, são descritos o contexto ao qual o trabalho está inserido, a questão de pesquisa, a justificativa para o desenvolvimento do trabalho e os objetivos gerais e específicos. 
+
 \section{Contextualização}
 
 Os requisitos não-funcionais (NFRs) e funcionais descrevem as características de um software em "como?" ele deve fazer e "o que?" ele deve fazer \cite{sommerville1997requirements}  dentre os dois tipos de requisitos os NFRs na maioria das vezes são declarados de forma enganosa \cite{eckhardt2016non} e são relatados mais de 114 classes de NFRs diferentes, sendo que dentre elas as mais mencionadas na literatura são: 1º Desempenho, 2º Confiabilidade e  3º Usabilidade \cite{mairiza2010investigation}, quando se trata do contexto industrial as classes de NFRs mais utilizadas nas especificações são: 1º Segurança, 2º Confiabilidade e 3º Usabilidade \cite{eckhardt2016non}.
 
 Em termos de desenvolvimento de software os NFRs tem grande impacto quando se trata dos aspectos de implementação, manutenção, operacionalização e utilização de recursos, esses impactos também influenciam os aspectos arquiteturais de uma aplicação de software, quanto maior e mais complexo for o software mais importante os NFRs. Para realizar o desenvolvimento de um sistema de software deve ser considerado em sua arquitetura os aspectos não funcionais \cite{buschmann1996system}. Dentre os padrões arquiteturais um padrão que é universalmente aceito e utilizado em várias linguagens de programação e frameworks e um dos mais utilizados se tratando em tecnologias web existe o padrão \textit{Model-View-Controler} (MVC) \cite{jailia2016behavior}.
 
-O MVC é um padrão arquitetural para sistemas interativos, que divide a aplicação em três componentes a \textit{Model} que contém a implementação das funcionalidades principais e os dados da aplicação, a \textit{View} que exibe as informações da aplicaçãSo ao usuário e a \textit{Control} que lidam com as entradas do usuário \cite{buschmann1996system}. 
+O MVC é um padrão arquitetural para sistemas interativos, que divide a aplicação em três componentes a \textit{Model} que contém a implementação das funcionalidades principais e os dados da aplicação, a \textit{View} que exibe as informações da aplicação ao usuário e a \textit{Control} que lidam com as entradas do usuário \cite{buschmann1996system}. Os aspectos arquiteturais de um software estão diretamente ligados aos NFRs, para realizar o tratamento desses NFRs por meio de um nível mais alto de abstração de forma intencional, focando em se concentrar e expressar os requisitos utilizando os conceitos de metas (\textit{Goals}) e metas flexíveis (\textit{Softgoals}) aplica-se o NFR Framework \cite{chung2009non}.
 
 \section{Questão de Pesquisa}
 A questão de pesquisa para o desenvolvimento deste trabalho é " \textit{Como realizar a modelagem dos NFRs de forma a impactar positivamente as necessidades arquiteturais do MVC de acordo com o atributo de qualidade de segurança?}"
@@ -15,12 +17,14 @@ As diretrizes médicas recomendam organizar as questões de pesquisa segundo tr�
 
 \begin{itemize}
 	\item População: "\textit{..Softwares desenvolvidos utilizando arquitetura MVC..}"
-	\item Intervenção: "S\textit{..utilização do NFR framework para modelar os requisitos não-funcionais de segurança, realizando a decomposição das características de segurança em operacionalizações  ..}"
-	\item Saídas: "\textit{..Um catálogo de operações com as possíveis soluções para serem tratas nas camandas do MVC..}
+	\item Intervenção: "\textit{..utilização do NFR framework para modelar os requisitos não-funcionais de segurança, realizando a decomposição das características de segurança em operacionalizações  ..}"
+	\item Saídas: "\textit{..Um catálogo de operações com as possíveis soluções para serem tratadas nas camandas do MVC..}
 \end{itemize}
 \section{Justificativa}
 
-A utilização da modelagem intencional no contexto de organizações promove aos atores que suas metas sejam mais claras aumentando a transparência relacionada a transformação do negócio da empresa e através dessas transparências das partes interessadas é possível estabelecer uma base sistemática das implicações de design arquitetônico que pode ser colocado. Isso promove que ao analisar diferentes objetivos as decisões a serem tomadas para selecionar diferentes arquiteturas empresariais específicas podem ser realizadas de forma racional. Essa relação das metas com as arquiteturas específicas, o contexto e as atividades de transformação ficam documentados  e podem ser rastreados quando, por exemplo, justificam ações passadas ou revisitam as decisões tomadas em reuniões \cite{yu2006exploring}.
+Quando se trata conceitos de arquitetura de software os NFRs são frequentemente chamados de atributos de qualidade e definem um conjunto de preocupações relacionadas aos conceitos de qualidade \cite{schneidewind1990standard} ou classes de NFRs. Os NFRs na maioria das vezes não são tratados de forma correta e as vezes são tratados de forma semelhante aos requisitos funcionais \cite{eckhardt2016non}.
+
+Dado a forma como vem sendo tratados os NFRs este trabalho visa a criação de um catálogo de operações com as possíveis soluções a serem tratadas nas camadas da arquitetura MVC, afim de promover um formato adequado de tratar os NFRs se tratando dos aspectos arquiteturais. O atributo de qualidade que será aplicado neste trabalho é o atributo de segurança, pois é o mais utilizado no meio industrial.  
 
 \section{Objetivos}
 
@@ -36,11 +40,13 @@ Com intuito de alcançar o objetivo geral, são considerados relevantes os segui
 
 \begin{itemize}
 	
-	\item Elaborar um catálogo de operações utilizando o NFR para alcançar um \textit{softgoal} específico de acordo coma a intencionalidade de um cliente simulado;
+	\item Elaborar um catálogo de operações (com tipos de NFRs, métodos a serem aplicados e correlação) utilizando o NFR Framework para identificar as possíveis soluções a serem tratadas nas camadas da arquitetura MVC, de acordo com o atributo de qualidade de segurança;
 	
 	\item Identificar e selecionar as ferramentas de modelagem intencional que suportam o NFR Framework;
 	
-	\item Pesquisar e compreender como é o comportamento e a comunicação entre as camadas de do padrão arquitetural 
+	\item Pesquisar e compreender como é o comportamento e a comunicação entre as camadas do padrão arquitetural MVC;
+	
+	\item Realizar modelagem do fluxo de atividades realizado para a aplicação da abordagem;
 \end{itemize}
 
 \chapter{Metodologia}
