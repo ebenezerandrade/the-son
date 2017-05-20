@@ -25,9 +25,27 @@ O NFR framework é composto por cinco componentes, sendo eles: Sofgoals, Interde
 		\label{fig01}
 	\end{figure} 
 
+	Os \textit{softgoals} também trabalham com o conceito de labels, possibilitando o entendimento das decisões tomadas, ficando assim registradas no desenho do gráfico SIG de acordo com  a figura \ref{fig02} . Os tipos de labels são: satisfeita, negada, fracamente satisfeita, fracamente negada, crítica e indecidida.
+	
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[keepaspectratio=true,scale=0.9]{figuras/labelsSoftgoals.png}
+		\caption{Representação gráfica das labels de \textit{softgoals}.}
+		\label{fig02}
+	\end{figure} 
+
 	\item Interdependências
 	
 	É o componente responsável por estabelecer as inter-relações entre os \textit{softgoals}. As interdependências que fazem o registro do refinamento dos \textit{softgoals} em \textit{softgoals} mais específicos (filhos), e suas contribuições para a satisfazer o \textit{softgoal} mais genêrico (pai).  
+
+	\item Métodos
+	
+	É o componente responsável por fornecer aos desenvolvedores catálogos com as técnicas de desenvolvimento, os métodos basicamente são refinados de \textit{softgoals} em outros \textit{softgoals}
+	
+	\item Correlações
+	
+	Os \textit{softgoals} possuem possíveis relações tanto positivas quanto negativas, as correlações são catálogos para poder inferir nessas possíveis relações. 
 \end{itemize}
 
 \subsection{i*}
