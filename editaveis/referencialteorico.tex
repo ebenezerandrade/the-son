@@ -37,8 +37,34 @@ O NFR framework é composto por cinco componentes, sendo eles: Sofgoals, Interde
 
 	\item Interdependências
 	
-	É o componente responsável por estabelecer as inter-relações entre os \textit{softgoals}. As interdependências que fazem o registro do refinamento dos \textit{softgoals} em \textit{softgoals} mais específicos (filhos), e suas contribuições para a satisfazer o \textit{softgoal} mais genêrico (pai).  
-
+	É o componente responsável por estabelecer as inter-relações entre os \textit{softgoals}. As interdependências que fazem o registro do refinamento dos \textit{softgoals} em \textit{softgoals} mais específicos (filhos), e suas contribuições para a satisfazer o \textit{softgoal} mais genêrico (pai). Os tipos de contribuições são: AND, OR, ++, --, +, -, S+, S-. 
+	
+	\begin{table}[h!]
+		\centering
+		\caption{Tipos de contribuições}
+		\label{tiposDeContribuições}
+		\begin{tabular}{|l|l|}
+			\hline
+			\textbf{Elementos SIGs} & \textbf{Descrição} \\ \hline
+			\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/And.png}} & \multirow{2}{*}{AND: Se todos os filhos são satisfeitos o pai também será satisfeito.} \\
+			&  \\ \hline
+			\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/OR.png}} & \multirow{2}{*}{OR: Se qualquer filho é satisfeito o pai também será satisfeito.} \\
+			&  \\ \hline
+			\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Make.png}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}MAKE: Pode ser tratado de forma semelhante ao AND, pois se \\ o filho for satisfeito o pai pode ser satisfeito.\end{tabular}} \\
+			&  \\ \hline
+			\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Break.png}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}BREAK: Fornece apoio negativo, pois se o filho é satisfeito o \\ pai pode ser negado.\end{tabular}} \\
+			&  \\ \hline
+			\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Help.png}} & \multirow{2}{*}{HELP: Se todos os filhos são satisfeitos o pai também será satisfeito.} \\
+			&  \\ \hline
+			\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Hurt.png}} & \multirow{2}{*}{HURT: Se todos os filhos são satisfeitos o pai também será satisfeito.} \\
+			&  \\ \hline
+			\multirow{2}{*}{\includegraphics[scale=0.7]{figuras/And.png}} & \multirow{2}{*}{AND: Se todos os filhos são satisfeitos o pai também será satisfeito.} \\
+			&  \\ \hline
+			\multirow{2}{*}{\includegraphics[scale=0.7]{figuras/And.png}} & \multirow{2}{*}{AND: Se todos os filhos são satisfeitos o pai também será satisfeito.} \\
+			&  \\ \hline
+		\end{tabular}
+	\end{table}
+	
 	\item Métodos
 	
 	É o componente responsável por fornecer aos desenvolvedores catálogos com as técnicas de desenvolvimento, os métodos basicamente são refinados de \textit{softgoals} em outros \textit{softgoals}
