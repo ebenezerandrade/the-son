@@ -4,48 +4,60 @@
 
 O conjunto de tarefas e técnicas utilizadas para promover o entendimento dos requisitos é denominado Engenharia de Requisitos. No desenvolvimento de software, pode ser vista como uma fase importante de Engenharia de Software que se inicia na atividade de comunicação e continua até a entrega do produto, sendo adaptada de acordo com as necessidades do processo de desenvolvimento, do produto e dos \textit{stakeholders} \cite{pressman2011engenharia}.
 
-A Engenharia de requisitos abrange sete fases distintas: concepção, levantamento, elaboração, negociação, especificação, verificação e validação \cite{pressman2011engenharia}. De acordo com \cite{kotonya1998requirements} durante a execução das atividades das fases da Engenharia de Requisitos alguns problemas são relatados como: (i) Os requisitos não refletem as reais necessidades do cliente de acordo com o sistema a ser desenvolvido; (ii) São inconsistentes e/ou incompletos; (iii) É complexa a realização de alguma mudança no requisito, logo após terem sido acordado pelas partes; (iv) comumente é interpretado de maneira errada entre a equipe de desenvolvimento de software e o cliente.  
+A Engenharia de Requisitos abrange sete fases distintas: concepção, levantamento, elaboração, negociação, especificação, verificação e validação \cite{pressman2011engenharia}. De acordo com \cite{kotonya1998requirements}, durante a execução das atividades das fases da Engenharia de Requisitos, alguns problemas são relatados como: (i) os requisitos não refletem as reais necessidades do cliente de acordo com o sistema a ser desenvolvido; (ii) são inconsistentes e/ou incompletos; (iii) é complexa a realização de alguma mudança no requisito, logo após terem sido acordados entre as partes; e (iv) comumente são interpretados de maneira errada pela equipe de desenvolvimento, diante do que foi solicitado pelo cliente. 
 
-A maioria dos modelos dentro da Engenharia de Requisitos, não possuíam um tratamento adequado para tratar os atributos de qualidade, logo o tratamento desses atributos tem sido um foco chave de trabalhos na área da Engenharia de Requisitos Orientada a Meta \cite{chung2012non}. Entretanto neste trabalho é abordado o NFR \textit{framework} que trata os requisitos não funcionais em um nível mais alto de abstração, tanto para o problema quanto para a solução. 
 
-\subsection{Engenharia de Requisitos Orientada a Meta}
+Boa parte dos modelos utilizados na Engenharia de Requisitos não possuem tratamento adequado para lidar com os critérios de qualidade. Logo, o tratamento desses atributos tem sido uma preocupação na comunidade da Engenharia de Requisitos. Esforços no sentido de aprimorar os modelos e especificações desses requisitos são fortemente associados à comunidade de pesquisadores da Engenharia de Requisitos Orientada a Meta (GORE) \cite{chung2012non}. Neste trabalho, é abordado o uso de uma notação específica, proposta por essa comunidade, no caso, trata-se do NFR \textit{framework} \cite{chung2012non}. 
 
-Os requisitos de software muitas vezes são elicitados, modelados e analisados como metas ao qual os \textit{stakeholders} querem alcançar \cite{van2001goal}. Tipicamente as metas são elicitadas e conceituadas  em termos de alguma forma de modelo. Os modelos de metas têm sido utilizados como um meio eficaz para capturar as interações e os compromissos entre os requisitos \cite{letier2002deriving}. Além disso as metas podem contemplar diferentes tipos de interesses: interesses funcionais associados ao serviço que deverá ser prestado e interesses não funcionais associados a qualidade do serviço (precisão, desempenho, segurança) \cite{van2001goal}.
- 
-Para auxiliar no entendimento das metas podem ser realizados as seguintes perguntas "por que?", "como?", "de que outra forma?"\cite{van2001goal}. Onde o "por que?" auxilia na compreensão de objetivos superiores e logo se um requisito não é considerado, se não possuir uma contribuição para um objetivo superior; O "Como?" ajuda a entender as metas em níveis inferiores\cite{yu1998goal}; E "de que outra forma?" ajuda no processo de identificação de possíveis alternativas para o atendimento de metas superiores \cite{van2001goal}.  
+O NFR \textit{framework} é um \textit{Framework} conceitual que procura lidar com os requisitos não funcionais, permitindo especificar os mesmos em um alto nível de abstração e, gradualmente, fornecendo insumos para que essa especificação seja trazida para um nível mais baixo de abstração. Nesse último nível, são especificadas as operacionalizações, as quais evidenciam alternativas para viabilizar a implementação desses requisitos no nível de código. Mais adiante, serão apresentados detalhes dessa notação.
 
+\subsection{Engenharia de Requisitos Orientada à Meta}
+
+A Engenharia de Requisitos Orientada à Meta (GORE) tem-se popularizado nos últimos anos e constitui-se no tratamento dos requisitos funcionais e não funcionais como metas a serem alcançadas \cite{van2001goal}, pois seus modelos possuem como objetivo a modelagem da razão pela qual determinado requisito existe, essa modelagem promove ao engenheiro de requisitos uma estratégia mais detalhada do problema, podendo então encontrar uma solução mais adequada \cite{van2001goal}\cite{chung2012non}. O GORE é um paradigma que vem sendo cada vez mais reconhecido para a execução das atividades de elicitação, elaboração, análise, negociação, documentação e modificação dos requisitos de software\cite{van2001goal}.
+
+Nas definições do GORE as metas são componentes essenciais, pois de acordo com \cite{van2001goal} uma meta é definida como propriedades do sistema que são expressas pelo \textit{stakeholders}, através de determinadas questões como o “\textbf{porquê}” uma meta é exigida, “\textbf{como}” ela pode ser atingida e quem será o responsável pela meta no sistema e no ambiente.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/GORE.png}
+	\caption{Responsabilidades da meta sob o software e sob o ambiente.}
+	\label{Gore}
+\end{figure}
+
+ Através da figura \ref{Gore} pode-se entender como são os comportamentos das metas no GORE. Representada pelo simbolo de uma nuvem uma meta, quando está sob a responsabilidade, de um único software essa meta pode-se tornar um requisito, de forma semelhante quando essa meta, está sob responsabilidade de um ambiente ela pode tornar-se uma suposição, diferente de um requisito as suposições não pode-ser aplicadas pelo software, mas podem ser satisfeitas devido as normas, regulamentos organizacionais e leis físicas \cite{van2001goal}. 
+
+
+Existem diversos \textit{frameworks} orientados a metas como o NFR Framework \cite{chung2012non} e o i* \cite{istarwiki20}, esses \textit{frameworks} são detalhados nas seções \ref{sec:NFR} e \ref{sec:i*}, respectivamente
 \subsection{Requisitos Não-Funcionais}
 
-Na literatura pode ser encontrada uma infinidade de definições para os NFRs, e vem sendo referenciados em termos que terminam com as palavras "-ilidades" ou "-idades", porém existem outros termos que referenciam requisitos não funcionais como por exemplo, desempenho, coerência, segurança, etc \cite{chung2012non}. Na área de arquitetura de software um termo frequentemente encontrado é atributos de qualidade \cite{barbacci1995quality}.
-
-Sabendo disso os impactos diretos no tempo de execução, design do sistema e na experiência do usuário são diretamente ligados aos atributos de qualidade, o conjunto de atributos de qualidade representam as áreas de interesse que possuem grande impacto em seus níveis e camadas. Alguns atributos possuem impacto geral ao design do sistema (Exemplo: Suportabilidade) e outros atuam em problemas mais específicos (Exemplo: Usabilidade), é somente então quando a aplicação de software a ser desenvolvida atende uma combinação desejada desses atributos que o sucesso do design e a qualidade geral do aplicativo de software é atingida\cite{microsoft2009}.
 
 
 \section{NFR Framework}
+\label{sec:NFR}
 
-O NFR Framework é um modelo intencional que ajuda desenvolvedores e engenheiros de requisitos a lidarem com requisitos não-funcionais, através de um grafo chamado de Softgoal Interdependency Graphs - SIGs, onde os requisitos podem ser analisados pois o mesmo, permite uma visão vertical desde a estratégia de alto nível até os detalhes operacionais;  possuindo operadores lógicos AND (E) e OR (OU) que promovem uma melhor tomada de decisão; onde  os requisitos não funcionais são escritos através de uma notação formal que permite provar a sua correção e completude. O framework também possui uma estrutura que pode ser orientada por processo, dando suporte às atividades do processo de engenharia de requisitos e pode ser utilizado como complemento nas abordagens tradicionais de desenvolvimento de software \cite{chung2012non}.
+O NFR \textit{Framework}  é um modelo intencional que ajuda desenvolvedores e engenheiros de requisitos a lidarem com requisitos não-funcionais, através de um grafo chamado de \textit{Softgoal Interdependency Graphs} (SIGs). Nesse grafo, os requisitos podem ser analisados, uma vez que o SIG permite uma visão vertical desde a estratégia de alto nível até os detalhes operacionais;  possuindo operadores lógicos AND (E) e OR (OU) que promovem uma melhor tomada de decisão; onde  os requisitos não funcionais são escritos através de uma notação formal que permite provar a sua correção e completude. O framework também possui uma estrutura que pode ser orientada por processo, dando suporte às atividades do processo de engenharia de requisitos, e pode ser utilizado como complemento nas abordagens tradicionais de desenvolvimento de software \cite{chung2012non}.
 
-O NFR Framework utiliza o conceito de metas flexíveis que é uma condição ou estado no mundo real que deseja ser alcançado, podendo assumir natureza subjetiva, pois o RNF pode variar de acordo com o julgamento de cada pessoa; e natureza relativa, pois o RNF pode depender de algum tipo de relação com outro RNF.  A notação no SIGs para a meta flexível é uma nuvem como mostra a figura \ref{fig01}, que também pode representar uma operacionalização e também uma reivindicação.
+O NFR Framework utiliza o conceito de metas flexíveis que é uma condição ou um estado no mundo real que deseja ser alcançado, podendo assumir natureza subjetiva, pois o RNF pode variar de acordo com o julgamento de cada pessoa; e natureza relativa, pois o RNF pode depender de algum tipo de relação com outro RNF.  A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de uma nuvem, conforme mostra a figura \ref{fig01}. Esse, com pequenas variações na forma, pode representar uma \textbf{operacionalização} (nuvem em negrito), e também uma \textbf{reivindicação} (nuvem tracejada).
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/tiposDeSoftgoals.png}
-	\caption{Representação gráfica dos tipos de \textit{metas flexíveis}.}
+	\caption{Representação gráfica dos tipos de metas flexíveis.}
 	\label{fig01}
 \end{figure} 
 
-Para facilitar o entendimento das decisões tomadas a meta flexível possui labels que determinam o grau em que determinado RNF é satisfeito de acordo com um conjunto de decisões do projeto, essas labels são: satisfeita, fracamente satisfeita,  negada, fracamente negada, crítica e indecisa \cite{chung2012non}.Outra notação importante é o grau de prioridade de uma meta flexível, representada por “\textbf{!}” ou “\textbf{!!}” para um grau de prioridade maior.
+Para facilitar o entendimento das decisões tomadas, a meta flexível possui \textit{labels} que determinam o grau em que determinado RNF é satisfeito, de acordo com um conjunto de decisões do projeto. Essas labels são: satisfeita, fracamente satisfeita,  negada, fracamente negada, indecidida e crítica \cite{chung2012non}. Outra notação importante é o grau de prioridade de uma meta flexível, representado por “\textbf{!}” ou “\textbf{!!}” para um grau de prioridade maior.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/labelsSoftgoals.png}
-	\caption{Representação gráfica das labels das \textit{metas flexíveis}.}
+	\caption{Representação gráfica das labels das metas flexíveis.}
 	\label{fig02}
 \end{figure} 
 
-As relações que as metas flexíveis possuem uma com as outras é estabelecida através de interdependências, são as interdependências que realizam o registro do refinamento das metas flexíveis em metas flexíveis mais específicas (filhos) e de certa forma, contribui para satisfazer a meta flexível mais genérica (pai), os tipos de contribuição são apresentados na tabela abaixo \cite{chung2012non}.
+As relações que as metas flexíveis possuem uma com as outras é estabelecida através de interdependências, sendo essas as que realizam o registro do refinamento das metas flexíveis em metas flexíveis mais específicas (filhos) De certa forma, tal detalhamento em outras metas, contribui para satisfazer a meta flexível mais genérica (pai). Os tipos de contribuições são apresentados na tabela \ref{tiposDeContribuições} adaptado de  \cite{chung2012non}.
 
-\begin{table}[h]
+\begin{table}[h!]
 	\centering
 	\caption{Tipos de contribuições.}
 	\label{tiposDeContribuições}
@@ -71,32 +83,35 @@ As relações que as metas flexíveis possuem uma com as outras é estabelecida 
 	\end{tabular}
 \end{table}
 
-A figura \ref{exemploNFR} apresenta uma decomposição de uma meta flexível em outras metas de mesma natureza, consideramos então neste exemplo o RNF: “manter as contas com boa segurança” onde a meta flexível  “segurança de contas” é refinada em outras como: “Integridade de contas”, “Confidencialidade de contas” e “Disponibilidade de contas” \cite{chung2012non}.
+A figura \ref{exemploNFR} apresenta uma decomposição de uma meta flexível em outras metas de mesma natureza. Consideramos, nesse exemplo, o RNF: “manter as contas com boa segurança”. Usando a notação do NFR \textit{Framework}, representou-se a meta flexível  “segurança de contas”, no nível mais generalista do grafo. Em segundo nível, são especificadas as principais metas flexíveis que merecem ser consideradas para que a meta generalista seja "satisfeita", no caso: “Integridade de contas”, “Confidencialidade de contas” e “Disponibilidade de contas” \cite{chung2012non}.
 
-\begin{figure}[h]
+\pagebreak
+
+\begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=1.0]{figuras/exemploNFR.png}
-	\caption{Operacionalização de segurança de contas adapatado de \cite{chung2012non}, \cite{affleck2012supporting}.}
+	\caption{Operacionalização de segurança de contas. Adapatado de \cite{chung2012non}, \cite{affleck2012supporting}.}
 	\label{exemploNFR}
 \end{figure} 
 
-Confidencialidade de contas é operacionalizada em “Autorizar acesso a informação das contas” que possui uma contribuição do tipo HELP com seu pai, para que essa operacionalização seja satisfeita seus filhos devem ser satisfeitos devido a relação do tipo AND ao ser operacionalizada em “Identificar usuários” e “Autenticar usuários”.
+Confidencialidade de contas é operacionalizada em “Autorizar acesso à informação das contas”, que possui uma contribuição do tipo HELP com seu pai. Dada a relação do tipo AND, entre essa operacionalização e as operacionalizações "Identificar usuários" e "Autenticar usuários", tem-se que a operacionalização "Autorizar acesso à informação das contas"  será realizada se ambas as operacionalizações, "Identificar usuários" e "Autenticar usuários", forem realizadas. Supondo que tudo tenha sido realizado com sucesso, tem-se que esse processo de operacionalização contribui positivamente - HELP (AJUDA) - a atingir "Confiabilidade de contas". Como essa meta flexível está especificada em uma relação de AND com as metas flexíveis "Integridade de contas" e "Disponibilidade de contas", pode-se dizer que em termos de "Confiabilidade de contas", "Segurança de contas" tem a ser "satisfeita". Mas, resta ainda ponderar se "Integridade de contas" e "Disponibilidade de contas" serão de fato "satisfeitas". O modelo, da forma como está especificado, não permite avaliar tais aspectos, visto que representa apenas uma visão parcial dessas metas flexíveis.
+
 
 Para Disponibilidade de contas a mesma é operacionalizada em “Duplicar servidor” e “Espelhar banco de dados” essas operacionalizações possuem contribuições do tipo HELP e mesmo pai, e para a meta flexível ser satisfeita, ambas as operacionalizações devem ser satisfeitas \cite{affleck2012supporting}. 
 
 
+\section{i*}
+\label{sec:i*}
 
-\subsection{i*}
-
-
-
-\subsection{FURPS}
+\section{FURPS}
 
 
 \section{Arquitetura de Software}
 
 \subsection{MVC - Model-View-Controller}
 
-\chapter{Metodologia}
+\section{Segurança de Software}
 
-\subsection{Classificação da Pesquisa}
+\chapter{Suporte Tecnológico}
+
+\chapter{Metodologia}
