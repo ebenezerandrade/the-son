@@ -2,11 +2,12 @@
 
 Neste capítulo, é apresentado os conceitos teóricos utilizados como base para o desenvolvimento do catálogo de segurança para o padrão arquitetural MVC. Antes de entender os conceitos relevantes para o desenvolvimento do catálogo é importante entender a definição de software, e segundo \cite{sommerville2003engenharia} pode ser entendido como programas de computador e toda documentação associada, e são produzidos através de uma disciplina da engenharia que preocupa com todos os aspectos da produção de software, essa disciplina é denominada de Engenharia de Software.
 
-A figura \ref{BigPicture} apresenta a visão geral da construção do catálogo, partindo da Engenharia de Software e apoiando principalmente em duas disciplinas a  (i) Engenharia de Requisitos que compõe-se de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, essa disciplina será detalhada na seção \ref{sec:requisitos} então entramos no contexto da orientação a meta que trata os requisitos funcionais e não funcionais como metas a serem alcançadas detalhado na subseção \ref{subsec:orientacaoMeta}, devido ao foco do trabalho ser os requisitos não funcionais (\ref{subsec:requisitosNaoFuncionais}) e utiliza-se o NFR \ref{sec:NFR} framework para tratar os requisitos não-funcionais, (ii) Desenho de software é a área da Engenharia de Software que possui como uma de suas preocupações o planejamento e a definição do padrão arquitetural a ser utilizado
+A figura \ref{BigPicture} apresenta a visão geral da construção do catálogo, partindo da Engenharia de Software e apoiando principalmente em duas disciplinas a  (i) Engenharia de Requisitos que compõe-se de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, essa disciplina será detalhada na seção \ref{sec:requisitos} então entramos no contexto da orientação a meta que trata os requisitos funcionais e não funcionais como metas a serem alcançadas detalhado na subseção \ref{subsec:orientacaoMeta}, devido ao foco do trabalho ser os requisitos não funcionais (\ref{subsec:requisitosNaoFuncionais}) e utiliza-se o NFR (\ref{sec:NFR}) framework para tratar os requisitos não-funcionais, (ii) Desenho de software ujm área da Engenharia de Software que possui como uma de suas preocupações o planejamento e a definição do padrão arquitetural a ser utilizado
+os conceitos de arquitetura de software e do padrão arquitetural MVC são detalhados na seção \ref{sec:arquitetura} e subseção \ref{subsec:mvc}.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=1.0]{figuras/bigPicture.png}
+	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/bigPicture.png}
 	\caption{Visão geral da proposta do catálogo.}
 	\label{BigPicture}
 \end{figure}
@@ -39,7 +40,7 @@ Nas definições do GORE as metas são componentes essenciais, pois de acordo co
 	\label{Gore}
 \end{figure}
 
- Através da figura \ref{Gore} pode-se entender como são os comportamentos das metas no GORE. Representada pelo simbolo de uma nuvem uma meta, quando está sob a responsabilidade, de um único software essa meta pode-se tornar um requisito, de forma semelhante quando essa meta, está sob responsabilidade de um ambiente ela pode tornar-se uma suposição, diferente de um requisito as suposições não pode-ser aplicadas pelo software, mas podem ser satisfeitas devido as normas, regulamentos organizacionais e leis físicas \cite{van2001goal}. 
+ Através da figura \ref{Gore} pode-se entender como são os comportamentos das metas no GORE. Representada pelo simbolo de uma nuvem uma meta, quando está sob a responsabilidade, de um único software essa meta pode-se tornar um requisito, de forma semelhante quando essa meta, está sob responsabilidade de um ambiente ela pode tornar-se uma suposição, diferente de um requisito as suposições não pode-ser aplicadas pelo software, mas podem ser satisfeitas devido as normas, regulamentos organizacionais e leis físicas \cite{van2001goal}. Este trabalho foca apenas nas responsabilidades voltadas ao software.
 
 
 Existem diversos \textit{frameworks} orientados a metas como o NFR Framework \cite{chung2012non} e o i* \cite{istarwiki20}, esses \textit{frameworks} são detalhados nas seções \ref{sec:NFR} e \ref{sec:i*}, respectivamente
