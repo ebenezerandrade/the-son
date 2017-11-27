@@ -1,6 +1,20 @@
 \chapter[Referencial Teórico]{Referencial Teórico}
 
+Neste capítulo, é apresentado os conceitos teóricos utilizados como base para o desenvolvimento do catálogo de segurança para o padrão arquitetural MVC. Antes de entender os conceitos relevantes para o desenvolvimento do catálogo é importante entender a definição de software, e segundo \cite{sommerville2003engenharia} pode ser entendido como programas de computador e toda documentação associada, e são produzidos através de uma disciplina da engenharia que preocupa com todos os aspectos da produção de software, essa disciplina é denominada de Engenharia de Software.
+
+A figura \ref{BigPicture} apresenta a visão geral da construção do catálogo, partindo da Engenharia de Software e apoiando principalmente em duas disciplinas a  (i) Engenharia de Requisitos que compõe-se de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, essa disciplina será detalhada na seção \ref{sec:requisitos} então entramos no contexto da orientação a meta que trata os requisitos funcionais e não funcionais como metas a serem alcançadas detalhado na subseção \ref{subsec:orientacaoMeta}, devido ao foco do trabalho ser os requisitos não funcionais (\ref{subsec:requisitosNaoFuncionais}) e utiliza-se o NFR \ref{sec:NFR} framework para tratar os requisitos não-funcionais, (ii) Desenho de software é a área da Engenharia de Software que possui como uma de suas preocupações o planejamento e a definição do padrão arquitetural a ser utilizado
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=1.0]{figuras/bigPicture.png}
+	\caption{Visão geral da proposta do catálogo.}
+	\label{BigPicture}
+\end{figure}
+
+
+
 \section{Engenharia de Requisitos}
+\label{sec:requisitos}
 
 O conjunto de tarefas e técnicas utilizadas para promover o entendimento dos requisitos é denominado Engenharia de Requisitos. No desenvolvimento de software, pode ser vista como uma fase importante de Engenharia de Software que se inicia na atividade de comunicação e continua até a entrega do produto, sendo adaptada de acordo com as necessidades do processo de desenvolvimento, do produto e dos \textit{stakeholders} \cite{pressman2011engenharia}.
 
@@ -12,6 +26,7 @@ Boa parte dos modelos utilizados na Engenharia de Requisitos não possuem tratam
 O NFR \textit{framework} é um \textit{Framework} conceitual que procura lidar com os requisitos não funcionais, permitindo especificar os mesmos em um alto nível de abstração e, gradualmente, fornecendo insumos para que essa especificação seja trazida para um nível mais baixo de abstração. Nesse último nível, são especificadas as operacionalizações, as quais evidenciam alternativas para viabilizar a implementação desses requisitos no nível de código. Mais adiante, serão apresentados detalhes dessa notação.
 
 \subsection{Engenharia de Requisitos Orientada à Meta}
+\label{subsec:orientacaoMeta}
 
 A Engenharia de Requisitos Orientada à Meta (GORE) tem-se popularizado nos últimos anos e constitui-se no tratamento dos requisitos funcionais e não funcionais como metas a serem alcançadas \cite{van2001goal}, pois seus modelos possuem como objetivo a modelagem da razão pela qual determinado requisito existe, essa modelagem promove ao engenheiro de requisitos uma estratégia mais detalhada do problema, podendo então encontrar uma solução mais adequada \cite{van2001goal}\cite{chung2012non}. O GORE é um paradigma que vem sendo cada vez mais reconhecido para a execução das atividades de elicitação, elaboração, análise, negociação, documentação e modificação dos requisitos de software\cite{van2001goal}.
 
@@ -28,8 +43,9 @@ Nas definições do GORE as metas são componentes essenciais, pois de acordo co
 
 
 Existem diversos \textit{frameworks} orientados a metas como o NFR Framework \cite{chung2012non} e o i* \cite{istarwiki20}, esses \textit{frameworks} são detalhados nas seções \ref{sec:NFR} e \ref{sec:i*}, respectivamente
-\subsection{Requisitos Não-Funcionais}
 
+\subsection{Requisitos Não-Funcionais}
+\label{subsec:requisitosNaoFuncionais}
 
 
 \section{NFR Framework}
@@ -107,8 +123,9 @@ Para Disponibilidade de contas a mesma é operacionalizada em “Duplicar servid
 
 
 \section{Arquitetura de Software}
-
+\label{sec:arquitetura}
 \subsection{MVC - Model-View-Controller}
+\label{subsec:mvc}
 
 \section{Segurança de Software}
 
