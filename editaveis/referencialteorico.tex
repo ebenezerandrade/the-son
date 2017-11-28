@@ -12,7 +12,12 @@ os conceitos de arquitetura de software e do padrão arquitetural MVC são detal
 	\label{BigPicture}
 \end{figure}
 
+Segundo \cite{chung2012non} o atributo de qualidade de segurança pode ser separado em três subtipos de atributos de qualidade: (i)Integridade, (ii) Confidencialidade, (iii) Disponibilidade. Portanto o catálogo de segurança é elaborado a partir deles, seguindo a estrutura lógica \ref{eq:EstruturaLogicaDeSeguranca}. O conceito de segurança será detalhado na seção \ref{sec:seguranca}
 
+\begin{equation}
+	\label{eq:EstruturaLogicaDeSeguranca}
+	\textrm{Integridade AND Confidencialidade AND Disponibilidade SATISFAZ Segurança}
+\end{equation}
 
 \section{Engenharia de Requisitos}
 \label{sec:requisitos}
@@ -47,6 +52,16 @@ Existem diversos \textit{frameworks} orientados a metas como o NFR Framework \ci
 
 \subsection{Requisitos Não-Funcionais}
 \label{subsec:requisitosNaoFuncionais}
+
+A visão do software como um produto fez com que os aspectos que avaliam a qualidade de um software passaram a possuir maior atenção e apenas satisfazer o mais próximo possível de todos os requisitos funcionais não é o suficiente, logo tem se dado uma atenção maior para os RNFs tais como: Segurança, Integridade, Disponibilidade, etc \cite{cysneiros1997definindo}. 
+
+Leite afirma em seu trabalho que os RNFs impactam o produto software em qualidade e preço, pois segundo ele:
+
+\begin{citacao}
+	A não observância da necessidade de RNFs durante o processo de desenvolvimento do software, pode levar uma recodificação custosa e demorada o que consequentemente, eleva o preço do software. \cite[p. 2]{cysneiros1997definindo}
+\end{citacao}
+
+Os RNFs devem ser analisados em toda sua magnitude dentro de um sistema de software, sendo importante analisar os possíveis conflitos que podem ser gerados com outros RNFs, como com requisitos funcionais, esses conflitos se não identificados em uma fase inicial do processo de desenvolvimento do software pode acarretar em problemas futuros durante a implementação do software \cite{cysneiros1997definindo}. 
 
 
 \section{NFR Framework}
@@ -121,14 +136,16 @@ Para Disponibilidade de contas a mesma é operacionalizada em “Duplicar servid
 \label{sec:i*}
 
 \section{FURPS}
-
+\label{sec:furps}
 
 \section{Arquitetura de Software}
 \label{sec:arquitetura}
+
 \subsection{MVC - Model-View-Controller}
 \label{subsec:mvc}
 
 \section{Segurança de Software}
+\label{sec:seguranca}
 
 \chapter{Suporte Tecnológico}
 
