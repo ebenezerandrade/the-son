@@ -50,18 +50,39 @@ Nas definições do GORE as metas são componentes essenciais, pois de acordo co
 
 Existem diversos \textit{frameworks} orientados a metas como o NFR Framework \cite{chung2012non} e o i* \cite{istarwiki20}, esses \textit{frameworks} são detalhados nas seções \ref{sec:NFR} e \ref{sec:i*}, respectivamente
 
-\subsection{Requisitos Não-Funcionais}
+\subsection{Requisitos Não-Funcionais e Atributos de Qualidade}
 \label{subsec:requisitosNaoFuncionais}
 
-A visão do software como um produto fez com que os aspectos que avaliam a qualidade de um software passaram a possuir maior atenção e apenas satisfazer o mais próximo possível de todos os requisitos funcionais não é o suficiente, logo tem se dado uma atenção maior para os RNFs tais como: Segurança, Integridade, Disponibilidade, etc \cite{cysneiros1997definindo}. 
+A visão do software como um produto fez com que os aspectos que avaliam a qualidade de um software passaram a possuir maior atenção e apenas satisfazer o mais próximo possível de todos os requisitos funcionais não é o suficiente, logo tem se dado uma atenção maior para os RNFs tais como: Segurança, Integridade, Disponibilidade, etc \cite{cysneiros1997definindo}.
+
 
 Leite afirma em seu trabalho que os RNFs impactam o produto software em qualidade e preço, pois segundo ele:
 
 \begin{citacao}
-	A não observância da necessidade de RNFs durante o processo de desenvolvimento do software, pode levar uma recodificação custosa e demorada o que consequentemente, eleva o preço do software. \cite[p. 2]{cysneiros1997definindo}
+	"A não observância da necessidade de RNFs durante o processo de desenvolvimento do software, pode levar uma recodificação custosa e demorada o que consequentemente, eleva o preço do software." \cite[p. 2]{cysneiros1997definindo}
 \end{citacao}
 
 Os RNFs devem ser analisados em toda sua magnitude dentro de um sistema de software, sendo importante analisar os possíveis conflitos que podem ser gerados com outros RNFs, como com requisitos funcionais, esses conflitos se não identificados em uma fase inicial do processo de desenvolvimento do software pode acarretar em problemas futuros durante a implementação do software \cite{cysneiros1997definindo}. 
+
+
+As classes de NFRs \cite{eckhardt2016non} podem ser compreendidas como subtipos dos atributos de qualidade da tabela \ref{AtributosDeQualidade}, onde são definidos de acordo com a \cite{organizacion2011iso}. 
+
+\begin{table}[h]
+	\centering
+	\caption{Descrição dos atributos de qualidade. Fonte: \cite{organizacion2011iso}}
+	\label{AtributosDeQualidade}
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{\begin{tabular}[c]{@{}c@{}}Atributos de \\ qualidade\end{tabular}} & \textbf{Descrição} \\ \hline
+		Funcionalidade & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de promover funções que \\ atendam às necessidades explícitas e implícitas.\end{tabular} \\ \hline
+		Segurança & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de apresentar níveis\\ aceitáveis e riscos de danos a pessoas, negócios\\ software, propriedades ou ambiente.\end{tabular} \\ \hline
+		Confiabilidade & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de manter o nível de \\ desempenho especificado.\end{tabular} \\ \hline
+		Usabilidade & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de ser compreendido,\\ de fácil aprendizagem, operável e atraente ao usuário.\end{tabular} \\ \hline
+		Eficiência & \begin{tabular}[c]{@{}c@{}}É a capacidade software de apresentar desempenho\\ apropriado, relativo aos recursos utilizados.\end{tabular} \\ \hline
+		Portabilidade & \begin{tabular}[c]{@{}c@{}}É a capacidade software de ser transferido de \\ um ambiente para o outro.\end{tabular} \\ \hline
+		Manutenção & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de modificado de forma\\ eficiente e eficaz.\end{tabular} \\ \hline
+	\end{tabular}
+\end{table}
 
 
 \section{NFR Framework}
@@ -137,6 +158,8 @@ Para Disponibilidade de contas a mesma é operacionalizada em “Duplicar servid
 
 \section{FURPS}
 \label{sec:furps}
+
+
 
 \section{Arquitetura de Software}
 \label{sec:arquitetura}
