@@ -158,28 +158,51 @@ Para Disponibilidade de contas a mesma é operacionalizada em “Duplicar servid
 \label{sec:i*}
 
 
-Outra abordagem orientada à metas, o \textit{Framework} de Modelagem i*\footnote[1]{O nome i* faz referência a utilização da notação de distribuição intencional que é a base do \textit{framework}.}, possui foco em ambientes organizacionais e seus sistemas de informação tomando como base os relacionamentos de dependência entre os atores participantes \cite{yu1997towards} \cite{istarwiki20}, composto por dois modelos; o (i) Modelo de Dependência Estratégica (do inglês \textit{Strategic Dependency - (SD)}) utilizado para descrever as relações de dependência entre vários atores em um contexto organizacional, e o (ii) Modelo de Razão estratégica (do inglês \textit{Strategic Rationale - (SR)}) utilizado para descrever os interesses e preocupações das partes interessadas e como eles podem ser abordados pelas configurações de sistemas e ambientes \cite{yu1997towards}. Esses dois modelos serão detalhados a seguir nas subseções \ref{subsec:SD} e \ref{subsec:SR}.
+Outra abordagem orientada à meta, o \textit{framework} de modelagem i*\footnote[1]{O nome i* faz referência a utilização da notação de distribuição intencional que é a base do \textit{framework}.}, possui foco em ambientes organizacionais e seus sistemas de informação tomando como base os relacionamentos de dependência entre os atores participantes \cite{yu1997towards} \cite{istarwiki20}, o framework é composto por dois modelos; o (i) Modelo de Dependência Estratégica (do inglês \textit{Strategic Dependency - (SD)}) utilizado para descrever as relações de dependência entre vários atores em um contexto organizacional, e o (ii) Modelo de Razão estratégica (do inglês \textit{Strategic Rationale - (SR)}) utilizado para descrever os interesses e preocupações das partes interessadas e como eles podem ser abordados pelas configurações do ambiente e dos sistemas \cite{yu1997towards}. Esses dois modelos serão detalhados a seguir nas subseções \ref{subsec:SD} e \ref{subsec:SR}.
 
-Com a utilização do \textit{framework} é possível representar, por meio de seus modelos, os atores participantes e suas dependências, para que suas metas sejam alcançadas, recursos fornecidos, tarefas realizadas e metas flexíveis sejam “satisfeitas a contento” ou “razoavelmente satisfeitas” \cite{istarwiki20}. Os atores e suas dependências podem ser representados de acordo com os símbolos das figuras  \ref{atoresIstar} e \ref{dependenciaIstar}.
+Com a utilização do \textit{framework} é possível representar, por meio de seus modelos, os atores participantes e suas dependências, para que suas metas sejam alcançadas, recursos fornecidos, tarefas realizadas e metas flexíveis sejam “satisfeitas a contento” ou “razoavelmente satisfeitas” \cite{istarwiki20}.
  
- \begin{figure}[h!]
- 	\centering
- 	\includegraphics[keepaspectratio=true,scale=1.0]{figuras/papeisIstar.PNG}
- 	\caption{Símbolos que representam atores no i*.}
- 	\label{atoresIstar}
- \end{figure}
  
+\subsection{Modelo de Dependência Estratégica - SD}
+\label{subsec:SD}
+
+O modelo SD é utilizado para expressar através de uma rede de relacionamentos estratégicos e intencionais a relação entre os atores em um contexto organizacional. Em sua modelagem o modelo utiliza um conjunto de nós e ligações, onde cada nó representa um ator e cada ligação entre dois atores indica que um determinado ator depende de outro, para que um objetivo possa ser atingido \cite{istarwiki20}. Os atores e suas dependências podem ser representados de acordo com os símbolos das figuras  \ref{atoresIstar} e \ref{dependenciaIstar}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=1.0]{figuras/papeisIstar.PNG}
+	\caption{Símbolos que representam atores no i*.}
+	\label{atoresIstar}
+\end{figure}
+
+De acordo com as definições de \cite{istarwiki20} um  \textbf{Ator} é o termo utilizado para referir de forma genérica a qualquer unidade em que as dependências intencionais possam ser atribuídas. Os agentes, posições e papeis podem ser entendidos como subunidades de um ator mais complexo e são definidas como: 
+
+\begin{itemize}
+	\item \textbf{Agente}: Abstração do comportamento de um ator em algum contexto específico; 
+	\item \textbf{Posição}: É definido como um conjunto de funções desempenhadas por um agente, também compreendido como uma abstração intermediária entre um Papel e um Agente, pois pode-se dizer que se um Agente ocupa uma posição essa Posição cobre um papel;
+	\item \textbf{Papel}: É definido como manifestações concretas e físicas, utilizado para se referir a humanos e agentes de \textit{Hardware}/\textit{Software}.
+\end{itemize} 
+
+No modelo Dependência Estratégica ao existir uma cooperação entre dois atores, essa cooperação é denominada de dependência, onde existe um "dependente" (\textit{depender}) e um "de quem se depende" (\textit{dependee}), esses atores são ligados por um elo de dependência (\textit{dependum}). 
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=1.0]{figuras/TiposDeContribuicao.png}
 	\caption{Símbolos que representam dependência.}
 	\label{dependenciaIstar}
 \end{figure} 
- 
-\subsection{Modelo de Dependência Estratégica - SD}
-\label{subsec:SD}
 
-O modelo SD é utilizado para expressar através de uma rede de relacionamentos estratégicos e intencionais a relação entre os atores em um contexto organizacional. Em sua modelagem o modelo utiliza um conjunto de nós e ligações, onde cada nó representa um ator e cada ligação entre dois atores indica que um determinado ator depende de outro, para que um objetivo possa ser atingido \cite{istarwiki20}.
+Os tipos de dependências são definidos por \cite{istarwiki20} como: 
+
+\begin{itemize}
+	\item \textbf{Meta}: uma condição ou estado de desejo intencional do ator no mundo real. Os detalhes de como a meta deve ser satisfeita não são descritos, promovendo então a decomposição da mesma em uma série de alternativas.   
+	\item \textbf{Meta flexível}: De maneira semelhante a Meta, também representa uma condição ou estado de desejo intencional do ator no mundo real, porém os detalhes de como a meta flexível deve ser satisfeita não são definidos a princípio, sendo então sujeito a interpretação. Para verificar se uma meta flexível foi satisfeita utiliza-se os termos "satisfeita a contento" ou "razoavelmente satisfeita", pois metas flexíveis não possui critérios claramente definidos. 
+	\item \textbf{Tarefa}: Representa a realização de algo em forma particular por um ator. Uma tarefa também pode ser decomposta em subtarefas mais específicas. 
+	\item \textbf{Recurso}: Representa uma entidade física ou informativa, presupõe-se então que não existe nenhum problema ou questões abertas sobre como a recurso será alcançado. 
+\end{itemize}
+
+
+
 
 
 \subsection{Modelo de Razão Estratégica - SR}
@@ -193,6 +216,9 @@ O modelo SD é utilizado para expressar através de uma rede de relacionamentos 
 
 \subsection{Usabilidade}
 \label{subsec:usabilidade}
+
+\subsection{Confiabilidade}
+\label{subsec:confiabilidade}
 
 \subsection{Desempenho}
 \label{subsec:desempenho}
