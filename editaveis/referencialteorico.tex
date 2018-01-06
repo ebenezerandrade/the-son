@@ -183,12 +183,12 @@ De acordo com as definições de \cite{istarwiki20} um  \textbf{Ator} é o termo
 	\item \textbf{Papel}: É definido como manifestações concretas e físicas, utilizado para se referir a humanos e agentes de \textit{Hardware}/\textit{Software}.
 \end{itemize} 
 
-No modelo Dependência Estratégica ao existir uma cooperação entre dois atores, essa cooperação é denominada de dependência, onde existe um "dependente" (\textit{depender}) e um "de quem se depende" (\textit{dependee}), esses atores são ligados por um elo de dependência (\textit{dependum}). 
+No modelo Dependência Estratégica ao existir uma cooperação entre dois atores, essa cooperação é denominada de dependência, onde existe um "dependente" (\textit{depender}) e um "de quem se depende" (\textit{dependee}), esses atores são ligados por um elo de dependência (\textit{dependum}) que pode ser uma meta a ser atingida, uma tarefa a ser realizada, um recurso a ser fornecido ou uma meta flexível a ser razoavelmente satisfeita \cite{napolitano2009estrategia}. 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=1.0]{figuras/TiposDeContribuicao.png}
-	\caption{Símbolos que representam dependência.}
+	\caption{Símbolos que representam o elo de dependência.}
 	\label{dependenciaIstar}
 \end{figure} 
 
@@ -201,9 +201,24 @@ Os tipos de dependências são definidos por \cite{istarwiki20} como:
 	\item \textbf{Recurso}: Representa uma entidade física ou informativa, presupõe-se então que não existe nenhum problema ou questões abertas sobre como a recurso será alcançado. 
 \end{itemize}
 
+A partir das definições dos tipos de dependência e dos atores é possível modelar a relação de dependência entre dois ou mais atores. Como apresentado no exemplo da figura \ref{exemploTipoDeDepencia}, onde na modelagem existem dois atores \textbf{Titular do cartão} e \textbf{Banco} e é possível perceber a existência dos 4 tipos de dependência: dependência por recurso, dependência por tarefa, dependência por meta flexível e dependência por meta.  
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=1.0]{figuras/ExemploTiposDeDependecias.PNG}
+	\caption{Exemplo dos tipos de dependência entre o titular de cartão e o banco.}
+	\label{exemploTipoDeDepencia}
+\end{figure} 
 
-
+\begin{itemize}
+	\item \textbf{Dependência por recurso}: Neste tipo de dependência, o \textit{depender} depente do \textit{dependee} para que ocorra a disponibilidade do recurso. Ao determinar essa dependência, o \textit{depender} pode utilizar a entidade como um recurso \cite{istarwiki20}. No contexto da figura \ref{exemploTipoDeDepencia}, esse elo existe através do recurso \textbf{conta}, onde o titular do cartão é o \textit{depender} e pode utilizar o recurso da conta bancária.
+	
+	\item \textbf{Dependência por tarefa}: Neste tipo de dependência, o \textit{depender} depente do \textit{dependee} para realização da tarefa. A tarefa pode ser entendida como uma restrição imposta pelo \textit{depender} ao \textit{dependee}, onde o \textit{dependee} possui certa liberdade de ação dentro dessas restrições \cite{istarwiki20}. No contexto da figura \ref{exemploTipoDeDepencia}, esse elo existe através da tarefa \textbf{Realizar pagamento}, onde o titular do cartão é o \textit{depender} e ele depende da disponibilização do banco para poder efetuar algum pagamento ao banco. 
+	
+	\item \textbf{Dependência por meta flexível}: Neste tipo de dependência, o \textit{depender} depente do \textit{dependee} para que alguma tarefa seja realizada para que a meta flexível possa ser "satisfeita a contento" ou "razoavelmente satisfeita" \cite{horkoff2016goal}. Onde o \textit{depender} determina se a meta flexível será alcançada ou não, utilizando as habilidades e conhecimentos do \textit{dependee} \cite{napolitano2009estrategia}. No contexto da figura \ref{exemploTipoDeDepencia}, esse elo existe através da meta flexível \textbf{Titular da conta satisfeito}, onde o titular do cartão é o \textit{depender} e ele depende da forma como o serviço do banco é prestado para que o \textit{depender} possa decidir se a meta flexível será alcançada.
+	
+	\item \textbf{Dependência por meta}: Neste tipo de dependência, o \textit{depender} depente do \textit{dependee} para que um estado no mundo real seja alcançado. O \textit{dependee} possui total liberdade para tomar as decisões necessárias para atingir a meta. O \textit{depender} não se preocupa com o quanto o \textit{dependee} destina-se em satisfazer a meta \cite{horkoff2016goal}. No contexto da figura \ref{exemploTipoDeDepencia}, esse elo existe através da meta que a \textbf{Conta seja gerenciada}, onde o banco é o \textit{depender}, pois, espera-se que o titular do cartão tenha capacidade de gerir sua própria conta, através dos recursos fornecidos pelo banco. 
+\end{itemize}
 
 \subsection{Modelo de Razão Estratégica - SR}
 \label{subsec:SR}
