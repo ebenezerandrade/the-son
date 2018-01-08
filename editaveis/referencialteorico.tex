@@ -298,6 +298,39 @@ Suportabilidade faz parte do conjunto dos RNFs de uma aplicação de software, c
 \section{Arquitetura de Software}
 \label{sec:arquitetura}
 
+O conceito de design de software surgiu da década de 1970, quando os pesquisadores da época acreditavam que o design, fosse uma atividade separada da implementação, exigindo notações, técnicas e ferramentas específicas, foi somente a partir da década de 1990 que utilizou-se o termo arquitetura de software em contraste com design de software, para indicar noções de codificação, abstrações, padrões e treinamentos formais de arquitetos de software \cite{perry1992foundations}.
+
+O termo arquitetura de software é definido por \cite{shaw1996software}, como o entendimento do sistema em termos de seus componentes computacionais e os relacionamentos entre os componentes, os padrões que guiam a composição organizacional dos componentes, bem como as decisões de restrições arquiteturais. 
+
+As arquiteturas de software são projetadas de acordo com algum princípio de estruturação genérico, os princípios são chamados de padrões arquiteturais \cite{buschmann1996system}. 
+
+Os padrões arquiteturais são modelos para arquiteturas concretas de software, expressando a estrutura essencial para o desenvolvimento de um produto de software. O padrão fornece um conjunto de subsistemas predefinidos, incluindo regras e diretrizes para organizar as relações entre eles, além de especificar suas responsabilidades \cite{buschmann1996system}. 
+
+A seleção de um padrão arquitetural é uma atividade fundamental ao desenvolver um sistema de software, e é importante entender que cada padrão auxilia o desenvolvedor a alcançar uma propriedade de sistema específica e dentre o conjunto dos padrões arquiteturais, existem padrões que auxiliam a suportar propriedades similares e podem ser agrupados em categoria, são elas \cite{buschmann1996system}:.
+
+\begin{itemize}
+	\item Da lama à estrutura;
+	\item Sistemas distribuídos;
+	\item Sistemas interativos;
+	\item Sistemas adaptáveis.
+\end{itemize}
+
+A Tabela \ref{categoriasDePadroesArquiteturais} apresenta de maneira detalhada os quatro tipos de categorias para os padrões arquiteturais, definidos por \cite{buschmann1996system} e seus respectivos padrões.
+
+\begin{table}[h!]
+	\centering
+	\caption{Descrição e padrões das quatro categorias de padrões arquiteturais.}
+	\label{categoriasDePadroesArquiteturais}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Categoria} & \textbf{Descrição} & \textbf{Padrões} \\ \hline
+		\begin{tabular}[c]{@{}c@{}}Da lama à \\ estrutura\end{tabular} & \begin{tabular}[c]{@{}c@{}}Da suporte ao desenvolvedor em evitar um \\ "mar" de componentes ou objetos. Os padrões\\ dessa categoria suportam uma decomposição\\  controlada de uma tarega geral em\\  subtarefas cooperantes.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Padrão Layers\\ \\ \\ Padrão \\ Pipe-and-Filter\\ \\ \\ Padrão Blackboard\end{tabular} \\ \hline
+		\begin{tabular}[c]{@{}c@{}}Sistemas \\ distribuidos\end{tabular} & \begin{tabular}[c]{@{}c@{}}O conjunto de sistemas interligados \\ que compartilham\\ processamento entre si.\end{tabular} & Broker \\ \hline
+		\begin{tabular}[c]{@{}c@{}}Sistemas \\ interativos\end{tabular} & \begin{tabular}[c]{@{}c@{}}O conjunto de padrões que suportam a \\ estruturação de sistemas de software \\ que apresentam a interação humano-computador.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Model-View-\\ Controller\\ \\ \\ Presentation-\\ Abstraction-\\ Control\end{tabular} \\ \hline
+		\begin{tabular}[c]{@{}c@{}}Sistemas \\ Adaptáveis\end{tabular} & \begin{tabular}[c]{@{}c@{}}O conjunto de padrões que suportam a extensão das\\ aplicações, adaptabilidade a evolução tecnológica e \\ alteração nos requisitos funcionais.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Mircokernel\\ \\ \\ Reflection\end{tabular} \\ \hline
+	\end{tabular}
+\end{table}
+
 \subsection{MVC - Model-View-Controller}
 \label{subsec:mvc}
 
