@@ -315,7 +315,7 @@ A seleção de um padrão arquitetural é uma atividade fundamental ao desenvolv
 	\item Sistemas adaptáveis.
 \end{itemize}
 
-A Tabela \ref{categoriasDePadroesArquiteturais} apresenta de maneira detalhada os quatro tipos de categorias para os padrões arquiteturais, definidos por \cite{buschmann1996system} e seus respectivos padrões.
+A Tabela \ref{categoriasDePadroesArquiteturais} apresenta detalhadamente os quatro tipos de categorias para os padrões arquiteturais, definidos por \cite{buschmann1996system} e seus respectivos padrões.
 
 \begin{table}[h!]
 	\centering
@@ -331,8 +331,55 @@ A Tabela \ref{categoriasDePadroesArquiteturais} apresenta de maneira detalhada o
 	\end{tabular}
 \end{table}
 
+\pagebreak
+
+Devido ao foco ser a construção de um catálogo de segurança para o padrão arquitetural MVC, a subseção \ref{subsec:mvc}, detalha este padrão arquitetural. 
+
+
 \subsection{MVC - Model-View-Controller}
 \label{subsec:mvc}
+
+O MVC divide a aplicação em três componentes: (i) a \textit{Model}, onde contém os dados e as funcionalidades, entendida como a camada de manipulação dos dados , (ii) a \textit{View}, componente responsável por apresentar as informações para o usuário, (iii) a \textit{Controller}, é responsável por receber e controlar as requisições de entrada do usuário, realizando o controle de qual \textit{model} usar e qual \textit{view} será mostrada ao usuário \cite{buschmann1996system}.  
+
+\subsubsection{Model}
+
+A \textit{Model} realiza o encapsulamento dos dados da aplicação, e detalha todo o comportamento funcional da aplicação. Este componente também realiza a exportação dos procedimentos para que a \textit{Controller} possa chamar esses procedimentos de acordo com as necessidades do usuário \cite{buschmann1996system}.
+
+É também na \textit{Model} onde fica os registros de todos os outros componentes, esses registros são mantidos através do mecanismo de troca de propagação \cite{buschmann1996system}. 
+
+A tabela \ref{responsabilidadeColaboradorModel} resume todos os aspectos da \textit{Model}, tratando de suas responsabilidades e seus colaboradores. 
+
+\begin{table}[h!]
+	\centering
+	\caption{Responsabilidades e colaboradores da \textit{Model} \cite{buschmann1996system}}
+	\label{responsabilidadeColaboradorModel}
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Responsabilidades} & \textbf{Colaboradores} \\ \hline
+		\begin{tabular}[c]{@{}l@{}}- Fornece o núcleo funcional da aplicação\\ - Registra visualizações e controladores dependentes\\ - Notifica componentes dependentes sobre mudanças de dados\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textit{View}\\ \textit{Controller}\end{tabular} \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsubsection{View}
+
+A \textit{View} é o componente responsável por apresentar as informações ao usuário, recuperando os dados da \textit{Model} através de procedimentos de atualização que são ativados pelo mecanismo de propagação de mudanças. A \textit{View} também possui um relacionamento de 1 para 1, com a \textit{Controller}, pois fornece procedimentos para a \textit{Controller} manipular as exibições da \textit{View} \cite{buschmann1996system}.
+
+A tabela \ref{responsabilidadeColaboradorView} resume todos os aspectos da \textit{View}, tratando de suas responsabilidades e seus colaboradores. 
+
+\begin{table}[h!]
+	\centering
+	\caption{Responsabilidades e colaboradores da \textit{View} \cite{buschmann1996system}}
+	\label{responsabilidadeColaboradorView}
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Responsabilidades} & \textbf{Colaboradores} \\ \hline
+		\begin{tabular}[c]{@{}l@{}}- Cria e inicializa o controlador associado\\ - Exibe informações ao usuário\\ - Implementa o procedimento de atualização\\ - Recupera dados do modelo\end{tabular} & \begin{tabular}[c]{@{}l@{}}Model\\ \\ Controller\end{tabular} \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsubsection{Controller}
+
+
 
 \section{Segurança de Software}
 \label{sec:seguranca}
@@ -392,7 +439,7 @@ Essa pesquisa é caracterizada como uma \textbf{pesquisa aplicada}, pois os conh
 
 Com base no objetivo de pesquisa é possível classificar a pesquisa como \textbf{pesquisa explicativa}, pois de segundo \cite{gil2002elaborar} “..este tipo de pesquisa preocupa-se em identificar os fatores que determinam ou que contribuem para a ocorrência dos fenômenos..”, ou seja, na presente pesquisa pretende-se explicar como o padrão arquitetural MVC pode ser impactado pelos RNFs, de acordo com o catálogo de segurança.
 
-\subsubsection{Procedimentos técnicos de pesquisa}
+\subsection{Procedimentos técnicos de pesquisa}
 
 A \textbf{pesquisa bibliográfica} é um dos procedimentos técnicos de pesquisa utilizado, como é evidente no capítulo \ref{chap:referencialTeorico}, onde é apresentado todo o levantamento teórico que serve de insumo para a execução deste trabalho. De acordo com \cite[p.35]{fonseca2002metodologia} “\textit{esse tipo de procedimento trata-se do levantamento de referências teóricas já analisadas, e publicadas por meio de escritos e eletrônicos, como livros, artigos científicos, páginas de web sites. Qualquer trabalho científico inicia-se com uma pesquisa bibliográfica, que permite ao pesquisador conhecer o que já estudou sobre o assunto}“.
  
