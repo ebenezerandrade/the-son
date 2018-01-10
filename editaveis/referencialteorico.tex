@@ -373,11 +373,43 @@ A tabela \ref{responsabilidadeColaboradorView} resume todos os aspectos da \text
 	\begin{tabular}{|l|l|}
 		\hline
 		\textbf{Responsabilidades} & \textbf{Colaboradores} \\ \hline
-		\begin{tabular}[c]{@{}l@{}}- Cria e inicializa o controlador associado\\ - Exibe informações ao usuário\\ - Implementa o procedimento de atualização\\ - Recupera dados do modelo\end{tabular} & \begin{tabular}[c]{@{}l@{}}Model\\ \\ Controller\end{tabular} \\ \hline
+		\begin{tabular}[c]{@{}l@{}}- Cria e inicializa o controlador associado\\ - Exibe informações ao usuário\\ - Implementa o procedimento de atualização\\ - Recupera dados do modelo\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textit{Model}\\ \textit{Controller}\end{tabular} \\ \hline
 	\end{tabular}
 \end{table}
 
 \subsubsection{Controller}
+
+A \textit{Controller} trata as entradas do usuário como eventos, as controladoras desses eventos recebem um pedido da \textit{View}, onde um procedimento específico na \textit{Controller} trata esse pedido e realiza uma chamada de um procedimento na \textit{model}. A \textit{Controller} basicamente traduz os pedidos de eventos para a model e a cada pedido existe uma \textit{view} associada. 
+
+\begin{table}[h!]
+	\centering
+	\caption{Responsabilidades e colaboradores da \textit{View} \cite{buschmann1996system}}
+	\label{responsabilidadeColaboradorController}
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Responsabilidades}                    & \textbf{Colaboradores}                                                        \\ \hline
+		\begin{tabular}[c]{@{}l@{}}- Aceita entrada do usuário como eventos\\ - Traduz os eventos para a \textit{Model} ou exibir os pedidos para a \textit{View}\\ - Se necessário, implementa prodecimentos de atualização\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textit{Model}\\ \textit{View}\end{tabular} \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsubsection{Fluxo de interação entre os componentes}
+
+Tão importante quando a compreensão de cada componente é compreender o fluxo de interação entre esses componentes. 
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=1.0]{figuras/DiagramaDeClasseMVC.PNG}
+	\caption{Diagrama de classes representando a interação entre os componentes no padrão arquitetural MVC.}
+	\label{DiagramaDeClasseMVC}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/DiagramaDeSequenciaMVC.PNG}
+	\caption{Diagrama de sequência para o padrão arquitetural MVC.}
+	\label{DiagramaDeSequenciaMVC}
+\end{figure}
 
 
 
