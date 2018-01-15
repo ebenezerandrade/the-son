@@ -413,8 +413,31 @@ Tão importante quanto a compreensão de cada componente é compreender o fluxo 
 
 
 
-\section{Segurança de Software}
+\section{Requisitos de segurança como RNFs}
 \label{sec:seguranca}
+
+Os RNFs de segurança podem ser entendidos como restrições, que realizam operacionalizações e satisfazem as metas de segurança, estabelecidas pelos engenheiros de requisitos e/ou engenheiros de software. Esse conjunto de  RNFs devem expressar de maneira precisa e não ambígua as metas de segurança de uma aplicação, fornecendo uma especificação para alcançar a meta deseja \cite{haley2006framework}.  
+
+Existem diversas definições de segurança, de forma simplificada segurança no contexto de segurança da informação significa proteger a informação \cite{chung2012non}. Portando, para uma definição mais formal, a segurança é entendida com base em três conceitos, sendo eles \cite{chung2012non}:  
+
+\begin{itemize}
+	\item \textbf{Integridade}: Proteção da informação para evitar que as informações armazenadas ou transmitidas não poderão ser vistas ou interpretadas por terceiros, sendo somente o usuário principal e o destinatário. Promovendo essa proteção da informação através de algoritmos de criptografia \cite{chung2012non} \cite{silva2007arquitetura}. 
+	\item \textbf{Disponibilidade}:
+	\item \textbf{Confidencialidade}:   
+\end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/catalogoSegurancaChung.PNG}
+	\caption{Catálogo de segurança. Fonte: \cite{chung2012non} adaptado.}
+	\label{catalogoSegurancaChung}
+\end{figure}
+
+
+
+
+
+
 
 \section{Resumo do capítulo}
 
@@ -440,7 +463,7 @@ Neste capítulo, é apresentado as ferramentas de software utilizadas para dar s
 \begin{itemize}
 	\item \textbf{Git}: É um sistema \textit{open source} que suporta o controle de versão distribuído \cite{git}. Utilizado para realizar o controle de versão da parte escrita da monografia. 
 	\item \textbf{GitHub}: O GitHub é uma plataforma de hospedagem de código para controle de versão utilizando o Git, através do GitHub é possível criar uma conta para armazenar o código fonte de projetos em repositórios gratuitos e privados \cite{github}. Utilizado para hospedar o repositório público para o controle de versão da monografia. 
-	\item \LaTeX\ : É um sistema que permite a elaboração de textos em alta qualidade, através do programa de diagramação de textos TEX. Utilizado no desenvolvimento da parte escrita da monografia. 
+	\item \LaTeX\ : É um sistema que permite a elaboração de textos em alta qualidade, através do programa de diagramação de textos TEX \cite{latex}. Utilizado no desenvolvimento da parte escrita da monografia. 
 \end{itemize}
 
 \section{Resumo do capítulo}
