@@ -1,23 +1,24 @@
 \chapter[Referencial Teórico]{Referencial Teórico}
 \label{chap:referencialTeorico}
 
-Neste capítulo, é apresentado os conceitos teóricos utilizados como base para o desenvolvimento do catálogo de segurança para o padrão arquitetural MVC. Antes de entender os conceitos relevantes para o desenvolvimento do catálogo é importante entender a definição de software, e segundo \cite{sommerville2003engenharia} pode ser entendido como programas de computador e toda documentação associada, e são produzidos através de uma disciplina da engenharia que preocupa com todos os aspectos da produção de software, essa disciplina é denominada de Engenharia de Software.
+Neste capítulo, será apresentado os conceitos teóricos utilizados como base para o desenvolvimento do catálogo de segurança para o padrão arquitetural MVC.
 
-A figura \ref{BigPicture} apresenta a visão geral da construção do catálogo, partindo da Engenharia de Software e apoiando principalmente em duas disciplinas a  (i) Engenharia de Requisitos que compõe-se de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, essa disciplina será detalhada na seção \ref{sec:requisitos} então entramos no contexto da orientação a meta que trata os requisitos funcionais e não funcionais como metas a serem alcançadas detalhado na subseção \ref{subsec:orientacaoMeta}, devido ao foco do trabalho ser os requisitos não funcionais (\ref{subsec:requisitosNaoFuncionais}) e utiliza-se o NFR (\ref{sec:NFR}) framework para tratar os requisitos não-funcionais, (ii) Desenho de software ujm área da Engenharia de Software que possui como uma de suas preocupações o planejamento e a definição do padrão arquitetural a ser utilizado
-os conceitos de arquitetura de software e do padrão arquitetural MVC são detalhados na seção \ref{sec:arquitetura} e subseção \ref{subsec:mvc}.
+Antes de entender os conceitos relevantes para o desenvolvimento do catálogo é importante entender a definição de software, e segundo \cite{sommerville2003engenharia}, pode ser entendido como, programas de computador e toda documentação associada. E para realização do desenvolvimento do software da maneira mais correta possível, existe a Engenharia de Software que preocupa-se com todos os aspectos da produção \cite{sommerville2003engenharia}. 
 
-\begin{figure}[h]
+A figura \ref{BigPicture}, apresenta a visão geral da construção do catálogo, partindo da Engenharia de Software e apoiando principalmente em duas disciplinas: a (i) Engenharia de Requisitos, que compõe-se de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, essa disciplina será brevemente detalhada na seção \ref{sec:requisitos}, então, entramos no contexto da orientação à meta, que trata dos requisitos funcionais e não funcionais como metas a serem alcançadas, será detalhado na subseção \ref{subsec:orientacaoMeta}. Como essa monografia trata dos RNFs, para elaboração do catálogo, logo na subseção \ref{subsec:requisitosNaoFuncionais} será apresentado conceitos sobre o que são os RNFs. Portando a seção seguinte \ref{sec:NFR} será detalhado o NFR \textit{framework}, para modelar e analisar as interdependências entre os RNFs, e (ii) Desenho de software, uma área da Engenharia de Software que possui como uma de suas preocupações o planejamento e a definição do padrão arquitetural a ser utilizado, os conceitos de arquitetura de software e do padrão arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e subseção \ref{subsec:mvc}.
+
+\begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/bigPicture.png}
+	\includegraphics[keepaspectratio=true,scale=0.65]{figuras/bigPicture.png}
 	\caption{Visão geral da proposta do catálogo.}
 	\label{BigPicture}
 \end{figure}
 
-Segundo \cite{chung2012non} o atributo de qualidade de segurança pode ser separado em três subtipos de atributos de qualidade: (i)Integridade, (ii) Confidencialidade, (iii) Disponibilidade. Portanto o catálogo de segurança é elaborado a partir deles, seguindo a estrutura lógica \ref{eq:EstruturaLogicaDeSeguranca}. O conceito de segurança será detalhado na seção \ref{sec:seguranca}
+Segundo \cite{chung2012non}, segurança pode ser entendido como a satisfação de três conceitos, e que podem ser interpretados como subtipos : (i) Integridade, (ii) Confidencialidade, (iii) Disponibilidade, e Portanto, o catálogo de segurança é elaborado a partir deles, seguindo a expressão \ref{eq:EstruturaLogicaDeSeguranca}. O conceito de segurança como RNFs, será detalhado na seção \ref{sec:seguranca}
 
 \begin{equation}
 	\label{eq:EstruturaLogicaDeSeguranca}
-	\textrm{Integridade AND Confidencialidade AND Disponibilidade SATISFAZ Segurança}
+	\textrm{Integridade E Confidencialidade E Disponibilidade SATISFAZ Segurança}
 \end{equation}
 
 \section{Engenharia de Requisitos}
@@ -420,8 +421,7 @@ Os RNFs de segurança podem ser entendidos como restrições, que realizam opera
 
 Existem diversas definições de segurança, de forma simplificada segurança no contexto de segurança da informação significa proteger a informação \cite{chung2012non}. Está monografia, portanto se fundamenta nos conceitos de \cite{chung2012non} \cite{sullivan2011web} como base para para conceituar segurança, tomando como base os três conceitos conhecidos como CIA (\textit{Confidentiality}, \textit{Integrity}, \textit{Availability}) . 
 
-
-Portanto, para uma definição formal,  segurança pode ser entendida com base em três conceitos, sendo eles: 
+Portanto, para a definição seguindo os fundamentos de \cite{chung2012non}, segurança se baseia em três conceitos, sendo eles: 
 
 \begin{itemize}
 	\item \textbf{Confidencialidade} (do inglês: \textit{Confidenciality}): Proteção da informação para evitar que as informações armazenadas ou transmitidas não poderão ser vistas ou interpretadas por terceiros, sendo somente o usuário principal e o destinatário. Promovendo essa proteção da informação através de algoritmos de criptografia \cite{chung2012non} \cite{silva2007arquitetura}. 
@@ -463,12 +463,10 @@ Se tratando de confidencialidade em \cite{reis10classificaccao} é definido conc
 \end{itemize} 
 
 A confidencialidade possui os subtipos "confidencialidade interna" e "confidencialidade externa" de acordo com a figura \ref{catalogoSegurancaChung}.
-
-\subsection{Disponibilidade}
-
-
+ 
 
 \subsection{Integridade}
+ 
 
 \textbf{Precisão}: Pode ser entendida como qualquer atributo semântico, que fundamenta uma informação \cite{chung2012non}, ou seja, a garantia que um requisito da informação deja descrito com precisão de acordo com, suas especificações. 
 
@@ -482,12 +480,14 @@ A confidencialidade possui os subtipos "confidencialidade interna" e "confidenci
 	\item \textbf{Consistência interna}: Garantir que os valores do mundo real seja correspondente aos valores do sistema.
 \end{itemize}
 
+\textbf{Completude}: Garantir que o RNF esteja completo \cite{chung2012non}. 
+
 \section{Resumo do capítulo}
 
 
 \chapter{Suporte Tecnológico}
 
-Neste capítulo, é apresentado as ferramentas de software utilizadas para dar suporte ao desenvolvimento do trabalho. 
+Neste capítulo, é apresentado as ferramentas de software utilizadas para dar suporte ao desenvolvimento do trabalho. A seção \ref{sec:ferramentasModelagem}, apresenta uma breve descrição das ferramentas utilizadas na modelagem dos diagramas e mapas mentais presentes na monografia e a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas de suporte a escrita, e controle de versão. 
 
 \section{Ferramentas de modelagem}
 \label{sec:ferramentasModelagem}
@@ -501,7 +501,7 @@ Neste capítulo, é apresentado as ferramentas de software utilizadas para dar s
 \end{itemize}
 
 \section{Ferramentas para desenvolvimento do TCC}
-\label{ferramentasDesenvolvimento}
+\label{sec:ferramentasDesenvolvimento}
 
 \begin{itemize}
 	\item \textbf{Git}: É um sistema \textit{open source} que suporta o controle de versão distribuído \cite{git}. Utilizado para realizar o controle de versão da parte escrita da monografia. 
