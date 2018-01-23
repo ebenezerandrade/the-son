@@ -96,27 +96,36 @@ As classes de NFRs \cite{eckhardt2016non} podem ser compreendidas como subtipos 
 \section{NFR Framework}
 \label{sec:NFR}
 
-O NFR \textit{Framework}  é um modelo intencional que ajuda desenvolvedores e engenheiros de requisitos a lidarem com requisitos não-funcionais, através de um grafo chamado de \textit{Softgoal Interdependency Graphs} (SIGs). Nesse grafo, os requisitos podem ser analisados, uma vez que o SIG permite uma visão vertical desde a estratégia de alto nível até os detalhes operacionais;  possuindo operadores lógicos AND (E) e OR (OU) que promovem uma melhor tomada de decisão; onde  os requisitos não funcionais são escritos através de uma notação formal que permite provar a sua correção e completude. O framework também possui uma estrutura que pode ser orientada por processo, dando suporte às atividades do processo de engenharia de requisitos, e pode ser utilizado como complemento nas abordagens tradicionais de desenvolvimento de software \cite{chung2012non}.
+O NFR \textit{Framework}  é um modelo intencional, criado para ajudar engenheiros de software e engenheiros de requisitos a lidarem com requisitos não-funcionais, através de um grafo chamado de \textit{Softgoal Interdependency Graphs} (SIGs). Neste tipo de grafo, os requisitos podem ser analisados, uma vez que o SIG permite uma visão vertical desde a estratégia de alto nível até os detalhes operacionais;  possuindo operadores lógicos AND (E) e OR (OU) que promovem uma melhor tomada de decisão; onde  os RNFs são escritos através de uma notação formal, que permite comprovar a precisão e completude de cada RNF \cite{chung2012non}. 
 
-O NFR Framework utiliza o conceito de metas flexíveis que é uma condição ou um estado no mundo real que deseja ser alcançado, podendo assumir natureza subjetiva, pois o RNF pode variar de acordo com o julgamento de cada pessoa; e natureza relativa, pois o RNF pode depender de algum tipo de relação com outro RNF.  A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de uma nuvem, conforme mostra a figura \ref{fig01}. Esse, com pequenas variações na forma, pode representar uma \textbf{operacionalização} (nuvem em negrito), e também uma \textbf{reivindicação} (nuvem tracejada).
+O \textit{framework} também pode ser orientado por processo, dando suporte às atividades e fases do processo de engenharia de requisitos, e pode ser utilizado como complemento nas abordagens de desenvolvimento de software \cite{chung2012non}.
 
-\begin{figure}[h]
+O NFR \textit{Framework} utiliza o conceito de metas flexíveis, que por definição é uma condição ou um estado no mundo real que deseja ser alcançado, podendo assumir natureza subjetiva, pois, o RNF pode variar de acordo com o julgamento de cada pessoa; e natureza relativa, pois, o RNF pode depender de algum tipo de relação com outro RNF \cite{chung2012non}.
+
+\pagebreak
+
+A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de uma nuvem, conforme apresentado pela figura \ref{fig01}. Esse simbolo, possui pequenas variações na forma, que representam uma \textbf{operacionalização} (nuvem em negrito), e também uma \textbf{reivindicação} (nuvem tracejada).
+
+\begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/tiposDeSoftgoals.png}
 	\caption{Representação gráfica dos tipos de metas flexíveis.}
 	\label{fig01}
 \end{figure} 
 
-Para facilitar o entendimento das decisões tomadas, a meta flexível possui \textit{labels} que determinam o grau em que determinado RNF é satisfeito, de acordo com um conjunto de decisões do projeto. Essas labels são: satisfeita, fracamente satisfeita,  negada, fracamente negada, indecidida e crítica \cite{chung2012non}. Outra notação importante é o grau de prioridade de uma meta flexível, representado por “\textbf{!}” ou “\textbf{!!}” para um grau de prioridade maior.
+
+Para facilitar no entendimento das decisões tomadas, a meta flexível possui \textit{labels}, que determinam o grau de satisfação para uma meta flexível, de acordo com um conjunto de decisões do projeto. As \textit{labels} são: satisfeita, fracamente satisfeita,  negada, fracamente negada, indecidida e crítica \cite{chung2012non}. Outra notação importante, e que apresenta o grau de prioridade de uma meta flexível, é representado por “\textbf{!}” ou “\textbf{!!}” para um grau de prioridade maior, onde o ponto de afirmação é desenhado a esquerda da nuvem.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/labelsSoftgoals.png}
-	\caption{Representação gráfica das labels das metas flexíveis.}
+	\caption{Representação gráfica das \textit{labels} em metas flexíveis.}
 	\label{fig02}
 \end{figure} 
 
-As relações que as metas flexíveis possuem uma com as outras é estabelecida através de interdependências, sendo essas as que realizam o registro do refinamento das metas flexíveis em metas flexíveis mais específicas (filhos) De certa forma, tal detalhamento em outras metas, contribui para satisfazer a meta flexível mais genérica (pai). Os tipos de contribuições são apresentados na tabela \ref{tiposDeContribuições} adaptado de  \cite{chung2012non}.
+As relações que as metas flexíveis possuem uma com as outras é estabelecida através de \textit{links} de interdependências, sendo esses \textit{links} que realizam o registro da decomposição das metas flexíveis em metas flexíveis mais específicas (filhos). De certa forma, a decomposição em outras metas, contribui para o nível de satisfação da meta flexível mais genérica (pai). Os tipos de contribuições são apresentados na tabela \ref{tiposDeContribuições} adaptado de  \cite{chung2012non}.
+
+
 
 \begin{table}[h!]
 	\centering
@@ -143,6 +152,10 @@ As relações que as metas flexíveis possuem uma com as outras é estabelecida 
 		&  \\ \hline
 	\end{tabular}
 \end{table}
+
+
+
+\pagebreak
 
 A figura \ref{exemploNFR} apresenta uma decomposição de uma meta flexível em outras metas de mesma natureza. Consideramos, nesse exemplo, o RNF: “manter as contas com boa segurança”. Usando a notação do NFR \textit{Framework}, representou-se a meta flexível  “segurança de contas”, no nível mais generalista do grafo. Em segundo nível, são especificadas as principais metas flexíveis que merecem ser consideradas para que a meta generalista seja "satisfeita", no caso: “Integridade de contas”, “Confidencialidade de contas” e “Disponibilidade de contas” \cite{chung2012non}.
 
