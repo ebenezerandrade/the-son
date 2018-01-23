@@ -47,31 +47,36 @@ Nas definições do GORE, existem as metas que são componentes essenciais, pois
 	\label{Gore}
 \end{figure}
 
+
+\pagebreak
+
  Através da figura \ref{Gore}, pode-se entender como são os comportamentos das metas no GORE. Representada pelo simbolo de uma nuvem, uma meta, quando está sob a responsabilidade de um único software, essa meta pode-se tornar um requisito, de forma semelhante quando essa meta, está sob responsabilidade de um ambiente, ela pode tornar-se uma suposição, diferente de um requisito as suposições não podem aplicadas pelo software, mas podem ser satisfeitas devido as normas, regulamentos organizacionais e leis físicas \cite{van2001goal}. Esta monografia, possui foco apenas nas responsabilidades voltadas ao software.
 
 
 Existem diversos \textit{frameworks} orientados à metas, os principais  são o NFR \textit{Framework} \cite{chung2012non} e o i* \cite{istarwiki20}, esses \textit{frameworks} são detalhados nas seções \ref{sec:NFR} e \ref{sec:i*}, respectivamente.
 
-\subsection{Requisitos Não-Funcionais e Atributos de Qualidade}
+\subsection{Requisitos Não-Funcionais}
 \label{subsec:requisitosNaoFuncionais}
 
-A visão do software como um produto fez com que os aspectos que avaliam a qualidade de um software passaram a possuir maior atenção e apenas satisfazer o mais próximo possível de todos os requisitos funcionais não é o suficiente, logo tem se dado uma atenção maior para os RNFs tais como: Segurança, Integridade, Disponibilidade, etc \cite{cysneiros1997definindo}.
+A visão do software como um produto, fez com que os aspectos que avaliam a qualidade de um software passassem a possuir maior atenção, e apenas satisfazer, o mais próximo possível de todos os requisitos funcionais não é o suficiente, logo, tem se dado uma atenção maior para os RNFs tais como: Segurança, Integridade, Disponibilidade, etc \cite{cysneiros1997definindo}.
+
+Os RNFs podem ser entendidos como restrições sobre como os requisitos funcionais devem ser implementados, e determinam como o software deve realizar suas funções \cite{sommerville1997requirements}.
 
 
-Leite afirma em seu trabalho que os RNFs impactam o produto software em qualidade e preço, pois segundo ele:
+Júlio Leite, afirma em sua pesquisa que os RNFs impactam o produto software em qualidade e preço, pois segundo ele:
 
 \begin{citacao}
 	"A não observância da necessidade de RNFs durante o processo de desenvolvimento do software, pode levar uma recodificação custosa e demorada o que consequentemente, eleva o preço do software." \cite[p. 2]{cysneiros1997definindo}
 \end{citacao}
 
-Os RNFs devem ser analisados em toda sua magnitude dentro de um sistema de software, sendo importante analisar os possíveis conflitos que podem ser gerados com outros RNFs, como com requisitos funcionais, esses conflitos se não identificados em uma fase inicial do processo de desenvolvimento do software pode acarretar em problemas futuros durante a implementação do software \cite{cysneiros1997definindo}. 
+Os RNFs devem ser analisados em toda sua magnitude para o desenvolvimento e manutenção de um produto de software, sendo importante analisar os possíveis conflitos que podem ser gerados com outros RNFs e com requisitos funcionais, esses conflitos se não identificados em uma fase inicial do processo de desenvolvimento do software podem acarretar em problemas futuros, durante as atividades de implementação e implantação do software \cite{cysneiros1997definindo}. 
 
 
 As classes de NFRs \cite{eckhardt2016non} podem ser compreendidas como subtipos dos atributos de qualidade da tabela \ref{AtributosDeQualidade}, onde são definidos de acordo com a \cite{organizacion2011iso}. 
 
-\begin{table}[h]
+\begin{table}[h!]
 	\centering
-	\caption{Descrição dos atributos de qualidade. Fonte: \cite{organizacion2011iso}}
+	\caption{Descrição dos atributos de qualidade. Fonte: \cite{organizacion2011iso}.}
 	\label{AtributosDeQualidade}
 	\begin{tabular}{|c|c|}
 		\hline
@@ -86,6 +91,7 @@ As classes de NFRs \cite{eckhardt2016non} podem ser compreendidas como subtipos 
 	\end{tabular}
 \end{table}
 
+\pagebreak
 
 \section{NFR Framework}
 \label{sec:NFR}
