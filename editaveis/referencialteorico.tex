@@ -331,7 +331,7 @@ Suportabilidade faz parte do conjunto dos RNFs de uma aplicação de software, c
 \section{Arquitetura de Software}
 \label{sec:arquitetura}
 
-O conceito de design de software surgiu da década de 1970, quando os pesquisadores da época acreditavam que o design, fosse uma atividade separada da implementação, exigindo notações, técnicas e ferramentas específicas, foi somente a partir da década de 1990 que utilizou-se o termo arquitetura de software em contraste com design de software, para indicar noções de codificação, abstrações, padrões e treinamentos formais de arquitetos de software \cite{perry1992foundations}.
+O conceito de design de software surgiu da década de 1970, quando os pesquisadores da época acreditavam que o design fosse uma atividade separada da implementação, exigindo notações, técnicas e ferramentas específicas, foi somente a partir da década de 1990 que utilizou-se o termo arquitetura de software em contraste com design de software, para indicar noções de codificação, abstrações, padrões e treinamentos formais de arquitetos de software \cite{perry1992foundations}.
 
 O termo arquitetura de software é definido por \cite{shaw1996software}, como o entendimento do sistema em termos de seus componentes computacionais e os relacionamentos entre os componentes, os padrões que guiam a composição organizacional dos componentes, bem como as decisões de restrições arquiteturais. 
 
@@ -357,7 +357,7 @@ A Tabela \ref{categoriasDePadroesArquiteturais} apresenta detalhadamente os quat
 	\begin{tabular}{|c|c|c|}
 		\hline
 		\textbf{Categoria} & \textbf{Descrição} & \textbf{Padrões} \\ \hline
-		\begin{tabular}[c]{@{}c@{}}Da lama à \\ estrutura\end{tabular} & \begin{tabular}[c]{@{}c@{}}Da suporte ao desenvolvedor em evitar um \\ "mar" de componentes ou objetos. Os padrões\\ dessa categoria suportam uma decomposição\\  controlada de uma tarega geral em\\  subtarefas cooperantes.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Padrão Layers\\ \\ \\ Padrão \\ Pipe-and-Filter\\ \\ \\ Padrão Blackboard\end{tabular} \\ \hline
+		\begin{tabular}[c]{@{}c@{}}Da lama à \\ estrutura\end{tabular} & \begin{tabular}[c]{@{}c@{}}Da suporte ao desenvolvedor em evitar um \\ "mar" de componentes ou objetos. Os padrões\\ dessa categoria suportam uma decomposição\\  controlada de uma tarefa geral em\\  subtarefas cooperantes.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Padrão Layers\\ \\ \\ Padrão \\ Pipe-and-Filter\\ \\ \\ Padrão Blackboard\end{tabular} \\ \hline
 		\begin{tabular}[c]{@{}c@{}}Sistemas \\ distribuidos\end{tabular} & \begin{tabular}[c]{@{}c@{}}O conjunto de sistemas interligados \\ que compartilham\\ processamento entre si.\end{tabular} & Broker \\ \hline
 		\begin{tabular}[c]{@{}c@{}}Sistemas \\ interativos\end{tabular} & \begin{tabular}[c]{@{}c@{}}O conjunto de padrões que suportam a \\ estruturação de sistemas de software \\ que apresentam a interação humano-computador.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Model-View-\\ Controller\\ \\ \\ Presentation-\\ Abstraction-\\ Control\end{tabular} \\ \hline
 		\begin{tabular}[c]{@{}c@{}}Sistemas \\ Adaptáveis\end{tabular} & \begin{tabular}[c]{@{}c@{}}O conjunto de padrões que suportam a extensão das\\ aplicações, adaptabilidade a evolução tecnológica e \\ alteração nos requisitos funcionais.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Mircokernel\\ \\ \\ Reflection\end{tabular} \\ \hline
@@ -366,13 +366,13 @@ A Tabela \ref{categoriasDePadroesArquiteturais} apresenta detalhadamente os quat
 
 \pagebreak
 
-Devido ao foco ser a construção de um catálogo de segurança para o padrão arquitetural MVC, a subseção \ref{subsec:mvc}, detalha este padrão arquitetural. 
+Devido ao foco da monografia ser a construção de um catálogo de segurança para o padrão arquitetural MVC, a subseção \ref{subsec:mvc}, detalha este padrão arquitetural. 
 
 
-\subsection{MVC - Model-View-Controller}
+\subsection{MVC: Model-View-Controller}
 \label{subsec:mvc}
 
-O MVC divide a aplicação em três componentes: (i) a \textit{Model}, onde contém os dados e as funcionalidades, entendida como a camada de manipulação dos dados , (ii) a \textit{View}, componente responsável por apresentar as informações para o usuário, (iii) a \textit{Controller}, é responsável por receber e controlar as requisições de entrada do usuário, realizando o controle de qual \textit{model} usar e qual \textit{view} será mostrada ao usuário \cite{buschmann1996system}.  
+O MVC divide a aplicação em três componentes: (i) a \textit{Model}, onde contém os dados e as funcionalidades, entendida como a camada de manipulação dos dados , (ii) a \textit{View}, componente responsável por apresentar as informações para o usuário, (iii) e a \textit{Controller}, responsável por receber e controlar as requisições de entrada do usuário, realizando o controle de qual \textit{model} usar e qual \textit{view} será mostrada ao usuário \cite{buschmann1996system}.  
 
 \subsubsection{Model}
 
@@ -389,7 +389,7 @@ A tabela \ref{responsabilidadeColaboradorModel} resume todos os aspectos da \tex
 	\begin{tabular}{|l|l|}
 		\hline
 		\textbf{Responsabilidades} & \textbf{Colaboradores} \\ \hline
-		\begin{tabular}[c]{@{}l@{}}- Fornece o núcleo funcional da aplicação\\ - Registra visualizações e controladores dependentes\\ - Notifica componentes dependentes sobre mudanças de dados\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textit{View}\\ \textit{Controller}\end{tabular} \\ \hline
+		\begin{tabular}[c]{@{}l@{}}- Fornecer o núcleo funcional da aplicação\\ - Registrar visualizações e controladores dependentes\\ - Notificar componentes dependentes sobre mudanças de dados\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textit{View}\\ \textit{Controller}\end{tabular} \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -406,13 +406,13 @@ A tabela \ref{responsabilidadeColaboradorView} resume todos os aspectos da \text
 	\begin{tabular}{|l|l|}
 		\hline
 		\textbf{Responsabilidades} & \textbf{Colaboradores} \\ \hline
-		\begin{tabular}[c]{@{}l@{}}- Cria e inicializa o controlador associado\\ - Exibe informações ao usuário\\ - Implementa o procedimento de atualização\\ - Recupera dados do modelo\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textit{Model}\\ \textit{Controller}\end{tabular} \\ \hline
+		\begin{tabular}[c]{@{}l@{}}- Inicializar o controlador associado\\ - Exibir informações ao usuário\\ - Implementar o procedimento de atualização\\ - Recuperar dados da \textit{Model}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textit{Model}\\ \textit{Controller}\end{tabular} \\ \hline
 	\end{tabular}
 \end{table}
 
 \subsubsection{Controller}
 
-A \textit{Controller} trata as entradas do usuário como eventos, as controladoras desses eventos recebem um pedido da \textit{View}, onde um procedimento específico na \textit{Controller} trata esse pedido e realiza uma chamada de um procedimento na \textit{model}. A \textit{Controller} basicamente traduz os pedidos de eventos para a model e a cada pedido existe uma \textit{view} associada. 
+A \textit{Controller} trata as entradas do usuário como eventos, as controladoras desses eventos recebem um pedido da \textit{View}, onde um procedimento específico na \textit{Controller} trata esse pedido e realiza uma chamada de um procedimento na \textit{model}. A \textit{Controller} basicamente traduz os pedidos de eventos para a \textit{model} e a cada pedido existe uma \textit{view} associada. 
 
 \begin{table}[h!]
 	\centering
@@ -421,30 +421,34 @@ A \textit{Controller} trata as entradas do usuário como eventos, as controlador
 	\begin{tabular}{|l|l|}
 		\hline
 		\textbf{Responsabilidades}                    & \textbf{Colaboradores}                                                        \\ \hline
-		\begin{tabular}[c]{@{}l@{}}- Aceita entrada do usuário como eventos\\ - Traduz os eventos para a \textit{Model} ou exibir os pedidos para a \textit{View}\\ - Se necessário, implementa prodecimentos de atualização\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textit{Model}\\ \textit{View}\end{tabular} \\ \hline
+		\begin{tabular}[c]{@{}l@{}}- Aceitar entrada do usuário como eventos\\ - Traduzir os eventos para a \textit{Model} ou exibir os pedidos para a \textit{View}\\ - Se necessário, implementar prodecimentos de atualização\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textit{Model}\\ \textit{View}\end{tabular} \\ \hline
 	\end{tabular}
 \end{table}
 
 \subsubsection{Fluxo de interação entre os componentes}
 
-Tão importante quanto a compreensão de cada componente é compreender o fluxo de interação entre esses componentes e suas interações diretas e indiretas. A figura \ref{DiagramaDeClasseMVC} representa os três componentes e suas interações e a figura \ref{DiagramaDeSequenciaMVC} representa o fluxo dos eventos no cenário que a \textit{Controller} interage diretamente com a \textit{Model} e \textit{View}, onde o usuário entra com alguma informação e aguarda um retorno da aplicação. 
-
+Tão importante quanto a compreensão de cada componente é compreender o fluxo de interação entre esses componentes e suas interações diretas e indiretas. A figura \ref{DiagramaDeClasseMVC} representa os três componentes e suas interações, através da notação da UML, onde, dentro de um pacote da \textit{Model} existe uma classe exemplo, cuja o nome é, \textit{Model.Class} possuindo relações de contribuição com o pacote \textit{Controller}, através da classe \textit{ManipuladoraDeDados.Class}. De forma semelhante existe a relação entre a \textit{Controller} e a \textit{View} entre as classes  \textit{ManipuladoraDeDados.Class} e \textit{GUI.Class}. Os nomes atribuídos na diagramação deste diagrama de classes, são para auxiliar a compreensão do diagrama. 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=1.0]{figuras/DiagramaDeClasseMVC.PNG}
-	\caption{Diagrama de classes representando a interação entre os componentes no padrão arquitetural MVC.}
+	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/DiagramaDeClasseMVC.PNG}
+	\caption{Diagrama de classes representando a interação entre os componentes no padrão arquitetural MVC. Adaptado de \cite{durelli2008proposta}.}
 	\label{DiagramaDeClasseMVC}
 \end{figure}
+
+\pagebreak
+
+A figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que representa o fluxo dos eventos em um cenário exemplo, onde a \textit{Controller} interage diretamente com a \textit{Model} e \textit{View}, onde o usuário entra com alguma informação e aguarda o retorno da aplicação. 
+
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/DiagramaDeSequenciaMVC.PNG}
-	\caption{Diagrama de sequência para o padrão arquitetural MVC.}
+	\caption{Diagrama de sequência para o padrão arquitetural MVC. Adaptado de \cite{durelli2008proposta} e \cite{buschmann1996system}.}
 	\label{DiagramaDeSequenciaMVC}
 \end{figure}
 
-
+\pagebreak
 
 \section{Requisitos de segurança como RNFs}
 \label{sec:seguranca}
