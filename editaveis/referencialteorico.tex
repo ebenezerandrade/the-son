@@ -162,7 +162,7 @@ Os \textit{links} entre as metas flexíveis, representam a contribuição que um
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/catalogoDeAvaliacao.png}
-	\caption{Propagação das \textit{labels} para os diferentes tipos de contribuição. Fonte \cite{chung2012non} adaptado.}
+	\caption{Propagação das \textit{labels} para os diferentes tipos de contribuição. Adaptado de \cite{chung2012non}.}
 	\label{catalogoDeAvaliação}
 \end{figure} 
 
@@ -183,11 +183,13 @@ Confidencialidade de contas é operacionalizada em “Autorizar acesso à inform
 Para Disponibilidade de contas a mesma é operacionalizada em “Duplicar servidor” e “Espelhar banco de dados” essas operacionalizações possuem contribuições do tipo HELP e mesmo pai, e para a meta flexível ser satisfeita, ambas as operacionalizações devem ser satisfeitas \cite{affleck2012supporting}. 
 
 
-\section{O Framework i*}
+\section{Framework i*}
 \label{sec:i*}
 
 
-Outra abordagem orientada à meta, o \textit{framework} de modelagem i*\footnote[1]{O nome i* faz referência a utilização da notação de distribuição intencional que é a base do \textit{framework}.}, possui foco em ambientes organizacionais e seus sistemas de informação tomando como base os relacionamentos de dependência entre os atores participantes \cite{yu1997towards} \cite{istarwiki20}, o framework é composto por dois modelos; o (i) Modelo de Dependência Estratégica (do inglês \textit{Strategic Dependency - (SD)}) utilizado para descrever as relações de dependência entre vários atores em um contexto organizacional, e o (ii) Modelo de Razão estratégica (do inglês \textit{Strategic Rationale - (SR)}) utilizado para descrever os interesses e preocupações das partes interessadas e como eles podem ser abordados pelas configurações do ambiente e dos sistemas \cite{yu1997towards}. Esses dois modelos serão detalhados a seguir nas subseções \ref{subsec:SD} e \ref{subsec:SR}.
+Outra abordagem orientada à meta, o \textit{framework} de modelagem i*\footnote[1]{O nome i* faz referência a utilização da notação de distribuição intencional que é a base do \textit{framework}.}, possui foco em ambientes organizacionais e seus sistemas de informação, tomando como base os relacionamentos de dependência entre os atores participantes \cite{yu1997towards} \cite{istarwiki20}. 
+
+O \textit{framework} é composto por dois modelos; o (i) Modelo de Dependência Estratégica (do inglês, \textit{Strategic Dependency - (SD)}), utilizado para descrever as relações de dependência entre vários atores em um contexto organizacional, e o (ii) Modelo de Razão estratégica (do inglês, \textit{Strategic Rationale - (SR)}), utilizado para descrever os interesses e preocupações das partes interessadas e como eles podem ser abordados pelas configurações do ambiente e dos sistemas \cite{yu1997towards}. Esses dois modelos serão detalhados a seguir nas subseções \ref{subsec:SD} e \ref{subsec:SR}.
 
 Com a utilização do \textit{framework} é possível representar, por meio de seus modelos, os atores participantes e suas dependências, para que suas metas sejam alcançadas, recursos fornecidos, tarefas realizadas e metas flexíveis sejam “satisfeitas a contento” ou “razoavelmente satisfeitas” \cite{istarwiki20}.
  
@@ -230,7 +232,7 @@ Os tipos de dependências são definidos por \cite{istarwiki20} como:
 	\item \textbf{Recurso}: Representa uma entidade física ou informativa, presupõe-se então que não existe nenhum problema ou questões abertas sobre como a recurso será alcançado. 
 \end{itemize}
 
-A partir das definições dos tipos de dependência e dos atores é possível modelar a relação de dependência entre dois ou mais atores. Como apresentado no exemplo da figura \ref{exemploTipoDeDepencia}, onde na modelagem existem dois atores \textbf{Titular do cartão} e \textbf{Banco} e é possível perceber a existência dos 4 tipos de dependência: dependência por recurso, dependência por tarefa, dependência por meta flexível e dependência por meta.  
+A partir das definições dos tipos de dependência e dos atores é possível modelar a relação de dependência entre dois ou mais atores. Como apresentado no exemplo da figura \ref{exemploTipoDeDepencia}, onde, na modelagem existem dois atores \textbf{Titular do cartão} e \textbf{Banco} e é possível perceber a existência dos 4 tipos de dependência: dependência por recurso, dependência por tarefa, dependência por meta flexível e dependência por meta.  
 
 \begin{figure}[h!]
 	\centering
@@ -256,39 +258,41 @@ O modelo SR apresenta de forma gráfica, com vários tipos de nós (Meta, Tarefa
 
 O modelo tem o objetivo principal de representar de forma detalhada as estratégias internas dos atores, em função dos elementos do processo, das alternativas e das decisões por trás do processo, em que as metas são alcançadas, as tarefas são realizadas, os recursos disponibilizados e as metas flexíveis são refinadas e operacionalizadas \cite{napolitano2009estrategia}.  
 
-De acordo com \cite{istarwiki20}, os tipos de links são definidos como: 
+De acordo com \cite{istarwiki20}, os tipos de \textit{links} são definidos como: 
+
+\pagebreak
 
 \begin{itemize}
-	\item \textbf{Link de meio-fim}: Representado graficamente por uma seta direcionada para o nó fim. O "\textbf{meio}" normalmente é expresso por uma tarefa, que define o "como" fazer algo e o " \textbf{fim}" expressa à meta a ser alcançada.
+	\item \textbf{\textit{link} de meio-fim}: Representado graficamente por uma seta direcionada para o nó fim. O "\textbf{meio}" normalmente é expresso por uma tarefa, que define o "como" fazer algo e o " \textbf{fim}" expressa à meta a ser alcançada.
 \end{itemize}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.6]{figuras/meioFim.PNG}
-	\caption{Notação gráfica para o link de meio-fim, onde, o meio é uma tarefa e o fim é uma meta. Fonte: \cite{istarwiki20} adaptado.}
+	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/meioFim.PNG}
+	\caption{Notação gráfica para o \textit{link} de meio-fim, onde, o meio é uma tarefa e o fim é uma meta. Adaptado de \cite{istarwiki20}}
 	\label{meiofim}
 \end{figure} 
 
 \begin{itemize}	
-	\item \textbf{Link de decomposição}: Uma tarefa pode ser decomposta em submeta, em subtarefa, em recurso ou em meta flexível. A representação gráfica para um link de decomposição é um segmento de reta com um pequeno corte perpendicular, como apresentado na figura.    
+	\item \textbf{\textit{link} de decomposição}: Uma tarefa pode ser decomposta em submeta, em subtarefa, em recurso ou em meta flexível. A representação gráfica para um link de decomposição é um segmento de reta com um pequeno corte perpendicular, como apresentado na figura \ref{decomposicaoLink}.    
 \end{itemize}	
 
 \begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=1.0]{figuras/decomposicaoLink.PNG}
-		\caption{Notação gráfica para o link de decomposição, onde. Fonte: \cite{istarwiki20} adaptado.}
+		\caption{Notação gráfica para o \textit{link} de decomposição. Adaptado de \cite{istarwiki20}}
 		\label{decomposicaoLink}
 \end{figure}
 
 \begin{itemize}		
-	\item \textbf{links de contribuição}: Os tipos de contribuições\footnote[1]{A definição de cada tipo de contribuição é a mesma dada por Chung em \cite{chung2012non}, como visto na tabela \ref{tiposDeContribuições} que detalha os tipos de contribuições para o NFR Framework.} entre as metas flexíveis são: \textit{Make}, \textit{Some+}, \textit{Help}, \textit{Unknown}, \textit{Break}, \textit{Some-}, \textit{Hurt}, \textit{Or} e \textit{And}. 
+	\item \textbf{\textit{links} de contribuição}: Os tipos de contribuições\footnote[1]{A definição de cada tipo de contribuição é a mesma dada por Chung em \cite{chung2012non}, como visto na tabela \ref{tiposDeContribuições} que detalha os tipos de contribuições para o NFR Framework.} entre as metas flexíveis são: \textit{Make}, \textit{Some+}, \textit{Help}, \textit{Unknown}, \textit{Break}, \textit{Some-}, \textit{Hurt}, \textit{Or} e \textit{And}. 
 \end{itemize}
 
 
 \section{FURPS}
 \label{sec:furps}
 
-O termo FURPS é um acrônimo que define um modelo de atributo de qualidade, esse acrônimo é composto por cinco RNFs: (i) Funcionalidade (\textit{Functionality}), (ii) Usabilidade (\textit{Usability}), Confiabilidade (\textit{Reliability}), Desempenho (\textit{Performance}) e Suportabilidade (\textit{Supportability}) \cite{umar2011analyzing}.
+O termo FURPS é um acrônimo que define um modelo de atributo de qualidade, esse acrônimo é composto por cinco atributos de qualidade, sendo eles: (i) Funcionalidade (\textit{Functionality}), (ii) Usabilidade (\textit{Usability}), Confiabilidade (\textit{Reliability}), Desempenho (\textit{Performance}) e Suportabilidade (\textit{Supportability}) \cite{umar2011analyzing}.
 
 \subsection{Funcionalidade}
 \label{subsec:funcionalidade}
@@ -315,7 +319,7 @@ Por definição confiabilidade é a capacidade do software em manter o nível de
 \subsection{Desempenho}
 \label{subsec:desempenho}
 
-O desempenho faz parte do conjunto dos RNFs de uma aplicação de software, considera-se o tempo de recuperação e tempo de resposta do software, a taxa de transferência de dados (do inglês \textit{troughput}) \footnote[1]{Quantidade de dados que pode ser tranferidos de um lugar para o outro em um espaço de tempo previamente especificado.}, capacidade do software de utilizar os recursos do sistema operacional \cite{cintra2006implementaccao}.
+O desempenho faz parte do conjunto dos RNFs de uma aplicação de software, considera-se o tempo de recuperação e tempo de resposta do software, a taxa de transferência de dados (do inglês, \textit{troughput}) \footnote[1]{Quantidade de dados que pode ser tranferidos de um lugar para o outro em um espaço de tempo previamente especificado.}, capacidade do software de utilizar os recursos do sistema operacional \cite{cintra2006implementaccao}.
 
 Por definição desempenho é o nível como o software atende as necessidades, representado por um conjunto específico da valores para cada característica especificada para a execução do software. \cite{qualidadeDeProdutoNBR}.  
 
