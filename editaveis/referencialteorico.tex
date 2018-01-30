@@ -485,6 +485,7 @@ Os subtipos das ``características dos RNF`` de acordo com \cite{chung2012non} p
 É de extrema importância entender os conceitos na literatura dos subtipos de cada conceito, as subseções a seguir fazem um breve detalhamento sobre esses conceitos Confidencialidade e Integridade. 
 
 \subsection{Confidencialidade}
+\label{subsec:confidencialidade}
 
 Se tratando de confidencialidade em \cite{reis10classificaccao} é definido conceitos sobre o tipo da informação em segurança, sendo eles: 
 
@@ -502,6 +503,7 @@ A confidencialidade possui os subtipos ``confidencialidade interna`` e ``confide
  
 
 \subsection{Integridade}
+\label{subsec:integridade}
  
 Definida através dos conceitos precisão e completude, por \cite{chung2012non}, onde: 
 
@@ -512,7 +514,7 @@ Definida através dos conceitos precisão e completude, por \cite{chung2012non},
 	
 	\item \textbf{Valor de precisão}: Garantir que os valores retornados pelas operações possuem a precisão desejada.
 	
-	\item \textbf{Precisão de um para um}: Garantir que um único objeto está ligado a uma única entidade do domínio. 
+	\item \textbf{Precisão de um para um}: Garantir que um único objeto esteja ligado a uma única entidade do domínio. 
 	
 	\item \textbf{Consistência interna}: Garantir que os valores do mundo real seja correspondente aos valores do sistema.
 \end{itemize}
@@ -704,8 +706,50 @@ Neste capitulo foi detalhada a classificação da pesquisa de acordo com seus ti
 \label{chap:proposta}
 
 
-Um catálogo de tipos de segurança promove ao engenheiro de requisitos e os engenheiros de software a entender as diferentes necessidades se tratando do domínios de segurança dos dados e segurança arquitetural de uma aplicação. Pois com base no catálogo, pode se escolher os conceitos de segurança que são mais relevantes para o desenvolvimento da aplicação. 
 
+\section{Catálogo de tipos de RNFs para segurança}
+
+Um catálogo de tipos de segurança promove a engenheiros de requisitos e engenheiros de software, o entendimento das diferentes necessidades, se tratando dos domínios de segurança dos dados e segurança arquitetural de uma aplicação de software. Pois com base no catálogo, pode se escolher os conceitos de segurança que são mais relevantes para o desenvolvimento da aplicação.
+
+A figura \ref{catalogoDeTipos} apresenta o catálogo de tipos de segurança proposto por esta monografia, nele as caraterísticas externas dos RNFs de segurança foram descartadas, pois a presente monografia trata apenas como o mundo real pode prejudicar o software em questões arquiteturais, e que podem ou não gerar impacto sobre os consistência dos dados.    
+
+As cores no catálogo são para facilitar o entendimento e identificar de onde, vem RNF mais genérico. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/catalogoDeTiposSeguranca.PNG}
+	\caption{Catálogo de tipos para segurança arquitetural de software.}
+	\label{catalogoDeTipos}
+\end{figure}
+
+Para ``disponibilidade`` apresentado em roxo escuto escuro na figura \ref{catalogoDeTipos}, se trata da proteção contra a interrupção dos serviços em execução, no momento em que o usuário estiver utilizando a aplicação, visando a disponibilidade das funções internas dentro da própria arquitetura do software. 
+
+Já em ``segurança operacional`` apresentado em laranjado na figura \ref{catalogoDeTipos} e seu subtipo ``operação interna confidencial`` referindo-se diretamente a manutenção da segurança dos dados e componentes durante a execução do software. 
+
+\subsection{Integridade}
+
+Integridade e seus subtipos são representados no catálogo da figura \ref{catalogoDeTipos} através da cor roxo claro. 
+
+Como definido na subseção \ref{subsec:integridade} integridade, pode ser abstraída em dois subtipos, precisão e completude, onde precisão pode ser abstraída em mais 4 subtipos \cite{chung2012non}, que são relevantes para a manutenção do controle de acesso de usuários e da própria permissão de instanciação de objetos dentro das camadas do padrão arquitetural MVC. 
+
+O papel de cada RNFs dentro do catálogo possui uma função específica, para ``precisão`` tem-se os subtipos, (i) ``propriedade de precisão``, cuja o papel dentro do catálogo é manter que um objeto não seja instanciado por uma classe em uma camada diferente ao qual no possui relação para tal, dentro do padrão arquitetural MVC, e de forma análoga o (ii) ``valor de precisão``, visa a garantia de que os valores retornados pelas operações possuem a precisão desejada, dentro de uma mesma camada, ou quando ocorre o retorno de uma função para uma outra função em outra camada no MVC, a (iii) ``precisão de um para um``, possui foco na \textit{model} pois, verifica se existe uma única entidade do mundo real, ligada a um objeto instanciado pela model. e (iv) ``consistência interna``, promover que os valores do mundo real sejam correspondente aos valores, e abstrações contidas no sistema (entidades, métodos, dados)
+
+O RNF ``controle de acesso`` é uma especificidade de todas as especificidades de precisão, pois procura-se garantir a consistência e precisão nas dimensões de dados e componentes dentro do padrão arquitetural MVC. Portanto, as especificações desse RNF são juntamente (i) ``controle de acesso de dados`` e ``(ii) ``controle de acesso de componentes``.
+
+Para completude é a garantia de que o RNFs esteja completo e não ambíguo.
+
+\subsection{Confidencialidade}
+
+Confidencialidade e seus subtipos são representados no catálogo da figura \ref{catalogoDeTipos} através da cor azul. 
+
+Como o foco é a parte arquitetural e como ocorrem os impactos entre os RNFs de segurança, para os aspectos de confidencialidade foram levados em considerações, somente os que possuíam relevância interna onde, ``confidencialidade interna``, trata-se dos termos, métodos, e instâncias de classes dentro do padrão MVC, que devem ser utilizamos somente dentro da aplicação, e um determinado ataque ou erro interno não prejudica o mantenedor da aplicação.
+
+Para ``confidencialidade interna e secreta``, se aplica o mesmo conceito da ``confidencialidade interna``, exceto que a integridade da informação deve ser mantida a qualquer custo, e a ocorrência de um determinado ataque ou erro causa grandes danos em quem mantém a aplicação.
+
+Para ``confidencialidade interna e confidencial``, aplica-se os mesmos conceitos das anteriores, exceto se a ocorrência de um determinado ataque ou erro pode causar vantagens a concorrentes e perda de usuários e clientes. 
+\section{Gráfico de interdependência entre metas flexíveis - SIGs}
+
+Os subtipos de conceitos que compõem a definição de segurança são abstraídos e tratados como metas flexíveis. Para então serem modelados e tratados no SIG.
 
 \section{Resumo do capítulo}
 
