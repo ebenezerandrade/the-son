@@ -177,7 +177,7 @@ A figura \ref{exemploNFR} apresenta uma decomposição de uma meta flexível em 
 	\label{exemploNFR}
 \end{figure} 
 
-Confidencialidade de contas é operacionalizada em “Autorizar acesso à informação das contas”, que possui uma contribuição do tipo HELP com seu pai. Dada a relação do tipo AND, entre essa operacionalização e as operacionalizações "Identificar usuários" e "Autenticar usuários", tem-se que a operacionalização "Autorizar acesso à informação das contas"  será realizada se ambas as operacionalizações, "Identificar usuários" e "Autenticar usuários", forem realizadas. Supondo que tudo tenha sido realizado com sucesso, tem-se que esse processo de operacionalização contribui positivamente - HELP (AJUDA) - a atingir "Confiabilidade de contas". Como essa meta flexível está especificada em uma relação de AND com as metas flexíveis "Integridade de contas" e "Disponibilidade de contas", pode-se dizer que em termos de "Confiabilidade de contas", "Segurança de contas" tem a ser "satisfeita". Mas, resta ainda ponderar se "Integridade de contas" e "Disponibilidade de contas" serão de fato "satisfeitas". O modelo, da forma como está especificado, não permite avaliar tais aspectos, visto que representa apenas uma visão parcial dessas metas flexíveis.
+Confidencialidade de contas é operacionalizada em ``Autorizar acesso à informação das contas``, que possui uma contribuição do tipo HELP com seu pai. Dada a relação do tipo AND, entre essa operacionalização e as operacionalizações ``Identificar usuários`` e ``Autenticar usuários``, tem-se que a operacionalização ``Autorizar acesso à informação das contas``  será realizada se ambas as operacionalizações, ``Identificar usuários`` e ``Autenticar usuários``, forem realizadas. Supondo que tudo tenha sido realizado com sucesso, tem-se que esse processo de operacionalização contribui positivamente - HELP (AJUDA) - a atingir ``Confiabilidade de contas``. Como essa meta flexível está especificada em uma relação de AND com as metas flexíveis "Integridade de contas" e ``Disponibilidade de contas``, pode-se dizer que em termos de ``Confiabilidade de contas``, ``Segurança de contas`` tem a ser ``satisfeita``. Mas, resta ainda ponderar se "Integridade de contas" e ``Disponibilidade de contas`` serão de fato ``satisfeitas``. O modelo, da forma como está especificado, não permite avaliar tais aspectos, visto que representa apenas uma visão parcial dessas metas flexíveis.
 
 
 Para Disponibilidade de contas a mesma é operacionalizada em “Duplicar servidor” e “Espelhar banco de dados” essas operacionalizações possuem contribuições do tipo HELP e mesmo pai, e para a meta flexível ser satisfeita, ambas as operacionalizações devem ser satisfeitas \cite{affleck2012supporting}. 
@@ -214,7 +214,7 @@ De acordo com as definições de \cite{istarwiki20} um  \textbf{Ator} é o termo
 	\item \textbf{Papel}: É definido como manifestações concretas e físicas, utilizado para se referir a humanos e agentes de \textit{Hardware}/\textit{Software}.
 \end{itemize} 
 
-No modelo Dependência Estratégica ao existir uma cooperação entre dois atores, essa cooperação é denominada de dependência, onde existe um "dependente" (\textit{depender}) e um "de quem se depende" (\textit{dependee}), esses atores são ligados por um elo de dependência (\textit{dependum}) que pode ser uma meta a ser atingida, uma tarefa a ser realizada, um recurso a ser fornecido ou uma meta flexível a ser razoavelmente satisfeita \cite{napolitano2009estrategia}. 
+No modelo Dependência Estratégica ao existir uma cooperação entre dois atores, essa cooperação é denominada de dependência, onde existe um ``dependente`` (\textit{depender}) e um ``de quem se depende`` (\textit{dependee}), esses atores são ligados por um elo de dependência (\textit{dependum}) que pode ser uma meta a ser atingida, uma tarefa a ser realizada, um recurso a ser fornecido ou uma meta flexível a ser razoavelmente satisfeita \cite{napolitano2009estrategia}. 
 
 \begin{figure}[h!]
 	\centering
@@ -227,7 +227,7 @@ Os tipos de dependências são definidos por \cite{istarwiki20} como:
 
 \begin{itemize}
 	\item \textbf{Meta}: uma condição ou estado de desejo intencional do ator no mundo real. Os detalhes de como a meta deve ser satisfeita não são descritos, promovendo então a decomposição da mesma em uma série de alternativas.   
-	\item \textbf{Meta flexível}: De maneira semelhante a Meta, também representa uma condição ou estado de desejo intencional do ator no mundo real, porém os detalhes de como a meta flexível deve ser satisfeita não são definidos a princípio, sendo então sujeito a interpretação. Para verificar se uma meta flexível foi satisfeita utiliza-se os termos "satisfeita a contento" ou "razoavelmente satisfeita", pois metas flexíveis não possui critérios claramente definidos. 
+	\item \textbf{Meta flexível}: De maneira semelhante a Meta, também representa uma condição ou estado de desejo intencional do ator no mundo real, porém os detalhes de como a meta flexível deve ser satisfeita não são definidos a princípio, sendo então sujeito a interpretação. Para verificar se uma meta flexível foi satisfeita utiliza-se os termos ``satisfeita a contento`` ou ``razoavelmente satisfeita``, pois metas flexíveis não possui critérios claramente definidos. 
 	\item \textbf{Tarefa}: Representa a realização de algo em forma particular por um ator. Uma tarefa também pode ser decomposta em subtarefas mais específicas. 
 	\item \textbf{Recurso}: Representa uma entidade física ou informativa, presupõe-se então que não existe nenhum problema ou questões abertas sobre como a recurso será alcançado. 
 \end{itemize}
@@ -263,13 +263,13 @@ De acordo com \cite{istarwiki20}, os tipos de \textit{links} são definidos como
 \pagebreak
 
 \begin{itemize}
-	\item \textbf{\textit{link} de meio-fim}: Representado graficamente por uma seta direcionada para o nó fim. O "\textbf{meio}" normalmente é expresso por uma tarefa, que define o "como" fazer algo e o " \textbf{fim}" expressa à meta a ser alcançada.
+	\item \textbf{\textit{link} de meio-fim}: Representado graficamente por uma seta direcionada para o nó fim. O ``\textbf{meio}`` normalmente é expresso por uma tarefa, que define o ``como`` fazer algo e o " \textbf{fim}`` expressa à meta a ser alcançada.
 \end{itemize}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/meioFim.PNG}
-	\caption{Notação gráfica para o \textit{link} de meio-fim, onde, o meio é uma tarefa e o fim é uma meta. Adaptado de \cite{istarwiki20}}
+	\caption{Notação gráfica para o \textit{link} de meio-fim, onde, o meio é uma tarefa e o fim é uma meta. Adaptado de \cite{istarwiki20}.}
 	\label{meiofim}
 \end{figure} 
 
@@ -280,7 +280,7 @@ De acordo com \cite{istarwiki20}, os tipos de \textit{links} são definidos como
 \begin{figure}[h!]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=1.0]{figuras/decomposicaoLink.PNG}
-		\caption{Notação gráfica para o \textit{link} de decomposição. Adaptado de \cite{istarwiki20}}
+		\caption{Notação gráfica para o \textit{link} de decomposição. Adaptado de \cite{istarwiki20}.}
 		\label{decomposicaoLink}
 \end{figure}
 
@@ -554,7 +554,10 @@ Neste capítulo foi descrito todas as ferramentas que deram suporte para a escri
 
 \chapter{Metodologia}
 
+Neste capítulo, é apresentado a classificação de pesquisa na secção \ref{sec:classificacaoDaPesquisa}, onde detalha-se a pesquisa de acordo com seus tipos de classificações como abordagem de pesquisa, natureza de pesquisa, objetivos de pesquisa e procedimentos técnicos de pesquisa. E a seção \ref{sec:procedimentosMetodológicos} apresenta os procedimentos metodológicos para o desenvolvimento dessa monografia, onde detalha-se o fluxo de atividades e o cronograma seguido tanto para o TCC1 e TCC2.  
+
 \section{Classificação da pesquisa}
+\label{sec:classificacaoDaPesquisa}
 
 A pesquisa científica pode ser classificada de acordo com sua abordagem, sua natureza, seus objetivos e seus procedimentos técnicos \cite{gerhardt2009metodos}. O objetivo desta seção é detalhar os tipos de classificações de pesquisa utilizados no desenvolvimento desta monografia. 
 
@@ -585,6 +588,7 @@ A \textbf{pesquisa bibliográfica} é um dos procedimentos técnicos de pesquisa
 Outro procedimento técnico de pesquisa adotado é a \textbf{pesquisa ação}, pois se trata de uma participação planejada do ator em uma situação problemática a ser investigada \cite{fonseca2002metodologia}. O ator participa ativamente do levantamento adquirindo consigo uma série de conhecimentos que servirão como base para construção do catálogo de segurança e que em tempo de execução do TCC2 será validado, através do desenvolvimento de uma solução de software utilizando o padrão arquitetural MVC. 
 
 \section{Procedimentos Metodológicos}
+\label{sec:procedimentosMetodológicos}
 
 Para o desenvolvimento da monografia foi realizado várias atividades, essas atividades foram então organizadas como um processo de desenvolvimento da monografia. Como apresentado nas figuras \ref{PDM-TCC1} e \ref{PDM-TCC2}. 
 
@@ -736,7 +740,7 @@ O papel de cada RNFs dentro do catálogo possui uma função específica, para `
 
 O RNF ``controle de acesso`` é uma especificidade de todas as especificidades de precisão, pois procura-se garantir a consistência e precisão nas dimensões de dados e componentes dentro do padrão arquitetural MVC. Portanto, as especificações desse RNF são juntamente (i) ``controle de acesso de dados`` e ``(ii) ``controle de acesso de componentes``.
 
-Para completude é a garantia de que o RNFs esteja completo e não ambíguo.
+Para ``completude`` é a garantia de que o RNFs esteja completo e não ambíguo.
 
 \subsection{Confidencialidade}
 
@@ -746,11 +750,42 @@ Como o foco é a parte arquitetural e como ocorrem os impactos entre os RNFs de 
 
 Para ``confidencialidade interna e secreta``, se aplica o mesmo conceito da ``confidencialidade interna``, exceto que a integridade da informação deve ser mantida a qualquer custo, e a ocorrência de um determinado ataque ou erro causa grandes danos em quem mantém a aplicação.
 
-Para ``confidencialidade interna e confidencial``, aplica-se os mesmos conceitos das anteriores, exceto se a ocorrência de um determinado ataque ou erro pode causar vantagens a concorrentes e perda de usuários e clientes. 
+Para ``confidencialidade interna e confidencial``, aplica-se os mesmos conceitos das anteriores, exceto se a ocorrência de um determinado ataque ou erro pode causar vantagens a concorrentes, perda de usuários e clientes. 
+
+\pagebreak
+
 \section{Gráfico de interdependência entre metas flexíveis - SIGs}
 
-Os subtipos de conceitos que compõem a definição de segurança são abstraídos e tratados como metas flexíveis. Para então serem modelados e tratados no SIG.
+Os subtipos de conceitos que compõem a definição de segurança são abstraídos e tratados como metas flexíveis, para então serem modelados e analisado o impacto entre eles, essa seção possui o intuito de detalhar cada nó do SIG, para isso o gráfico foi reduzido em pequenas partes, para facilitar o entendimento do leitor.
 
+Entende-se no grafo o tipo [\textbf{dados}], as informações contidas nas bases de dados e os valores utilizados como parâmetros, e retornos de métodos dentro das camadas do padrão MVC. E o tipo [\textbf{arquitetural}], as estruturas dos componentes que compões o MVC. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/SIG-SO-e-Disponibilidade.PNG}
+	\caption{Decomposição de segurança para disponibilidade e segurança operancional}
+	\label{DecomposicaoDisponibilidade}
+\end{figure}
+
+Como apresentado na figura \ref{DecomposicaoDisponibilidade}, a de ``disponibildade[dados]`` pode ser decomposta em duas operacionalizações, baseado em \cite{affleck2012supporting}, e possui um \textit{link} de contribuição, representando uma contribuição positiva com ``acompanhamento de informações (\textit{logs}) [arquitetural,dados]``, pois a disponibilidade dos dados, podem constituir a geração dos \textit{logs}, tanto para verificação do comportamento entre os componentes dentro da arquitetura, quanto para as informações de entrada do usuário, logo a decomposição pode ser descrita pela expressão\footnote[1]{Os tipos de contribuições serão expressados no inglês conforme a tabela \ref{tiposDeContribuições}.} \ref{eq:disponibilidade}.
+
+\pagebreak
+
+\begin{eqnarray}
+\label{eq:disponibilidade}
+\textrm{duplicar servido[dados] AND}  \nonumber\\
+\textrm{espelhar banco de dados[dados] AND} \nonumber \\
+\textrm{SATISFAZ disponibilidade[dados]} 
+\end{eqnarray}
+
+e o impacto de ``disponibilidade[dados]`` sobre ``acompanhamento de informações(\textit{logs})[arquitetural,dados]`` pela expressão
+
+
+\begin{eqnarray}
+\label{eq:disponibilidadeImpacto}
+\textrm{disponibilidade[dados]}  \nonumber\\
+\textrm{SOME+ acompanhamento de informações (logs)[arquitetural,dados]} 
+\end{eqnarray}
 \section{Resumo do capítulo}
 
 \chapter{Considerações finais}
