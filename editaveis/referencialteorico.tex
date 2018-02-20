@@ -5,7 +5,7 @@ Neste capítulo, será apresentado os conceitos teóricos utilizados como base p
 
 Antes de entender os conceitos relevantes para o desenvolvimento do catálogo é importante entender a definição de software, e segundo \cite{sommerville2003engenharia}, pode ser entendido como, programas de computador e toda documentação associada. E para realização do desenvolvimento do software da maneira mais correta possível, existe a Engenharia de Software que preocupa-se com todos os aspectos da produção \cite{sommerville2003engenharia}. 
 
-A figura \ref{BigPicture}, apresenta a visão geral da construção do catálogo, partindo da Engenharia de Software e apoiando principalmente em duas disciplinas: a (i) Engenharia de Requisitos, que compõe-se de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, essa disciplina será brevemente detalhada na seção \ref{sec:requisitos}, então, entramos no contexto da orientação à meta, que trata dos requisitos funcionais e não funcionais como metas a serem alcançadas, será detalhado na subseção \ref{subsec:orientacaoMeta}. Como essa monografia trata dos RNFs, para elaboração do catálogo, logo na subseção \ref{subsec:requisitosNaoFuncionais} será apresentado conceitos sobre o que são os RNFs. Portando a seção seguinte \ref{sec:NFR} será detalhado o NFR \textit{framework}, para modelar e analisar as interdependências entre os RNFs, e (ii) Desenho de software, uma área da Engenharia de Software que possui como uma de suas preocupações o planejamento e a definição do padrão arquitetural a ser utilizado, os conceitos de arquitetura de software e do padrão arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e subseção \ref{subsec:mvc}.
+A Figura \ref{BigPicture}, apresenta a visão geral da construção do catálogo, partindo da Engenharia de Software e apoiando principalmente em duas disciplinas: a (i) Engenharia de Requisitos, que compõe-se de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, essa disciplina será brevemente detalhada na seção \ref{sec:requisitos}, então, entramos no contexto da orientação à meta, que trata dos requisitos funcionais e não funcionais como metas a serem alcançadas, será detalhado na subseção \ref{subsec:orientacaoMeta}. Como essa monografia trata dos RNFs, para elaboração do catálogo, logo na subseção \ref{subsec:requisitosNaoFuncionais} será apresentado conceitos sobre o que são os RNFs. Portando a seção seguinte \ref{sec:NFR} será detalhado o NFR \textit{framework}, para modelar e analisar as interdependências entre os RNFs, e (ii) Desenho de software, uma área da Engenharia de Software que possui como uma de suas preocupações o planejamento e a definição do padrão arquitetural a ser utilizado, os conceitos de arquitetura de software e do padrão arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e subseção \ref{subsec:mvc}.
 
 \begin{figure}[h!]
 	\centering
@@ -50,7 +50,7 @@ Nas definições do GORE, existem as metas que são componentes essenciais, pois
 
 \pagebreak
 
- Através da figura \ref{Gore}, pode-se entender como são os comportamentos das metas no GORE. Representada pelo simbolo de uma nuvem, uma meta, quando está sob a responsabilidade de um único software, essa meta pode-se tornar um requisito, de forma semelhante quando essa meta, está sob responsabilidade de um ambiente, ela pode tornar-se uma suposição, diferente de um requisito as suposições não podem aplicadas pelo software, mas podem ser satisfeitas devido as normas, regulamentos organizacionais e leis físicas \cite{van2001goal}. Esta monografia, possui foco apenas nas responsabilidades voltadas ao software.
+ Através da Figura \ref{Gore}, pode-se entender como são os comportamentos das metas no GORE. Representada pelo simbolo de uma nuvem, uma meta, quando está sob a responsabilidade de um único software, essa meta pode-se tornar um requisito, de forma semelhante quando essa meta, está sob responsabilidade de um ambiente, ela pode tornar-se uma suposição, diferente de um requisito as suposições não podem aplicadas pelo software, mas podem ser satisfeitas devido as normas, regulamentos organizacionais e leis físicas \cite{van2001goal}. Esta monografia, possui foco apenas nas responsabilidades voltadas ao software.
 
 
 Existem diversos \textit{frameworks} orientados à metas, os principais  são o NFR \textit{Framework} \cite{chung2012non} e o i* \cite{istarwiki20}, esses \textit{frameworks} são detalhados nas seções \ref{sec:NFR} e \ref{sec:i*}, respectivamente.
@@ -72,7 +72,7 @@ Júlio Leite, afirma em sua pesquisa que os RNFs impactam o produto software em 
 Os RNFs devem ser analisados em toda sua magnitude para o desenvolvimento e manutenção de um produto de software, sendo importante analisar os possíveis conflitos que podem ser gerados com outros RNFs e com requisitos funcionais, esses conflitos se não identificados em uma fase inicial do processo de desenvolvimento do software podem acarretar em problemas futuros, durante as atividades de implementação e implantação do software \cite{cysneiros1997definindo}. 
 
 
-As classes de NFRs \cite{eckhardt2016non} podem ser compreendidas como subtipos dos atributos de qualidade da tabela \ref{AtributosDeQualidade}, onde são definidos de acordo com a \cite{organizacion2011iso}. 
+As classes de NFRs \cite{eckhardt2016non} podem ser compreendidas como subtipos dos atributos de qualidade da Tabela \ref{AtributosDeQualidade}, onde são definidos de acordo com a \cite{organizacion2011iso}. 
 
 \begin{table}[h!]
 	\centering
@@ -104,7 +104,7 @@ O NFR \textit{Framework} utiliza o conceito de metas flexíveis, que por defini�
 
 \pagebreak
 
-A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de uma nuvem, conforme apresentado pela figura \ref{fig01}. Esse simbolo, possui pequenas variações na forma, que representam uma \textbf{operacionalização} (nuvem em negrito), e também uma \textbf{reivindicação} (nuvem tracejada). Mais adiante na figura \ref{exemploNFR} é apresentada a decomposição de uma meta flexível em outras metas.  
+A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de uma nuvem, conforme apresentado pela Figura \ref{fig01}. Esse simbolo, possui pequenas variações na forma, que representam uma \textbf{operacionalização} (nuvem em negrito), e também uma \textbf{reivindicação} (nuvem tracejada). Mais adiante na Figura \ref{exemploNFR} é apresentada a decomposição de uma meta flexível em outras metas.  
 
 \begin{figure}[h!]
 	\centering
@@ -125,7 +125,7 @@ Para facilitar no entendimento das decisões tomadas, a meta flexível possui \t
 
 As relações que as metas flexíveis possuem uma com as outras é estabelecida através de \textit{links} de interdependências, sendo esses \textit{links} que realizam o registro da decomposição das metas flexíveis em metas flexíveis mais específicas (filhos). De certa forma, a decomposição em outras metas, contribui para o nível de satisfação da meta flexível mais genérica (pai).
 
-Os \textit{links} de interdependências também podem ser entendidos como tipos de contribuições,e possuem uma notação simbólica para cada tipo, e cada tipo possui um significado, esses tipos de contribuições são apresentados na tabela \ref{tiposDeContribuições} adaptado de  \cite{chung2012non}.
+Os \textit{links} de interdependências também podem ser entendidos como tipos de contribuições,e possuem uma notação simbólica para cada tipo, e cada tipo possui um significado, esses tipos de contribuições são apresentados na Tabela \ref{tiposDeContribuições} adaptado de  \cite{chung2012non}.
 
 
 
@@ -157,7 +157,7 @@ Os \textit{links} de interdependências também podem ser entendidos como tipos 
 
 \pagebreak
 
-Os \textit{links} entre as metas flexíveis, representam a contribuição que uma meta flexível tem com outra meta flexível, ou meta flexível de operacionalização, ou meta flexível de reivindicação, logo, a figura \ref{catalogoDeAvaliação} apresenta a forma como as \textit{labels} são propagadas, de acordo com seu tipo de relacionamento. A propagação das \textit{labels}, se aplica a todos os tipos de metas flexíveis. 
+Os \textit{links} entre as metas flexíveis, representam a contribuição que uma meta flexível tem com outra meta flexível, ou meta flexível de operacionalização, ou meta flexível de reivindicação, logo, a Figura \ref{catalogoDeAvaliação} apresenta a forma como as \textit{labels} são propagadas, de acordo com seu tipo de relacionamento. A propagação das \textit{labels}, se aplica a todos os tipos de metas flexíveis. 
 
 \begin{figure}[h!]
 	\centering
@@ -168,7 +168,7 @@ Os \textit{links} entre as metas flexíveis, representam a contribuição que um
 
 \pagebreak
 
-A figura \ref{exemploNFR} apresenta uma decomposição de uma meta flexível em outras metas de mesma natureza. Consideramos, nesse exemplo, o RNF: “manter as contas com boa segurança”. Usando a notação do NFR \textit{Framework}, representou-se a meta flexível  “segurança de contas”, no nível mais generalista do grafo. Em segundo nível, são especificadas as principais metas flexíveis que merecem ser consideradas para que a meta generalista seja "satisfeita", no caso: “Integridade de contas”, “Confidencialidade de contas” e “Disponibilidade de contas” \cite{chung2012non}.
+A Figura \ref{exemploNFR} apresenta uma decomposição de uma meta flexível em outras metas de mesma natureza. Consideramos, nesse exemplo, o RNF: “manter as contas com boa segurança”. Usando a notação do NFR \textit{Framework}, representou-se a meta flexível  “segurança de contas”, no nível mais generalista do grafo. Em segundo nível, são especificadas as principais metas flexíveis que merecem ser consideradas para que a meta generalista seja "satisfeita", no caso: “Integridade de contas”, “Confidencialidade de contas” e “Disponibilidade de contas” \cite{chung2012non}.
 
 \begin{figure}[h!]
 	\centering
@@ -197,7 +197,7 @@ Com a utilização do \textit{framework} é possível representar, por meio de s
 \subsection{Modelo de Dependência Estratégica - SD}
 \label{subsec:SD}
 
-O modelo SD é utilizado para expressar através de uma rede de relacionamentos estratégicos e intencionais a relação entre os atores em um contexto organizacional. Em sua modelagem o modelo utiliza um conjunto de nós e ligações, onde cada nó representa um ator e cada ligação entre dois atores indica que um determinado ator depende de outro, para que um objetivo possa ser atingido \cite{istarwiki20}. Os atores e suas dependências podem ser representados de acordo com os símbolos das figuras  \ref{atoresIstar} e \ref{dependenciaIstar}.
+O modelo SD é utilizado para expressar através de uma rede de relacionamentos estratégicos e intencionais a relação entre os atores em um contexto organizacional. Em sua modelagem o modelo utiliza um conjunto de nós e ligações, onde cada nó representa um ator e cada ligação entre dois atores indica que um determinado ator depende de outro, para que um objetivo possa ser atingido \cite{istarwiki20}. Os atores e suas dependências podem ser representados de acordo com os símbolos das Figuras  \ref{atoresIstar} e \ref{dependenciaIstar}.
 
 \begin{figure}[h!]
 	\centering
@@ -232,7 +232,7 @@ Os tipos de dependências são definidos por \cite{istarwiki20} como:
 	\item \textbf{Recurso}: Representa uma entidade física ou informativa, presupõe-se então que não existe nenhum problema ou questões abertas sobre como a recurso será alcançado. 
 \end{itemize}
 
-A partir das definições dos tipos de dependência e dos atores é possível modelar a relação de dependência entre dois ou mais atores. Como apresentado no exemplo da figura \ref{exemploTipoDeDepencia}, onde, na modelagem existem dois atores \textbf{Titular do cartão} e \textbf{Banco} e é possível perceber a existência dos 4 tipos de dependência: dependência por recurso, dependência por tarefa, dependência por meta flexível e dependência por meta.  
+A partir das definições dos tipos de dependência e dos atores é possível modelar a relação de dependência entre dois ou mais atores. Como apresentado no exemplo da Figura \ref{exemploTipoDeDepencia}, onde, na modelagem existem dois atores \textbf{Titular do cartão} e \textbf{Banco} e é possível perceber a existência dos 4 tipos de dependência: dependência por recurso, dependência por tarefa, dependência por meta flexível e dependência por meta.  
 
 \begin{figure}[h!]
 	\centering
@@ -244,11 +244,11 @@ A partir das definições dos tipos de dependência e dos atores é possível mo
 \begin{itemize}
 	\item \textbf{Dependência por recurso}: Neste tipo de dependência, o \textit{depender} depente do \textit{dependee} para que ocorra a disponibilidade do recurso. Ao determinar essa dependência, o \textit{depender} pode utilizar a entidade como um recurso \cite{istarwiki20}. No contexto da figura \ref{exemploTipoDeDepencia}, esse elo existe através do recurso \textbf{conta}, onde o titular do cartão é o \textit{depender} e pode utilizar o recurso da conta bancária.
 	
-	\item \textbf{Dependência por tarefa}: Neste tipo de dependência, o \textit{depender} depente do \textit{dependee} para realização da tarefa. A tarefa pode ser entendida como uma restrição imposta pelo \textit{depender} ao \textit{dependee}, onde o \textit{dependee} possui certa liberdade de ação dentro dessas restrições \cite{istarwiki20}. No contexto da figura \ref{exemploTipoDeDepencia}, esse elo existe através da tarefa \textbf{Realizar pagamento}, onde o titular do cartão é o \textit{depender} e ele depende da disponibilização do banco para poder efetuar algum pagamento ao banco. 
+	\item \textbf{Dependência por tarefa}: Neste tipo de dependência, o \textit{depender} depente do \textit{dependee} para realização da tarefa. A tarefa pode ser entendida como uma restrição imposta pelo \textit{depender} ao \textit{dependee}, onde o \textit{dependee} possui certa liberdade de ação dentro dessas restrições \cite{istarwiki20}. No contexto da Figura \ref{exemploTipoDeDepencia}, esse elo existe através da tarefa \textbf{Realizar pagamento}, onde o titular do cartão é o \textit{depender} e ele depende da disponibilização do banco para poder efetuar algum pagamento ao banco. 
 	
-	\item \textbf{Dependência por meta flexível}: Neste tipo de dependência, o \textit{depender} depente do \textit{dependee} para que alguma tarefa seja realizada para que a meta flexível possa ser "satisfeita a contento" ou "razoavelmente satisfeita" \cite{istarwiki20}. Onde o \textit{depender} determina se a meta flexível será alcançada ou não, utilizando as habilidades e conhecimentos do \textit{dependee} \cite{napolitano2009estrategia}. No contexto da figura \ref{exemploTipoDeDepencia}, esse elo existe através da meta flexível \textbf{Titular da conta satisfeito}, onde o titular do cartão é o \textit{depender} e ele depende da forma como o serviço do banco é prestado para que o \textit{depender} possa decidir se a meta flexível será alcançada.
+	\item \textbf{Dependência por meta flexível}: Neste tipo de dependência, o \textit{depender} depente do \textit{dependee} para que alguma tarefa seja realizada para que a meta flexível possa ser "satisfeita a contento" ou "razoavelmente satisfeita" \cite{istarwiki20}. Onde o \textit{depender} determina se a meta flexível será alcançada ou não, utilizando as habilidades e conhecimentos do \textit{dependee} \cite{napolitano2009estrategia}. No contexto da Figura \ref{exemploTipoDeDepencia}, esse elo existe através da meta flexível \textbf{Titular da conta satisfeito}, onde o titular do cartão é o \textit{depender} e ele depende da forma como o serviço do banco é prestado para que o \textit{depender} possa decidir se a meta flexível será alcançada.
 	
-	\item \textbf{Dependência por meta}: Neste tipo de dependência, o \textit{depender} depente do \textit{dependee} para que um estado no mundo real seja alcançado. O \textit{dependee} possui total liberdade para tomar as decisões necessárias para atingir a meta. O \textit{depender} não se preocupa com o quanto o \textit{dependee} destina-se em satisfazer a meta \cite{istarwiki20}. No contexto da figura \ref{exemploTipoDeDepencia}, esse elo existe através da meta que a \textbf{Conta seja gerenciada}, onde o banco é o \textit{depender}, pois, espera-se que o titular do cartão tenha capacidade de gerir sua própria conta, através dos recursos fornecidos pelo banco. 
+	\item \textbf{Dependência por meta}: Neste tipo de dependência, o \textit{depender} depente do \textit{dependee} para que um estado no mundo real seja alcançado. O \textit{dependee} possui total liberdade para tomar as decisões necessárias para atingir a meta. O \textit{depender} não se preocupa com o quanto o \textit{dependee} destina-se em satisfazer a meta \cite{istarwiki20}. No contexto da Figura \ref{exemploTipoDeDepencia}, esse elo existe através da meta que a \textbf{Conta seja gerenciada}, onde o banco é o \textit{depender}, pois, espera-se que o titular do cartão tenha capacidade de gerir sua própria conta, através dos recursos fornecidos pelo banco. 
 \end{itemize}
 
 \subsection{Modelo de Razão Estratégica - SR}
@@ -274,7 +274,7 @@ De acordo com \cite{istarwiki20}, os tipos de \textit{links} são definidos como
 \end{figure} 
 
 \begin{itemize}	
-	\item \textbf{\textit{link} de decomposição}: Uma tarefa pode ser decomposta em submeta, em subtarefa, em recurso ou em meta flexível. A representação gráfica para um link de decomposição é um segmento de reta com um pequeno corte perpendicular, como apresentado na figura \ref{decomposicaoLink}.    
+	\item \textbf{\textit{link} de decomposição}: Uma tarefa pode ser decomposta em submeta, em subtarefa, em recurso ou em meta flexível. A representação gráfica para um link de decomposição é um segmento de reta com um pequeno corte perpendicular, como apresentado na Figura \ref{decomposicaoLink}.    
 \end{itemize}	
 
 \begin{figure}[h!]
@@ -285,7 +285,7 @@ De acordo com \cite{istarwiki20}, os tipos de \textit{links} são definidos como
 \end{figure}
 
 \begin{itemize}		
-	\item \textbf{\textit{links} de contribuição}: Os tipos de contribuições\footnote[1]{A definição de cada tipo de contribuição é a mesma dada por Chung em \cite{chung2012non}, como visto na tabela \ref{tiposDeContribuições} que detalha os tipos de contribuições para o NFR Framework.} entre as metas flexíveis são: \textit{Make}, \textit{Some+}, \textit{Help}, \textit{Unknown}, \textit{Break}, \textit{Some-}, \textit{Hurt}, \textit{Or} e \textit{And}. 
+	\item \textbf{\textit{links} de contribuição}: Os tipos de contribuições\footnote[1]{A definição de cada tipo de contribuição é a mesma dada por Chung em \cite{chung2012non}, como visto na Tabela \ref{tiposDeContribuições} que detalha os tipos de contribuições para o NFR Framework.} entre as metas flexíveis são: \textit{Make}, \textit{Some+}, \textit{Help}, \textit{Unknown}, \textit{Break}, \textit{Some-}, \textit{Hurt}, \textit{Or} e \textit{And}. 
 \end{itemize}
 
 
@@ -380,7 +380,7 @@ A \textit{Model} realiza o encapsulamento dos dados da aplicação, e detalha to
 
 É também na \textit{Model} onde fica os registros de todos os outros componentes, esses registros são mantidos através do mecanismo de troca de propagação \cite{buschmann1996system}. 
 
-A tabela \ref{responsabilidadeColaboradorModel} resume todos os aspectos da \textit{Model}, tratando de suas responsabilidades e seus colaboradores. 
+A Tabela \ref{responsabilidadeColaboradorModel} resume todos os aspectos da \textit{Model}, tratando de suas responsabilidades e seus colaboradores. 
 
 \begin{table}[h!]
 	\centering
@@ -397,7 +397,7 @@ A tabela \ref{responsabilidadeColaboradorModel} resume todos os aspectos da \tex
 
 A \textit{View} é o componente responsável por apresentar as informações ao usuário, recuperando os dados da \textit{Model} através de procedimentos de atualização que são ativados pelo mecanismo de propagação de mudanças. A \textit{View} também possui um relacionamento de 1 para 1, com a \textit{Controller}, pois fornece procedimentos para a \textit{Controller} manipular as exibições da \textit{View} \cite{buschmann1996system}.
 
-A tabela \ref{responsabilidadeColaboradorView} resume todos os aspectos da \textit{View}, tratando de suas responsabilidades e seus colaboradores. 
+A Tabela \ref{responsabilidadeColaboradorView} resume todos os aspectos da \textit{View}, tratando de suas responsabilidades e seus colaboradores. 
 
 \begin{table}[h!]
 	\centering
@@ -427,7 +427,7 @@ A \textit{Controller} trata as entradas do usuário como eventos, as controlador
 
 \subsubsection{Fluxo de interação entre os componentes}
 
-Tão importante quanto a compreensão de cada componente é compreender o fluxo de interação entre esses componentes e suas interações diretas e indiretas. A figura \ref{DiagramaDeClasseMVC} representa os três componentes e suas interações, através da notação da UML, onde, dentro de um pacote da \textit{Model} existe uma classe exemplo, cuja o nome é, \textit{Model.Class} possuindo relações de contribuição com o pacote \textit{Controller}, através da classe \textit{ManipuladoraDeDados.Class}. De forma semelhante existe a relação entre a \textit{Controller} e a \textit{View} entre as classes  \textit{ManipuladoraDeDados.Class} e \textit{GUI.Class}. Os nomes atribuídos na diagramação deste diagrama de classes, são para auxiliar a compreensão do diagrama. 
+Tão importante quanto a compreensão de cada componente é compreender o fluxo de interação entre esses componentes e suas interações diretas e indiretas. A Figura \ref{DiagramaDeClasseMVC} representa os três componentes e suas interações, através da notação da UML, onde, dentro de um pacote da \textit{Model} existe uma classe exemplo, cuja o nome é, \textit{Model.Class} possuindo relações de contribuição com o pacote \textit{Controller}, através da classe \textit{ManipuladoraDeDados.Class}. De forma semelhante existe a relação entre a \textit{Controller} e a \textit{View} entre as classes  \textit{ManipuladoraDeDados.Class} e \textit{GUI.Class}. Os nomes atribuídos na diagramação deste diagrama de classes, são para auxiliar a compreensão do diagrama. 
 
 \begin{figure}[h!]
 	\centering
@@ -438,7 +438,7 @@ Tão importante quanto a compreensão de cada componente é compreender o fluxo 
 
 \pagebreak
 
-A figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que representa o fluxo dos eventos em um cenário exemplo, onde a \textit{Controller} interage diretamente com a \textit{Model} e \textit{View}, onde o usuário entra com alguma informação e aguarda o retorno da aplicação. 
+A Figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que representa o fluxo dos eventos em um cenário exemplo, onde a \textit{Controller} interage diretamente com a \textit{Model} e \textit{View}, onde o usuário entra com alguma informação e aguarda o retorno da aplicação. 
 
 
 \begin{figure}[h!]
@@ -469,9 +469,9 @@ Portanto, para a definição seguindo os fundamentos de \cite{chung2012non}, seg
 \end{itemize}
 
 
-O CIA pode ser abstraído em metas flexíveis de segurança, logo depois, capturados e organizados em um catálogo de segurança, promovendo um conjunto rico de alternativas e pontos de verificação para se proteger contra a negligencia de pontos relevantes, e para a segurança da informação em uma aplicação. Como apresentado na figura \ref{catalogoSegurancaChung}, onde abaixo, de cada conceito chave para segurança exitem seus subtipos. 
+O CIA pode ser abstraído em metas flexíveis de segurança, logo depois, capturados e organizados em um catálogo de segurança, promovendo um conjunto rico de alternativas e pontos de verificação para se proteger contra a negligencia de pontos relevantes, e para a segurança da informação em uma aplicação. Como apresentado na Figura \ref{catalogoSegurancaChung}, onde abaixo, de cada conceito chave para segurança exitem seus subtipos. 
 
-Apresentados em  verde na figura \ref{catalogoSegurancaChung} estão outras características dos requisitos de segurança, sendo um dos mais relevantes o ``operacional``, que possui como subtipo ``segurança operacional`` que refere-se diretamente a segurança da informação \cite{chung2012non}.
+Apresentados em  verde na Figura \ref{catalogoSegurancaChung} estão outras características dos requisitos de segurança, sendo um dos mais relevantes o ``operacional``, que possui como subtipo ``segurança operacional`` que refere-se diretamente a segurança da informação \cite{chung2012non}.
 
 Os subtipos das ``características dos RNF`` de acordo com \cite{chung2012non} podem ser ``ciclo de vida``, ``operacional \footnote[1]{Operação realizada por uma aplicação de software em tempo de execução \cite{chung2012non}.}``, ``desenvolvimento \footnote[2]{Estágios de desenvolvimento \cite{chung2012non}.}``, ``interna-externa \footnote[3]{Refere-se a confidencialidade dos itens de informação do sistema \cite{chung2012non}.}``, ``interna `` e ``externa``.
 
@@ -499,7 +499,7 @@ Se tratando de confidencialidade em \cite{reis10classificaccao} é definido conc
 	\item \textbf{Secreta}: Tipo de informação interna, restrita a um conjunto específico de usuários, onde, a disponibilidade tanto ao público externo quando ao público interno não definido, pode causar grandes danos. A integridade dessa informação deve ser mantida a qualquer custo.
 \end{itemize} 
 
-A confidencialidade possui os subtipos ``confidencialidade interna`` e ``confidencialidade externa`` de acordo com a figura \ref{catalogoSegurancaChung}.
+A confidencialidade possui os subtipos ``confidencialidade interna`` e ``confidencialidade externa`` de acordo com a Figura \ref{catalogoSegurancaChung}.
  
 
 \subsection{Integridade}
@@ -525,6 +525,7 @@ Definida através dos conceitos precisão e completude, por \cite{chung2012non},
 
 
 \chapter{Suporte Tecnológico}
+\label{chap:suporteTecnologico}
 
 Neste capítulo, é apresentado as ferramentas de software utilizadas para dar suporte ao desenvolvimento da monografia. A seção \ref{sec:ferramentasModelagem}, apresenta uma breve descrição das ferramentas utilizadas na modelagem dos diagramas e mapas mentais presentes na monografia e a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas de suporte à escrita, e para a realização do controle de versão. 
 
@@ -553,6 +554,7 @@ Neste capítulo, é apresentado as ferramentas de software utilizadas para dar s
 Neste capítulo foi descrito todas as ferramentas que deram suporte para a escrita o desenvolvimento dessa monografia. Na seção \ref{sec:ferramentasModelagem} foi apresentada as versões e a utilização de cada ferramenta, e a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas utilizadas no desenvolvimento da parte escrita e o controle de versão da mesma. 
 
 \chapter{Metodologia}
+\label{chap:metodologia}
 
 Neste capítulo, é apresentado a classificação de pesquisa na secção \ref{sec:classificacaoDaPesquisa}, onde detalha-se a pesquisa de acordo com seus tipos de classificações como abordagem de pesquisa, natureza de pesquisa, objetivos de pesquisa e procedimentos técnicos de pesquisa. E a seção \ref{sec:procedimentosMetodológicos} apresenta os procedimentos metodológicos para o desenvolvimento dessa monografia, onde detalha-se o fluxo de atividades e o cronograma seguido tanto para o TCC1 e TCC2.  
 
@@ -590,7 +592,7 @@ Outro procedimento técnico de pesquisa adotado é a \textbf{pesquisa ação}, p
 \section{Procedimentos Metodológicos}
 \label{sec:procedimentosMetodológicos}
 
-Para o desenvolvimento da monografia foi realizado várias atividades, essas atividades foram então organizadas como um processo de desenvolvimento da monografia. Como apresentado nas figuras \ref{PDM-TCC1} e \ref{PDM-TCC2}. 
+Para o desenvolvimento da monografia foi realizado várias atividades, essas atividades foram então organizadas como um processo de desenvolvimento da monografia. Como apresentado nas Figuras \ref{PDM-TCC1} e \ref{PDM-TCC2}. 
 
 Pelas diretrizes do curso de graduação em Engenharia de Software é necessário à aprovação nas disciplinas de TCC1 e TCC2, logo as próximas seções detalham o fluxo de execução de atividades para concluir a monografia. 
 
@@ -663,7 +665,7 @@ As atividades são:
 
 \subsection{Cronograma das atividades de desenvolvimento da monografia}
 
-O planejamento com os meses de execução de cada atividade do processo de desenvolvimento da monografia seguem nas tabelas \ref{cronograma-tcc1} e \ref{cronograma-tcc2} respectivamente. 
+O planejamento com os meses de execução de cada atividade do processo de desenvolvimento da monografia seguem nas Tabelas \ref{cronograma-tcc1} e \ref{cronograma-tcc2} respectivamente. 
 
 \begin{table}[h!]
 	\centering
@@ -715,7 +717,7 @@ Neste capitulo foi detalhada a classificação da pesquisa de acordo com seus ti
 
 Um catálogo de tipos de segurança promove a engenheiros de requisitos e engenheiros de software, o entendimento das diferentes necessidades, se tratando dos domínios de segurança dos dados e segurança arquitetural de uma aplicação de software. Pois com base no catálogo, pode se escolher os conceitos de segurança que são mais relevantes para o desenvolvimento da aplicação.
 
-A figura \ref{catalogoDeTipos} apresenta o catálogo de tipos de segurança proposto por esta monografia, nele as caraterísticas externas dos RNFs de segurança foram descartadas, pois a presente monografia trata apenas como o mundo real pode prejudicar o software em questões arquiteturais, e que podem ou não gerar impacto sobre os consistência dos dados.    
+A Figura \ref{catalogoDeTipos} apresenta o catálogo de tipos de segurança proposto por esta monografia, nele as caraterísticas externas dos RNFs de segurança foram descartadas, pois a presente monografia trata apenas como o mundo real pode prejudicar o software em questões arquiteturais, e que podem ou não gerar impacto sobre os consistência dos dados.    
 
 As cores no catálogo são para facilitar o entendimento e identificar de onde, vem RNF mais genérico. 
 
@@ -726,13 +728,13 @@ As cores no catálogo são para facilitar o entendimento e identificar de onde, 
 	\label{catalogoDeTipos}
 \end{figure}
 
-Para ``disponibilidade`` apresentado em roxo escuto escuro na figura \ref{catalogoDeTipos}, se trata da proteção contra a interrupção dos serviços em execução, no momento em que o usuário estiver utilizando a aplicação, visando a disponibilidade das funções internas dentro da própria arquitetura do software. 
+Para ``disponibilidade`` apresentado em roxo escuto escuro na Figura \ref{catalogoDeTipos}, se trata da proteção contra a interrupção dos serviços em execução, no momento em que o usuário estiver utilizando a aplicação, visando a disponibilidade das funções internas dentro da própria arquitetura do software. 
 
-Já em ``segurança operacional`` apresentado em laranjado na figura \ref{catalogoDeTipos} e seu subtipo ``operação interna confidencial`` referindo-se diretamente a manutenção da segurança dos dados e componentes durante a execução do software. 
+Já em ``segurança operacional`` apresentado em laranjado na Figura \ref{catalogoDeTipos} e seu subtipo ``operação interna confidencial`` referindo-se diretamente a manutenção da segurança dos dados e componentes durante a execução do software. 
 
 \subsection{Integridade}
 
-Integridade e seus subtipos são representados no catálogo da figura \ref{catalogoDeTipos} através da cor roxo claro. 
+Integridade e seus subtipos são representados no catálogo da Figura \ref{catalogoDeTipos} através da cor roxo claro. 
 
 Como definido na subseção \ref{subsec:integridade} integridade, pode ser abstraída em dois subtipos, precisão e completude, onde precisão pode ser abstraída em mais 4 subtipos \cite{chung2012non}, que são relevantes para a manutenção do controle de acesso de usuários e da própria permissão de instanciação de objetos dentro das camadas do padrão arquitetural MVC. 
 
@@ -744,7 +746,7 @@ Para ``completude`` é a garantia de que o RNFs esteja completo e não ambíguo.
 
 \subsection{Confidencialidade}
 
-Confidencialidade e seus subtipos são representados no catálogo da figura \ref{catalogoDeTipos} através da cor azul. 
+Confidencialidade e seus subtipos são representados no catálogo da Figura \ref{catalogoDeTipos} através da cor azul. 
 
 Como o foco é a parte arquitetural e como ocorrem os impactos entre os RNFs de segurança, para os aspectos de confidencialidade foram levados em considerações, somente os que possuíam relevância interna onde, ``confidencialidade interna``, trata-se dos termos, métodos, e instâncias de classes dentro do padrão MVC, que devem ser utilizamos somente dentro da aplicação, e um determinado ataque ou erro interno não prejudica o mantenedor da aplicação.
 
@@ -767,13 +769,13 @@ Entende-se no grafo o tipo [\textbf{dados}], as informações contidas nas bases
 	\label{DecomposicaoDisponibilidade}
 \end{figure}
 
-Como apresentado na figura \ref{DecomposicaoDisponibilidade}, a de ``disponibildade[dados]`` pode ser decomposta em duas operacionalizações, baseado em \cite{affleck2012supporting}, e possui um \textit{link} de contribuição, representando uma contribuição positiva com ``acompanhamento de informações (\textit{logs}) [arquitetural,dados]``, pois a disponibilidade dos dados, podem constituir a geração dos \textit{logs}, tanto para verificação do comportamento entre os componentes dentro da arquitetura, quanto para as informações de entrada do usuário, logo a decomposição pode ser descrita pela expressão\footnote[1]{Os tipos de contribuições serão expressados no inglês conforme a tabela \ref{tiposDeContribuições}.} \ref{eq:disponibilidade}.
+Como apresentado na Figura \ref{DecomposicaoDisponibilidade}, a de ``disponibildade[dados]`` pode ser decomposta em duas operacionalizações, baseado em \cite{affleck2012supporting}, e possui um \textit{link} de contribuição, representando uma contribuição positiva com ``acompanhamento de informações (\textit{logs}) [arquitetural,dados]``, pois a disponibilidade dos dados, podem constituir a geração dos \textit{logs}, tanto para verificação do comportamento entre os componentes dentro da arquitetura, quanto para as informações de entrada do usuário, logo a decomposição pode ser descrita pela expressão\footnote[1]{Os tipos de contribuições serão expressados no inglês conforme a Tabela \ref{tiposDeContribuições}.} \ref{eq:disponibilidade}.
 
 \pagebreak
 
 \begin{eqnarray}
 \label{eq:disponibilidade}
-\textrm{duplicar servido[dados] AND}  \nonumber\\
+\textrm{duplicar servidor[dados] AND}  \nonumber\\
 \textrm{espelhar banco de dados[dados] AND} \nonumber \\
 \textrm{SATISFAZ disponibilidade[dados]} 
 \end{eqnarray}
@@ -789,3 +791,4 @@ e o impacto de ``disponibilidade[dados]`` sobre ``acompanhamento de informaçõe
 \section{Resumo do capítulo}
 
 \chapter{Considerações finais}
+\label{chap:consideracoesFinais}
