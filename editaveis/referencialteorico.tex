@@ -5,7 +5,7 @@ Neste capítulo, será apresentado os conceitos teóricos utilizados como base p
 
 Antes de entender os conceitos relevantes para o desenvolvimento do catálogo é importante entender a definição de software, e segundo \cite{sommerville2003engenharia}, pode ser entendido como, programas de computador e toda documentação associada. E para realização do desenvolvimento do software da maneira mais correta possível, existe a Engenharia de Software que preocupa-se com todos os aspectos da produção \cite{sommerville2003engenharia}. 
 
-A Figura \ref{BigPicture}, apresenta a visão geral da construção do catálogo, partindo da Engenharia de Software e apoiando principalmente em duas disciplinas: a (i) Engenharia de Requisitos, que compõe-se de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, essa disciplina será brevemente detalhada na seção \ref{sec:requisitos}, então, entramos no contexto da orientação à meta, que trata dos requisitos funcionais e não funcionais como metas a serem alcançadas, será detalhado na subseção \ref{subsec:orientacaoMeta}. Como essa monografia trata dos RNFs, para elaboração do catálogo, logo na subseção \ref{subsec:requisitosNaoFuncionais} será apresentado conceitos sobre o que são os RNFs. Portando a seção seguinte \ref{sec:NFR} será detalhado o NFR \textit{framework}, para modelar e analisar as interdependências entre os RNFs, e (ii) Desenho de software, uma área da Engenharia de Software que possui como uma de suas preocupações o planejamento e a definição do padrão arquitetural a ser utilizado, os conceitos de arquitetura de software e do padrão arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e subseção \ref{subsec:mvc}.
+A Figura \ref{BigPicture}, apresenta a visão geral da construção do catálogo, partindo da Engenharia de Software e apoiando principalmente em duas disciplinas: a (i) Engenharia de Requisitos, que compõe-se de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, essa disciplina será brevemente detalhada na seção \ref{sec:requisitos}, então, entramos no contexto da orientação à meta, que trata dos requisitos funcionais e não funcionais como metas a serem alcançadas, será detalhado na Subseção \ref{subsec:orientacaoMeta}. Como essa monografia trata dos RNFs, para elaboração do catálogo, logo na Subseção \ref{subsec:requisitosNaoFuncionais} será apresentado conceitos sobre o que são os RNFs. Portando a seção seguinte \ref{sec:NFR} será detalhado o NFR \textit{framework}, para modelar e analisar as interdependências entre os RNFs, e (ii) Desenho de software, uma área da Engenharia de Software que possui como uma de suas preocupações o planejamento e a definição do padrão arquitetural a ser utilizado, os conceitos de arquitetura de software e do padrão arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e subseção \ref{subsec:mvc}.
 
 \begin{figure}[h!]
 	\centering
@@ -254,7 +254,7 @@ A partir das definições dos tipos de dependência e dos atores é possível mo
 \subsection{Modelo de Razão Estratégica - SR}
 \label{subsec:SR}
 
-O modelo SR apresenta de forma gráfica, com vários tipos de nós (Meta, Tarefa, Recurso e Meta flexível)\footnote[1]{Os tipos de nós possuem as mesmas definições que os tipos de dependências no Modelo de Dependência Estratégica (SD) descritos na subseção \ref{subsec:SD}} e links (links de meio-fim, links de decomposição de tarefas e links de contribuição) que servem como estrutura representacional que expressam as razões por trás das dependências \cite{istarwiki20}.
+O modelo SR apresenta de forma gráfica, com vários tipos de nós (Meta, Tarefa, Recurso e Meta flexível)\footnote[1]{Os tipos de nós possuem as mesmas definições que os tipos de dependências no Modelo de Dependência Estratégica (SD) descritos na Subseção \ref{subsec:SD}} e links (links de meio-fim, links de decomposição de tarefas e links de contribuição) que servem como estrutura representacional que expressam as razões por trás das dependências \cite{istarwiki20}.
 
 O modelo tem o objetivo principal de representar de forma detalhada as estratégias internas dos atores, em função dos elementos do processo, das alternativas e das decisões por trás do processo, em que as metas são alcançadas, as tarefas são realizadas, os recursos disponibilizados e as metas flexíveis são refinadas e operacionalizadas \cite{napolitano2009estrategia}.  
 
@@ -366,7 +366,7 @@ A Tabela \ref{categoriasDePadroesArquiteturais} apresenta detalhadamente os quat
 
 \pagebreak
 
-Devido ao foco da monografia ser a construção de um catálogo de segurança para o padrão arquitetural MVC, a subseção \ref{subsec:mvc}, detalha este padrão arquitetural. 
+Devido ao foco da monografia ser a construção de um catálogo de segurança para o padrão arquitetural MVC, a Subseção \ref{subsec:mvc}, detalha este padrão arquitetural. 
 
 
 \subsection{MVC: Model-View-Controller}
@@ -527,17 +527,29 @@ Definida através dos conceitos precisão e completude, por \cite{chung2012non},
 \chapter{Suporte Tecnológico}
 \label{chap:suporteTecnologico}
 
-Neste capítulo, é apresentado as ferramentas de software utilizadas para dar suporte ao desenvolvimento da monografia. A seção \ref{sec:ferramentasModelagem}, apresenta uma breve descrição das ferramentas utilizadas na modelagem dos diagramas e mapas mentais presentes na monografia e a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas de suporte à escrita, e para a realização do controle de versão. 
+Neste Capítulo, é apresentado as ferramentas de software utilizadas para dar suporte ao desenvolvimento da monografia. A seção \ref{sec:ferramentasModelagem}, apresenta uma breve descrição das ferramentas utilizadas na modelagem dos diagramas e mapas mentais presentes na monografia e a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas de suporte à escrita, e para a realização do controle de versão. 
 
 \section{Ferramentas de modelagem}
 \label{sec:ferramentasModelagem}
 
 \begin{itemize}
-	\item \textbf{Astah Professional}: é uma ferramenta de modelagem de diagramas dinâmicos e estáticos, que suporta a UML 2.x, \textit{Entity Relationship Diagram} (ERD), \textit{Data Flow Diagram} (DFD), fluxogramas, mapas mentais, suportando a engenharia reversa para as linguagens Java, C\# e C++ \cite{astah}. A versão utilizada foi a v7.2.0 com licença de estudante, para modelagem dos diagramas da UML e mapas mentais.   
+	\item \textbf{Astah Professional}: é uma ferramenta de modelagem de diagramas dinâmicos e estáticos, que suporta a UML 2.x, \textit{Entity Relationship Diagram} (ERD), 
+	
+	\textit{Data Flow Diagram} (DFD), fluxogramas, mapas mentais, suportando a engenharia reversa para as linguagens Java, C\# e C++ \cite{astah}. A versão utilizada foi a v7.2.0 com licença de estudante, para modelagem dos diagramas da UML e mapas mentais.   
+	
 	\item \textbf{StarUML}: É um software \textit{open source} para modelagem de diagramas, para a UML/\textit{Model Driven Architecture} (MDA). A proposta da ferramenta e se tornar uma ferramenta gratuita que substitua as plataformas comerciais \cite{starUML}. A versão utilizada é a versão v1.0, pois suporta o \textit{plug-in} RE-Tools, que permite a modelagem do SIGs para o NFR Framework. 
+	
 	\item \textbf{OpenOME}: É uma ferramenta \textit{open source} de modelagem para apoiar a engenharia requisitos orientada à meta, orientada à agente e orientada à aspectos, ela promove ao desenvolvedor um vinculo entre os requisitos e as especificações e as fases do \textit{design} arquitetural \cite{openOME}. A versão utilizada é a v3.4.1, para modelagem na notação do i*. 
+	
 	\item \textbf{Xmind}: É um software proprietário para criação de mapas mentais e suporte na criação de \textit{brainstorming} \cite{xMind}. A versão utilizada é o XMind 8 Update 2, permitindo a criação de mapas mentais. 
-	\item \textbf{RE-Tools}: É um conjunto de ferramentas \textit{open source}, para a modelagem de requisitos em várias notações: (i) NFR Framework, i*, KAOS, \textit{Problem Frames}, UML e BPMN \cite{reTools}. A versão do \textit{plug-in} utilizada foi a v3.0.2, para modelagem do gráfico de SIGs.   
+	
+	\item \textbf{Bizagi Modeler}: É uma ferramenta gratuita utilizada para modelagem de processos de negócio, utilizando notação BPMN. É eleita pela comunidade a mais potente e fácil de utilizar do mercado. A versão utilizada é a versão 3.1, para a modelagem do processo de desenvolvimento da monografia \cite{bizagi}. 
+	
+	\item \textbf{RE-Tools}: É um conjunto de ferramentas \textit{open source} utilizado para a modelagem de diferentes aspectos das organizações e de seus sistemas, durante a realização das atividades da engenharia de requisitos, possuindo suporte para as notações do (i) NFR Framework, (ii) i*, (iii) \textit{Knowledge Acquisition in autOmated Specification} (KAOS), (iv) \textit{Problem Frames}, (v) UML e (vi) BPMN \cite{reTools} \cite{supakkul2012re}.
+	
+	Esse conjunto de ferramentas vem sendo utilizado para o ensino da Engenharia de Requisitos em cursos na Universidade de Trento (Itália), Universidade do Texas em Dallas (Estados Unidos) e na Universidade de Brasília (Brasil), além de estar envolvida em pesquisas no Brasil, Austrália, Canadá, China, França, Reino Unido e Estados Unidos \cite{supakkul2012re}. 
+	
+	Na monografia a versão do \textit{plug-in} utilizada foi a v3.0.2, para modelagem do gráfico de SIGs. 
 \end{itemize}
 
 \section{Ferramentas para desenvolvimento da monografia}
@@ -551,12 +563,12 @@ Neste capítulo, é apresentado as ferramentas de software utilizadas para dar s
 
 \section{Resumo do capítulo}
 
-Neste capítulo foi descrito todas as ferramentas que deram suporte para a escrita o desenvolvimento dessa monografia. Na seção \ref{sec:ferramentasModelagem} foi apresentada as versões e a utilização de cada ferramenta, e a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas utilizadas no desenvolvimento da parte escrita e o controle de versão da mesma. 
+Neste Capítulo foi descrito todas as ferramentas que deram suporte para a escrita o desenvolvimento dessa monografia. Na seção \ref{sec:ferramentasModelagem} foi apresentada as versões e a utilização de cada ferramenta, e a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas utilizadas no desenvolvimento da parte escrita e o controle de versão da mesma. 
 
 \chapter{Metodologia}
 \label{chap:metodologia}
 
-Neste capítulo, é apresentado a classificação de pesquisa na secção \ref{sec:classificacaoDaPesquisa}, onde detalha-se a pesquisa de acordo com seus tipos de classificações como abordagem de pesquisa, natureza de pesquisa, objetivos de pesquisa e procedimentos técnicos de pesquisa. E a seção \ref{sec:procedimentosMetodológicos} apresenta os procedimentos metodológicos para o desenvolvimento dessa monografia, onde detalha-se o fluxo de atividades e o cronograma seguido tanto para o TCC1 e TCC2.  
+Neste Capítulo, é apresentado a classificação de pesquisa na secção \ref{sec:classificacaoDaPesquisa}, onde detalha-se a pesquisa de acordo com seus tipos de classificações como abordagem de pesquisa, natureza de pesquisa, objetivos de pesquisa e procedimentos técnicos de pesquisa. E a seção \ref{sec:procedimentosMetodológicos} apresenta os procedimentos metodológicos para o desenvolvimento dessa monografia, onde detalha-se o fluxo de atividades e o cronograma seguido tanto para o TCC1 e TCC2.  
 
 \section{Classificação da pesquisa}
 \label{sec:classificacaoDaPesquisa}
@@ -585,7 +597,7 @@ Com base no objetivo de pesquisa é possível classificar essa pesquisa como \te
 
 \subsection{Procedimentos técnicos de pesquisa}
 
-A \textbf{pesquisa bibliográfica} é um dos procedimentos técnicos de pesquisa utilizado, como é evidente no capítulo \ref{chap:referencialTeorico}, onde é apresentado todo o levantamento teórico que serve de insumo para a execução dessa monografia. De acordo com \cite[p.35]{fonseca2002metodologia} “\textit{esse tipo de procedimento trata-se do levantamento de referências teóricas já analisadas, e publicadas por meio de escritos e eletrônicos, como livros, artigos científicos, páginas de web sites. Qualquer trabalho científico inicia-se com uma pesquisa bibliográfica, que permite ao pesquisador conhecer o que já estudou sobre o assunto}“.
+A \textbf{pesquisa bibliográfica} é um dos procedimentos técnicos de pesquisa utilizado, como é evidente no Capítulo \ref{chap:referencialTeorico}, onde é apresentado todo o levantamento teórico que serve de insumo para a execução dessa monografia. De acordo com \cite[p.35]{fonseca2002metodologia} “\textit{esse tipo de procedimento trata-se do levantamento de referências teóricas já analisadas, e publicadas por meio de escritos e eletrônicos, como livros, artigos científicos, páginas de web sites. Qualquer trabalho científico inicia-se com uma pesquisa bibliográfica, que permite ao pesquisador conhecer o que já estudou sobre o assunto}“.
  
 Outro procedimento técnico de pesquisa adotado é a \textbf{pesquisa ação}, pois se trata de uma participação planejada do ator em uma situação problemática a ser investigada \cite{fonseca2002metodologia}. O ator participa ativamente do levantamento adquirindo consigo uma série de conhecimentos que servirão como base para construção do catálogo de segurança e que em tempo de execução do TCC2 será validado, através do desenvolvimento de uma solução de software utilizando o padrão arquitetural MVC. 
 
@@ -736,9 +748,9 @@ Já em ``segurança operacional`` apresentado em laranjado na Figura \ref{catalo
 
 Integridade e seus subtipos são representados no catálogo da Figura \ref{catalogoDeTipos} através da cor roxo claro. 
 
-Como definido na subseção \ref{subsec:integridade} integridade, pode ser abstraída em dois subtipos, precisão e completude, onde precisão pode ser abstraída em mais 4 subtipos \cite{chung2012non}, que são relevantes para a manutenção do controle de acesso de usuários e da própria permissão de instanciação de objetos dentro das camadas do padrão arquitetural MVC. 
+Como definido na Subseção \ref{subsec:integridade} integridade, pode ser abstraída em dois subtipos, precisão e completude, onde precisão pode ser abstraída em mais 4 subtipos \cite{chung2012non}, que são relevantes para a manutenção do controle de acesso de usuários e da própria permissão de instanciação de objetos dentro das camadas do padrão arquitetural MVC. 
 
-O papel de cada RNFs dentro do catálogo possui uma função específica, para ``precisão`` tem-se os subtipos, (i) ``propriedade de precisão``, cuja o papel dentro do catálogo é manter que um objeto não seja instanciado por uma classe em uma camada diferente ao qual no possui relação para tal, dentro do padrão arquitetural MVC, e de forma análoga o (ii) ``valor de precisão``, visa a garantia de que os valores retornados pelas operações possuem a precisão desejada, dentro de uma mesma camada, ou quando ocorre o retorno de uma função para uma outra função em outra camada no MVC, a (iii) ``precisão de um para um``, possui foco na \textit{model} pois, verifica se existe uma única entidade do mundo real, ligada a um objeto instanciado pela model. e (iv) ``consistência interna``, promover que os valores do mundo real sejam correspondente aos valores, e abstrações contidas no sistema (entidades, métodos, dados)
+O papel de cada RNF dentro do catálogo possui uma função específica, para ``precisão`` tem-se os subtipos, (i) ``propriedade de precisão``, cuja o papel dentro do catálogo é manter que um objeto não seja instanciado por uma classe em uma camada diferente ao qual no possui relação para tal, dentro do padrão arquitetural MVC, e de forma análoga o (ii) ``valor de precisão``, visa a garantia de que os valores retornados pelas operações possuem a precisão desejada, dentro de uma mesma camada, ou quando ocorre o retorno de uma função para uma outra função em outra camada no MVC, a (iii) ``precisão de um para um``, possui foco na \textit{model} pois, verifica se existe uma única entidade do mundo real, ligada a um objeto instanciado pela model. e (iv) ``consistência interna``, promover que os valores do mundo real sejam correspondente aos valores, e abstrações contidas no sistema (entidades, métodos, dados)
 
 O RNF ``controle de acesso`` é uma especificidade de todas as especificidades de precisão, pois procura-se garantir a consistência e precisão nas dimensões de dados e componentes dentro do padrão arquitetural MVC. Portanto, as especificações desse RNF são juntamente (i) ``controle de acesso de dados`` e ``(ii) ``controle de acesso de componentes``.
 
@@ -780,7 +792,7 @@ Como apresentado na Figura \ref{DecomposicaoDisponibilidade}, a de ``disponibild
 \textrm{SATISFAZ disponibilidade[dados]} 
 \end{eqnarray}
 
-e o impacto de ``disponibilidade[dados]`` sobre ``acompanhamento de informações(\textit{logs})[arquitetural,dados]`` pela expressão
+e o impacto de ``disponibilidade[dados]`` sobre ``acompanhamento de informações(\textit{logs}) [arquitetural,dados]`` pela expressão
 
 
 \begin{eqnarray}
