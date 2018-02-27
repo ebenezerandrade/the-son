@@ -823,7 +823,25 @@ Para ``operação interna confidencial[dados]`` como definido por \cite{chung201
 	\label{DecomposicaoConfidencialidade}
 \end{figure}
 
+De acordo com a Figura \ref{DecomposicaoConfidencialidade}, a meta flexível ``confidencialidade[arquitetural]`` pode ser decomposta por ``confidencialidade interna[arquitetural,dados]``, se satisfeita a ``confidencialidade interna[arquitetural,dados]`` garante que a comunicação entre os componentes arquiteturais e os dados estão com o acesso restrito somente ao componentes internos da arquitetura. A ``confidencialidade interna[arquitetural,dados]`` pode decomposta em ``confidencialidade interna e secreta[arquitetural,dados]`` e ``confidencialidade interna e confidencial[arquitetural,dados]`` através do relacionamento do tipo AND.   
+
+\begin{eqnarray}
+\label{eq:confidencialidadeInterna}
+\textrm{confidencialidade interna e secreta[arquitetural,dados]}  \nonumber\\
+\textrm{AND confidencialidade interna e confidencial[arquitetural,dados]} \nonumber\\
+\textrm{SATISFAZ confidencialidade interna[arquitetural, dados]} 
+\end{eqnarray}
+
+\pagebreak
+
 \subsection{Decomposição de segurança em integridade}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/SIG-Integridade.PNG}
+	\caption{Decomposição de segurança para integridade.}
+	\label{DecomposicaoIntegridade}
+\end{figure}
 
 \subsection{SIG para segurança arquitetural completo}
 
