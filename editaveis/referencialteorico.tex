@@ -777,7 +777,9 @@ Para ``confidencialidade interna e confidencial``, aplica-se os mesmos conceitos
 
 Os subtipos de conceitos que compõem a definição de segurança são abstraídos e tratados como metas flexíveis, para então serem modelados e analisado o impacto entre eles, essa seção possui o intuito de detalhar cada nó do SIG, para isso o gráfico foi reduzido em pequenas partes, para facilitar o entendimento do leitor.
 
-Entende-se no grafo o tipo [\textbf{dados}], as informações contidas nas bases de dados e os valores utilizados como parâmetros, e retornos de métodos dentro das camadas do padrão MVC. E o tipo [\textbf{arquitetural}], as estruturas dos componentes que compões o MVC. 
+Entende-se no grafo o tipo [\textbf{dados}], as informações contidas nas bases de dados e os valores utilizados como parâmetros, e retornos de métodos dentro das camadas do padrão MVC. E o tipo [\textbf{arquitetural}], as estruturas dos componentes que compõe o MVC. 
+
+\subsection{Decomposição de segurança em disponibilidade e segurança operacional}
 
 \begin{figure}[h!]
 	\centering
@@ -786,7 +788,7 @@ Entende-se no grafo o tipo [\textbf{dados}], as informações contidas nas bases
 	\label{DecomposicaoDisponibilidade}
 \end{figure}
 
-Como apresentado na Figura \ref{DecomposicaoDisponibilidade}, a de ``disponibildade[dados]`` pode ser decomposta em duas operacionalizações, baseado em \cite{affleck2012supporting}, e possui um \textit{link} de contribuição, representando uma contribuição positiva com ``acompanhamento de informações (\textit{logs}) [arquitetural,dados]``, pois a disponibilidade dos dados, podem constituir a geração dos \textit{logs}, tanto para verificação do comportamento entre os componentes dentro da arquitetura, quanto para as informações de entrada do usuário, logo a decomposição pode ser descrita pela expressão\footnote[1]{Os tipos de contribuições serão expressados no inglês conforme a Tabela \ref{tiposDeContribuições}.} \ref{eq:disponibilidade}.
+Como apresentado na Figura \ref{DecomposicaoDisponibilidade}, a meta flexível de ``disponibildade[dados]`` pode ser decomposta em duas operacionalizações, baseado em \cite{affleck2012supporting}, e possui um \textit{link} SOME+ de contribuição, representando uma contribuição positiva com ``acompanhamento de informações (\textit{logs}) [arquitetural,dados]``, pois a disponibilidade dos dados, podem constituir a geração dos \textit{logs}, tanto para verificação do comportamento entre os componentes dentro da arquitetura, quanto para as informações de entrada do usuário, logo a decomposição pode ser descrita pela expressão\footnote[1]{Os tipos de contribuições serão expressados no inglês conforme a Tabela \ref{tiposDeContribuições}.} \ref{eq:disponibilidade}.
 
 \pagebreak
 
@@ -797,7 +799,7 @@ Como apresentado na Figura \ref{DecomposicaoDisponibilidade}, a de ``disponibild
 \textrm{SATISFAZ disponibilidade[dados]} 
 \end{eqnarray}
 
-e o impacto de ``disponibilidade[dados]`` sobre ``acompanhamento de informações(\textit{logs}) [arquitetural,dados]`` pela expressão
+e o impacto de ``disponibilidade[dados]`` sobre ``acompanhamento de informações(\textit{logs}) [arquitetural,dados]`` é expresso como:
 
 
 \begin{eqnarray}
@@ -805,6 +807,26 @@ e o impacto de ``disponibilidade[dados]`` sobre ``acompanhamento de informaçõe
 \textrm{disponibilidade[dados]}  \nonumber\\
 \textrm{SOME+ acompanhamento de informações (logs)[arquitetural,dados]} 
 \end{eqnarray}
+
+Segurança operacional definido no SIG da Figura \ref{DecomposicaoDisponibilidade} como ``segurança operacional[arquitetural]`` possui link de contribuição do tipo HELP, com as metas flexíveis ``autenticidade[arquitetura,dados]`` e ``operação interna confidencial[dados]`` pois se ambas forem satisfeitas, contribuem para a satisfação de segurança operacional da arquitetura, pois a ``autenticidade[arquitetura,dados]`` se satisfeita garante que os objetos instanciados, passagem de parâmetros, retorno de funções e os dados provém de suas fontes originais e não foram submetidos a mudanças maliciosas durante o processo de comunicação entre os componentes, garantindo a originalidade da informação.
+
+Para ``operação interna confidencial[dados]`` como definido por \cite{chung2012non} deriva de uma das características dos RNFs e essa meta flexível se satisfeita garante que todos os dados confidenciais manipulados internamente entre os componentes da arquitetura não serão expostos ao público externo devido a erros internos ou por ataque malicioso. 
+
+\pagebreak
+
+\subsection{Decomposição de segurança em confidencialidade}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/SIG-Confidencialidade.PNG}
+	\caption{Decomposição de segurança para confidencialidade.}
+	\label{DecomposicaoConfidencialidade}
+\end{figure}
+
+\subsection{Decomposição de segurança em integridade}
+
+\subsection{SIG para segurança arquitetural completo}
+
 \section{Resumo do capítulo}
 
 \chapter{Considerações finais}
