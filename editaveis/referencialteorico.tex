@@ -780,6 +780,7 @@ Os subtipos de conceitos que compõem a definição de segurança são abstraíd
 Entende-se no grafo o tipo [\textbf{dados}], as informações contidas nas bases de dados e os valores utilizados como parâmetros, e retornos de métodos dentro das camadas do padrão MVC. E o tipo [\textbf{arquitetural}], as estruturas dos componentes que compõe o MVC. 
 
 \subsection{Decomposição de segurança em disponibilidade e segurança operacional}
+\label{sub:DecomposicaoDeSegurancaEmDisponibilidadeESeguranca}
 
 \begin{figure}[h!]
 	\centering
@@ -823,16 +824,30 @@ Para ``operação interna confidencial[dados]`` como definido por \cite{chung201
 	\label{DecomposicaoConfidencialidade}
 \end{figure}
 
-De acordo com a Figura \ref{DecomposicaoConfidencialidade}, a meta flexível ``confidencialidade[arquitetural]`` pode ser decomposta por ``confidencialidade interna[arquitetural,dados]``, se satisfeita a ``confidencialidade interna[arquitetural,dados]`` garante que a comunicação entre os componentes arquiteturais e os dados estão com o acesso restrito somente ao componentes internos da arquitetura. A ``confidencialidade interna[arquitetural,dados]`` pode decomposta em ``confidencialidade interna e secreta[arquitetural,dados]`` e ``confidencialidade interna e confidencial[arquitetural,dados]`` através do relacionamento do tipo AND.   
+De acordo com a Figura \ref{DecomposicaoConfidencialidade}, a meta flexível ``confidencialidade[arquitetural]`` pode ser decomposta por ``confidencialidade interna[arquitetural,dados]``, se satisfeita a ``confidencialidade interna[arquitetural,dados]`` garante que a comunicação entre os componentes arquiteturais e os dados estão com o acesso restrito somente ao componentes internos da arquitetura. A ``confidencialidade interna[arquitetural,dados]`` pode decomposta em ``confidencialidade interna e secreta[arquitetural,dados]`` e ``confidencialidade interna e confidencial[arquitetural,dados]`` através do relacionamento do tipo AND e descrito pela expressão \ref{eq:confidencialidadeInterna}.   
 
 \begin{eqnarray}
 \label{eq:confidencialidadeInterna}
 \textrm{confidencialidade interna e secreta[arquitetural,dados]}  \nonumber\\
 \textrm{AND confidencialidade interna e confidencial[arquitetural,dados]} \nonumber\\
-\textrm{SATISFAZ confidencialidade interna[arquitetural, dados]} 
+\textrm{SATISFAZ confidencialidade interna[arquitetural,dados]}
 \end{eqnarray}
 
-\pagebreak
+Em ``confidencialidade interna e confidencial[arquitetural,dados]`` se satisfeita garante que as características da meta flexível mais genérica possivelmente pode vir a ser satisfeita, além de garantir que os componentes arquiteturais e os dados são internos e não estão expostos ao um público externo, logo, não podem gerar vantagens a concorrentes e a perda de usuários e clientes. 
+
+Pode parecer redundante ao leitor as palavras confidencialidade e confidencial no nome de uma mesma meta flexível, porém, a intenção é apoiar nos conceitos de confidencialidade como RNF e tratar especificamente o conceito de confidencial em segurança da informação. 
+
+A meta flexível ``operação interna confidencial[aquitetural,dados]`` e sua garantia ao ser satisfeita, já foi apresentada ao final da Subseção \ref{sub:DecomposicaoDeSegurancaEmDisponibilidadeESeguranca}. Portanto, a expressão \ref{eq:confidencialidadeInternaConfidencial} descreve o relacionamento, para satisfazer ``confidencialidade interna e confidencial[arquitetural,dados]``.
+
+\begin{eqnarray}
+\label{eq:confidencialidadeInternaConfidencial}
+\textrm{AND operação interna confidencial[arquitetural,dados]} \nonumber\\
+\textrm{SATISFAZ confidencialidade interna e confidencial[arquitetural,dados]}
+\end{eqnarray}  
+
+Em ``confidencialidade interna e secreta[arquitetural,dados]`` se satisfeita garante que as características da meta flexível mais genérica possivelmente pode vir a ser satisfeita, além de garantir que os componentes arquiteturais que tratam dados secretos em suas comunicações estão previamente protegidos a qualquer custo e os dados pertencem a uma parte específica de usuários internos e pode causar grandes danos ao sistema e a organização, caso sejam acessados por ataques maliciosos ou divulgados por falha do sistema. 
+
+\newpage
 
 \subsection{Decomposição de segurança em integridade}
 
@@ -843,7 +858,14 @@ De acordo com a Figura \ref{DecomposicaoConfidencialidade}, a meta flexível ``c
 	\label{DecomposicaoIntegridade}
 \end{figure}
 
+Como apresentado na Figura \ref{DecomposicaoIntegridade} ``integridade[arquitetural]`` pode ser decomposta em duas metas flexíveis através do link de contribuição do tipo AND, baseado em \cite{chung2012non}, sendo elas ``completude[arquitetural]`` e ``precisão[arquitetural]``.
+
+Em ``completude[arquitetural]`` se satisfeita, garante que o RNF esteja especificado de maneira completa, para ``precisão[arquitetural]`` se satisfeita os atributos semânticos, definidos como metas flexíveis como ``propriedade de precisão[aquitetural]``, ``valor de precisão[dados]``, ``precisão de um para um[arquitetural,dados]``, e ``consistência interna[dados]``, estão todos satisfeitos.
+
+
 \subsection{SIG para segurança arquitetural completo}
+
+
 
 \section{Resumo do capítulo}
 
