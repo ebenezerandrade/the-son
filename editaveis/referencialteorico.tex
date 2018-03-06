@@ -1,20 +1,28 @@
 \chapter[Referencial Teórico]{Referencial Teórico}
 \label{chap:referencialTeorico}
 
-Neste capítulo, será apresentado os conceitos teóricos utilizados como base para o desenvolvimento do catálogo de segurança para o padrão arquitetural MVC.
+Neste capítulo, serão apresentados os conceitos teóricos utilizados como base para o desenvolvimento do catálogo de segurança para o padrão arquitetural MVC.
 
-Antes de entender os conceitos relevantes para o desenvolvimento do catálogo é importante entender a definição de software, e segundo \cite{sommerville2003engenharia}, pode ser entendido como, programas de computador e toda documentação associada. E para realização do desenvolvimento do software da maneira mais correta possível, existe a Engenharia de Software que preocupa-se com todos os aspectos da produção \cite{sommerville2003engenharia}. 
+Antes de entender os conceitos relevantes para o desenvolvimento do catálogo, é importante entender a definição de software. Este, segundo \cite{sommerville2003engenharia}, pode ser entendido como programas de computador e toda documentação associada. Para realização do desenvolvimento do software da forma mais correta possível, existem preocupações que merecem menção/atenção e são estabelecidas na área da Engenharia de Software que preocupa-se com todos os aspectos da produção \cite{sommerville2003engenharia}. 
 
-A Figura \ref{BigPicture}, apresenta a visão geral da construção do catálogo, partindo da Engenharia de Software e apoiando principalmente em duas disciplinas: a (i) Engenharia de Requisitos, que compõe-se de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, essa disciplina será brevemente detalhada na seção \ref{sec:requisitos}, então, entramos no contexto da orientação à meta, que trata dos requisitos funcionais e não funcionais como metas a serem alcançadas, será detalhado na Subseção \ref{subsec:orientacaoMeta}. Como essa monografia trata dos RNFs, para elaboração do catálogo, logo na Subseção \ref{subsec:requisitosNaoFuncionais} será apresentado conceitos sobre o que são os RNFs. Portando a seção seguinte \ref{sec:NFR} será detalhado o NFR \textit{framework}, para modelar e analisar as interdependências entre os RNFs, e (ii) Desenho de software, uma área da Engenharia de Software que possui como uma de suas preocupações o planejamento e a definição do padrão arquitetural a ser utilizado, os conceitos de arquitetura de software e do padrão arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e subseção \ref{subsec:mvc}.
+A Figura \ref{BigPicture} apresenta o escopo de atuação desse trabalho, partindo da Engenharia de Software e apoiando-se, principalmente em duas disciplinas: 
+
+\begin{itemize}
+	\item A Engenharia de Requisitos, que se compõe de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, sendo uma disciplina detalhada na seção \ref{sec:requisitos}. Será observado que o trabalho foca em uma abordagem orientada à meta. Portanto, tem-se a Engenharia de Requisitos Orientada à Meta. Essa procura tratar os requisitos funcionais e não funcionais como metas a serem alcançadas, sendo esse estudo apresentado na subseção \ref{subsec:orientacaoMeta}. Especificando ainda mais a área de atuação, como esse trabalho centraliza seus esforços nos RNFs, em particular para elaboração do catálogo, a subseção \ref{subsec:requisitosNaoFuncionais} define conceitos associados aos RNFs, preparando o leitor para a apresentação de um \textit{framework} conceitual especificamente proposto para especificação de RNFs. Trata-se do NFR Framework, o qual será detalhado na seção \ref{sec:NFR};
+	\item E Desenho de software, uma área da Engenharia de Software que se preocupa, dentre outras atividades, com o planejamento e a definição da Arquitetura de Software a ser utilizada. Para fins desse trabalho, o foco será na arquitetura padrão MVC. Conceitos associados à Arquitetura de Software bem como ao padrão arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e não subseção \ref{subsec:mvc}, respectivamente.
+	
+\end{itemize}
+
+\pagebreak
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.65]{figuras/bigPicture.png}
-	\caption{Visão geral da proposta do catálogo.}
+	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/bigPicture.png}
+	\caption{Áreas de atuação  da presente proposta e conceitos associados.}
 	\label{BigPicture}
 \end{figure}
 
-Segundo \cite{chung2012non}, segurança pode ser entendido como a satisfação de três conceitos, e que podem ser interpretados como subtipos : (i) Integridade, (ii) Confidencialidade, (iii) Disponibilidade, e Portanto, o catálogo de segurança é elaborado a partir deles, seguindo a expressão \ref{eq:EstruturaLogicaDeSeguranca}. O conceito de segurança como RNFs, será detalhado na seção \ref{sec:seguranca}
+Por fim, cabe ressaltar que o presente trabalho atuará mais especificamente no requisito não funcional segurança, dada a sua relevância, conforme pesquisa na literatura. Segundo \cite{chung2012non}, segurança pode ser entendida como a satisfação de três conceitos: Integridade, Confidencialidade, e Disponibilidade. Portanto, o catálogo de segurança proposto parte desses conceitos, seguindo a expressão \ref{eq:EstruturaLogicaDeSeguranca}. Segurança, sobre a ótica de um RNF, será tratada na seção \ref{sec:seguranca}.
 
 \begin{equation}
 	\label{eq:EstruturaLogicaDeSeguranca}
@@ -24,10 +32,9 @@ Segundo \cite{chung2012non}, segurança pode ser entendido como a satisfação d
 \section{Engenharia de Requisitos}
 \label{sec:requisitos}
 
-Ao conjunto de tarefas e técnicas utilizadas para promover o entendimento dos requisitos é denominado Engenharia de Requisitos \cite{pressman2011engenharia}. No desenvolvimento de software, ela pode ser vista como uma fase importante da Engenharia de Software, que se inicia nas atividades de comunicação com os \textit{stakeholders} e continua até a entrega do produto, sendo adaptada de acordo com as necessidades do processo de desenvolvimento, do produto e dos \textit{stakeholders} \cite{pressman2011engenharia}.
+Ao conjunto de tarefas e técnicas utilizadas para promover o entendimento dos requisitos é denominado Engenharia de Requisitos \cite{pressman2011engenharia}. No desenvolvimento de software, ela pode ser vista como uma fase importante da Engenharia de Software, que se inicia nas atividades de comunicação com os \textit{stakeholders}, e continua até a entrega do produto, sendo adaptada de acordo com as necessidades do processo de desenvolvimento, do produto e dos \textit{stakeholders} \cite{pressman2011engenharia}.
 
-A Engenharia de Requisitos, abrange sete fases distintas: concepção, levantamento, elaboração, negociação, especificação, verificação e validação \cite{pressman2011engenharia}. De acordo com \cite{kotonya1998requirements}, durante a execução das atividades nas fases da Engenharia de Requisitos, alguns problemas são relatados como: (i) os requisitos não refletem as reais necessidades do cliente, de acordo com o sistema a ser desenvolvido; (ii) são inconsistentes e/ou incompletos; (iii) é complexa e possui um custo alto, a realização de alguma mudança no requisito, logo após terem sido acordados entre as partes; e (iv) comumente são interpretados de maneira errada pela equipe de desenvolvimento, diante do que foi solicitado pelo cliente. 
-
+A Engenharia de Requisitos abrange sete fases distintas: concepção, levantamento, elaboração, negociação, especificação, verificação e validação \cite{pressman2011engenharia}. De acordo com \cite{kotonya1998requirements}, durante a execução das atividades nas fases da Engenharia de Requisitos, alguns problemas são relatados como: (i) os requisitos não refletem as reais necessidades do cliente, de acordo com o sistema a ser desenvolvido; (ii) os requisitos são inconsistentes e/ou incompletos; (iii) a Engenharia de Requisitos é complexa e possui alto custo, principalmente, quando há necessidade de mudanças após os requisitos serem ditos acordados/elicitados entre as partes; e (iv) os requisitos são comumente interpretados de maneira errada pela equipe de desenvolvimento, diante do que foi solicitado pelo cliente. 
 
 Boa parte dos modelos utilizados na Engenharia de Requisitos não possuem tratamento adequado para lidar com os critérios de qualidade. Logo, o tratamento desses critérios tem sido uma preocupação para a comunidade da Engenharia de Requisitos. Atualmente, existem esforços no sentido de aprimorar os modelos e especificações desses requisitos, e são fortemente associados à comunidade de pesquisadores da Engenharia de Requisitos Orientada à Meta (GORE) \cite{chung2012non}. Nesta monografia, é abordado o uso de uma notação específica para tratar RNFs, proposta por essa comunidade, no caso, trata-se do NFR \textit{framework} \cite{chung2012non}. 
 
@@ -36,11 +43,11 @@ O NFR \textit{framework} é um \textit{Framework} conceitual que procura lidar c
 \subsection{Engenharia de Requisitos Orientada à Meta}
 \label{subsec:orientacaoMeta}
 
-A Engenharia de Requisitos Orientada à Meta (GORE), tem-se popularizado nos últimos anos e constitui-se do tratamento dos requisitos funcionais e não funcionais, como metas a serem alcançadas \cite{van2001goal}, pois, seus modelos possuem como objetivo a modelagem da razão pela qual determinado requisito existe, essa modelagem, promove ao engenheiro de requisitos uma estratégia mais detalhada do problema, podendo então encontrar uma solução mais adequada \cite{van2001goal}\cite{chung2012non}. O GORE é um paradigma que vem sendo cada vez mais reconhecido para a execução das atividades nas fases da Engenharia de Requisitos \cite{van2001goal}.
+A Engenharia de Requisitos Orientada à Meta (GORE) tem-se popularizado nos últimos anos e foca seus esforços no tratamento dos requisitos funcionais e não funcionais, como metas a serem alcançadas \cite{van2001goal}, Seus modelos possuem como objetivo a modelagem da razão pela qual determinado requisito existe. Essa modelagem promove ao engenheiro de requisitos uma estratégia mais detalhada do problema, podendo encontrar uma solução mais adequada \cite{van2001goal}\cite{chung2012non}. O GORE é uma abordagem cada vez mais reconhecida na comunidade de Engenharia de Requisitos \cite{van2001goal}.
 
-Nas definições do GORE, existem as metas que são componentes essenciais, pois de acordo com \cite{van2001goal}, uma meta é definida como propriedades do sistema que são expressas pelos \textit{stakeholders}, através de determinadas questões como, o “\textbf{porquê}” uma meta é exigida, “\textbf{como}” ela pode ser atingida, e “\textbf{quem}” será o responsável pela meta no sistema e no ambiente.
+Nas definições do GORE, existem as metas que são componentes essenciais. De acordo com \cite{van2001goal}, uma meta é definida como uma propriedade do sistema, a qual é expressa pelos \textit{stakeholders} através de determinadas questões como, através de determinadas questões como, o “\textbf{porquê}” uma meta é exigida, “\textbf{como}” ela pode ser atingida, e “\textbf{quem}” será o responsável pela meta no sistema e no ambiente.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/GORE.png}
 	\caption{Responsabilidades da meta sob o software e sob o ambiente.}
@@ -50,15 +57,15 @@ Nas definições do GORE, existem as metas que são componentes essenciais, pois
 
 \pagebreak
 
- Através da Figura \ref{Gore}, pode-se entender como são os comportamentos das metas no GORE. Representada pelo simbolo de uma nuvem, uma meta, quando está sob a responsabilidade de um único software, essa meta pode-se tornar um requisito, de forma semelhante quando essa meta, está sob responsabilidade de um ambiente, ela pode tornar-se uma suposição, diferente de um requisito as suposições não podem aplicadas pelo software, mas podem ser satisfeitas devido as normas, regulamentos organizacionais e leis físicas \cite{van2001goal}. Esta monografia, possui foco apenas nas responsabilidades voltadas ao software.
+ Com base na Figura \ref{Gore}, pode-se entender como são os comportamentos das metas na abordagem GORE. Representada pelo simbolo de uma nuvem, uma meta, quando está sob a responsabilidade de um único software, pode se tornar um requisito. De forma semelhante, quando uma meta está sob a responsabilidade de um ambiente, ela pode se tornar uma suposição. Diferentemente de um requisito, uma suposição não pode ser aplicada pelo software. Mas, pode ser satisfeita devidos às normas, aos regulamentos organizacionais e às leis físicas\cite{van2001goal}. Esse trabalho foca apenas nas responsabilidades voltadas ao software.
 
 
-Existem diversos \textit{frameworks} orientados à metas, os principais  são o NFR \textit{Framework} \cite{chung2012non} e o i* \cite{istarwiki20}, esses \textit{frameworks} são detalhados nas seções \ref{sec:NFR} e \ref{sec:i*}, respectivamente.
+Existem diversos \textit{frameworks} orientados à meta. Os principais  são o NFR \textit{Framework} \cite{chung2012non} e o i* \cite{istarwiki20}. Ambos esses \textit{frameworks} serão detalhados nas seções \ref{sec:NFR} e \ref{sec:i*}, respectivamente.
 
 \subsection{Requisitos Não-Funcionais}
 \label{subsec:requisitosNaoFuncionais}
 
-A visão do software como um produto, fez com que os aspectos que avaliam a qualidade de um software passassem a possuir maior atenção, e apenas satisfazer, o mais próximo possível de todos os requisitos funcionais não é o suficiente, logo, tem se dado uma atenção maior para os RNFs tais como: Segurança, Integridade, Disponibilidade, etc \cite{cysneiros1997definindo}.
+A visão do software como um produto fez com que os aspectos que avaliam a qualidade de um software passassem a possuir maior atenção. Apenas satisfazer requisitos funcionais não é o suficiente. Logo, tem-se dado maior atenção para o RNFs, tais como: Segurança, Integridade, Disponibilidade, dentre outros \cite{cysneiros1997definindo}.
 
 Os RNFs podem ser entendidos como restrições sobre como os requisitos funcionais devem ser implementados, e determinam como o software deve realizar suas funções \cite{sommerville1997requirements}.
 
