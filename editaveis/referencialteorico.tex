@@ -76,42 +76,41 @@ Júlio Leite, afirma em sua pesquisa que os RNFs impactam o produto software em 
 	"A não observância da necessidade de RNFs durante o processo de desenvolvimento do software, pode levar uma recodificação custosa e demorada o que consequentemente, eleva o preço do software." \cite[p. 2]{cysneiros1997definindo}
 \end{citacao}
 
-Os RNFs devem ser analisados em toda sua magnitude para o desenvolvimento e manutenção de um produto de software, sendo importante analisar os possíveis conflitos que podem ser gerados com outros RNFs e com requisitos funcionais, esses conflitos se não identificados em uma fase inicial do processo de desenvolvimento do software podem acarretar em problemas futuros, durante as atividades de implementação e implantação do software \cite{cysneiros1997definindo}. 
+Os RNFs devem ser analisados em toda sua magnitude para o desenvolvimento e a manutenção de um produto de software, sendo importante analisar os possíveis conflitos que podem ser gerados com outros RNFs bem como com os requisitos funcionais. Esses conflitos, uma vez não identificados em uma fase inicial do processo de desenvolvimento de software, podem acarretar em problemas futuros, durante as atividades de implementação e implantação do software \cite{cysneiros1997definindo}. 
 
 
-As classes de NFRs \cite{eckhardt2016non} podem ser compreendidas como subtipos dos atributos de qualidade da Tabela \ref{AtributosDeQualidade}, onde são definidos de acordo com a \cite{organizacion2011iso}. 
+As classes de NFRs \cite{eckhardt2016non} podem ser compreendidas como subtipos dos atributos de qualidade da Tabela \ref{AtributosDeQualidade}, na qual são definidos de acordo com a \cite{organizacion2011iso}. 
 
 \begin{table}[h!]
 	\centering
 	\caption{Descrição dos atributos de qualidade. Fonte: \cite{organizacion2011iso}.}
 	\label{AtributosDeQualidade}
-	\begin{tabular}{|c|c|}
-		\hline
-		\textbf{\begin{tabular}[c]{@{}c@{}}Atributos de \\ qualidade\end{tabular}} & \textbf{Descrição} \\ \hline
-		Funcionalidade & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de promover funções que \\ atendam às necessidades explícitas e implícitas.\end{tabular} \\ \hline
-		Segurança & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de apresentar níveis\\ aceitáveis e riscos de danos a pessoas, negócios\\ software, propriedades ou ambiente.\end{tabular} \\ \hline
-		Confiabilidade & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de manter o nível de \\ desempenho especificado.\end{tabular} \\ \hline
-		Usabilidade & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de ser compreendido,\\ de fácil aprendizagem, operável e atraente ao usuário.\end{tabular} \\ \hline
-		Eficiência & \begin{tabular}[c]{@{}c@{}}É a capacidade software de apresentar desempenho\\ apropriado, relativo aos recursos utilizados.\end{tabular} \\ \hline
-		Portabilidade & \begin{tabular}[c]{@{}c@{}}É a capacidade software de ser transferido de \\ um ambiente para o outro.\end{tabular} \\ \hline
-		Manutenção & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de modificado de forma\\ eficiente e eficaz.\end{tabular} \\ \hline
+	\begin{tabular}{@{}cc@{}}
+		\toprule
+		\textbf{\begin{tabular}[c]{@{}c@{}}Atributos de \\ qualidade\end{tabular}} & \textbf{Descrição} \\ \midrule
+		Funcionalidade & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de promover funções que\\ atendam às necessidades explícitas e implícitas.\end{tabular} \\
+		\rowcolor[HTML]{C0C0C0} 
+		Segurança & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de apresentar níveis\\  aceitáveis e riscos de danos a pessoas, negócios\\  software, propriedades ou ambiente.\end{tabular} \\
+		Confiabilidade & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de manter o nível de\\ desempenho especificado.\end{tabular} \\
+		\rowcolor[HTML]{C0C0C0} 
+		Usabilidade & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de ser compreendido,\\ de fácil aprendizagem, operável e atraente ao usuário.\end{tabular} \\
+		Eficiência & \begin{tabular}[c]{@{}c@{}}É a capacidade software de apresentar desempenho\\ apropriado, relativo aos recursos utilizados.\end{tabular} \\
+		\rowcolor[HTML]{C0C0C0} 
+		Portabilidade & \begin{tabular}[c]{@{}c@{}}É a capacidade software de ser transferido de\\ um ambiente para o outro.\end{tabular} \\
+		Manutenção & \begin{tabular}[c]{@{}c@{}}É a capacidade do software de modificado de forma\\ eficiente e eficaz.\end{tabular} \\ \bottomrule
 	\end{tabular}
 \end{table}
-
-\pagebreak
 
 \section{NFR Framework}
 \label{sec:NFR}
 
-O NFR \textit{Framework}  é um modelo intencional, criado para ajudar engenheiros de software e engenheiros de requisitos a lidarem com requisitos não-funcionais, através de um grafo chamado de \textit{Softgoal Interdependency Graphs} (SIGs). Neste tipo de grafo, os requisitos podem ser analisados, uma vez que o SIG permite uma visão vertical desde a estratégia de alto nível até os detalhes operacionais;  possuindo operadores lógicos AND (E) e OR (OU) que promovem uma melhor tomada de decisão; onde  os RNFs são escritos através de uma notação formal, que permite comprovar a precisão e completude de cada RNF \cite{chung2012non}. 
+O NFR \textit{Framework}  é um modelo intencional, criado para ajudar engenheiros de software e engenheiros de requisitos a lidarem com requisitos não-funcionais, através de um grafo chamado de \textit{Softgoal Interdependency Graphs} (SIGs). Neste tipo de grafo, os requisitos podem ser analisados, uma vez que o SIG permite uma visão vertical desde a estratégia de alto nível até os detalhes operacionais;  possuindo operadores lógicos AND (E) e OR (OU) que promovem uma melhor tomada de decisão. Os RNFs são escritos através de uma notação formal. Essa notação permite comprovar a precisão e a completude de cada NFR \cite{chung2012non}. 
 
-O \textit{framework} também pode ser orientado por processo, dando suporte às atividades e fases do processo de engenharia de requisitos, e pode ser utilizado como complemento nas abordagens de desenvolvimento de software \cite{chung2012non}.
+O \textit{framework} também pode ser orientado por processo, dando suporte às atividades e fases do processo de engenharia de requisitos. Nesse caso, sendo utilizado como complemento nas abordagens de desenvolvimento de software \cite{chung2012non}.
 
-O NFR \textit{Framework} utiliza o conceito de metas flexíveis, que por definição é uma condição ou um estado no mundo real que deseja ser alcançado, podendo assumir natureza subjetiva, pois, o RNF pode variar de acordo com o julgamento de cada pessoa; e natureza relativa, pois, o RNF pode depender de algum tipo de relação com outro RNF \cite{chung2012non}.
+O NFR \textit{Framework} utiliza o conceito de metas  flexíveis. Por definição, uma meta flexível é uma condição ou um estado no mundo real que deseja ser alcançado, podendo assumir natureza subjetiva, uma vez que o RNF pode variar de acordo com o julgamento de cada pessoa; e natureza relativa, uma vez que o RNF pode depender de algum tipo de relação com outro RNF \cite{chung2012non}.
 
-\pagebreak
-
-A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de uma nuvem, conforme apresentado pela Figura \ref{fig01}. Esse simbolo, possui pequenas variações na forma, que representam uma \textbf{operacionalização} (nuvem em negrito), e também uma \textbf{reivindicação} (nuvem tracejada). Mais adiante na Figura \ref{exemploNFR} é apresentada a decomposição de uma meta flexível em outras metas.  
+A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de uma nuvem, conforme apresentado pela Figura \ref{fig01}. Esse simbolo possui pequenas variações na forma, podendo representar uma \textbf{operacionalização} (nuvem em negrito), e também uma \textbf{reivindicação} (nuvem tracejada). Mais adiante, na Figura \ref{exemploNFR}, é apresentada a decomposição de uma meta flexível em outras metas.  
 
 \begin{figure}[h!]
 	\centering
@@ -120,8 +119,7 @@ A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de u
 	\label{fig01}
 \end{figure} 
 
-
-Para facilitar no entendimento das decisões tomadas, a meta flexível possui \textit{labels}, que determinam o grau de satisfação para uma meta flexível, de acordo com um conjunto de decisões do projeto. As \textit{labels} são: satisfeita, fracamente satisfeita,  negada, fracamente negada, indecidida e crítica \cite{chung2012non}. Outra notação importante, e que apresenta o grau de prioridade de uma meta flexível, é representado por “\textbf{!}” ou “\textbf{!!}” para um grau de prioridade maior, onde o ponto de afirmação é desenhado a esquerda da nuvem.
+Para facilitar no entendimento das decisões tomadas, a meta flexível possui \textit{labels}, que determinam o grau de satisfação para uma meta flexível, de acordo com um conjunto de decisões do projeto. As \textit{labels} são: satisfeita, fracamente satisfeita,  negada, fracamente negada, indecidida e crítica \cite{chung2012non}. Outra notação importante, e que apresenta o grau de prioridade de uma meta flexível, é representada por “\textbf{!}” ou “\textbf{!!}” para um grau de prioridade maior, onde o ponto de afirmação é desenhado à esquerda da nuvem.
 
 \begin{figure}[h]
 	\centering
@@ -130,9 +128,9 @@ Para facilitar no entendimento das decisões tomadas, a meta flexível possui \t
 	\label{fig02}
 \end{figure} 
 
-As relações que as metas flexíveis possuem uma com as outras é estabelecida através de \textit{links} de interdependências, sendo esses \textit{links} que realizam o registro da decomposição das metas flexíveis em metas flexíveis mais específicas (filhos). De certa forma, a decomposição em outras metas, contribui para o nível de satisfação da meta flexível mais genérica (pai).
+As relações que as metas flexíveis possuem umas com as outras são estabelecidas através de \textit{links} de interdependências, sendo esses \textit{links} que realizam o registro da decomposição das metas flexíveis em metas flexíveis mais específicas (filhos). De certa forma, a decomposição em outras metas contribui para o nível de satisfação da meta flexível mais genérica (pai).
 
-Os \textit{links} de interdependências também podem ser entendidos como tipos de contribuições,e possuem uma notação simbólica para cada tipo, e cada tipo possui um significado, esses tipos de contribuições são apresentados na Tabela \ref{tiposDeContribuições} adaptado de  \cite{chung2012non}.
+Os \textit{links} de interdependências também podem ser entendidos como tipos de contribuições, e possuem uma notação simbólica para cada tipo, e cada tipo possui ainda um significado.  Tais tipos de contribuição são apresentados na Tabela \ref{tiposDeContribuições} adaptado de  \cite{chung2012non}.
 
 
 
@@ -140,20 +138,20 @@ Os \textit{links} de interdependências também podem ser entendidos como tipos 
 	\centering
 	\caption{Tipos de contribuições.}
 	\label{tiposDeContribuições}
-	\begin{tabular}{|l|l|}
+	\begin{tabular}{@{}cl@{}}
 		\hline
 		\textbf{Símbolo} & \textbf{Descrição} \\ \hline
-		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/And.png}} & \multirow{2}{*}{AND: Se todos os filhos são satisfeitos o pai também será satisfeito.} \\
+		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/And.png}} & \multirow{2}{*}{AND: Se todos os filhos são satisfeitos, o pai também será satisfeito.} \\
 		&  \\ \hline
-		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/OR.png}} & \multirow{2}{*}{OR: Se qualquer filho é satisfeito o pai também será satisfeito.} \\
+		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/OR.png}} & \multirow{2}{*}{OR: Se qualquer filho é satisfeito, o pai também será satisfeito.} \\
 		&  \\ \hline
-		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Make.png}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}MAKE: Pode ser tratado de forma semelhante ao AND, pois se \\ o filho for satisfeito o pai pode ser satisfeito.\end{tabular}} \\
+		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Make.png}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}MAKE: Pode ser tratado de forma semelhante ao AND, pois, se \\ o filho for satisfeito, o pai pode ser satisfeito.\end{tabular}} \\
 		&  \\ \hline
-		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Break.png}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}BREAK: Fornece apoio negativo, pois se o filho é satisfeito o \\ pai pode ser negado.\end{tabular}} \\
+		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Break.png}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}BREAK: Fornece apoio negativo, pois, se o filho é satisfeito, o \\ pai pode ser negado.\end{tabular}} \\
 		&  \\ \hline
-		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Help.png}} & \multirow{2}{*}{HELP: Se todos os filhos são satisfeitos o pai também será satisfeito.} \\
+		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Help.png}} & \multirow{2}{*}{HELP: Se todos os filhos são satisfeitos, o pai também será satisfeito.} \\
 		&  \\ \hline
-		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Hurt.png}} & \multirow{2}{*}{HURT: Se todos os filhos são satisfeitos o pai será fracamente negado.} \\
+		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Hurt.png}} & \multirow{2}{*}{HURT: Se todos os filhos são satisfeitos, o pai será fracamente negado.} \\
 		&  \\ \hline
 		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/SomeMais.png}} & \multirow{2}{*}{SOME+: Representa a existência de alguma contribuição positiva.} \\
 		&  \\ \hline
@@ -164,7 +162,7 @@ Os \textit{links} de interdependências também podem ser entendidos como tipos 
 
 \pagebreak
 
-Os \textit{links} entre as metas flexíveis, representam a contribuição que uma meta flexível tem com outra meta flexível, ou meta flexível de operacionalização, ou meta flexível de reivindicação, logo, a Figura \ref{catalogoDeAvaliação} apresenta a forma como as \textit{labels} são propagadas, de acordo com seu tipo de relacionamento. A propagação das \textit{labels}, se aplica a todos os tipos de metas flexíveis. 
+Os \textit{links} entre as metas flexíveis representam a contribuição que uma meta flexível tem com outra meta flexível, ou meta flexível de operacionalização, ou meta flexível de reivindicação. Logo, a Figura \ref{catalogoDeAvaliação} apresenta a forma como as \textit{labels} são propagadas, de acordo com seu tipo de relacionamento. A propagação das \textit{labels} aplica-se a todos os tipos de metas flexíveis. 
 
 \begin{figure}[h!]
 	\centering
@@ -184,10 +182,10 @@ A Figura \ref{exemploNFR} apresenta uma decomposição de uma meta flexível em 
 	\label{exemploNFR}
 \end{figure} 
 
-Confidencialidade de contas é operacionalizada em ``Autorizar acesso à informação das contas``, que possui uma contribuição do tipo HELP com seu pai. Dada a relação do tipo AND, entre essa operacionalização e as operacionalizações ``Identificar usuários`` e ``Autenticar usuários``, tem-se que a operacionalização ``Autorizar acesso à informação das contas``  será realizada se ambas as operacionalizações, ``Identificar usuários`` e ``Autenticar usuários``, forem realizadas. Supondo que tudo tenha sido realizado com sucesso, tem-se que esse processo de operacionalização contribui positivamente - HELP (AJUDA) - a atingir ``Confiabilidade de contas``. Como essa meta flexível está especificada em uma relação de AND com as metas flexíveis "Integridade de contas" e ``Disponibilidade de contas``, pode-se dizer que em termos de ``Confiabilidade de contas``, ``Segurança de contas`` tem a ser ``satisfeita``. Mas, resta ainda ponderar se "Integridade de contas" e ``Disponibilidade de contas`` serão de fato ``satisfeitas``. O modelo, da forma como está especificado, não permite avaliar tais aspectos, visto que representa apenas uma visão parcial dessas metas flexíveis.
+Confidencialidade de contas é operacionalizada em ``Autorizar acesso à informação das contas``, que possui uma contribuição do tipo HELP com seu pai. Dada a relação do tipo AND, entre essa operacionalização e as operacionalizações ``Identificar usuários`` e ``Autenticar usuários``, tem-se que a operacionalização ``Autorizar acesso à informação das contas``  será realizada, se ambas as operacionalizações, ``Identificar usuários`` e ``Autenticar usuários``, forem realizadas. Supondo que tudo tenha sido realizado com sucesso, tem-se que esse processo de operacionalização contribui positivamente - HELP (AJUDA) - a atingir ``Confiabilidade de contas``. Como essa meta flexível está especificada em uma relação de AND com as metas flexíveis "Integridade de contas" e ``Disponibilidade de contas``, pode-se dizer que em termos de ``Confiabilidade de contas``, ``Segurança de contas`` tende a ser ``satisfeita``. Mas, resta ainda ponderar se "Integridade de contas" e ``Disponibilidade de contas`` serão de fato ``satisfeitas``. O modelo, da forma como está especificado, não permite avaliar tais aspectos, visto que representa apenas uma visão parcial dessas metas flexíveis.
 
 
-Para Disponibilidade de contas a mesma é operacionalizada em “Duplicar servidor” e “Espelhar banco de dados” essas operacionalizações possuem contribuições do tipo HELP e mesmo pai, e para a meta flexível ser satisfeita, ambas as operacionalizações devem ser satisfeitas \cite{affleck2012supporting}. 
+Para Disponibilidade de contas, a mesma é operacionalizada em “Duplicar servidor” e “Espelhar banco de dados”. Essas operacionalizações possuem contribuições do tipo HELP e mesmo pai. Para a meta flexível ser satisfeita, ambas as operacionalizações devem ser satisfeitas \cite{affleck2012supporting}. 
 
 
 \section{Framework i*}
@@ -196,7 +194,7 @@ Para Disponibilidade de contas a mesma é operacionalizada em “Duplicar servid
 
 Outra abordagem orientada à meta, o \textit{framework} de modelagem i*\footnote[1]{O nome i* faz referência a utilização da notação de distribuição intencional que é a base do \textit{framework}.}, possui foco em ambientes organizacionais e seus sistemas de informação, tomando como base os relacionamentos de dependência entre os atores participantes \cite{yu1997towards} \cite{istarwiki20}. 
 
-O \textit{framework} é composto por dois modelos; o (i) Modelo de Dependência Estratégica (do inglês, \textit{Strategic Dependency - (SD)}), utilizado para descrever as relações de dependência entre vários atores em um contexto organizacional, e o (ii) Modelo de Razão estratégica (do inglês, \textit{Strategic Rationale - (SR)}), utilizado para descrever os interesses e preocupações das partes interessadas e como eles podem ser abordados pelas configurações do ambiente e dos sistemas \cite{yu1997towards}. Esses dois modelos serão detalhados a seguir nas subseções \ref{subsec:SD} e \ref{subsec:SR}.
+O \textit{framework} é composto por dois modelos: o (i) Modelo de Dependência Estratégica (do inglês, \textit{Strategic Dependency - (SD)}), utilizado para descrever as relações de dependência entre vários atores em um contexto organizacional, e o (ii) Modelo de Razão estratégica (do inglês, \textit{Strategic Rationale - (SR)}), utilizado para descrever os interesses e preocupações das partes interessadas e como eles podem ser abordados pelas configurações do ambiente e dos sistemas \cite{yu1997towards}. Esses dois modelos serão detalhados a seguir nas subseções \ref{subsec:SD} e \ref{subsec:SR}.
 
 Com a utilização do \textit{framework} é possível representar, por meio de seus modelos, os atores participantes e suas dependências, para que suas metas sejam alcançadas, recursos fornecidos, tarefas realizadas e metas flexíveis sejam “satisfeitas a contento” ou “razoavelmente satisfeitas” \cite{istarwiki20}.
  
