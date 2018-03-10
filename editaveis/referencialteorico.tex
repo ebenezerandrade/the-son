@@ -417,13 +417,13 @@ A Tabela \ref{responsabilidadeColaboradorModel} resume os principais aspectos da
 
 A \textit{View} é o componente responsável por apresentar as informações ao usuário, recuperando os dados da \textit{Model} através de procedimentos de atualização que são ativados pelo mecanismo de propagação de mudanças. A \textit{View} também possui um relacionamento de 1 para 1, com a \textit{Controller}, pois fornece procedimentos para a \textit{Controller} manipular as exibições da \textit{View} \cite{buschmann1996system}.
 
-A Tabela \ref{responsabilidadeColaboradorView} resume todos os aspectos da \textit{View}, tratando de suas responsabilidades e seus colaboradores. 
+A Tabela \ref{responsabilidadeColaboradorView} resume os principais aspectos da \textit{View}, tratando de suas responsabilidades e seus colaboradores. 
 
 \begin{table}[h!]
 	\centering
 	\caption{Responsabilidades e colaboradores da \textit{View} \cite{buschmann1996system}.}
 	\label{responsabilidadeColaboradorView}
-	\begin{tabular}{|l|l|}
+	\begin{tabular}{@{}ll@{}}
 		\hline
 		\textbf{Responsabilidades} & \textbf{Colaboradores} \\ \hline
 		\begin{tabular}[c]{@{}l@{}}- Inicializar o controlador associado\\ - Exibir informações ao usuário\\ - Implementar o procedimento de atualização\\ - Recuperar dados da \textit{Model}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textit{Model}\\ \textit{Controller}\end{tabular} \\ \hline
@@ -432,13 +432,15 @@ A Tabela \ref{responsabilidadeColaboradorView} resume todos os aspectos da \text
 
 \subsubsection{Controller}
 
-A \textit{Controller} trata as entradas do usuário como eventos, as controladoras desses eventos recebem um pedido da \textit{View}, onde um procedimento específico na \textit{Controller} trata esse pedido e realiza uma chamada de um procedimento na \textit{model}. A \textit{Controller} basicamente traduz os pedidos de eventos para a \textit{model} e a cada pedido existe uma \textit{view} associada. 
+A \textit{Controller} trata as entradas do usuário como eventos. As controladoras desses eventos recebem um pedido da \textit{View}. Nesse caso, um procedimento específico na \textit{Controller} trata esse pedido e realiza uma chamada de um procedimento na \textit{Model}. A \textit{Controller} basicamente traduz os pedidos de eventos para a \textit{Model}, sendo que, a cada pedido existe uma \textit{view} associada. 
+
+A Tabela \ref{responsabilidadeColaboradorController} resume os principais aspectos da \textit{Controller}, tratando de suas responsabilidades e seus colaboradores. 
 
 \begin{table}[h!]
 	\centering
 	\caption{Responsabilidades e colaboradores da \textit{Controller} \cite{buschmann1996system}.}
 	\label{responsabilidadeColaboradorController}
-	\begin{tabular}{|l|l|}
+	\begin{tabular}{@{}ll@{}}
 		\hline
 		\textbf{Responsabilidades}                    & \textbf{Colaboradores}                                                        \\ \hline
 		\begin{tabular}[c]{@{}l@{}}- Aceitar entrada do usuário como eventos\\ - Traduzir os eventos para a \textit{Model} ou exibir os pedidos para a \textit{View}\\ - Se necessário, implementar prodecimentos de atualização\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textit{Model}\\ \textit{View}\end{tabular} \\ \hline
@@ -447,7 +449,7 @@ A \textit{Controller} trata as entradas do usuário como eventos, as controlador
 
 \subsubsection{Fluxo de interação entre os componentes}
 
-Tão importante quanto a compreensão de cada componente é compreender o fluxo de interação entre esses componentes e suas interações diretas e indiretas. A Figura \ref{DiagramaDeClasseMVC} representa os três componentes e suas interações, através da notação da UML, onde, dentro de um pacote da \textit{Model} existe uma classe exemplo, cuja o nome é, \textit{Model.Class} possuindo relações de contribuição com o pacote \textit{Controller}, através da classe \textit{ManipuladoraDeDados.Class}. De forma semelhante existe a relação entre a \textit{Controller} e a \textit{View} entre as classes  \textit{ManipuladoraDeDados.Class} e \textit{GUI.Class}. Os nomes atribuídos na diagramação deste diagrama de classes, são para auxiliar a compreensão do diagrama. 
+Tão importante quanto a compreensão de cada componente é compreender o fluxo de interação entre esses componentes e suas interações diretas e indiretas. A Figura \ref{DiagramaDeClasseMVC} representa os três componentes e suas interações, através da notação da UML. Conforme representado, dentro de um pacote da \textit{Model} existe uma classe exemplo, cujo o nome é \textit{Model.Class}, possuindo relações de contribuição com o pacote \textit{Controller}, através da classe \textit{ManipuladoraDeDados.Class}. De forma semelhante, existe a relação entre a \textit{Controller} e a \textit{View} entre as classes  \textit{ManipuladoraDeDados.Class} e \textit{GUI.Class}. Os nomes atribuídos na diagramação são para auxiliar a compreensão. 
 
 \begin{figure}[h!]
 	\centering
@@ -458,7 +460,7 @@ Tão importante quanto a compreensão de cada componente é compreender o fluxo 
 
 \pagebreak
 
-A Figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que representa o fluxo dos eventos em um cenário exemplo, onde a \textit{Controller} interage diretamente com a \textit{Model} e \textit{View}, onde o usuário entra com alguma informação e aguarda o retorno da aplicação. 
+A Figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que representa o fluxo dos eventos em um cenário exemplo, no qual a \textit{Controller} interage diretamente com a \textit{Model} e \textit{View}, sendo que o usuário entra com alguma informação e aguarda o retorno da aplicação. 
 
 
 \begin{figure}[h!]
@@ -470,62 +472,62 @@ A Figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que represent
 
 \pagebreak
 
-\section{Requisitos de segurança como RNFs}
+\section{Segurança vista como um RNF}
 \label{sec:seguranca}
 
-Os RNFs de segurança podem ser entendidos como restrições, que realizam operacionalizações e satisfazem as metas de segurança, estabelecidas pelos engenheiros de requisitos e/ou engenheiros de software. Esse conjunto de  RNFs devem expressar de maneira precisa e não ambígua as metas de segurança de uma aplicação, fornecendo uma especificação para alcançar a meta deseja \cite{haley2006framework}.  
+Tratando a Segurança como um RNF, pode-se entender a mesma como estando associadas a vários outros RNFs. Dessa forma, podemos entender os RNFs associados à Segurança como sendo restrições, as quais realizam operacionalizações e satisfazem as metas de segurança, estabelecidas pelos engenheiros de requisitos e/ou engenheiros de software. Esse conjunto de  RNFs devem expressar de maneira precisa e não ambígua as metas de segurança de uma aplicação, fornecendo uma especificação para alcançar a meta deseja \cite{haley2006framework}.  
 
-Existem diversas definições de segurança, de forma simplificada, segurança no contexto de segurança da informação, significa proteger a informação \cite{chung2012non}. Está monografia, portanto se fundamenta nos conceitos de \cite{chung2012non} e \cite{sullivan2011web} como base para para conceituar segurança, tomando como base os três conceitos conhecidos como CIA (\textit{Confidentiality}, \textit{Integrity}, \textit{Availability}) . 
+Existem diversas definições de Segurança. De forma simplificada, Segurança, no contexto de Segurança da Informação, significa proteger a informação \cite{chung2012non}. O presente trabalho fundamenta-se nos conceitos de \cite{chung2012non} e \cite{sullivan2011web} como base para conceituar, Segurança, orientando-se por três conceitos conhecidos como CIA (\textit{Confidentiality}, \textit{Integrity}, \textit{Availability}) . 
 
-Portanto, para a definição seguindo os fundamentos de \cite{chung2012non}, segurança se baseia em três conceitos, sendo eles: 
+Diante do exposto, para a definição seguindo os fundamentos de \cite{chung2012non}, segurança se baseia em: 
 
 \begin{itemize}
-	\item \textbf{Confidencialidade} (do inglês, \textit{Confidenciality}): Proteção da informação para evitar que as informações armazenadas ou transmitidas não poderão ser vistas ou interpretadas por terceiros, sendo somente o usuário principal e o destinatário. Promovendo essa proteção da informação através de algoritmos de criptografia \cite{chung2012non} \cite{silva2007arquitetura}. 
+	\item \textbf{Confidencialidade} (do inglês, \textit{Confidenciality}): Proteção da informação para evitar que as informações armazenadas ou transmitidas não sejam vistas ou interpretadas por terceiros, sendo somente o usuário principal e o destinatário. Deve-se prover essa proteção da informação através de algoritmos de criptografia \cite{chung2012non} \cite{silva2007arquitetura}. 
 	
-	\item \textbf{Integridade} (do inglês, \textit{Integrity}): Proteção contra qualquer tipo de atualização e/ou adulteração não autorizada, certifica-se que essa proteção seja garantida contra todo tipo modificação acidental ou maliciosa, garantindo então que a informação percorra, todo o trajeto entre o usuário principal e um destinatário \cite{chung2012non} \cite{silva2007arquitetura}. 
+	\item \textbf{Integridade} (do inglês, \textit{Integrity}): Proteção contra qualquer tipo de atualização e/ou adulteração não autorizada. Certifica-se que essa proteção seja garantida contra todo tipo de modificação acidental ou maliciosa, garantindo que a informação percorra todo o trajeto entre o usuário principal e um destinatário \cite{chung2012non} \cite{silva2007arquitetura}. 
 	
 	\item \textbf{Disponibilidade} (do inglês, \textit{Availability}): Proteção contra a interrupção do serviço, no momento em que o usuário principal estiver necessitando da utilização do serviço \cite{chung2012non} \cite{silva2007arquitetura}.
 	  
 \end{itemize}
 
 
-O CIA pode ser abstraído em metas flexíveis de segurança, logo depois, capturados e organizados em um catálogo de segurança, promovendo um conjunto rico de alternativas e pontos de verificação para se proteger contra a negligencia de pontos relevantes, e para a segurança da informação em uma aplicação. Como apresentado na Figura \ref{catalogoSegurancaChung}, onde abaixo, de cada conceito chave para segurança exitem seus subtipos. 
+O CIA pode ser abstraído em metas flexíveis de Segurança. Logo após, essas metas flexíveis devem ser capturadas e organizadas em um catálogo de Segurança, promovendo um conjunto rico de alternativas e pontos de verificação para se proteger contra a negligencia de pontos relevantes, e para a segurança da informação em uma aplicação. Como apresentado na Figura \ref{catalogoSegurancaChung},  abaixo de cada conceito chave de Segurança, existem seus subtipos. 
 
-Apresentados em  verde na Figura \ref{catalogoSegurancaChung} estão outras características dos requisitos de segurança, sendo um dos mais relevantes o ``operacional``, que possui como subtipo ``segurança operacional`` que refere-se diretamente a segurança da informação \cite{chung2012non}.
+Apresentados em  verde na Figura \ref{catalogoSegurancaChung} estão outras características dos requisitos de Segurança, sendo um dos mais relevantes o ``operacional``, que possui como subtipo ``segurança operacional`` referindo-se, diretamente, à Segurança da Informação \cite{chung2012non}.
 
-Os subtipos das ``características dos RNF`` de acordo com \cite{chung2012non} podem ser ``ciclo de vida``, ``operacional \footnote[1]{Operação realizada por uma aplicação de software em tempo de execução \cite{chung2012non}.}``, ``desenvolvimento \footnote[2]{Estágios de desenvolvimento \cite{chung2012non}.}``, ``interna-externa \footnote[3]{Refere-se a confidencialidade dos itens de informação do sistema \cite{chung2012non}.}``, ``interna `` e ``externa``.
+Os subtipos das ``características dos RNF``, de acordo com \cite{chung2012non}, podem ser ``ciclo de vida``, ``operacional \footnote[1]{Operação realizada por uma aplicação de software em tempo de execução \cite{chung2012non}.}``, ``desenvolvimento \footnote[2]{Estágios de desenvolvimento \cite{chung2012non}.}``, ``interna-externa \footnote[3]{Refere-se a confidencialidade dos itens de informação do sistema \cite{chung2012non}.}``, ``interna `` e ``externa``.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/catalogoSegurancaChung.PNG}
-	\caption{Catálogo de segurança. Fonte: \cite{chung2012non}.}
+	\caption{Catálogo de Segurança. Fonte: \cite{chung2012non}.}
 	\label{catalogoSegurancaChung}
 \end{figure}
 
-É de extrema importância entender os conceitos na literatura dos subtipos de cada conceito, as subseções a seguir fazem um breve detalhamento sobre esses conceitos Confidencialidade e Integridade. 
+É de extrema importância entender os subtipos de cada conceito. Portanto, as subseções a seguir fazem uma breve apresentação sobre os conceitos de Confiabilidade e Integridade. 
 
 \subsection{Confidencialidade}
 \label{subsec:confidencialidade}
 
-Se tratando de confidencialidade em \cite{reis10classificaccao} é definido conceitos sobre o tipo da informação em segurança, sendo eles: 
+De acordo com \cite{reis10classificaccao}, em Confidencialidade, podem ser definidos conceitos sobre o tipo de Segurança, sendo eles:
 
 \begin{itemize}
-	\item \textbf{Irrestrido}: Tipo de informação pública. 
+	\item \textbf{Irrestrito}: Tipo de informação pública. 
 	
-	\item \textbf{Interna}: Tipo de informação que seu acesso deve ser evitada por público externo, caso este tipo de informação seja disponibilizada, por erro interno ou por ataque malicioso não causa nenhum impacto ao mantenedor da informação.
+	\item \textbf{Interna}: Tipo de informação que seu acesso deve ser evitado por público externo. Caso este tipo de informação seja disponibilizado, por erro interno ou por ataque malicioso, não causa impacto algum ao mantenedor da informação.
 	
-	\item \textbf{Confidencial}: Tipo de informação interna, onde, a disponibilidade ao público externo, por erro interno ou por ataque malicioso pode gerar vantagens a concorrentes e perda de usuários/clientes. 
+	\item \textbf{Confidencial}: Tipo de informação interna, a qual, uma vez disponibilizada ao público externo, por erro interno ou ataque malicioso, pode gerar vantagens a concorrentes e, consequentemente perda de usuários/clientes. 
 	
-	\item \textbf{Secreta}: Tipo de informação interna, restrita a um conjunto específico de usuários, onde, a disponibilidade tanto ao público externo quando ao público interno não definido, pode causar grandes danos. A integridade dessa informação deve ser mantida a qualquer custo.
+	\item \textbf{Secreta}: Tipo de informação interna, restrita a um conjunto específico de usuários, a qual, uma vez disponibilizada tanto ao público externo, quanto ao público interno não definidos, pode causar grandes danos. A integridade dessa informação deve ser mantida a qualquer custo.
 \end{itemize} 
 
-A confidencialidade possui os subtipos ``confidencialidade interna`` e ``confidencialidade externa`` de acordo com a Figura \ref{catalogoSegurancaChung}.
+A Confidencialidade possui os subtipos ``confidencialidade interna`` e ``confidencialidade externa`` conforme ilustra a Figura \ref{catalogoSegurancaChung}.
  
 
 \subsection{Integridade}
 \label{subsec:integridade}
  
-Definida através dos conceitos precisão e completude, por \cite{chung2012non}, onde: 
+Definida através dos conceitos Precisão e Completude, por \cite{chung2012non}, onde: 
 
 \textbf{Precisão}: Pode ser entendida como qualquer atributo semântico, que fundamenta uma informação \cite{chung2012non}, ou seja, a garantia que um requisito da informação seja descrito com precisão de acordo com, suas especificações. 
 
@@ -536,7 +538,7 @@ Definida através dos conceitos precisão e completude, por \cite{chung2012non},
 	
 	\item \textbf{Precisão de um para um}: Garantir que um único objeto esteja ligado a uma única entidade do domínio. 
 	
-	\item \textbf{Consistência interna}: Garantir que os valores do mundo real seja correspondente aos valores do sistema.
+	\item \textbf{Consistência interna}: Garantir que os valores do mundo real sejam correspondentes aos valores do sistema.
 \end{itemize}
 
 \textbf{Completude}: Garantir que o RNF esteja completo \cite{chung2012non}. 
@@ -552,48 +554,50 @@ Os conceitos de arquitetura de software também, foram apresentados neste Capít
 \chapter{Suporte Tecnológico}
 \label{chap:suporteTecnologico}
 
-Neste Capítulo, é apresentado as ferramentas de software utilizadas para dar suporte ao desenvolvimento da monografia. A seção \ref{sec:ferramentasModelagem}, apresenta uma breve descrição das ferramentas utilizadas na modelagem dos diagramas e mapas mentais presentes na monografia e a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas de suporte à escrita, e para a realização do controle de versão. 
+Neste Capítulo, são apresentadas as ferramentas de software utilizadas para dar suporte ao desenvolvimento deste trabalho. A seção \ref{sec:ferramentasModelagem} apresenta uma breve descrição das ferramentas utilizadas na modelagem dos diagramas e mapas mentais. A seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas de suporte à escrita, e para a realização do controle de versão. 
 
 \section{Ferramentas de modelagem}
 \label{sec:ferramentasModelagem}
 
 \begin{itemize}
-	\item \textbf{Astah Professional}: é uma ferramenta de modelagem de diagramas dinâmicos e estáticos, que suporta a UML 2.x, \textit{Entity Relationship Diagram} (ERD), 
+	\item \textbf{Astah Professional}: é uma ferramenta de modelagem de diagramas dinâmicos e estáticos, que suporta a UML 2.x, \textit{Entity Relationship Diagram} (ERD), \textit{Data Flow Diagram} (DFD), fluxogramas, mapas mentais, e a engenharia reversa para as linguagens Java, C\# e C++ \cite{astah}. A versão utilizada foi a v7.2.0 com licença de estudante, para modelagem dos diagramas da UML e mapas mentais.   
 	
-	\textit{Data Flow Diagram} (DFD), fluxogramas, mapas mentais, suportando a engenharia reversa para as linguagens Java, C\# e C++ \cite{astah}. A versão utilizada foi a v7.2.0 com licença de estudante, para modelagem dos diagramas da UML e mapas mentais.   
+	\item \textbf{StarUML}: É um software \textit{open source} para modelagem de diagramas, na notação UML/\textit{Model Driven Architecture} (MDA). A proposta da ferramenta é tornar-se uma ferramenta gratuita que substitua as plataformas comerciais \cite{starUML}. A versão utilizada é a versão v1.0, pois suporta o \textit{plug-in} RE-Tools, o qual permite a modelagem do SIGs para o NFR Framework. 
 	
-	\item \textbf{StarUML}: É um software \textit{open source} para modelagem de diagramas, para a UML/\textit{Model Driven Architecture} (MDA). A proposta da ferramenta e se tornar uma ferramenta gratuita que substitua as plataformas comerciais \cite{starUML}. A versão utilizada é a versão v1.0, pois suporta o \textit{plug-in} RE-Tools, que permite a modelagem do SIGs para o NFR Framework. 
-	
-	\item \textbf{OpenOME}: É uma ferramenta \textit{open source} de modelagem para apoiar a engenharia requisitos orientada à meta, orientada à agente e orientada à aspectos, ela promove ao desenvolvedor um vinculo entre os requisitos e as especificações e as fases do \textit{design} arquitetural \cite{openOME}. A versão utilizada é a v3.4.1, para modelagem na notação do i*. 
+	\item \textbf{OpenOME}: É uma ferramenta \textit{open source} de modelagem para apoiar a Engenharia Requisitos Orientada à Meta, orientada a agente e orientada a aspectos. Promove ao desenvolvedor um vínculo entre os requisitos e as especificações e as fases do \textit{design} arquitetural \cite{openOME}. A versão utilizada é a v3.4.1, para modelagem na notação do i*. 
 	
 	\item \textbf{Xmind}: É um software proprietário para criação de mapas mentais e suporte na criação de \textit{brainstorming} \cite{xMind}. A versão utilizada é o XMind 8 Update 2, permitindo a criação de mapas mentais. 
 	
-	\item \textbf{Bizagi Modeler}: É uma ferramenta gratuita utilizada para modelagem de processos de negócio, utilizando notação BPMN. É eleita pela comunidade a mais potente e fácil de utilizar do mercado. A versão utilizada é a versão 3.1, para a modelagem do processo de desenvolvimento da monografia \cite{bizagi}. 
+	\item \textbf{Bizagi Modeler}: É uma ferramenta gratuita utilizada para modelagem de processos de negócio, utilizando notação BPMN. É eleita pela comunidade a mais potente e fácil de utilizar do mercado. A versão utilizada é a versão 3.1, para a modelagem do fluxo de desenvolvimento da monografia \cite{bizagi}. 
 	
 	\item \textbf{RE-Tools}: É um conjunto de ferramentas \textit{open source} utilizado para a modelagem de diferentes aspectos das organizações e de seus sistemas, durante a realização das atividades da engenharia de requisitos, possuindo suporte para as notações do (i) NFR Framework, (ii) i*, (iii) \textit{Knowledge Acquisition in autOmated Specification} (KAOS), (iv) \textit{Problem Frames}, (v) UML e (vi) BPMN \cite{reTools} \cite{supakkul2012re}.
 	
 	Esse conjunto de ferramentas vem sendo utilizado para o ensino da Engenharia de Requisitos em cursos na Universidade de Trento (Itália), Universidade do Texas em Dallas (Estados Unidos) e na Universidade de Brasília (Brasil), além de estar envolvida em pesquisas no Brasil, Austrália, Canadá, China, França, Reino Unido e Estados Unidos \cite{supakkul2012re}. 
 	
-	Na monografia a versão do \textit{plug-in} utilizada foi a v3.0.2, para modelagem do gráfico de SIGs. 
+	No presente trabalho a versão do \textit{plug-in} utilizada foi a v3.0.2, para modelagem do gráfico de SIGs. 
 \end{itemize}
 
 \section{Ferramentas para desenvolvimento da monografia}
 \label{sec:ferramentasDesenvolvimento}
 
 \begin{itemize}
-	\item \textbf{Git}: É um sistema \textit{open source} que suporta o controle de versão distribuído \cite{git}. Utilizado para realizar o controle de versão da parte escrita da monografia. 
+	
+	\item \textbf{Git}: É um sistema \textit{open source} que suporta o controle de versão distribuído \cite{git}. A versão utilizada é a v2.13.0 para realizar o controle de versão da parte escrita da monografia. 
+	
 	\item \textbf{GitHub}: O GitHub é uma plataforma de hospedagem de código para controle de versão utilizando o Git, através do GitHub é possível criar uma conta para armazenar o código fonte de projetos em repositórios gratuitos e privados \cite{github}. Utilizado para hospedar o repositório público para o controle de versão da monografia. 
-	\item \LaTeX\ : É um sistema que permite a elaboração de textos em alta qualidade, através do programa de diagramação de textos TEX \cite{latex}. Utilizado no desenvolvimento da parte escrita da monografia. 
+	
+	\item \LaTeX\ : É um sistema que permite a elaboração de textos em alta qualidade, através do programa de diagramação de textos TEX \cite{latex}. A versão utilizada é a v5.6.2 utilizado no desenvolvimento da parte escrita da monografia. 
+	
 \end{itemize}
 
 \section{Resumo do capítulo}
 
-Neste Capítulo foi descrito todas as ferramentas que deram suporte para a escrita o desenvolvimento dessa monografia. Na seção \ref{sec:ferramentasModelagem} foi apresentada as versões e a utilização de cada ferramenta, e a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas utilizadas no desenvolvimento da parte escrita e o controle de versão da mesma. 
+Neste capítulo, foram descritas as principais ferramentas que apoiaram o desenvolvimento do trabalho. Na seção \ref{sec:ferramentasModelagem} foi apresentada as versões e a utilização de cada ferramenta, e a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas utilizadas no desenvolvimento da parte escrita e o controle de versão da mesma. 
 
 \chapter{Metodologia}
 \label{chap:metodologia}
 
-Neste Capítulo, é apresentado a classificação de pesquisa na secção \ref{sec:classificacaoDaPesquisa}, onde detalha-se a pesquisa de acordo com seus tipos de classificações como abordagem de pesquisa, natureza de pesquisa, objetivos de pesquisa e procedimentos técnicos de pesquisa. E a seção \ref{sec:procedimentosMetodológicos} apresenta os procedimentos metodológicos para o desenvolvimento dessa monografia, onde detalha-se o fluxo de atividades e o cronograma seguido tanto para o TCC1 e TCC2.  
+Neste Capítulo, é apresentada a classificação de pesquisa na secção \ref{sec:classificacaoDaPesquisa}, classificando-a de acordo com a sua abordagem, sua natureza, seus objetivos e procedimentos. A seção \ref{sec:procedimentosMetodológicos} apresenta os procedimentos metodológicos para o desenvolvimento desse trabalho, procurando detalhar o fluxo de atividades bem como o cronograma de ambos, TCC1 e TCC2.  
 
 \section{Classificação da pesquisa}
 \label{sec:classificacaoDaPesquisa}
