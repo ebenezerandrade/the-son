@@ -8,8 +8,10 @@ Antes de entender os conceitos relevantes para o desenvolvimento do catálogo, �
 A Figura \ref{BigPicture} apresenta o escopo de atuação desse trabalho, partindo da Engenharia de Software e apoiando-se, principalmente em duas disciplinas: 
 
 \begin{itemize}
+	
 	\item A Engenharia de Requisitos, que se compõe de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, sendo uma disciplina detalhada na seção \ref{sec:requisitos}. Será observado que o trabalho foca em uma abordagem orientada à meta. Portanto, tem-se a Engenharia de Requisitos Orientada à Meta. Essa procura tratar os requisitos funcionais e não funcionais como metas a serem alcançadas, sendo esse estudo apresentado na subseção \ref{subsec:orientacaoMeta}. Especificando ainda mais a área de atuação, como esse trabalho centraliza seus esforços nos RNFs, em particular para elaboração do catálogo, a subseção \ref{subsec:requisitosNaoFuncionais} define conceitos associados aos RNFs, preparando o leitor para a apresentação de um \textit{framework} conceitual especificamente proposto para especificação de RNFs. Trata-se do NFR Framework, o qual será detalhado na seção \ref{sec:NFR};
-	\item E Desenho de software, uma área da Engenharia de Software que se preocupa, dentre outras atividades, com o planejamento e a definição da Arquitetura de Software a ser utilizada. Para fins desse trabalho, o foco será na arquitetura padrão MVC. Conceitos associados à Arquitetura de Software bem como ao padrão arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e não subseção \ref{subsec:mvc}, respectivamente.
+	
+	\item E Desenho de Software, uma área da Engenharia de Software que se preocupa, dentre outras atividades, com o planejamento e a definição da Arquitetura de Software a ser utilizada. Para fins desse trabalho, o foco será na arquitetura padrão MVC. Conceitos associados à Arquitetura de Software bem como ao padrão arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e não subseção \ref{subsec:mvc}, respectivamente.
 	
 \end{itemize}
 
@@ -240,7 +242,7 @@ Os tipos de dependências são definidos por \cite{istarwiki20} como:
 	
 	\item \textbf{Tarefa}: Representa a realização de algo em forma particular por um ator. Uma tarefa também pode ser decomposta em subtarefas mais específicas. 
 	
-	\item \textbf{Recurso}: Representa uma entidade física ou informativa, presupõe-se, então, que não existe nenhum problema ou questões abertas sobre como a recurso será alcançado.
+	\item \textbf{Recurso}: Representa uma entidade física ou informativa, pressupõe-se, então, que não existe nenhum problema ou questões abertas sobre como a recurso será alcançado.
 	 
 \end{itemize}
 
@@ -554,7 +556,7 @@ Os conceitos de arquitetura de software também, foram apresentados neste Capít
 \chapter{Suporte Tecnológico}
 \label{chap:suporteTecnologico}
 
-Neste Capítulo, são apresentadas as ferramentas de software utilizadas para dar suporte ao desenvolvimento deste trabalho. A seção \ref{sec:ferramentasModelagem} apresenta uma breve descrição das ferramentas utilizadas na modelagem dos diagramas e mapas mentais. A seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas de suporte à escrita, e para a realização do controle de versão. 
+Neste Capítulo, são apresentadas as ferramentas de software utilizadas para dar suporte ao desenvolvimento deste trabalho. A seção \ref{sec:ferramentasModelagem} apresenta uma breve descrição das ferramentas utilizadas na modelagem dos diagramas e mapas mentais. A seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas de suporte à escrita, e para a realização do controle de versão. A seção \ref{sec:ferramentasParaDesenvolvimentoWebApp} apresenta as ferramentas que serão utilizadas para o desenvolvimento da aplicação web durante a execução do TCC2.  
 
 \section{Ferramentas de modelagem}
 \label{sec:ferramentasModelagem}
@@ -584,137 +586,215 @@ Neste Capítulo, são apresentadas as ferramentas de software utilizadas para da
 	
 	\item \textbf{Git}: É um sistema \textit{open source} que suporta o controle de versão distribuído \cite{git}. A versão utilizada é a v2.13.0 para realizar o controle de versão da parte escrita da monografia. 
 	
-	\item \textbf{GitHub}: O GitHub é uma plataforma de hospedagem de código para controle de versão utilizando o Git, através do GitHub é possível criar uma conta para armazenar o código fonte de projetos em repositórios gratuitos e privados \cite{github}. Utilizado para hospedar o repositório público para o controle de versão da monografia. 
+	\item \textbf{GitHub}: O GitHub é uma plataforma de hospedagem de código para controle de versão utilizando o Git, através do GitHub é possível criar uma conta para armazenar o código fonte de projetos em repositórios gratuitos e privados \cite{github}. Utilizado para hospedar o repositório público para o controle de versão da monografia, a versão utilizada é a v1.0.13.
 	
 	\item \LaTeX\ : É um sistema que permite a elaboração de textos em alta qualidade, através do programa de diagramação de textos TEX \cite{latex}. A versão utilizada é a v5.6.2 utilizado no desenvolvimento da parte escrita da monografia. 
 	
 \end{itemize}
 
+\section{Ferramentas para o desenvolvimento da aplicação web}
+\label{sec:ferramentasParaDesenvolvimentoWebApp}
+
+O Git e o GitHub também serão utilizados para realização do controle de versão de código no desenvolvimento do software.
+
+\begin{itemize}
+	
+	\item \textbf{Linux Mint 18.3 Sylvia}: É uma distribuição linux baseada no Ubuntu 16.04 LTS é a terceira e última versão do ciclo da série 18 \cite{Mint}. Essa versão será utilizada no sistema operacional para o desenvolvimento do TCC2, a versão encontra-se disponível através da URL \url{https://linuxmint.com/download.php} 
+	
+	\item \textbf{Sublime Text:} É um editor de textos multiplataforma. Possuindo recursos que facilitam a escrita de código, como: Minimap, edição de textos em multi-painel, salvamento automático, autocompletar, correspondência entre parenteses, dentre outros \cite{SublimeText}. A versão que será utilizada no TCC2 é a versão 3.0.
+	
+	\item \textbf{Ruby:} É uma linguagem de programação interpretada e multiparadigma, desenvolvida por Yukihiro “Matz” Matsumoto, unificando caraterísticas de suas linguagens favoritas (Perl, Smalltalk, Eiffel, Ada e Lisp), para formar uma linguagem que equilibra a programação funcional com a programação imperativa \cite{Ruby}. A versão da linguagem que será utilizada no TCC2 será a versão 2.5.0.
+	
+	\item \textbf{Ruby on Rails - (RoR):} É um  \textit{framework open source} de desenvolvimento de aplicações web, escrito em \textbf{Ruby} e baseado no padrão arquitetural MVC \cite{RoR}. A versão do \textit{framework} que será utilizada no TCC2 será a versão 5.1.5.
+	
+	\item \textbf{MySQL}: De acordo com a Oracle o MySQL é o Sistema de Gerenciamento de Banco de Dados (SGBD) \textit{open source} mais conhecido do mundo, além de ser uma das principais tecnologias de SGBD para desenvolvimento de aplicações web \cite{MySQL}. A versão do MySQL quer será utilizada no TCC2 será o MySQL \textit{Community Server}, sob licença GPL disponível na versão 5.7.21.
+	
+	\item \textbf{Bootstrap:} É um \textit{framework open source} de desenvolvimento dos componentes responsivos para interface gráfica de aplicações web, que utiliza as Linguagens HTML, CSS e JavaScript \cite{Bootstrap}. A versão que será utilizada no TCC2 será a versão 4.0.0. 
+	
+\end{itemize}
+
 \section{Resumo do capítulo}
 
-Neste capítulo, foram descritas as principais ferramentas que apoiaram o desenvolvimento do trabalho. Na seção \ref{sec:ferramentasModelagem} foi apresentada as versões e a utilização de cada ferramenta, e a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas utilizadas no desenvolvimento da parte escrita e o controle de versão da mesma. 
+Neste capítulo, foram descritas as principais ferramentas que apoiaram o desenvolvimento do trabalho. Na seção \ref{sec:ferramentasModelagem} foi apresentada as versões e a utilização de cada ferramenta, a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas utilizadas no desenvolvimento da parte escrita e o controle de versão da mesma, e a seção \ref{sec:ferramentasParaDesenvolvimentoWebApp} apresenta as ferramentas que serão utilizadas no desenvolvimento da aplicação web em tempo de execução do TCC2. 
+
+A tabela \ref{resumo-cap-3}, resume todas as ferramentas que foram e que serão utilizadas em tempo de execução de TCC1 e TCC2. 
+
+\begin{table}[]
+	\centering
+	\caption{Resumo das ferramentas de suporte.}
+	\label{resumo-cap-3}
+	\begin{tabular}{@{}cccc@{}}
+		\toprule
+		\textbf{Ferramenta} & \textbf{Versão} & \textbf{Suporte} & \textbf{Aplicabilidade} \\ \midrule
+		\begin{tabular}[c]{@{}c@{}}Astah \\ Professional\end{tabular} & v7.2.0 & Modelagem & Modelagem de diagramas dinâmicos e estáticos. \\
+		\rowcolor[HTML]{C0C0C0} 
+		StarUML & v1.0 & Modelagem & Modelagem de diagramas na notação UML/MDA. \\
+		OpenOME & v3.4.1 & Modelagem & Modelagem na notação do i*. \\
+		\rowcolor[HTML]{C0C0C0} 
+		Xmind & \begin{tabular}[c]{@{}c@{}}XMind 8 \\ Update 2\end{tabular} & Modelagem & Modelagem de mapas mentais. \\
+		\begin{tabular}[c]{@{}c@{}}Bizagi \\ Modeler\end{tabular} & v3.1 & Modelagem & \begin{tabular}[c]{@{}c@{}}Modelagem de processos de negócio, \\ utilizando notação BPMN.\end{tabular} \\
+		\rowcolor[HTML]{C0C0C0} 
+		RE-Tools & v3.0.2 & Modelagem & Modelagem do gráfico de SIGs. \\
+		Git & v2.13.0 & \begin{tabular}[c]{@{}c@{}}Controle de\\ versão\end{tabular} & \begin{tabular}[c]{@{}c@{}}Realização do controle de versão da escrita e \\ para o desenvolvimento da aplicação web em \\ tempo de execução do TCC2.\end{tabular} \\
+		\rowcolor[HTML]{C0C0C0} 
+		GitHub & v1.0.13 & \begin{tabular}[c]{@{}c@{}}Hospedagem\\ de código fonte\end{tabular} & \begin{tabular}[c]{@{}c@{}}Armazenar o código fonte da parte escrita do \\ trabalho e da aplicação web que será desenvolvida\end{tabular} \\
+		LaTeX & v5.6.2 & \begin{tabular}[c]{@{}c@{}}Escrita/\\ formatação\end{tabular} & Utilizado para a escrita e formatação do texto. \\
+		\rowcolor[HTML]{C0C0C0} 
+		Linux Mint & \begin{tabular}[c]{@{}c@{}}v18.3 \\ Sylvia\end{tabular} & \begin{tabular}[c]{@{}c@{}}Sistema \\ Operacional\end{tabular} & \begin{tabular}[c]{@{}c@{}}Será o sistema operacional para o desenvolvimento\\ da aplicação web.\end{tabular} \\
+		Sublime Text & v3.0 & \begin{tabular}[c]{@{}c@{}}Escrita de \\ código\end{tabular} & \begin{tabular}[c]{@{}c@{}}Editor de textos para escrita do código fonte \\ da aplicação web.\end{tabular} \\
+		\rowcolor[HTML]{C0C0C0} 
+		Ruby & v2.5.0 & \begin{tabular}[c]{@{}c@{}}Linguagem \\ de programação\end{tabular} & \begin{tabular}[c]{@{}c@{}}Linguagem de programação para desenvolvimento\\ da aplicação web.\end{tabular} \\
+		RoR & v5.1.5 & Desenvolvimento & \begin{tabular}[c]{@{}c@{}}Framework de desenvolvimento web de acordo\\ com o padrão arquitetural MVC.\end{tabular} \\
+		\rowcolor[HTML]{C0C0C0} 
+		MySQL & v5.7.21 & Desenvolvimento & \begin{tabular}[c]{@{}c@{}}SGBD que será utilizado no desenvolvimento da \\ aplicação web.\end{tabular} \\
+		Bootstrap & v4.0.0 & Desenvolvimento & \begin{tabular}[c]{@{}c@{}}Framework quer será utilizado para desenvolver\\ o front-end da aplicação web.\end{tabular} \\ \bottomrule
+	\end{tabular}
+\end{table}
+
 
 \chapter{Metodologia}
 \label{chap:metodologia}
 
-Neste Capítulo, é apresentada a classificação de pesquisa na secção \ref{sec:classificacaoDaPesquisa}, classificando-a de acordo com a sua abordagem, sua natureza, seus objetivos e procedimentos. A seção \ref{sec:procedimentosMetodológicos} apresenta os procedimentos metodológicos para o desenvolvimento desse trabalho, procurando detalhar o fluxo de atividades bem como o cronograma de ambos, TCC1 e TCC2.  
+Neste Capítulo, é apresentada a classificação de pesquisa na secção \ref{sec:classificacaoDaPesquisa}, classificando-a de acordo com a sua abordagem, sua natureza, seus objetivos e procedimentos. A seção \ref{sec:metodologiaDeDesenvolvimentoDeSoftware} apresenta a metodologia de desenvolvimento de software que será utilizada para o TCC2. A seção \ref{sec:procedimentosMetodológicos} apresenta os procedimentos metodológicos para o desenvolvimento desse trabalho, procurando detalhar o fluxo de atividades bem como o cronograma de ambos, TCC1 e TCC2.  
 
 \section{Classificação da pesquisa}
 \label{sec:classificacaoDaPesquisa}
 
-A pesquisa científica pode ser classificada de acordo com sua abordagem, sua natureza, seus objetivos e seus procedimentos técnicos \cite{gerhardt2009metodos}. O objetivo desta seção é detalhar os tipos de classificações de pesquisa utilizados no desenvolvimento desta monografia. 
+A pesquisa científica pode ser classificada de acordo com sua abordagem, sua natureza, seus objetivos e seus procedimentos técnicos \cite{gerhardt2009metodos}. Portanto, nessa seção, procura-se enquadrar a pesquisa do presente trabalho, classificando-a quanto à Abordagem de pesquisa (seção \ref{sub:abordagemDePesquisa}); à Natureza de pesquisa (seção \ref{sub:naturezaDePesquisa}), aos Objetivos de pesquisa (seção \ref{sub:objetivosDePesquisa}) e aos Procedimentos técnicos de pesquisa (seção \ref{sub:procedimentosDePesquisa}).
 
 \subsection{Abordagem de pesquisa}
+\label{sub:abordagemDePesquisa}
 
 Segundo \cite{gerhardt2009metodos}, a pesquisa qualitativa preocupa-se com os aspectos da realidade e que não podem ser quantificados, centrando-se na compreensão e explicação da dinâmica das relações sociais. Também possui três características fundamentais para prosseguir com os estudos \cite{mazzotti1991planejamento}, são elas:
 
 \begin{itemize}
-	\item \textit{Visão Holística:} Onde a compreensão de um comportamento ou evento só é possível com o entendimento das inter-relações que surgem dentro do contexto da pesquisa;
-	\item \textit{Abordagem indutiva:} Onde o pesquisador parte de observações mais livres deixando que as dimensões e categorias de interesse surjam progressivamente durante todo o processo de coleta e análise dos dados;
-	\item \textit{Investigação naturalística:} Onde a intervenção do pesquisador no contexto observado é reduzida ao mínimo.
+	\item \textit{Visão holística:} A compreensão de um comportamento ou evento só é possível com o entendimento das inter-relações que surgem dentro do contexto da pesquisa;
+	\item \textit{Abordagem indutiva:} O pesquisador parte de observações mais livres, deixando que as dimensões e categorias de interesse surjam progressivamente durante todo o processo de coleta e análise dos dados;
+	\item \textit{Investigação naturalística:} A intervenção do pesquisador no contexto observado é reduzida ao mínimo.
 \end{itemize}
 
-A abordagem de \textbf{pesquisa qualitativa} é utilizada na execução desta pesquisa, pois para execução da pesquisa, o autor tem a necessidade de realizar as ações de descrever os principais subtipos de RNFs de segurança, para estruturação de um catálogo de segurança utilizando o NFR \textit{Framework}, bem como compreender e explicar os impactos entre os RNFs no padrão arquitetural MVC. 
+A abordagem de \textbf{pesquisa qualitativa} é utilizada na execução desta pesquisa, pois para execução da pesquisa, o autor tem a necessidade de realizar as ações de descrever os principais subtipos de RNFs de Segurança, visando a estruturação de um catálogo de Segurança utilizando o NFR \textit{Framework}, bem como compreender e explicar os impactos entre os RNFs no padrão arquitetural MVC. 
 
 \subsection{Natureza de pesquisa}
+\label{sub:naturezaDePesquisa}
 
-Essa pesquisa é caracterizada como uma \textbf{pesquisa aplicada}, pois os conhecimentos gerados são voltados para a aplicação prática \cite{gerhardt2009metodos}, voltados à solução de como auxiliar os engenheiros de requisitos e engenheiros de software na especificação dos RNFs de segurança, quando uma arquitetura é imposta. 
+Essa pesquisa é caracterizada como uma \textbf{pesquisa aplicada}, pois os conhecimentos gerados são voltados para a aplicação prática \cite{gerhardt2009metodos}, visando auxiliar os engenheiros de requisitos e engenheiros de software na especificação dos RNFs de segurança, quando uma arquitetura é imposta. 
 
 \subsection{Objetivos de pesquisa}
+\label{sub:objetivosDePesquisa}
 
-Com base no objetivo de pesquisa é possível classificar essa pesquisa como \textbf{pesquisa explicativa}, pois de segundo \cite{gil2002elaborar} “..este tipo de pesquisa preocupa-se em identificar os fatores que determinam ou que contribuem para a ocorrência dos fenômenos..”, ou seja, na presente pesquisa pretende-se explicar como o padrão arquitetural MVC pode ser impactado pelos RNFs, de acordo com o catálogo de segurança.
+Quanto aos objetivos, essa pesquisa pode ser classificada como \textbf{pesquisa explicativa}, pois, segundo \cite{gil2002elaborar}, “...este tipo de pesquisa preocupa-se em identificar os fatores que determinam ou que contribuem para a ocorrência dos fenômenos...”, ou seja, pretende-se explicar como o padrão arquitetural MVC pode ser impactado pelos RNFs, de acordo com o catálogo de Segurança.
 
 \subsection{Procedimentos técnicos de pesquisa}
+\label{sub:procedimentosDePesquisa}
 
-A \textbf{pesquisa bibliográfica} é um dos procedimentos técnicos de pesquisa utilizado, como é evidente no Capítulo \ref{chap:referencialTeorico}, onde é apresentado todo o levantamento teórico que serve de insumo para a execução dessa monografia. De acordo com \cite[p.35]{fonseca2002metodologia} “\textit{esse tipo de procedimento trata-se do levantamento de referências teóricas já analisadas, e publicadas por meio de escritos e eletrônicos, como livros, artigos científicos, páginas de web sites. Qualquer trabalho científico inicia-se com uma pesquisa bibliográfica, que permite ao pesquisador conhecer o que já estudou sobre o assunto}“.
+A \textbf{pesquisa bibliográfica} é um dos procedimentos técnicos de pesquisa utilizados, como é evidente no Capítulo \ref{chap:referencialTeorico}, onde é apresentado todo o levantamento teórico que serve de insumo para a execução dessa monografia. De acordo com \cite[p.35]{fonseca2002metodologia}, “\textit{esse tipo de procedimento trata-se do levantamento de referências teóricas já analisadas, e publicadas por meio de escritos e eletrônicos, como livros, artigos científicos, páginas de web sites. Qualquer trabalho científico inicia-se com uma pesquisa bibliográfica, que permite ao pesquisador conhecer o que já estudou sobre o assunto}“.
  
-Outro procedimento técnico de pesquisa adotado é a \textbf{pesquisa ação}, pois se trata de uma participação planejada do ator em uma situação problemática a ser investigada \cite{fonseca2002metodologia}. O ator participa ativamente do levantamento adquirindo consigo uma série de conhecimentos que servirão como base para construção do catálogo de segurança e que em tempo de execução do TCC2 será validado, através do desenvolvimento de uma solução de software utilizando o padrão arquitetural MVC. 
+Outro procedimento técnico de pesquisa adotado é a \textbf{pesquisa ação}, pois se trata de uma participação planejada do ator em uma situação problemática a ser investigada \cite{fonseca2002metodologia}. O ator participa ativamente do levantamento, adquirindo consigo uma série de conhecimentos que servirão como base para construção do catálogo de Segurança e que, em tempo de execução do TCC2, será validado, através do desenvolvimento de uma solução de software utilizando o padrão arquitetural MVC. 
+
+\section{Metodologia de desenvolvimento de software}
+\label{sec:metodologiaDeDesenvolvimentoDeSoftware}
+
+A metodologia de desenvolvimento de software utilizada para o TCC2 será o \textbf{scrum com adaptações}, que trata-se de uma metodologia de desenvolvimento ágil utilizada para a gestão e planejamento de projetos de software \cite{schwaber2002agile}. 
+
+\pagebreak
+
+O scrum trata os projetos de forma iterativa e incremental, entregando ao final de cada \textit{sprint}\footnote[1]{Curto período de tempo em que são realizadas as atividades de desenvolvimento de software, é indicado que seja de 2 a 4 semanas \cite{schwaber2002agile}.} uma versão funcional do software com o incremento de uma nova funcionalidade \cite{schwaber2002agile}. Para a execução do TCC2 a \textit{sprint} terá duração de 2 semanas com inicio do desenvolvimento em Marco e finalizando no início de Junho. 
+
+Outro conceito do scrum que será utilizado é o \textit{product backlog}\footnote[2]{Lista de funcionalidades a serem implementadas no projeto de software, não necessita estar preenchida por completo no inicio do projeto, pois essa lista cresce a medida que se aprende mais sobre o produto de software \cite{schwaber2002agile}.} Para execução do TCC2 será aplicado o conceito de \textit{product backlog}.
+
+Com base no \textit{product backlog} o \textit{scrum team}\footnote[3]{Um time scrum é definido por uma equipe de pessoas variando de 6 a 10 pessoas \cite{schwaber2002agile}. No presente trabalho o \textit{scrum team} sofre uma adaptação para somente uma única pessoa ``o autor``, mas o termo será utilizado para referir-se diretamente ao autor.} realizará o planejamento da \textit{sprint}, de acordo com as funcionalidades mais relevantes. 
+
+As reuniões de retrospectiva e revisão de \textit{sprint} ocorrerão duas vezes dentro da \textit{sprint}, será as reuniões semanais   de ponto de controle com os orientadores ao qual apresentará o que foi feito, o que não foi feito, e o por que não foi feito, no decorrer da \textit{sprint}. 
+
+O Kanban um método ágil que promove ao \textit{scrum team} e aos \textit{stakeholders} do trabalho uma visão geral de gestão do estado de implementação de uma funcionalidade \cite{prikladnicki2014metodos}. Será utilizado para controle visual do fluxo das atividades, dividindo suas colunas da seguinte maneira ``fazer``, ``Fazendo`` e ``Feito``.
 
 \section{Procedimentos Metodológicos}
 \label{sec:procedimentosMetodológicos}
 
-Para o desenvolvimento da monografia foi realizado várias atividades, essas atividades foram então organizadas como um processo de desenvolvimento da monografia. Como apresentado nas Figuras \ref{PDM-TCC1} e \ref{PDM-TCC2}. 
+Para o desenvolvimento do trabalho, foram realizadas várias atividades. Essas atividades foram então organizadas como um processo de desenvolvimento, conforme ilustrado nas Figura \ref{PDM-TCC1} e \ref{PDM-TCC2}. 
 
-Pelas diretrizes do curso de graduação em Engenharia de Software é necessário à aprovação nas disciplinas de TCC1 e TCC2, logo as próximas seções detalham o fluxo de execução de atividades para concluir a monografia. 
+Pelas diretrizes do curso de graduação em Engenharia de Software, é necessária à aprovação nas disciplinas de TCC1 e TCC2. Assim, nas próximas seções, procurou-se detalhar o fluxo de atividades que conduzirá a execução do trabalho como um todo. 
 
+\subsection{Fluxo de atividades do o TCC1}
 
-
-\subsection{Processo de desenvolvimento da monografia para o TCC1}
-
-Este processo tem como principal objetivo a elaboração e estruturação do catálogo de segurança para o padrão arquitetural MVC. 
+Este processo tem como principal objetivo a fundamentação, a elaboração e a estruturação do catálogo de Segurança para o padrão arquitetural MVC. 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.6]{figuras/PDM-TCC1.PNG}
-	\caption{Atividades do processo de desenvolvimento da monografia para o TCC1.}
+	\caption{Atividades realizadas no TCC1.}
 	\label{PDM-TCC1}
 \end{figure}
 
 As atividades são:
 
 \begin{itemize}
-	\item \textbf{Definir tema}: Junto com os professores orientadores dessa monografia, essa atividade teve, como principal objetivo o refinamento sobre os conceitos teóricos, referente a área de interesse do autor.   
+	\item \textbf{Definir tema}: Junto com os professores orientadores desse trabalho, essa atividade teve como principal objetivo o refinamento sobre os conceitos teóricos referentes à área de interesse do autor.   
 	
-	\item \textbf{Realizar levantamento teórico}: Com base nos resultados obtidos da execução da atividade anterior, iniciou-se o levantamento teórico, com base nas orientações dos orientadores. Onde foi discutido os aspectos fundamentais do GORE, os \textit{frameworks} se se apoiam nos conceitos do GORE, conceitos de Arquitetura de Software e sobre os atributos de qualidade mais relevantes para o mercado e para a academia. 
+	\item \textbf{Realizar levantamento teórico}: Com base nos resultados obtidos da execução da atividade anterior, iniciou-se o levantamento teórico, seguindo as orientações dos orientadores. Discutiu-se sobre os aspectos fundamentais do GORE, os \textit{frameworks} que se apoiam nos conceitos do GORE, os conceitos de Arquitetura de Software e os atributos de qualidade mais relevantes para o mercado e para a academia. 
 	
-	\item \textbf{Elaborar proposta}: Com o conhecimento das necessidades da área de atuação dessa monografia, iniciou a elaboração da proposta de pequisa, junto aos orientados, onde foi discutido e acordado a utilização do NFR \textit{Framework} e a decisão de aplicar o trabalho ao mercado, tomando como \textbf{segurança} sendo o atributo de qualidade mais relevante.  
+	\item \textbf{Elaborar proposta}: Com o conhecimento das necessidades da área de atuação desse trabalho, iniciou a elaboração da proposta de pequisa. Ficou acordado que seria utilizado o NFR Framework bem como que seria aplicado o trabalho ao mercado, tomando Segurança como o principal atributo de qualidade.  
 	
-	\item \textbf{Elaborar referencial teórico}: Redação dos conceitos teóricos a serem aplicados no desenvolvimento da monografia. 
+	\item \textbf{Elaborar referencial teórico}: Redação dos conceitos teóricos a serem aplicados no desenvolvimento desse trabalho. 
 	
-	\item \textbf{Classificar pesquisa}: Redação  da classificação da pesquisa em suas dimensões em (i) abordagem de pesquisa,  (ii) natureza de pesquisa, (iii) objetivos de pesquisa e os (iv) procedimentos técnicos de pesquisa.  
+	\item \textbf{Classificar pesquisa}: Redação  da classificação da pesquisa em suas dimensões. Sendo especificada quanto (i) à abordagem de pesquisa, (ii) à natureza de pesquisa, (iii) aos objetivos de pesquisa, e (iv) aos procedimentos técnicos de pesquisa.
 	
-	\item \textbf{Definir ferramentas de suporte}: Definição e descrição das ferramentas utilizadas no desenvolvimento da monografia.  
+	\item \textbf{Definir ferramentas de suporte}: Definição e descrição das ferramentas utilizadas no desenvolvimento desse trabalho.  
 	
-	\item \textbf{Estruturar catálogo de tipos de segurança}: Com base nos conceitos de segurança apresentados por Lawrence Chung, Brian A. Nixon, Eric Yu e John Mylopoulos no  livro: \textit{NON-FUNCTIONAL REQUIREMENTS
-	IN SOFTWARE ENGINEERING}, iniciou a elaboraçao  do catálogo de tipos de RNFs para segurança, e expandindo o catálogo com base em definições de subtipos de RNFs de segurança definidos por outros autores.
+	\item \textbf{Estruturar catálogo de tipos de segurança}: Com base nos conceitos de Segurança apresentados por Lawrence Chung, Brian A. Nixon, Eric Yu e John Mylopoulos, no  livro: \textit{NON-FUNCTIONAL REQUIREMENTS
+	IN SOFTWARE ENGINEERING}, iniciou-se a elaboraçao  do catálogo de tipos de RNFs para Segurança, e expandindo o catálogo com base em definições de subtipos de RNFs.
 	
-	\item \textbf{Elaborar SIG}: A partir do catálogo de segurança, iniciou-se o processo de identificação das metas flexíveis que podem ser satisfeitas e fundamentando em alguns exemplos do livro: \textit{NON-FUNCTIONAL REQUIREMENTS IN SOFTWARE ENGINEERING}.
+	\item \textbf{Elaborar SIG}: A partir do catálogo de Segurança, iniciou-se o processo de identificação das metas flexíveis que podem ser satisfeitas, orientando-se também pelo livro supracitado.
 	
-	\item \textbf{Realizar o mapeamento entre metas flexíveis e o padrão MVC}: Iniciou-se a comparação das metas flexíveis que possuiam, tipo arquitetural e gerariam impactos positivos ou negativos, na segurança dos dados e da arquitetura. 
+	\item \textbf{Realizar o mapeamento entre metas flexíveis e o padrão MVC}: Iniciou-se a comparação das metas flexíveis que possuiam tipo arquitetural e gerariam impactos positivos ou negativos na Segurança dos dados e da arquitetura. Caso ocorresse a identificação de outro subtipo para Segurança à atividade, ``Estruturar catálogo de tipos para Segurança`` era realizada novamente e consequentemente as atividades seguintes de acordo com a Figura \ref{PDM-TCC1}. 
+	
+	\item \textbf{Definir tecnologia de desenvolvimento de software}: Definir ferramentas para o desenvolvimento do software de exemplo, desenvolvido utilizando o padrão arquitetural MVC.
+	
+	\item \textbf{Definir metodologia de desenvolvimento de software}: Definir metodologia de desenvolvimento de software a ser utilizada.
 	
 	\item \textbf{Apresentar TCC 1}: Defesa do TCC1 para a banca. 
 \end{itemize}
 
-\subsection{Processo de desenvolvimento da monografia para o TCC2}
+\subsection{Fluxo de Atividades do TCC2}
 
 Este processo tem como principal objetivo a validação do catálogo proposto, através do desenvolvimento de uma aplicação de software. 
-
-As atividades são:
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/PDM-TCC2.PNG}
-	\caption{Atividades do processo de desenvolvimento da monografia para o TCC2.}
+	\caption{Atividades a serem realizadas no TCC2.}
 	\label{PDM-TCC2}
 \end{figure}
 
+As atividades são:
+
 \begin{itemize}
-	\item \textbf{Definir tecnologia de desenvolvimento de software}: Definir ferramentas para o desenvolvimento do software de exemplo, desenvolvido utilizando o padrão arquitetural MVC.
-	
-	\item \textbf{Definir metas flexíveis a serem alcançadas}: Definir as metas flexíveis a serem alcançadas de acordo com o cenário exemplo do software a ser desenvolvido.
-	
-	\item \textbf{Definir metodologia de desenvolvimento}: Definir metodologia de desenvolvimento de software a ser utilizada.  
+		
+	\item \textbf{Definir metas flexíveis a serem alcançadas}: Definir as metas flexíveis a serem alcançadas de acordo com o cenário exemplo do software a ser desenvolvido.  
 	
 	\item \textbf{Macro atividade: Realizar desenvolvimento do software}: Realizar as etapas de desenvolvimento de acordo com a metodologia selecionada.
 	
-	\item \textbf{Verificar o nível de satisfação das metas flexíveis}: Verificar se as metas flexíveis foram alcançadas após o desenvolvimento do software
+	\item \textbf{Verificar o nível de satisfação das metas flexíveis}: Verificar se as metas flexíveis foram alcançadas após o desenvolvimento do software.
 	
-	\item \textbf{Validar catálogo}: Validar o catálogo de segurança porposto no TCC1 de acordo com o cenário especificado. 
+	\item \textbf{Coletar as primeiras impressões da aplicação do catálogo}: Validar o catálogo de segurança porposto no TCC1 de acordo com o cenário especificado. 
 	
 	\item \textbf{Apresentar TCC 2}: Apresentar TCC 2 para a banca.
 \end{itemize}
 
-\subsection{Cronograma das atividades de desenvolvimento da monografia}
+\subsection{Cronograma das atividades}
 
-O planejamento com os meses de execução de cada atividade do processo de desenvolvimento da monografia seguem nas Tabelas \ref{cronograma-tcc1} e \ref{cronograma-tcc2} respectivamente. 
+O cronograma apresentado no Tabela \ref{cronograma-tcc1}, organizado em meses,  procura expor como se deu a execução das atividades do TCC1. 
+
+Observa-se que foram utilizados, além do prazo base, os meses de Janeiro e Fevereiro. Isso ocorreu para um melhor aprofundamento do tema, o qual demandou a leitura de vários materiais bibliográficos. Adicionalmente, as notações envolvidas nessa pesquisa são complexas, necessitando de um cuidado maior na escrita, facilitando o entendimento por parte dos interessados.
 
 \begin{table}[h!]
 	\centering
 	\caption{Cronograma das atividades para desenvolvimento do TCC1.}
 	\label{cronograma-tcc1}
-	\begin{tabular}{|l|c|c|c|c|c|c|c|}
+	\begin{tabular}{@{}lccccccc@{}}
 		\hline
-		\textbf{Atividade} & \multicolumn{1}{l|}{\textbf{Ago}} & \multicolumn{1}{l|}{\textbf{Set}} & \multicolumn{1}{l|}{\textbf{Out}} & \multicolumn{1}{l|}{\textbf{Nov}} & \multicolumn{1}{l|}{\textbf{Dez}} & \multicolumn{1}{l|}{\textbf{Jan}} & \multicolumn{1}{l|}{\textbf{Fev}} \\ \hline
+		\textbf{Atividade} & \multicolumn{1}{l}{\textbf{Ago}} & \multicolumn{1}{l}{\textbf{Set}} & \multicolumn{1}{l}{\textbf{Out}} & \multicolumn{1}{l}{\textbf{Nov}} & \multicolumn{1}{l}{\textbf{Dez}} & \multicolumn{1}{l}{\textbf{Jan}} & \multicolumn{1}{l}{\textbf{Fev}} \\ \hline
 		Definir tema & \textbf{x} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \hline
 		Realizar levantamento teórico & \textbf{x} & \textbf{x} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \hline
 		Elaborar proposta & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \hline
@@ -724,30 +804,34 @@ O planejamento com os meses de execução de cada atividade do processo de desen
 		\begin{tabular}[c]{@{}l@{}}Estruturar catálogo de tipos \\ para segurança\end{tabular} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{} \\ \hline
 		Elaborar SIG & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{} \\ \hline
 		\begin{tabular}[c]{@{}l@{}}Realizar mapeamento entre metas\\ flexíveis e o padrão MVC\end{tabular} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} \\ \hline
+		\begin{tabular}[c]{@{}l@{}}Definir metodologia de\\ desenvolvimento de software MVC\end{tabular} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} \\ \hline
+		\begin{tabular}[c]{@{}l@{}}Definir tecnologia de desenvolvimento\\ de software\end{tabular} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} \\ \hline
 		Apresentar TCC1 & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} \\ \hline
 	\end{tabular}
 \end{table}
+
+Na Tabela, é apresentado um planejamento para execução das atividades referentes ao TCC2. trata-se de uma previsão, podendo ocorrer pequenos ajustes ao longo da realização do trabalho.
 
 \begin{table}[h!]
 	\centering
 	\caption{Cronograma das atividades para desenvolvimento do TCC2.}
 	\label{cronograma-tcc2}
-	\begin{tabular}{|l|c|c|c|c|c|}
+	\begin{tabular}{@{}lccccc@{}}
 		\hline
-		\textbf{Atividade} & \multicolumn{1}{l|}{\textbf{Mar}} & \multicolumn{1}{l|}{\textbf{Abr}} & \multicolumn{1}{l|}{\textbf{Mai}} & \multicolumn{1}{l|}{\textbf{Jun}} & \multicolumn{1}{l|}{\textbf{Jul}} \\ \hline
-		\begin{tabular}[c]{@{}l@{}}Definir tecnologia de desenvolvimento\\ de software\end{tabular} & \textbf{x} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \hline
+		\textbf{Atividade} & \multicolumn{1}{l}{\textbf{Mar}} & \multicolumn{1}{l}{\textbf{Abr}} & \multicolumn{1}{l}{\textbf{Mai}} & \multicolumn{1}{l}{\textbf{Jun}} & \multicolumn{1}{l}{\textbf{Jul}} \\ \hline
 		Definir metas flexíveis a serem alcançadas & \textbf{x} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \hline
-		Definir metodologia de desenvolvimento & \textbf{x} & \textbf{x} & \textbf{} & \textbf{} & \textbf{} \\ \hline
-		Realizar desenvolvimento do software & \textbf{} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{} \\ \hline
+		Realizar desenvolvimento do software & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{} \\ \hline
 		\begin{tabular}[c]{@{}l@{}}Verificar o nível de satisfação das metas\\ flexíveis\end{tabular} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{} \\ \hline
-		Validar catálogo & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{} \\ \hline
-		Apresentar TCC 2 & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} \\ \hline
+		Coletar as primeiras impressões da \\ aplicação do catálogo & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{} \\ \hline
+		Apresentar TCC 2 & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{} \\ \hline
 	\end{tabular}
-\end{table}
+\end{table} 
 
 \section{Resumo do capítulo}
 
-Neste capitulo foi detalhada a classificação da pesquisa de acordo com seus tipos, como sendo a (i) abordagem de pesquisa, se tratando de uma pesquisa qualitativa, a (ii) Natureza de pesquisa, caraterizada como uma pesquisa aplicada, o (ii) objetivo de pesquisa, caracterizado como uma pesquisa explicativa e os (iv) procedimentos técnicos de pesquisa, caracterizados como uma pesquisa bibliográfica e a pesquisa ação. Também foi detalhado o fluxo de atividades para o desenvolvimento dessa monografia englobando a sua execução para a execução das disciplinas obrigatórias TCC1 e TCC2.
+Neste capitulo foi detalhada a classificação da pesquisa de acordo com seus tipos, como sendo a (i) abordagem de pesquisa, se tratando de uma pesquisa qualitativa, a (ii) Natureza de pesquisa, caraterizada como uma pesquisa aplicada, o (ii) objetivo de pesquisa, caracterizado como uma pesquisa explicativa e os (iv) procedimentos técnicos de pesquisa, caracterizados como uma pesquisa bibliográfica e a pesquisa ação. E a adaptação do Scrum como método de desenvolvimento de software e o Kanban para acompanhamento visual do andamento da implementação das funcionalidades da aplicação web.
+
+Adicionalmente, procurou-se detalhar ambos os fluxos de atividades e cronogramas para o pleno desenvolvimento do TCC1 e TCC2, respectivamente.
 
 \chapter{Proposta}
 \label{chap:proposta}
@@ -759,7 +843,7 @@ Neste capítulo, é apresentado a proposta do trabalho partido dos tipos de RNFs
 
 Um catálogo de tipos de segurança promove a engenheiros de requisitos e engenheiros de software o entendimento das diferentes necessidades se tratando dos domínios de segurança dos dados e segurança arquitetural de uma aplicação de software. Pois, com base no catálogo pode escolher os conceitos de segurança que são mais relevantes para o desenvolvimento da aplicação.
 
-A Figura \ref{catalogoDeTipos} apresenta o catálogo de tipos de segurança proposto por esta monografia, nele as caraterísticas externas dos RNFs de segurança foram descartadas, pois o presente trabalho trata apenas como o mundo real pode prejudicar o software em questões arquiteturais, e que podem ou não gerar impacto sobre os consistência dos dados.    
+A Figura \ref{catalogoDeTipos} apresenta o catálogo de tipos de Segurança proposto por esta monografia, nele as caraterísticas externas dos RNFs de segurança foram descartadas, pois o presente trabalho trata apenas como o mundo real pode prejudicar o software em questões arquiteturais, e que podem ou não gerar impacto sobre os consistência dos dados.    
 
 As cores no catálogo são para facilitar o entendimento e identificar de onde vem RNF mais genérico. 
 
