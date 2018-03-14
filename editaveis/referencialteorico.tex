@@ -836,217 +836,101 @@ Adicionalmente, procurou-se detalhar ambos os fluxos de atividades e cronogramas
 \chapter{Proposta}
 \label{chap:proposta}
 
-Neste capítulo, é apresentado a proposta do trabalho partido dos tipos de RNFs de segurança e suas características voltadas a segurança arquitetural de software através da Seção \ref{sec:CatalogoDeTiposDeNFRsParaSeguranca} e na Seção \ref{sec:SIG} os tipos de RNFs são abstraídos, tratados como metas flexíveis e modelados em um SIG.  
+\section{Catálogo de Segurança}
 
-\section{Catálogo de tipos de RNFs para segurança}
-\label{sec:CatalogoDeTiposDeNFRsParaSeguranca}
+Esse catálogo de Segurança procura promover aos engenheiros de requisitos e engenheiros de software uma maior compreensão quanto às diferentes necessidades em se tratando de Segurança de Dados e Segurança em termos arquiteturais. Isso é obtido, pois o catálogo acorda os principais conceitos associados à Segurança, com base em levantamento bibliográfico, e que por isso mostram-se relevantes para o desenvolvimento de aplicações, cujo gargalo é Segurança.
 
-Um catálogo de tipos de segurança promove a engenheiros de requisitos e engenheiros de software o entendimento das diferentes necessidades se tratando dos domínios de segurança dos dados e segurança arquitetural de uma aplicação de software. Pois, com base no catálogo pode escolher os conceitos de segurança que são mais relevantes para o desenvolvimento da aplicação.
+Para melhor organização, o catálogo está estruturado em três níveis de detalhamento, o primeiro nível define as metas flexíveis de Segurança sem o foco em Segurança de Dados e os aspectos arquiteturais, o segundo nível realiza o mapeamento entre as metas flexíveis do primeiro nível com os aspectos arquiteturais do MVC e o terceiro nível realiza o mapeamento dos aspectos arquiteturais do MVC com as operacionalizações, de acordo com a meta flexível mapeada.
 
-A Figura \ref{catalogoDeTipos} apresenta o catálogo de tipos de Segurança proposto por esta monografia, nele as caraterísticas externas dos RNFs de segurança foram descartadas, pois o presente trabalho trata apenas como o mundo real pode prejudicar o software em questões arquiteturais, e que podem ou não gerar impacto sobre os consistência dos dados.    
+Os três níveis de detalhamento são descritos nas subseções abaixo. 
 
-As cores no catálogo são para facilitar o entendimento e identificar de onde vem RNF mais genérico. 
+\subsection{Primeiro nível de detalhamento}
+\label{sub:primeiroNivel}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.6]{figuras/catalogoDeTiposSeguranca.PNG}
-	\caption{Catálogo de tipos para segurança arquitetural de software.}
-	\label{catalogoDeTipos}
-\end{figure}
+O primeiro nível de detalhamento apresenta as metas flexíveis mais genéricas de Segurança de software, apoiando-se principalmente na definição na definição de Chung que se baseia em Confidencialidade, Integridade e Disponibilidade e na definição de Segurança da Informação apresentada na ISO 27001.
 
-Para ``disponibilidade`` apresentado em roxo escuto escuro na Figura \ref{catalogoDeTipos}, trata-se da proteção contra a interrupção dos serviços em execução, no momento em que o usuário estiver utilizando a aplicação, visando a disponibilidade das funções internas dentro da própria arquitetura do software. 
-
-Em ``segurança operacional`` apresentado em laranjado na Figura \ref{catalogoDeTipos} e seu subtipo ``operação interna confidencial`` referindo-se diretamente a manutenção da segurança dos dados e componentes durante a execução do software. 
-
-\subsection{Integridade}
-
-Integridade e seus subtipos são representados no catálogo da Figura \ref{catalogoDeTipos} através da cor roxo claro. 
-
-2Como definido na Subseção \ref{subsec:integridade} integridade pode ser abstraída em dois subtipos, precisão e completude, onde precisão pode ser abstraída em mais 4 subtipos \cite{chung2012non}, que são relevantes para a manutenção do controle de acesso de usuários e da própria permissão de instanciação de objetos dentro das camadas do padrão arquitetural MVC. 
-
-O papel de cada RNF dentro do catálogo possui uma função específica, para ``precisão`` tem-se os subtipos, (i) ``propriedade de precisão``, cuja o papel dentro do catálogo é manter que um objeto não seja instanciado por uma classe em uma camada diferente ao qual no possui relação para tal, dentro do padrão arquitetural MVC, e de forma análoga o (ii) ``valor de precisão``, visa a garantia de que os valores retornados pelas operações possuem a precisão desejada, dentro de uma mesma camada, ou quando ocorre o retorno de uma função para uma outra função em outra camada no MVC, a (iii) ``precisão de um para um``, possui foco na \textit{model} pois, verifica se existe uma única entidade do mundo real, ligada a um objeto instanciado pela model. e (iv) ``consistência interna``, promover que os valores do mundo real sejam correspondente aos valores, e abstrações contidas no sistema (entidades, métodos, dados)
-
-O RNF ``controle de acesso`` é uma especificidade de todas as especificidades de precisão, pois procura-se garantir a consistência e precisão nas dimensões de dados e componentes dentro do padrão arquitetural MVC. Portanto, as especificações desse RNF são justamente (i) ``controle de acesso de dados`` e ``(ii) ``controle de acesso de componentes``.
-
-Para ``completude`` é a garantia de que o RNFs esteja completo e não ambíguo.
-
-\subsection{Confidencialidade}
-
-Confidencialidade e seus subtipos são representados no catálogo da Figura \ref{catalogoDeTipos} através da cor azul. 
-
-Como foco é a verificação dos impactos entre os RNFs de segurança aplicado aos conceitos arquiteturais, para os aspectos de confidencialidade foram levados em consideração, somente os que possuíam relevância interna onde ``confidencialidade interna``, trata-se dos termos, métodos, e instâncias de classes dentro do padrão MVC, que devem ser utilizamos somente dentro da aplicação, e um determinado ataque ou erro interno não prejudica o mantenedor da aplicação.
-
-Para ``confidencialidade interna e secreta``, aplica-se o mesmo conceito da ``confidencialidade interna``, exceto que a integridade da informação deve ser mantida a qualquer custo, e a ocorrência de um determinado ataque ou erro causa grandes danos em quem mantém a aplicação.
-
-Para ``confidencialidade interna e confidencial``, aplica-se os mesmos conceitos das anteriores, exceto se existir a ocorrência de um determinado ataque ou erro pode causar vantagens a concorrentes, perda de usuários e clientes. 
-
-\section{Gráfico de interdependência entre metas flexíveis - SIGs}
-\label{sec:SIG}
-
-Os subtipos de conceitos que compõem a definição de segurança são abstraídos e tratados como metas flexíveis, para então serem modelados no SIG, promovendo então a possibilidade de analise do impacto entre eles, essa Seção possui o intuito de detalhar cada nó do SIG da Figura \ref{SIG-Completo} que apresenta o SIG completo, portanto o gráfico foi reduzido em pequenas partes, possuindo os mesmos relacionamentos, para facilitar o entendimento do leitor.
-
-As Subseções \ref{sub:DecomposicaoDeSegurancaEmDisponibilidadeESeguranca} Decomposição de segurança em Disponibilidade e Segurança Operacional, \ref{sub: DecomposicaoDeSegurancaEmConfidencialidade} Decomposição de segurança em Confidencialidade, \ref{sub:DecomposicaoDeSegurancaEmIntegridade} Decomposição de segurança em Integridade, detalham cada parte de decomposição do gráfico. 
-
-Entende-se no gráfico o tipo [\textbf{dados}], as informações contidas nas bases de dados e os valores utilizados como parâmetros, e retornos de métodos dentro das camadas do padrão MVC. E o tipo [\textbf{arquitetural}], as estruturas dos componentes que compõe o MVC. 
-
-\begin{landscape}
-	
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[keepaspectratio=true,scale=0.43]{figuras/CatalogOfSecurity.jpg}
-		\caption{Decomposição de segurança para confidencialidade.}
-		\label{SIG-Completo}
-	\end{figure}
-
-\end{landscape}
-
-\subsection{Decomposição de segurança em disponibilidade e segurança operacional}
-\label{sub:DecomposicaoDeSegurancaEmDisponibilidadeESeguranca}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/SIG-SO-e-Disponibilidade.PNG}
-	\caption{Decomposição de segurança em disponibilidade e segurança operancional.}
-	\label{DecomposicaoDisponibilidade}
-\end{figure}
-
-Como apresentado na Figura \ref{DecomposicaoDisponibilidade}, a meta flexível de ``disponibildade[dados]`` pode ser decomposta em duas operacionalizações, baseado em \cite{affleck2012supporting}, e possui um \textit{link} SOME+ de contribuição, representando uma contribuição positiva com ``acompanhamento de informações (\textit{logs}) [arquitetural,dados]``, pois a disponibilidade dos dados pode constituir a geração dos \textit{logs}, tanto para verificação do comportamento entre os componentes dentro da arquitetura, quanto para as informações de entrada do usuário, logo a decomposição pode ser descrita pela expressão \ref{eq:disponibilidade}.
-
-\pagebreak
-
-\begin{eqnarray}
-\label{eq:disponibilidade}
-\textrm{duplicar servidor[dados] E}  \nonumber\\
-\textrm{espelhar banco de dados[dados] E} \nonumber \\
-\textrm{SATISFAZ disponibilidade[dados]} 
-\end{eqnarray}
-
-O impacto de ``disponibilidade[dados]`` sobre ``acompanhamento de informações(\textit{logs}) [arquitetural,dados]`` é expresso como:
+\begin{citacao}
+	"Segurança da informação: preservação da \textbf{confidencialidade}, \textbf{integridade} e \textbf{disponibilidade} da informação; adicionalmente, outras propriedades, tais como \textbf{autenticidade}, \textbf{responsabilidade}, não repúdio e \textbf{confiabilidade}, podem também estar envolvidas." \cite[p. 2]{documentation2005information}
+\end{citacao}
 
 
-\begin{eqnarray}
-\label{eq:disponibilidadeImpacto}
-\textrm{disponibilidade[dados]}  \nonumber\\
-\textrm{ALGUMA+ acompanhamento de informações (logs)[arquitetural,dados]} 
-\end{eqnarray}
-
-Segurança operacional definido no SIG da Figura \ref{DecomposicaoDisponibilidade} como ``segurança operacional[arquitetural]`` possui link de contribuição do tipo HELP(AJUDA), com as metas flexíveis ``autenticidade[arquitetural,dados]`` e ``operação interna confidencial[dados]`` pois se ambas forem satisfeitas, contribuem para a satisfação de segurança operacional da arquitetura. 
-
-A ``autenticidade[arquitetural,dados]`` se satisfeita garante que os objetos instanciados, passagem de parâmetros, retorno de funções e os dados provém de suas fontes originais e não foram submetidos a mudanças maliciosas durante o processo de comunicação entre os componentes, garantindo a originalidade da informação.
-
-Para ``operação interna confidencial[dados]``, como definido por \cite{chung2012non}, deriva de uma das características dos RNFs e essa meta flexível se satisfeita garante que todos os dados confidenciais manipulados internamente entre os componentes da arquitetura não serão expostos ao público externo, devido a erros internos ou por ataque malicioso. 
-
-\pagebreak
-
-\subsection{Decomposição de segurança em confidencialidade}
-\label{sub: DecomposicaoDeSegurancaEmConfidencialidade}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/SIG-Confidencialidade.PNG}
-	\caption{Decomposição de segurança em confidencialidade.}
-	\label{DecomposicaoConfidencialidade}
-\end{figure}
-
-De acordo com a Figura \ref{DecomposicaoConfidencialidade}, a meta flexível ``confidencialidade[arquitetural]``, pode ser decomposta por ``confidencialidade interna[arquitetural,dados]``, se satisfeita a ``confidencialidade interna[arquitetural,dados]``, garante que a comunicação entre os componentes arquiteturais e os dados estão com o acesso restrito somente aos componentes internos da arquitetura. 
-
-A ``confidencialidade interna[arquitetural,dados]``, pode decomposta em ``confidencialidade interna e secreta[arquitetural,dados]`` e ``confidencialidade interna e confidencial[arquitetural,dados]``, através do relacionamento do tipo AND(E) e descrito pela expressão \ref{eq:confidencialidadeInterna}.   
-
-\begin{eqnarray}
-\label{eq:confidencialidadeInterna}
-\textrm{confidencialidade interna e secreta[arquitetural,dados]}  \nonumber\\
-\textrm{E confidencialidade interna e confidencial[arquitetural,dados]} \nonumber\\
-\textrm{SATISFAZ confidencialidade interna[arquitetural,dados]}
-\end{eqnarray}
-
-A meta flexível ``confidencialidade interna e confidencial[arquitetural,dados]``, se satisfeita garante que as características da meta flexível mais genérica possivelmente pode vir a ser satisfeita, além de garantir que os componentes arquiteturais e os dados são internos e não estão expostos ao público externo, logo não podem gerar vantagens a concorrentes e a perda de usuários e clientes. 
-
-Pode parecer redundante ao leitor as palavras confidencialidade e confidencial no nome de uma mesma meta flexível, porém, a intenção é apoiar nos conceitos de confidencialidade como RNF e tratar especificamente o conceito de confidencial em segurança da informação. 
-
-A meta flexível ``operação interna confidencial[aquitetural,dados]`` e sua garantia ao ser satisfeita, já foi apresentada ao final da Subseção \ref{sub:DecomposicaoDeSegurancaEmDisponibilidadeESeguranca}. Portanto, a expressão \ref{eq:confidencialidadeInternaConfidencial} descreve o relacionamento para satisfazer ``confidencialidade interna e confidencial[arquitetural,dados]``.
-
-\begin{eqnarray}
-\label{eq:confidencialidadeInternaConfidencial}
-\textrm{E operação interna confidencial[arquitetural,dados]} \nonumber\\
-\textrm{SATISFAZ confidencialidade interna e confidencial[arquitetural,dados]}
-\end{eqnarray}  
-
-A ``confidencialidade interna e secreta[arquitetural,dados]``, se satisfeita garante que as características da meta flexível mais genérica possivelmente pode vir a ser satisfeita, além de garantir que os componentes arquiteturais que tratam dados secretos em suas comunicações estão previamente protegidos a qualquer custo. E os dados pertencem a uma parte específica de usuários internos podendo causar grandes danos ao sistema e a organização, caso sejam acessados por ataques maliciosos ou divulgados por falha do sistema. 
-
-\newpage
-
-\subsection{Decomposição de segurança em integridade}
-\label{sub:DecomposicaoDeSegurancaEmIntegridade}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/SIG-Integridade.PNG}
-	\caption{Decomposição de segurança em integridade.}
-	\label{DecomposicaoIntegridade}
-\end{figure}
-
-Como apresentado na Figura \ref{DecomposicaoIntegridade} ``integridade[arquitetural]``, pode ser decomposta em duas metas flexíveis através do \textit{link} de contribuição do tipo AND(E), baseado em \cite{chung2012non}, sendo elas ``completude[arquitetural]`` e ``precisão[arquitetural]`` descrito de acordo com a expressão \ref{eq:integridade}.
-
-\begin{eqnarray}
-\label{eq:integridade}
-\textrm{completude[arquitetural]} \nonumber\\
-\textrm{E precisão[arquitetural]} \nonumber\\
-\textrm{SATISFAZ integridade[arquitetural]}
-\end{eqnarray}  
-
-Em ``completude[arquitetural]``, se satisfeita garante que o RNF esteja especificado de maneira completa. Para ``precisão[arquitetural]``, se satisfeita os atributos semânticos definidos como metas flexíveis como ``propriedade de precisão[aquitetural]``, ``valor de precisão[dados]``, ``precisão de um para um[arquitetural,dados]`` e ``consistência interna[dados]``, estão todos satisfeitos.
-
-\newpage
-
-\begin{eqnarray}
-\label{eq:precisao}
-\textrm{propriedade de precisão[arquitetural]} \nonumber\\
-\textrm{E propriedade de precisão[dados]} \nonumber\\
-\textrm{E propriedade de um para um[arquitetural,dados]} \nonumber\\
-\textrm{E consistencia interna[dados]} \nonumber\\
-\textrm{SATISFAZ precisão[arquitetural]}
-\end{eqnarray}
-
-A meta flexível ``controle de acesso[arquitetural,dados]``, se satisfeita garante que o controle de acesso entre os componentes da arquitetura e o tratamento dos dados envolvidos na comunicação entre os componentes estejam sendo realizados como estabelecido pelo padrão MVC.
-
-A Tabela \ref{controleDeAcesso} detalha as contribuições que o ``controle de acesso[arquitetural,dados]`` representa com outras metas flexíveis, bem como a descrição caso venha a ser satisfeitas as metas flexíveis da expressão \ref{eq:precisao}.
+As metas flexíveis foram definidas de acordo com sua relação com Segurança. A meta flexível no SIG apresenta um valor número, esse valor representa a rastreabilidade do conceito da meta com sua devida referência teórica, comprovando a relação direta da meta com Segurança. a Tabela \ref{indicesDeReferencia} apresenta os identificadores para a rastreabilidade da referência teórica de uma meta flexível no SIG da Figura \ref{DetalhamentoPrimeiroNivel}. 
 
 \begin{table}[h!]
 	\centering
-	\caption{Descrição da contribuição entre ``controle de acesso[arquitetural,dados] com outras metas flexíveis.}
-	\label{controleDeAcesso}
+	\caption{Índices de rastreabilidade.}
+	\label{indicesDeReferencia}
 	\begin{tabular}{@{}cc@{}}
 		\toprule
-		\textbf{Meta flexível} & \textbf{Descrição da contribuição} \\ \midrule
-		\begin{tabular}[c]{@{}c@{}}``propriedade de \\ precisão{[}arquitetural{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Se satisfeita, garante a existência de controle onde somente as classes \\ dentro de suas respectivas camadas possam realizar a instanciação dos \\ objetos ao qual possuem suas determinadas responsabilidades. \\ Logo o controle de acesso se satisfeito contribui \\ para a satisfação dessa meta flexível.\end{tabular} \\
-		\rowcolor[HTML]{C0C0C0} 
-		\begin{tabular}[c]{@{}c@{}}``propriedade de \\ precisão{[}dados{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Se satisfeita, existe o controle onde os objetos utilizam somente os\\ (valores/dados) de parâmetros corretos para instanciação dos \\ objetos dentro das camadas. Logo o controle de acesso se satisfeito \\  contribui para a satisfação dessa meta flexível.\end{tabular} \\
-		\begin{tabular}[c]{@{}c@{}}``precisão de \\ um para um\\ {[}arquitetural,dados{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Se satisfeita, garante que para cada entidade no mundo real existe\\ apenas um única entidade no sistema. Logo o controle de acesso se\\ satisfeito contribui para a satisfação dessa meta flexível.\end{tabular} \\
-		\rowcolor[HTML]{C0C0C0} 
-		\begin{tabular}[c]{@{}c@{}}``consistência \\ interna{[}dados{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Se satisfeita contribui para a satisfação do controle de acesso, pois \\ os dados armazenados na base de dados devem estar compatíveis\\ com os dados do mundo real. Um exemplo mais claro é o Cadastro de \\ Pessoas Físicas (CPF) que deve existir, um único CPF vinculado a \\ uma pessoa no mundo real.\end{tabular} \\
-		\begin{tabular}[c]{@{}c@{}}``completude\\ {[}arquitetural{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}O controle de acesso contribui para a satisfação dessa meta flexível, \\ pois para realização do controle de acesso, todos os RNFs \\ entre a comunicação dos componentes e a maneira de tratar os \\ dados devem estar especificados de maneira completa e não ambígua.\end{tabular} \\ \bottomrule
+		\textbf{Identificador} & \textbf{Referência} \\ \midrule
+		{[}1{]} & \cite{chung2012non} \\ 
+		{[}2{]} & \cite{benitti2015taxonomia} \\
+		{[}3{]} & \cite{documentation2005information} \\ \bottomrule
 	\end{tabular}
-\end{table}
+\end{table} 
 
-A meta flexível ``controle de acesso[arquitetural]``, depende do sucesso de duas metas flexíveis mais específicas através do \textit{link} de contribuição do tipo AND(E), com as metas ``controle de acesso[arquitetural]`` e ``controle de acesso usuários[dados]`` como descrito pela expressão \ref{eq:controleDeAcesso}. 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/primeiroNivel.PNG}
+	\caption{Catálogo de Segurança.}
+	\label{DetalhamentoPrimeiroNivel}
+\end{figure}
 
-\begin{eqnarray}
-\label{eq:controleDeAcesso}
-\textrm{controle de acesso componentes[arquitetural]} \nonumber\\
-\textrm{E controle de acesso usuários[dados]} \nonumber\\
-\textrm{SATISFAZ controle de acesso[arquitetural,dados]}
-\end{eqnarray}
+As definições das metas flexíveis são: 
 
-A meta flexível ``controle de acesso componentes[arquitetural]``, para ser satisfeita depende diretamente da implementação de três padrões de projeto \cite{buschmann1996system}, logo esses padrões são definidos como operacionalizações, pois restringe sistematicamente a organização entre as classes. 
+\begin{itemize}
+	
+	\item \textbf{integridade:} Proteção contra qualquer tipo de atualização e/ou adulteração não autorizada. Definida na seção \ref{sec:seguranca}.
+	
+	\begin{itemize}
+		
+		\item \textbf{precisão:} Pode ser entendida como qualquer atributo semântico que fundamenta uma informação. Definida na seção \ref{sec:seguranca}.
+		
+		\item \textbf{completude:} Garantia que o RNF esteja completo. Definida na seção \ref{sec:seguranca}.
+	\end{itemize}
+	
+	\item \textbf{confidencialidade:} Proteção da informação para evitar que as informações armazenadas ou transmitidas não sejam vistas ou interpretadas por terceiros, sendo somente o usuário principal e o destinatário. Definida na seção \ref{sec:seguranca}.
+	
+	\begin{itemize}
+		
+		\item \textbf{confidencialidade interna:} Proteção da informação que o acesso deve ser evitado por um público externo. Definida na seção \ref{sec:seguranca}.
+		
+	\end{itemize}
+	 
+	 \item \textbf{disponibilidade:} Proteção contra a interrupção do serviço, no momento em que o usuário estiver utilizando a aplicação. Definida na seção \ref{sec:seguranca}.
+	 
+	 \begin{itemize}
+	 		
+	 		\item \textbf{recuperabilidade:} Intervalo de tempo que o software deverá estar disponível após uma falha \cite{benitti2015taxonomia}.
+	 	
+	 		\item \textbf{recuperação de desastres:} Políticas e procedimentos aplicados na recuperação de ``desastres`` induzidos no software por usuário ou softwares de terceiros \cite{benitti2015taxonomia}.
+	 		
+	 \end{itemize}
+ 
+ 	\item \textbf{auditoria e controle:} Especificação dos aspectos que devem ser contemplados para proporcionar a auditoria e o controle \cite{benitti2015taxonomia}. 
+ 	
+ 	\item  \textbf{contestabilidade e responsabilização:} Capacidade do software em quantificar as ações e eventos, com intuito de comprovar sua ocorrência \cite{benitti2015taxonomia}. 
+ 	
+ 	\begin{itemize}
+ 		
+ 		\item \textbf{cronologia(logs):} Registro de alterações no software \cite{benitti2015taxonomia}.
+ 		
+ 	\end{itemize}
+ 	
+ 	\item \textbf{autenticidade:} Pode ser entendida como a capacidade do software em identificar que um objeto ou recurso é o que ele realmente declara ser \cite{benitti2015taxonomia}. 
+ 	
+ 	\item \textbf{confiabilidade:} Pode ser entendida como a capacidade do software em realizar e manter seu funcionamento quando submetido em circunstâncias de rotina \cite{benitti2015taxonomia}. 
+ 	
+\end{itemize}
 
-Para a meta flexível ``controle de acesso[dados]``, ser satisfeita depende somente do tipo de linguagem de programação deixado em aberto ao usuário do SIG inserir a linguagem de programação a ser utilizada.
+\subsection{Segundo nível de detalhamento}
+\label{sub:segundoNivel}
 
-Como exemplo e devido a implementação do TCC2 utilizar \textit{Ruby on Rails}, foi modelado as operacionalizações para essa linguagem e para linguagem Java, onde a partir deste ponto do grafo pode ser identificado operacionalizações mais específicas, como algoritmos de autenticação de usuários.
+O segundo nível de detalhamento apresenta as metas flexíveis mais genéricas com foco na relação com Segurança de Dados e os aspectos arquiteturais do padrão MVC.  
 
 
-\section{Resumo do capítulo}
-
-Neste capítulo foi detalhado a proposta deste trabalho, sendo o catálogo de tipos de requisitos de segurança para a arquitetura de software que serviu como base para a construção do SIG e o SIG elaborado através de abstrações do catálogo de tipos, ambos com foco no padrão arquitetural MVC. 
+\subsection{Terceiro nível de detalhamento}
+\label{sub:terceiroNivel}
 
 \chapter{Considerações finais}
 \label{chap:consideracoesFinais}
