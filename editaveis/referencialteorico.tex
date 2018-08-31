@@ -545,6 +545,16 @@ Definida através dos conceitos Precisão e Completude, por \cite{chung2012non},
 
 \textbf{Completude}: Garantir que o RNF esteja completo \cite{chung2012non}. 
 
+\section{Personas}
+\label{sec:personas}
+
+Personas são especificações comportamentais que incorporam as metas e necessidades de usuários, este conceito foi introduzido para auxiliar os desenvolvedores a entender melhor os usuários para um sistema, podendo ser aplicada na Engenharia de Software cobrindo áreas importantes desde a engenharia de requisitos até a entrega do produto \cite{ford2017characterizing}. 
+
+Auxiliando em temas como segurança e privacidade com o objetivo de diminuir as dificuldades enfrentadas no entendimento dos perfis de usuários. Sendo possível modelar aspectos sociais quanto aspectos psicológicos para promover o entendimento do perfil do usuário e suas possíveis motivações que permeiam suas ações \cite{ford2017characterizing} \cite{daelaboraccao}. 
+
+No processo de construção do produto, começamos a imaginar como esse produto irá funcionar e como poderíamos aplicar esse produto\cite{soegaard2012encyclopedia}. Se os integrantes de uma equipe obtiverem um número de descrições de personas na frente deles durante a execução do projeto, as personas auxiliam a manter o produto de acordo com as perspectivas dos usuários. Durante a construção do produto imagina-se como ele deverá ser utilizado por uma persona, portanto a utilização do método de personas não é descrever a persona, mas potencializar a capacidade da equipe de imaginar o produto adequando-se ao perfil dos possíveis usuários \cite{soegaard2012encyclopedia}.  
+
+
 \section{Resumo do Capítulo}
 
 Neste Capítulo, foi abordado os conceitos fundamentais para a construção do catálogo de segurança, foi introduzidos os conceitos chaves da Engenharia de Requisitos e aprofundando em uma de suas áreas que é a Engenharia de Requisitos Orientada à Meta, para compreendermos o conceito de meta e as suas responsabilidades, partimos então para uma visão dos requisitos, focando somente nos requisitos não-funcionais, logo em seguida foi apresentado as características e notações dos modelos intencionais NFR \textit{Framework} e o i*, bem como a apresentação do FURPS. 
@@ -834,14 +844,14 @@ Neste capitulo, foi detalhada a classificação da pesquisa de acordo com seus t
 
 Adicionalmente, procurou-se detalhar ambos os fluxos de atividades e cronogramas para o pleno desenvolvimento do TCC1 e TCC2, respectivamente.
 
-\chapter{Proposta}
+\chapter{Catálogo de Segurança}
 \label{chap:proposta}
 
 Neste Capítulo, é apresentada uma primeira versão do catálogo de Segurança. Dado o volume de aspectos associados à Segurança, procurou-se focar nos aspectos mais relevantes, tomando como base a literatura. Portanto, o autor está ciente de que o catálogo proposto não acorda todo e qualquer aspecto associado à Segurança. Mas, a intenção do trabalho é apenas demonstrar que um catálogo construído para especificar RNFs, utilizando uma notação adequada, mesmo que em alto nível de abstração, pode colaborar no entendimento das necessidades inerentes aos aspectos não-funcionais de um software, comumente colocados em segundo plano, ou apenas especificados em documentos, em linguagem natural. Esses documentos, como a Especificação Suplementar \cite{sommerville1997requirements}, carecem de uma notação que permita especificar os RNFs com toda a complexidade envolvida, ou seja, partindo de  um alto nível de abstração, mas permitindo acordar operacionalizações, as quais de fato tornarão aquele RNF algo implementável, tratável a nível de código. Para a equipe de desenvolvedores, ter especificadas as operacionalizações, acorda soluções concretas para viabilizar a implementação de aspectos considerados tão abstratos. Para atingir esse objetivo, o catálogo proposto é especificado utilizando a notação do NFR \textit{Framework}, já comentada em capítulos anteriores. Essa notação propõe a elaboração de um grafo de interdependências entre os RNFs. Adicionalmente, deixa evidente as principais correlações entre esses RNFs, seus impactos e suas operacionalizações. Conforme justificado no Capítulo \ref{chap:introducao}, dada a relevância do RNF Segurança, têm-se que essa proposta foca seus esforços na especificação desse RNF.
 
 Para tornar mais compreensível o catálogo, optou-se por apresentá-lo em dois níveis de detalhamento. Portanto, na seção \ref{sub:primeiroNivel}, tem-se um primeiro nível de detalhamento. Nesse nível, são acordadas as metas flexíveis (representando os RNFs), seus impactos e suas operacionalizações. Utilizou-se a notação do NFR \textit{Framework}, com a elaboração de um grafo, SIG (\textit{Softgoal Interdependence Graph}). Na seção \ref{sub:segundoNivel}, é apresentado um mapeamento, procurando correlacionar as metas flexíveis e as camadas do Padrão Arquitetural MVC. Um terceiro nível de detalhamento também é almejado nessa pesquisa, sendo esse o mapeamento entre as operacionalizações e as camadas do Padrão Arquitetural MVC. Entretanto, optou-se por construir esse último mapeamento, juntamente com o andamento do TCC 02, pois acredita-se que essa construção - por envolver aspectos em um nível mais baixo de abstração (implementando de fato as operacionalizações nas camadas \textit{Model-View-Controller}) - se tornará mais concreta com um software sendo desenvolvido. Portanto, a construção desse nível de detalhamento ocorrerá de forma dinâmica e evolutiva, ao longo do TCC 02.
 
-\section{Catálogo de Segurança}
+\section{O Catálogo de Segurança}
 
 Essa primeira versão do catálogo de Segurança procura promover aos engenheiros de requisitos e engenheiros de software uma maior compreensão quanto às diferentes necessidades em se tratando de Segurança. O catálogo acorda os principais conceitos associados à Segurança, tomando como base o levantamento bibliográfico realizado nessa pesquisa.
 
@@ -1014,20 +1024,70 @@ Dada a complexidade do tema, em especial por procurar contribuir partindo de cri
 Por fim, cabe mencionar que o catálogo ainda terá mais um nível de detalhamento, o qual irá focar em apresentar a correlação entre as operacionalizações e as camadas MVC. Esse nível será mais bem compreendido ao realizar o desenvolvimento de uma aplicação Web, tarefa a ser desempenhada ao longo do TCC2. Portanto, o catálogo evoluirá em alguns aspectos, o que permitirá que o mesmo contribua ainda mais em apresentar como critérios de qualidade podem ser suficientemente tratados e satisfeitos no nível de código.
 
 
-\chapter{Considerações Finais}
-\label{chap:consideracoesFinais}
+\chapter{Resultados Obtidos}
+\label{chap:resultados obtidos}
 
-Esse Capítulo procura apresentar um resumo quanto aos resultados alcançados até o momento, com a realização do presente trabalho, bem como o que ainda será alcançado com a realização do TCC2. Dessa forma, a seção \ref{sec:resultadosObtidos} procura resgatar os objetivos geral e específicos apresentados no Capítulo \ref{chap:introducao}, detalhando em uma tabela (ou em um quadro) o que foi atendido em tempo de TCC1. Na seção \ref{sec:resultadosEsperados}, outra tabela (ou outro quadro) é apresentada(o), procurando acordar o que ainda será atendido em tempo de TCC2.
+\section{Aplicação do catálogo}
 
-\section{Resultados Obtidos}
-\label{sec:resultadosObtidos}
 
+Para a aplicação do catálogo foi realizado a aplicação de 5 personas com intuito de simular 5 ambientes isolados de desenvolvimento de software utilizando como base de sua arquitetura o padrão arquitetural MVC. 
+
+\subsection{Persona 1}
+\label{subsec:persona1}
+
+\subsubsection{Descrição da Persona 1}
+
+Heleno, 24 anos, Engenheiro de Requisitos está assumindo a função de elicitar os requisitos não funcionais para um novo projeto na empresa em que trabalha, o projeto será desenvolvido em Rails e seu chefe pediu que devesse ter perfis diferentes dentro da aplicação sendo os perfis de membro e administrador. O sistema ao qual seu chefe está solicitando deve principalmente ser um sistema seguro para autenticar o usuário.
+
+O problema: Segurança na realização da autenticação do usuário.
+Objetivo: Verificar o quão seguro poderá ser a autenticação. 
+Desafio: Análise dos impactos entre os requisitos não funcionais para autenticar os usuários.
+Possível solução: Utilização do catálogo
+
+Contexto
+
+Usuário 
+Cadastrar usuário
+Verificar perfil
+Alterar dados da conta
+Administrador 
+Verificar quantidade de usuários
+
+\subsubsection{Utilização do catálogo}
+
+
+\subsubsection{Identificação das possíveis operacionalizações e suas decomposições de acordo com o contexto}
+
+\subsubsection{Tomada de decisões}
+
+\subsubsection{Identificação dos relacionamentos entre os objetivos e justificá-los}
+
+\subsubsection{Identificação de quais metas flexíveis são mais relevantes ao stakeholder}
+
+\subsubsection{Avaliação e Análise}
+
+
+
+
+\subsection{Persona 2}
+\label{subsec:persona2}
+
+\subsection{Persona 3}
+\label{subsec:persona3}
+
+\subsection{Persona 4}
+\label{subsec:persona4}
+
+\subsection{Persona 5}
+\label{subsec:persona5}
+
+\section{Primeira visão da aplicação do catálogo}
+\label{sec: aplicacaoDoCatalogo}
 As atividades previstas para a execução do TCC1 de acordo com o cronograma apresentado na Tabela \ref{cronograma-tcc1} foram executadas com sucesso. Porém ao modelar a primeira versão do catálogo tem-se uma visão preliminar sobre Segurança devido a subjetividade e o conjunto de conceitos abstratos presentes na literatura.
 
 A primeira versão do catálogo apresenta uma visão mais concreta para integridade de software e disponibilidade de software, onde o autor conseguiu detalhar em tempo de execução do TCC1 níveis de operacionalização com base na respectiva fonte ou referência teórica.
 
 A Tabela \ref{resultadosObtidos} apresenta de acordo com os objetivos específicos do trabalho, usando "atendido", "parcialmente atendido" e "não atendido", os principais resultados obtidos até o momento, com a realização do TCC1.
-
 
 \begin{table}[h!]
 	\centering
@@ -1045,6 +1105,12 @@ A Tabela \ref{resultadosObtidos} apresenta de acordo com os objetivos específic
 		Realizar correspondência entre o catálogo e as camadas do padrão arquitetural MVC & Atendido & Atendido, pois essa correspondência foi analisada de acordo com a base teórica já levantada. \\ \bottomrule
 	\end{tabular}
 \end{table}
+
+\chapter{Considerações Finais}
+\label{chap:consideracoesFinais}
+
+Esse Capítulo procura apresentar um resumo quanto aos resultados alcançados até o momento, com a realização do presente trabalho, bem como o que ainda será alcançado com a realização do TCC2. Dessa forma, a seção \ref{sec:resultadosObtidos} procura resgatar os objetivos geral e específicos apresentados no Capítulo \ref{chap:introducao}, detalhando em uma tabela (ou em um quadro) o que foi atendido em tempo de TCC1. Na seção \ref{sec:resultadosEsperados}, outra tabela (ou outro quadro) é apresentada(o), procurando acordar o que ainda será atendido em tempo de TCC2.
+
 
 \section{Resultados Esperados}
 \label{sec:resultadosEsperados}
