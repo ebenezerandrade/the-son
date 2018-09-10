@@ -1030,39 +1030,103 @@ Por fim, cabe mencionar que o catálogo ainda terá mais um nível de detalhamen
 \section{Aplicação do catálogo}
 
 
-Para a aplicação do catálogo foi realizado a aplicação de 5 personas com intuito de simular 5 ambientes isolados de desenvolvimento de software utilizando como base de sua arquitetura o padrão arquitetural MVC. 
+Para a aplicação do catálogo foi realizado a aplicação de cinco personas com intuito de simular cinco ambientes isolados de desenvolvimento de software utilizando como base de sua arquitetura o padrão arquitetural MVC.
 
 \subsection{Persona 1}
 \label{subsec:persona1}
 
+Está subseção detalha o processo de aplicação do catálogo de segurança para a primeira persona 
+
 \subsubsection{Descrição da Persona 1}
 
-Heleno, 24 anos, Engenheiro de Requisitos está assumindo a função de elicitar os requisitos não funcionais para um novo projeto na empresa em que trabalha, o projeto será desenvolvido em Rails e seu chefe pediu que devesse ter perfis diferentes dentro da aplicação sendo os perfis de membro e administrador. O sistema ao qual seu chefe está solicitando deve principalmente ser um sistema seguro para autenticar o usuário.
+Heleno, 24 anos, Engenheiro de Requisitos está assumindo a função de elicitar os requisitos não funcionais para um novo projeto na empresa em que trabalha, o projeto será desenvolvido em Rails e seu chefe pediu que devesse ter perfis diferentes dentro da aplicação sendo os perfis de membro e administrador. O sistema ao qual seu chefe está solicitando deve principalmente ser um sistema seguro para autenticar o usuário com capacidade de redefinir a senha do usuário, ser possível realizar monitorar a quantidade de entradas do usuário e por final validar email do usuário.
 
-O problema: Segurança na realização da autenticação do usuário.
-Objetivo: Verificar o quão seguro poderá ser a autenticação. 
-Desafio: Análise dos impactos entre os requisitos não funcionais para autenticar os usuários.
-Possível solução: Utilização do catálogo
-
-Contexto
-
-Usuário 
-Cadastrar usuário
-Verificar perfil
-Alterar dados da conta
-Administrador 
-Verificar quantidade de usuários
-
-\subsubsection{Utilização do catálogo}
+\begin{itemize}
+	\item O problema: Mapear os métodos de autenticação relevantes na autenticação do usuário. 
+	\item Objetivo: Verificar o quão seguro poderá ser a autenticação. 
+	\item Desafio: Análise dos impactos entre os requisitos não funcionais para autenticar os usuários.
+	\item Possível solução: Utilização de gems que pomovem a autenticação.
+\end{itemize}
 
 
-\subsubsection{Identificação das possíveis operacionalizações e suas decomposições de acordo com o contexto}
+\subsubsection{Identificar possível solução}
+
+Como o problema principal do usuário é a realização da autenticação do usuário o primeiro passo a ser adotado é identificar qual gem é a mais adequada, segundo o \textit{The Ruby Toolbox} na categoria \textit{Rails Authentication} o ranking de popularidade das 3 gems mais utilizadas para autenticação é:
+
+\begin{enumerate}
+	\item devise: 38.982.741 downloads
+	\item omniauth: 23.524.509 downloads
+	\item doorkeeper: 7.091.328 downloads
+\end{enumerate}
+
+Portanto a gem selecionada para ser aplicada ao projeto por Heleno é a devise, pois além da posição do ranking é a gem mais recomendada pela comunidade Rails.As vantagens da utilização do devise é que (i) é uma solução baseada no padrão arquitetural MVC, (ii) permite a criação e a utilização de vários perfis de usuários conectados ao mesmo tempo, (iii) basea-se no conceito de modularidade, utilizando somente o que é necessário. Essa \textit{gem} possui 10 módulos: 
+
+\begin{enumerate}
+	\item \textit{Database Authenticatable}: Hashes que armazenam a senha no banco de dados para serem validadas durante o login. A autenticação pode ser realizada via método POST ou HTTP. 
+	\item \textit{Omniauthable}: Suporte adicional ao omniauth.
+	\item \textit{Confirmable}: Envio automático de email para confirmação da conta e verificação da confirmação da conta durante o login.
+	\item \textit{Recoverable}: Envia instruções de redefinição de senha para o usuário e redefine a senha do usuário.
+	\item \textit{Registerable}: Permite a inscrição de usuários por meio de processo de registro que permite a edição e a remoção de suas contas.
+	\item \textit{Rememberable}: Gerenciador de \textit{token} para notificar o usuário da existência de \textit{cookie} salvo.
+	\item \textit{Trackable}: contador de entradas, mantendo o registro de data, hora e endereço de IP
+	\item \textit{Timeoutable}: Expira as sessões inativas em um período de tempo especificado. 
+	\item \textit{Validatable}: Validações de email e senha. 
+	\item \textit{Lockable}: Bloqueia a conta após exceder o número de tentativas especificado, portanto o desbloqueio pode ocorrer via email ou após um período de tempo. 
+\end{enumerate}
+
+\subsubsection{Aplicação do Catálogo de Segurança}
+
+Com base nas descrições dos módulos e a capacidade deles em satisfazer a utilização da \textit{gem} devise, a gem e seus módulos foram então modelados como operacionalizações.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoPersona1-1.PNG}
+	\caption{Operacionalizações para autenticação de usuário utilizando a \textit{gem} devise, parte superior do Catálogo de Segurança.}
+	\label{catalogoPersona1}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoPersona1-2.PNG}
+	\caption{Operacionalizações para autenticação de usuário utilizando a \textit{gem} devise, parte inferior do Catálogo de Segurança.}
+	\label{catalogoPersona2-2}
+\end{figure}
 
 \subsubsection{Tomada de decisões}
 
-\subsubsection{Identificação dos relacionamentos entre os objetivos e justificá-los}
+Para auxiliar a tomada de decisões devemos identificar os relacionamentos entre as metas flexíveis e justifica-los de acordo com o contexto.
+
+O Catálogo de Segurança aplicado no contexto da \textit{Persona} 1 pode ser visualizado  nas Figuras \ref{catalogoPersona1} e \ref{catalogoPersona2-2} onde as operacionalizações são incrementadas no catálogo de acordo com as necessidades do engenheiro de requisitos, a operacioanlização "autorizar acesso a contas" agora possui um grau de prioridade alto devido ser uma das operacionalizações que impactam diretamente o problema.
+
+A utilização da \textit{gem} devise permite que seja um RNF modelado como uma operacionalização e que representa alguma contribuição positiva SOME+ com as as operacionalizações "autorizar acesso a contas" e "utilizar senha para contas". 
+
+As operacionalizações filhas de "utilizar gem devise" e que atendem a demanda da \textit{Persona} 1 são:
+
+\begin{itemize}
+	\item habilitar Database Authenticable: É um dos requisitos mínimos para que ocorra a persistência da senha no banco de dados.
+	\item habilitar Recoverable: Capacidade de redefinir a senha do usuário.
+	\item habilitar Registrable: É um dos requisitos mínimos e que permite a inscrição de usuários. 
+	\item habilitar Trackable: monitorar a quantidade de entradas do usuário. 
+	\item habilitar Validatable: Validar conta via email do usuário. 
+\end{itemize}
+
+portanto ao habilitar os módulos eles são satisfeitos e podemos verificar o nível em que segurança pode ser satisfeito com a utilização da gem devise. A implementação dos padrões de projeto strategy, observer e composite já estão satisfeitos pois a aplicação é feita em MVC e a gem que está sendo utilizada também percorre todas as camadas e é voltada para o padrão arquitetural MVC. 
 
 \subsubsection{Identificação de quais metas flexíveis são mais relevantes ao stakeholder}
+
+As metas flexíveis mais relevantes e seus níveis de satisfação.
+
+\begin{itemize}
+	\item controle de acesso dos usuários [software]: Satisfeita
+	\item controle de acesso [software]: Satisfeita
+	\item controle de acesso dos componentes MVC [nível arquitetural]: Satisfeita
+	\item precisão [software]: Parcialmente satisfeita
+	\item confidencialidade interna [software]: Parcialmente satisfeita
+	\item integridade [software]: Parcialmente satisfeita
+	\item confidencialidade [software]: Parcialmente satisfeita
+	\item confiabilidade [informação]: Parcialmente satisfeita
+	\item segurança [software]: Parcialmente satisfeita
+\end{itemize}
 
 \subsubsection{Avaliação e Análise}
 
