@@ -89,7 +89,7 @@ Pedro, 23 anos, Engenheiro de Software, trabalha em empresa privada e possui a n
 
 \subsection{Identificar possível solução}
 
-Uma possível solução é gerar um número de protocolo durante o registro da manifestação para que possa ser realizado o acompanhamento, o manifestante poderá também acompanhar o status de sua manifestação através da visão de acompanhamento de manifestação, oinde ficará registrado respostas dada pela ouvidora.
+Uma possível solução é gerar um número de protocolo durante o registro da manifestação para que possa ser realizado o acompanhamento, o manifestante poderá também acompanhar o status de sua manifestação através da visão de acompanhamento de manifestação, onde ficará registrado respostas dada pela ouvidora.
 A Ouvidora no caso acessará o sistema de maneira diferente, utilizando a área administrativa do sistema através de autenticação de usuário. 
 
 
@@ -101,8 +101,18 @@ A Ouvidora no caso acessará o sistema de maneira diferente, utilizando a área 
 	\caption{Catálogo de segurança aplicado ao sistema de ouvidoria.}
 	\label{catalogoPersona2}
 \end{figure}
+
+Na aplicação do catálogo da figura \ref{catalogoPersona2} teve-se a necessidade de focar em ``auditoria e controle`` pois o cenário demandava  o acompanhamento das manifestações pelos administradores do sistema, portanto foi expandido no catálogo uma nova meta flexível ``Realizar acompanhamento das manifestações`` e uma operacionalização ``Criar método para gerir manifestação``, a operacionalização é definida pelos implementados na \textit{controller - ManagerManifestationsController}. Portanto a meta flexível ``auditoria e controle`` é satisfeita para este contexto.
+
+Para que ocorra a satisfação da meta flexível ``controle de acesso dos usuários`` temos três operacionalizações satisfeitas e que estão no nível mais baixo do grafo, são elas: (i) Implementar método de geração do protocolo: Trata-se do método para gerar os números de protocolos com caracteres (de 'a' a 'z'), (de 'A' a 'Z') e (de '0' a '9') utilizado para compor um protocolo de 10 digitos; (ii) utilizar senha única para senha: Para cada usuário administrador do sistema é gerada uma única senha para autenticação no sistema; e (iii) utilizar bcrypt: Trata-se de um algoritmo de \textit{hashing} criptográfico que tratam um trecho do dado para gerar um \textit{hash}, pois ao gerar uma senha dessa maneira trata-se da execução de um processo não reversível porquê não há como voltar da \textit{hash} para a senha \cite{brcypt};
+
+A operacionalização ``realizar precisão de um para um`` é satisfeita pois para cada manifestação ocasionada por determinado evento do mundo real existirá uma única manifestação no sistema.
+
+Observa-se portanto que a segurança do software é parcialmente satisfeita devido a satisfação parcial da integridade do software e da confidencialidade, ocorridos devido aos níveis de satisfação das operacionalizações e metas flexíveis abaixo. 
+
 \section{Persona 3}
 \label{subsec:persona3}
+
 
 
 Milena, 22 anos, Engenheira de Software, possui várias atividades no seu dia-a-dia, sentiu-se então a necessidade de organizar as suas atividades e para isso devido suas habilidades decidiu escrever um programa para obter maior controle. Esse programa descreve a atividade, a data de início, a previsão de conclusão e o status da atividade. Portanto, Gustavo optou por fazer seu sistema em Rails e decidiu verificar as relações entre as camadas do sistema com o foco em segurança.
@@ -128,7 +138,6 @@ Na descrição da persona tem se a necessidade de vincular cada atividade do mun
 \section{Persona 4}
 \label{subsec:persona4}
 
-<Escrever persona junto com o Vini>
 
 Gustavo, 28 anos, Engenheiro de Requisitos, exerce a função em empresa privada onde foi demandado. 
 
