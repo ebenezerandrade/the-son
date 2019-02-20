@@ -30,7 +30,7 @@ O problema principal do usuário é a realização da autenticação do usuário
 Portanto, a \textit{gem} selecionada para ser aplicada ao projeto por Heleno é a \textit{devise}, pois além da posição do ranking é a \textit{gem} mais recomendada pela comunidade. As vantagens da utilização do \textit{devise} é  (i) uma solução baseada no padrão arquitetural MVC, (ii) permite a criação e a utilização de vários perfis de usuários conectados ao mesmo tempo, (iii) basea-se no conceito de modularidade, utilizando somente o que é necessário. Essa \textit{gem} possui 10 módulos \cite{gemdevise}: 
 
 \begin{enumerate}
-	\item \textit{Database Authenticatable}: \textit{Hashes} que armazenam a senha no banco de dados para serem validadas durante o \textit{login}. A autenticação pode ser realizada via método POST ou HTTP. 
+	\item \textit{Database Authenticatable}: \textit{Hashes} que armazenam a senha no banco de dados para serem validadas durante o \textit{login}. A autenticação pode ser realizada via método POST ou HTTP \textit{basic authentication}. 
 	\item \textit{Omniauthable}: Suporte adicional ao \textit{omniauth}.
 	\item \textit{Confirmable}: Envio automático de email para confirmação da conta e verificação da confirmação da conta durante o \textit{login}.
 	\item \textit{Recoverable}: Envia instruções de redefinição de senha para o usuário e redefine a senha do usuário.
@@ -50,7 +50,7 @@ Através dos módulos apresentados anteriormente é possível realizar o mapeame
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoPersona1.PNG}
-	\caption{Operacionalizações para autenticação de usuário utilizando a \textit{gem devise}}
+	\caption{Operacionalizações para autenticação de usuário utilizando a \textit{gem devise}.}
 	\label{catalogoPersona1}
 \end{figure}
 
@@ -102,7 +102,7 @@ A Ouvidora no caso acessará o sistema de maneira diferente, utilizando a área 
 	\label{catalogoPersona2}
 \end{figure}
 
-Na aplicação do catálogo da figura \ref{catalogoPersona2} teve-se a necessidade de focar em ``auditoria e controle`` pois o cenário demandava  o acompanhamento das manifestações pelos administradores do sistema, portanto foi expandido no catálogo uma nova meta flexível ``Realizar acompanhamento das manifestações`` e uma operacionalização ``Criar método para gerir manifestação``, a operacionalização é definida pelos implementados na \textit{controller - ManagerManifestationsController}. Portanto a meta flexível ``auditoria e controle`` é satisfeita para este contexto.
+Na aplicação do catálogo da figura \ref{catalogoPersona2} teve-se a necessidade de focar em ``auditoria e controle`` pois o cenário demandava  o acompanhamento das manifestações pelos administradores do sistema, portanto foi expandido no catálogo uma nova meta flexível ``Realizar acompanhamento das manifestações`` e uma operacionalização ``Criar método para gerir manifestação``, a operacionalização é definida pelos métodos implementados na \textit{controller - ManagerManifestationsController}. Portanto a meta flexível ``auditoria e controle`` é satisfeita para este contexto.
 
 Para que ocorra a satisfação da meta flexível ``controle de acesso dos usuários`` temos três operacionalizações satisfeitas e que estão no nível mais baixo do grafo, são elas: (i) Implementar método de geração do protocolo: Trata-se do método para gerar os números de protocolos com caracteres (de 'a' a 'z'), (de 'A' a 'Z') e (de '0' a '9') utilizado para compor um protocolo de 10 digitos; (ii) utilizar senha única para senha: Para cada usuário administrador do sistema é gerada uma única senha para autenticação no sistema; e (iii) utilizar bcrypt: Trata-se de um algoritmo de \textit{hashing} criptográfico que tratam um trecho do dado para gerar um \textit{hash}, pois ao gerar uma senha dessa maneira trata-se da execução de um processo não reversível porquê não há como voltar da \textit{hash} para a senha \cite{brcypt};
 
@@ -115,7 +115,7 @@ Observa-se portanto que a segurança do software é parcialmente satisfeita devi
 
 
 
-Milena, 22 anos, Engenheira de Software, possui várias atividades no seu dia-a-dia, sentiu-se então a necessidade de organizar as suas atividades e para isso devido suas habilidades decidiu escrever um programa para obter maior controle. Esse programa descreve a atividade, a data de início, a previsão de conclusão e o status da atividade. Portanto, Gustavo optou por fazer seu sistema em Rails e decidiu verificar as relações entre as camadas do sistema com o foco em segurança.
+Milena, 22 anos, Engenheira de Software, possui várias atividades no seu dia-a-dia, sentiu-se então a necessidade de organizar as suas atividades e para isso devido suas habilidades decidiu escrever um programa para obter maior controle. Esse programa descreve a atividade, a data de início, a previsão de conclusão e o status da atividade. Portanto, Milena optou por fazer seu sistema em Rails e decidiu verificar as relações entre as camadas do sistema com o foco em segurança.
 
 \begin{itemize}
 	\item O problema: Atividades diárias desorganizadas;
@@ -125,7 +125,7 @@ Milena, 22 anos, Engenheira de Software, possui várias atividades no seu dia-a-
 
 \subsubsection{Aplicação do Catálogo de Segurança}
 
-Na descrição da persona tem se a necessidade de vincular cada atividade do mundo real com uma entidade no sistema, para isso utilizou se a ferramenta o Rails para 
+Na descrição da persona tem se a necessidade de vincular cada atividade do mundo real com uma entidade no sistema, para isso utilizou-se o comando scaffold do rails, tal comando gera a estrutura de arquivos de acordo com o padrão MVC, gerando o \textit{model}, o \textit{controller}, as \textit{views} necessárias \cite{railscommunity}. 
 
 \begin{figure}[h!]
 	\centering
@@ -139,11 +139,27 @@ Na descrição da persona tem se a necessidade de vincular cada atividade do mun
 \label{subsec:persona4}
 
 
-Gustavo, 28 anos, Engenheiro de Requisitos, exerce a função em empresa privada onde foi demandado. 
-
-\subsubsection{Identificar possível solução}
+Gustavo, 23 anos, Engenheiro de Requisitos de empresa privada, possui a demanda de analisar os requisitos do sistema de solicitação de documentos digitais via plataforma web, tal sistema possui arquitetura MVC e está em constante evolução. Portanto seu chefe solicitou que a mesma fizesse uma analise dos requisitos de segurança do sistema, devido a emissão de documentos com assinatura digital.
 
 \subsubsection{Aplicação do Catálogo de Segurança}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoPersona4.PNG}
+	\caption{Catálogo aplicado a sistema de geração de documentos digitais.}
+	\label{catalogoPersona4}
+\end{figure}
+
+A aplicação do catálogo apresentado na figura \ref{catalogoPersona4} possui uma extensão devido a utilização de assinatura digital nos documentos, que é modelada como uma meta flexível que está satisfeita, pois depende de duas operacionalizações. As operacionalizações fazem uma relação do tipo AND com a meta flexível e ambas são satisfeitas sendo elas método de geração de (\textit{Quick Response} Quick) QR e o  método de autenticação
+
+que utiliza valores como o identificador do usuário e a \textit{string} do QR. A essas relações trazem a satisfação da meta flexível para autenticidade. 
+
+O controle de acesso do software é satisfeito devido a relação das metas flexíveis e operacionalizações da mesma forma que as personas anteriores que já apresentaram esses relacionamentos.  
+
+Já a operacionalização definir propriedades de precisão para instanciação de objetos, é escrita em cada model onde a linguagem onde o atributo tem que existir no banco de dados, não podendo colocar vazio ou nulo. 
+
+A aplicação está em um servidor do google na nuvem, garantindo sua disponibilidade.  
+
 
 \section{Persona 5}
 \label{subsec:persona5}
@@ -153,7 +169,6 @@ Duplicação/espelhamento da base de dados.
 \subsubsection{Identificar possível solução}
 
 \subsubsection{Aplicação do Catálogo de Segurança}
-
 
 \section{Primeira visão da aplicação do catálogo}
 \label{sec: aplicacaoDoCatalogo}
