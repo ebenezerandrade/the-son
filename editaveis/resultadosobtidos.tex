@@ -150,9 +150,7 @@ Gustavo, 23 anos, Engenheiro de Requisitos de empresa privada, possui a demanda 
 	\label{catalogoPersona4}
 \end{figure}
 
-A aplicação do catálogo apresentado na figura \ref{catalogoPersona4} possui uma extensão devido a utilização de assinatura digital nos documentos, que é modelada como uma meta flexível que está satisfeita, pois depende de duas operacionalizações. As operacionalizações fazem uma relação do tipo AND com a meta flexível e ambas são satisfeitas sendo elas método de geração de (\textit{Quick Response} Quick) QR e o  método de autenticação
-
-que utiliza valores como o identificador do usuário e a \textit{string} do QR. A essas relações trazem a satisfação da meta flexível para autenticidade. 
+A aplicação do catálogo apresentado na figura \ref{catalogoPersona4} possui uma extensão devido a utilização de assinatura digital nos documentos, que é modelada como uma meta flexível que está satisfeita, pois depende de duas operacionalizações. As operacionalizações fazem uma relação do tipo AND com a meta flexível e ambas são satisfeitas sendo elas método de geração de (\textit{Quick Response} Quick) QR e o  método de autenticaçãoque utiliza valores como o identificador do usuário e a \textit{string} do QR. A essas relações trazem a satisfação da meta flexível para autenticidade. 
 
 O controle de acesso do software é satisfeito devido a relação das metas flexíveis e operacionalizações da mesma forma que as personas anteriores que já apresentaram esses relacionamentos.  
 
@@ -160,23 +158,53 @@ Já a operacionalização definir propriedades de precisão para instanciação 
 
 A aplicação está em um servidor do google na nuvem, garantindo sua disponibilidade.  
 
+Semelhante as aplicações das personas anteriores a precisão de um para um é satisfeita pelos memos motivos.
 
 \section{Persona 5}
 \label{subsec:persona5}
 
-Duplicação/espelhamento da base de dados. 
-
-\subsubsection{Identificar possível solução}
+Chung, 40 anos, Engenheiro de Software possui em seu quadro de responsabilidades a função de realizar manutenção e evolução de um dos sistemas ao qual é responsável. Para tanto percebeu que um de seus sistemas poderia ficar indisponível caso ocorre-se algum problema no servidor de banco de dados, preocupado então com a segurança de seus sistemas, utilizou se o catálogo para analisar o impacto que o espelhamento do banco do banco poderia afetar na segurança do software como um todo. 
 
 \subsubsection{Aplicação do Catálogo de Segurança}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoPersona5.PNG}
+	\caption{Catálogo aplicado ao contexto de duplicação de base de dados.}
+	\label{catalogoPersona5}
+\end{figure}
+
+
 
 \section{Primeira visão da aplicação do catálogo}
 \label{sec: aplicacaoDoCatalogo}
 As atividades previstas para a execução do TCC1 de acordo com o cronograma apresentado na Tabela \ref{cronograma-tcc1} foram executadas com sucesso. Porém ao modelar a primeira versão do catálogo tem-se uma visão preliminar sobre Segurança devido a subjetividade e o conjunto de conceitos abstratos presentes na literatura.
 
-A primeira versão do catálogo apresenta uma visão mais concreta para integridade de software e disponibilidade de software, onde o autor conseguiu detalhar em tempo de execução do TCC1 níveis de operacionalização com base na respectiva fonte ou referência teórica.
+Ao aplicar as personas para validação do catálogo observou-se que o catálogo trás uma visão premilinar da segurança não somente do sistema mas também aspectos de segurança da informação.
+
+No entanto durante a validação do catálogo foi utilizado projetos reais e abstrações de possíveis usuários e cenários tornando o catálogo mais abrangente caso a tecnologia utilizada seja o rails, como um exemplo de evolução do catálogo e as comunicações com as camadas do padrão arquitetural padronizado pelo framework. 
 
 A Tabela \ref{resultadosObtidos} apresenta de acordo com os objetivos específicos do trabalho, usando "atendido", "parcialmente atendido" e "não atendido", os principais resultados obtidos até o momento, com a realização do TCC1.
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoFull.PNG}
+	\caption{Versão extendida do catálogo focada em projetos Rails}
+	\label{catalogoFull}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoMapeado.PNG}
+	\caption{Mapeamento das metas flexíveis e operacionalizações com as camadas do MVC.}
+	\label{catalogoMapeado}
+\end{figure}
+
 
 \begin{table}[h!]
 	\centering
