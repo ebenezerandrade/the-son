@@ -18,48 +18,48 @@ Existem alguns \textit{frameworks} conceituais centrados na especificação de R
 
 A abordagem mais emergente, mencionada para os \textit{frameworks} NFR e i*, usa modelos específicos, focados na especificação de requisitos usando princípios da \textit{Goal-Oriented Requirements Engineering} (GORE) \cite{horkoff2016goal}. Rastreabilidade de requisitos \cite{wiegers2013software}; especificação de impactos e interdependências entre os requisitos; registro de alternativas quanto aos requisitos analisados, e definição de operacionalizações para viabilizar a realização dos requisitos são algumas vantagens que ficam evidentes no uso desses modelos mais específicos, como, por exemplo: o \textit{Softgoal Interdependency Graphs} (SIGs) \cite{chung2012non} ou, em português, Grafos de Interdependências entre Requisitos Não Funcionais. 
 
-Portanto, esse trabalho propõe a definição de um Catálogo de SIGs centrado no RNF Segurança, especificamente desenhado para o Padrão Arquitetural MVC, usando a notação do NFR Framework. A intenção é auxiliar os Engenheiros de Requisitos e ainda os Engenheiros de Software na tarefa de especificação de requisitos não funcionais e funcionais quando uma arquitetura é imposta. Como o catálogo ficaria muito abrangente e generalista, caso fosse definido para qualquer RNF e padrão arquitetural, não sendo, portanto, útil, optou-se por focar: (i) no RNF mais preocupante - Segurança, segundo a literatura - em aplicações de software de cunho comercial; (ii) em aplicações Web, e (iii) no padrão arquitetural MVC.  Vale ressaltar ainda que os termos RNFs, atributos de qualidade, critérios de qualidade e metas flexíveis serão utilizados como sinônimos ao longo dessa monografia.
+Portanto, esse trabalho propôs a definição de um Catálogo de SIGs centrado no RNF Segurança, especificamente desenhado para o Padrão Arquitetural MVC, usando a notação do NFR Framework. Com a intenção de auxiliar os Engenheiros de Requisitos e ainda os Engenheiros de Software na tarefa de especificação de requisitos não funcionais e funcionais quando uma arquitetura for imposta. Como o catálogo ficaria muito abrangente e generalista, caso fosse definido para qualquer RNF e padrão arquitetural, não sendo, portanto, útil, focou-se: (i) no RNF mais preocupante - Segurança, segundo a literatura - em aplicações de software de cunho comercial; (ii) em aplicações Web, e (iii) no padrão arquitetural MVC.  Vale ressaltar ainda que os termos RNFs, atributos de qualidade, critérios de qualidade e metas flexíveis serão utilizados como sinônimos ao longo dessa monografia.
 
 
 \section{Questão de Pesquisa}
-Esse trabalho procurará responder a seguinte questão de pesquisa: \textit{Como auxiliar Engenheiros de Requisitos e Engenheiros de Software na especificação de RNFs quando uma arquitetura é imposta?} É relevante comentar que essa resposta ao final do trabalho, parecerá parcial, pois o trabalho exemplificará esse auxílio usando como base o RNF Segurança, aplicações Web e o padrão arquitetural MVC. Entretanto, pretende-se que seja possível ao leitor extrapolar as particularidades desse exemplo, usando-o como base mesmo quando outro RNF for foco bem como outro padrão arquitetural for imposto.
+Este trabalho procurou responder a seguinte questão de pesquisa: \textit{Como auxiliar Engenheiros de Requisitos e Engenheiros de Software na especificação de RNFs quando uma arquitetura é imposta?} É relevante comentar que essa resposta ao final do trabalho, pareceu parcial, pois o trabalho exemplificou esse auxílio usando como base o RNF Segurança, aplicações Web e o padrão arquitetural MVC. Entretanto, cabe ao  ao leitor extrapolar as particularidades desse exemplo, usando-o como base mesmo quando outro RNF for foco bem como outro padrão arquitetural for imposto.
 
-Segundo \cite{keele2007guidelines}, recomenda-se que uma questão de pesquisa seja organizada em três visões: \textbf{População}, estabelecendo quem são as pessoas diretamente afetadas pela intervenção; \textbf{Intervenção}, comparando dois ou mais "tratamentos alternativos", ou seja, duas ou mais possíveis estratégias de atuação, e \textbf{Saídas}, estabelecendo a forma como a intervenção vem sendo aplicada. Nesse contexto, tem-se: 
+É recomendado que uma questão de pesquisa seja organizada em três visões \cite{keele2007guidelines}: 
+\textbf{População}, estabelecendo quem são as pessoas diretamente afetadas pela intervenção; \textbf{Intervenção}, comparando dois ou mais "tratamentos alternativos", ou seja, duas ou mais possíveis estratégias de atuação, e \textbf{Saídas}, estabelecendo a forma como a intervenção vem sendo aplicada. Nesse contexto, tem-se: 
 
 \begin{itemize}
 	\item População: "\textit{..Engenheiros de Requisitos e Engenheiros de Software na especificação de requisitos associados ao RNF Segurança, em aplicações Web desenvolvidas orientando-se pelo padrão arquitetural MVC..}"
-	\item Intervenção: "\textit{..utilização de uma notação específica, NFR Framework, para modelagem dos Grafos de Interdependências de Requisitos Não Funcionais centrados no critério de qualidade Segurança, especificando impactos, interdependências e operacionalizações cabíveis  ..}"
-	\item Saídas: "\textit{..um catálogo de soluções centrado em Segurança e no padrão arquitetural MVC..}"
+	\item Intervenção: "\textit{..utilização de notação específica, NFR Framework, para modelagem dos Grafos de Interdependências de Requisitos Não Funcionais centrados no critério de qualidade Segurança, especificando impactos, interdependências e operacionalizações cabíveis  ..}"
+	\item Saídas: "\textit{.. catálogo de soluções centrado em Segurança e no padrão arquitetural MVC..}"
 \end{itemize}
 \section{Justificativa}
 
 
-Observa-se que mesmo com uma \textit{baseline}  arquitetural definida, os RNFs, chamados também de atributos ou critérios de qualidade, são negligenciados ou tratados de forma equivocada \cite{eckhardt2016non}. Entretanto, esses critérios evidenciam preocupações, as quais impactam na qualidade do software em desenvolvimento \cite{schneidewind1990standard}.  
+Observou-se que mesmo com uma \textit{baseline}  arquitetural definida, os RNFs, chamados também de atributos ou critérios de qualidade, são negligenciados ou tratados de forma equivocada \cite{eckhardt2016non}. Entretanto, esses critérios evidenciam preocupações, as quais impactam na qualidade do software em desenvolvimento \cite{schneidewind1990standard}.  
 Portanto, são necessários esforços para auxiliar os Engenheiros de Requisitos e os Engenheiros de Software na especificação desses RNFs, em particular em aplicações tipicamente comerciais, cujas arquiteturas são, normalmente, impostas pelas empresas de desenvolvimento.
 
-Esse trabalho visa a definição de um catálogo de SIGs centrado no RNF Segurança, no escopo das aplicações Web, e no padrão arquitetural MVC. Pretende-se ainda obter subprodutos a partir desse catálogo, tais como: diretrizes, boas práticas, operacionalizações e, possivelmente, padrões. Tais subprodutos serão documentados; sejam em especificações em linguagem natural, em \textit{checklists}  ou outras notações mais adequadas.
+Nesse trabalho então definiu um catálogo de SIGs centrado no RNF Segurança, no escopo das aplicações web, e no padrão arquitetural MVC aplicado em cenários de desenvolvimento onde a tecnologia utilizada foi \textit{rails} que trata-se de um framework de desenvolvimento web baseado no padrão arquitetural MVC. 
 
 \section{Objetivos}
-
-Este trabalho visa alcançar os objetivos, Geral e Específicos, apresentados a seguir.  
-
+ 
 \subsection{Objetivo Geral}
 
-Definir um catálogo de segurança para o padrão arquitetural MVC usando uma modelagem orientada a grafos de interdependências de RNFs, ou seja, levando em consideração as boas práticas acordadas na Engenharia de Requisitos Orientada à Meta (em inglês, \textit{Goal Oriented Requirements Engineering} - GORE). 
+Definir catálogo de segurança para o padrão arquitetural MVC usando modelagem orientada a grafos de interdependências de RNFs, ou seja, levando em consideração as boas práticas acordadas na Engenharia de Requisitos Orientada à Meta (em inglês, \textit{Goal Oriented Requirements Engineering} - GORE). 
 
 \subsection{Objetivos Específicos}
 
-Com intuito de alcançar o objetivo geral, são considerados relevantes os seguintes objetivos específicos:
+Com intuito de alcançar o objetivo geral, foram considerados relevantes os seguintes objetivos específicos:
 
 \begin{itemize}
 	
-	\item Investigar - na literatura: (i) formas recomendadas para lidar com o RNF Segurança em aplicações Web desenvolvidas com base no padrão arquitetural MVC, permitindo identificar alternativas e operacionalizações para concretização desse RNF de forma satisfatória, e (ii) RNFs associados à Segurança, permitindo identificar as interdependências e os impactos entre eles;
+	\item Investigar - na literatura: (i) formas recomendadas para lidar com o RNF Segurança em aplicações web desenvolvidas com base no padrão arquitetural MVC, permitindo identificar alternativas e operacionalizações para concretização desse RNF de forma satisfatória, e (ii) RNFs associados à Segurança, permitindo identificar as interdependências e os impactos entre eles;
 	
 	\item Elaborar o catálogo de SIGs, com base nos resultados da etapa de investigação (supracitada) bem como orientando-se pela notação do NFR Framework;
 	
 	\item Realizar a correspondência entre o  catálogo e as camadas do padrão arquitetural MVC;
 	
-	\item Desenvolver uma aplicação Web exemplo, no padrão MVC, orientando-se pelo catálogo. Essa aplicação Web exemplo pode ser vista como um cenário de uso ou um estudo de caso, procurando apresentar aos interessados como o catálogo pode ser utilizado/instanciado. 
+	
+	\item Elaborar cenários e desenvolver aplicações web exemplo, no padrão MVC, orientando-se pelo catálogo. Essas aplicações web exemplo podem ser vistas como cenários de uso ou um estudo de caso, procurando apresentar aos interessados como o catálogo pode ser utilizado/instanciado. 
 	
 \end{itemize}
 
