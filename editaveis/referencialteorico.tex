@@ -5,13 +5,13 @@ Neste capítulo, serão apresentados os conceitos teóricos utilizados como base
 
 Antes de entender os conceitos relevantes para o desenvolvimento do catálogo, é importante entender a definição de software. Este, segundo \cite{sommerville2003engenharia}, pode ser entendido como programas de computador e toda documentação associada. Para realização do desenvolvimento do software da forma mais correta possível, existem preocupações que merecem menção/atenção e são estabelecidas na área da Engenharia de Software que preocupa-se com todos os aspectos da produção \cite{sommerville2003engenharia}. 
 
-A Figura \ref{BigPicture} apresenta o escopo de atuação desse trabalho, partindo da Engenharia de Software e apoiando-se, principalmente em duas disciplinas: 
+A Figura \ref{BigPicture} apresenta o escopo de atuação dessa monografia, partindo da Engenharia de Software e apoiando-se, principalmente em duas disciplinas: 
 
 \begin{itemize}
 	
-	\item A Engenharia de Requisitos, que se compõe de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, sendo uma disciplina detalhada na seção \ref{sec:requisitos}. Será observado que o trabalho foca em uma abordagem orientada à meta. Portanto, tem-se a Engenharia de Requisitos Orientada à Meta. Essa procura tratar os requisitos funcionais e não funcionais como metas a serem alcançadas, sendo esse estudo apresentado na subseção \ref{subsec:orientacaoMeta}. Especificando ainda mais a área de atuação, como esse trabalho centraliza seus esforços nos RNFs, em particular para elaboração do catálogo, a subseção \ref{subsec:requisitosNaoFuncionais} define conceitos associados aos RNFs, preparando o leitor para a apresentação de um \textit{framework} conceitual especificamente proposto para especificação de RNFs. Trata-se do NFR Framework, o qual será detalhado na seção \ref{sec:NFR};
+	\item A Engenharia de Requisitos, que se compõe de um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, sendo uma disciplina detalhada na seção \ref{sec:requisitos}. Será observado que a monografia foca em uma abordagem orientada à meta. Portanto, tem-se a Engenharia de Requisitos Orientada à Meta. Essa procura tratar os requisitos funcionais e não funcionais como metas a serem alcançadas, sendo esse estudo apresentado na subseção \ref{subsec:orientacaoMeta}. Especificando ainda mais a área de atuação, como essa monografia centraliza seus esforços nos RNFs, em particular para elaboração do catálogo, a subseção \ref{subsec:requisitosNaoFuncionais} define conceitos associados aos RNFs, preparando o leitor para a apresentação de um \textit{framework} conceitual especificamente proposto para especificação de RNFs. Trata-se do NFR Framework, o qual será detalhado na seção \ref{sec:NFR};
 	
-	\item E Desenho de Software, uma área da Engenharia de Software que se preocupa, dentre outras atividades, com o planejamento e a definição da Arquitetura de Software a ser utilizada. Para fins desse trabalho, o foco será na arquitetura padrão MVC. Conceitos associados à Arquitetura de Software bem como ao padrão arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e não subseção \ref{subsec:mvc}, respectivamente.
+	\item E Desenho de Software, uma área da Engenharia de Software que se preocupa, dentre outras atividades, com o planejamento e a definição da Arquitetura de Software utilizada. Para fins dessa monografia, o foco será na arquitetura padrão MVC. Conceitos associados à Arquitetura de Software bem como ao padrão arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e não subseção \ref{subsec:mvc}, respectivamente.
 	
 \end{itemize}
 
@@ -24,7 +24,7 @@ A Figura \ref{BigPicture} apresenta o escopo de atuação desse trabalho, partin
 	\label{BigPicture}
 \end{figure}
 
-Por fim, cabe ressaltar que o presente trabalho atuará mais especificamente no requisito não funcional segurança, dada a sua relevância, conforme pesquisa na literatura. Segundo \cite{chung2012non}, segurança pode ser entendida como a satisfação de três conceitos: Integridade, Confidencialidade, e Disponibilidade. Portanto, o catálogo de segurança proposto parte desses conceitos, seguindo a expressão \ref{eq:EstruturaLogicaDeSeguranca}. Segurança, sobre a ótica de um RNF, será tratada na seção \ref{sec:seguranca}.
+Por fim, cabe ressaltar que a presente monografia atuará mais especificamente no requisito não funcional Segurança, dada a sua relevância, conforme pesquisa na literatura. Segundo \cite{chung2012non}, Segurança pode ser entendida como a satisfação de três conceitos: Integridade, Confidencialidade, e Disponibilidade. Portanto, o catálogo de segurança proposto parte desses conceitos, seguindo a expressão \ref{eq:EstruturaLogicaDeSeguranca}. Segurança, sobre a ótica de um RNF, será tratada na seção \ref{sec:seguranca}. E para apoiar os cenários de aplicação do Catálogo de Segurança foi utilizado o conceito de personas que será detalhado na seção \ref{sec:personas}.
 
 \begin{equation}
 	\label{eq:EstruturaLogicaDeSeguranca}
@@ -59,7 +59,7 @@ Nas definições do GORE, existem as metas que são componentes essenciais. De a
 
 \pagebreak
 
- Com base na Figura \ref{Gore}, pode-se entender como são os comportamentos das metas na abordagem GORE. Representada pelo simbolo de uma nuvem, uma meta, quando está sob a responsabilidade de um único software, pode se tornar um requisito. De forma semelhante, quando uma meta está sob a responsabilidade de um ambiente, ela pode se tornar uma suposição. Diferentemente de um requisito, uma suposição não pode ser aplicada pelo software. Mas, pode ser satisfeita devidos às normas, aos regulamentos organizacionais e às leis físicas\cite{van2001goal}. Esse trabalho foca apenas nas responsabilidades voltadas ao software.
+ Com base na Figura \ref{Gore}, pode-se entender como são os comportamentos das metas na abordagem GORE. Representada pelo simbolo de uma nuvem, uma meta, quando está sob a responsabilidade de um único software, pode se tornar um requisito. De forma semelhante, quando uma meta está sob a responsabilidade de um ambiente, ela pode se tornar uma suposição. Diferentemente de um requisito, uma suposição não pode ser aplicada pelo software. Mas, pode ser satisfeita devidos às normas, aos regulamentos organizacionais e às leis físicas\cite{van2001goal}. Essa monografia focou apenas nas responsabilidades voltadas ao software.
 
 
 Existem diversos \textit{frameworks} orientados à meta. Os principais  são o NFR \textit{Framework} \cite{chung2012non} e o i* \cite{istarwiki20}. Ambos esses \textit{frameworks} serão detalhados nas seções \ref{sec:NFR} e \ref{sec:i*}, respectivamente.
@@ -388,7 +388,7 @@ A Tabela \ref{categoriasDePadroesArquiteturais} apresenta detalhadamente os quat
 
 \pagebreak
 
-Devido ao foco do presente trabalho ser a construção de um catálogo de segurança para o padrão arquitetural MVC, a Subseção \ref{subsec:mvc} detalha este padrão arquitetural. 
+Devido ao foco da presente monografia ser a construção do Catálogo de Segurança para o padrão arquitetural MVC, a Subseção \ref{subsec:mvc} detalha este padrão arquitetural. 
 
 
 \subsection{MVC: Model-View-Controller}
@@ -479,7 +479,7 @@ A Figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que represent
 
 Tratando a Segurança como um RNF, pode-se entender a mesma como estando associadas a vários outros RNFs. Dessa forma, podemos entender os RNFs associados à Segurança como sendo restrições, as quais realizam operacionalizações e satisfazem as metas de segurança, estabelecidas pelos engenheiros de requisitos e/ou engenheiros de software. Esse conjunto de  RNFs devem expressar de maneira precisa e não ambígua as metas de segurança de uma aplicação, fornecendo uma especificação para alcançar a meta deseja \cite{haley2006framework}.  
 
-Existem diversas definições de Segurança. De forma simplificada, Segurança, no contexto de Segurança da Informação, significa proteger a informação \cite{chung2012non}. O presente trabalho fundamenta-se nos conceitos de \cite{chung2012non} e \cite{sullivan2011web} como base para conceituar, Segurança, orientando-se por três conceitos conhecidos como CIA (\textit{Confidentiality}, \textit{Integrity}, \textit{Availability}) . 
+Existem diversas definições de Segurança. De forma simplificada, Segurança, no contexto de Segurança da Informação, significa proteger a informação \cite{chung2012non}. A presente monografia fundamenta-se nos conceitos de \cite{chung2012non} e \cite{sullivan2011web} como base para conceituar, Segurança, orientando-se por três conceitos conhecidos como CIA (\textit{Confidentiality}, \textit{Integrity}, \textit{Availability}) . 
 
 Diante do exposto, para a definição seguindo os fundamentos de \cite{chung2012non}, segurança se baseia em: 
 
@@ -559,7 +559,7 @@ No processo de construção do produto, começamos a imaginar como esse produto 
 
 Neste Capítulo, foi abordado os conceitos fundamentais para a construção do catálogo de segurança, foi introduzidos os conceitos chaves da Engenharia de Requisitos e aprofundando em uma de suas áreas que é a Engenharia de Requisitos Orientada à Meta, para compreendermos o conceito de meta e as suas responsabilidades, partimos então para uma visão dos requisitos, focando somente nos requisitos não-funcionais, logo em seguida foi apresentado as características e notações dos modelos intencionais NFR \textit{Framework} e o i*, bem como a apresentação do FURPS. 
 
-Os conceitos de arquitetura de software também, foram apresentados neste Capítulo, pois são de extrema importância, para o entendimento do padrão arquitetural MVC, ao qual o catálogo de segurança é voltado, Por fim foi apresentado a visão dos requisitos de segurança como RNFs, onde foi apresentado os conceitos chave e suas definições na área de segurança, para a construção do catálogo. 
+Os conceitos de arquitetura de software também, foram apresentados neste Capítulo, pois são de extrema importância, para o entendimento do padrão arquitetural MVC, ao qual o catálogo de segurança é voltado, Por fim foi apresentado a visão dos requisitos de segurança como RNFs, onde foi apresentado os conceitos chave e suas definições na área de segurança, para a construção do catálogo e a conceituação das personas utilizada para criação dos cenários de validação do Catálogo de Segurança. 
 
 
 
