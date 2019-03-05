@@ -22,7 +22,7 @@ Portanto, essa monografia propôs a definição de um Catálogo de SIGs centrado
 
 
 \section{Questão de Pesquisa}
-Esta monografia procurou responder a seguinte questão de pesquisa: \textit{Como auxiliar Engenheiros de Requisitos e Engenheiros de Software na especificação de RNFs quando uma arquitetura é imposta?} É relevante comentar que essa resposta ao final da monografia, pareceu parcial, pois a monografia exemplificou esse auxílio usando como base o RNF Segurança, aplicações Web e o padrão arquitetural MVC. Entretanto, cabe ao  ao leitor extrapolar as particularidades desse exemplo, usando-o como base mesmo quando outro RNF for foco bem como outro padrão arquitetural for imposto.
+Esta monografia procurou responder a seguinte questão de pesquisa: \textit{Como auxiliar Engenheiros de Requisitos e Engenheiros de Software na especificação de RNFs quando uma arquitetura é imposta?} É relevante comentar que essa resposta ao final da monografia, pareceu parcial, pois a monografia exemplificou esse auxílio usando como base o RNF Segurança, aplicações Web e o padrão arquitetural MVC. Entretanto, cabe ao leitor extrapolar as particularidades desse exemplo, usando-o como base mesmo quando outro RNF for foco bem, como outro padrão arquitetural for imposto.
 
 É recomendado que uma questão de pesquisa seja organizada em três visões \cite{keele2007guidelines}: 
 \textbf{População}, estabelecendo quem são as pessoas diretamente afetadas pela intervenção; \textbf{Intervenção}, comparando dois ou mais “tratamentos alternativos”, ou seja, duas ou mais possíveis estratégias de atuação, e \textbf{Saídas}, estabelecendo a forma como a intervenção vem sendo aplicada. Nesse contexto, tem-se: 
@@ -35,10 +35,10 @@ Esta monografia procurou responder a seguinte questão de pesquisa: \textit{Como
 \section{Justificativa}
 
 
-Observou-se que mesmo com uma \textit{baseline}  arquitetural definida, os RNFs, chamados também de atributos ou critérios de qualidade, são negligenciados ou tratados de forma equivocada \cite{eckhardt2016non}. Entretanto, esses critérios evidenciam preocupações, as quais impactam na qualidade do software em desenvolvimento \cite{schneidewind1990standard}.  
+Observou-se que, mesmo com uma \textit{baseline}  arquitetural definida, os RNFs, chamados também de atributos ou critérios de qualidade, são negligenciados ou tratados de forma equivocada \cite{eckhardt2016non}. Entretanto, esses critérios evidenciam preocupações, as quais impactam na qualidade do software em desenvolvimento \cite{schneidewind1990standard}.  
 Portanto, são necessários esforços para auxiliar os Engenheiros de Requisitos e os Engenheiros de Software na especificação desses RNFs, em particular em aplicações tipicamente comerciais, cujas arquiteturas são, normalmente, impostas pelas empresas de desenvolvimento.
 
-Nessa monografia então definiu um catálogo de SIGs centrado no RNF Segurança, no escopo das aplicações web, e no padrão arquitetural MVC aplicado em cenários de desenvolvimento onde a tecnologia utilizada foi \textit{rails} que trata-se de um framework de desenvolvimento web baseado no padrão arquitetural MVC. 
+Nessa monografia então, definiu-se um catálogo de SIGs centrado no RNF Segurança, no escopo das aplicações web, e no padrão arquitetural MVC aplicado em cenários de desenvolvimento onde a tecnologia utilizada foi \textit{rails} que trata-se de um \textit{framework} de desenvolvimento web baseado no padrão arquitetural MVC. 
 
 \section{Objetivos}
  
@@ -59,7 +59,7 @@ Com intuito de alcançar o objetivo geral, foram considerados relevantes os segu
 	\item Realizar a correspondência entre o  catálogo e as camadas do padrão arquitetural MVC;
 	
 	
-	\item Elaborar cenários e desenvolver aplicações web exemplo, no padrão MVC, orientando-se pelo catálogo. Essas aplicações web exemplo podem ser vistas como cenários de uso ou um estudo de caso, procurando apresentar aos interessados como o catálogo pode ser utilizado/instanciado. 
+	\item Elaborar cenários e desenvolver aplicações web exemplo, no padrão MVC, orientando-se pelo catálogo. Essas aplicações web utilizadas como exemplos podem ser vistas como cenários de uso ou um estudo de caso, procurando apresentar, aos interessados, como o catálogo pode ser utilizado/instanciado. 
 	
 \end{itemize}
 
@@ -67,7 +67,7 @@ Com intuito de alcançar o objetivo geral, foram considerados relevantes os segu
 
 Esta monografia está dividida nos respectivos capítulos, sendo eles: 
 \begin{itemize}
-	\item O Capítulo \ref{chap:referencialTeorico} \textbf{Referencial Teórico}, explora os conceitos chave para elaboração da monografia, partindo da engenharia de requisitos e seus conceitos, explora-se também os aspectos e conceitos de arquitetura de software e o padrão MVC, bem como a visão dos requisitos de segurança como RNFs, finalizando com a conceituação de personas;
+	\item O Capítulo \ref{chap:referencialTeorico} \textbf{Referencial Teórico}, explora os conceitos chave para elaboração da monografia, partindo da engenharia de requisitos e seus conceitos, explora-se também os aspectos e conceitos de arquitetura de software e o padrão MVC, bem como, a visão dos requisitos de segurança como RNFs, finalizando com a conceituação de personas;
 	
 	\item  O Capítulo \ref{chap:suporteTecnologico} \textbf{Suporte Tecnológico}, apresenta as ferramentas de modelagem dos diagramas e mapas mentais, e as ferramentas de suporte à escrita utilizadas para o desenvolvimento da monografia;
 	
@@ -75,7 +75,7 @@ Esta monografia está dividida nos respectivos capítulos, sendo eles:
 	
 	\item O Capítulo \ref{chap:proposta} \textbf{Catálogo de Segurança}, descreve o catálogo de tipos de RNFs para segurança e o gráfico de interdependência entre as metas flexíveis (SIGs);
 	
-	\item  O Capítulo  \ref{chap:resultadosObtidos} \textbf{Resultados Obtidos}, apresenta a aplicação do Catálogo de Segurança detalhando os cenários de aplicação, por fim apresenta o SIG a visão geral de aplicação do catálogo fazendo o mapeamento entre o Catálogo de Segurança com as camadas do padrão arquitetural MVC. 
+	\item  O Capítulo  \ref{chap:resultadosObtidos} \textbf{Resultados Obtidos}, apresenta a aplicação do Catálogo de Segurança detalhando os cenários de aplicação, por fim apresenta o SIG, a visão geral de aplicação do catálogo fazendo o mapeamento entre o Catálogo de Segurança com as camadas do padrão arquitetural MVC. 
 	
 	\item  O Capítulo \ref{chap:consideracoesFinais} \textbf{Conclusão}, apresenta os resultados alcançados com a execução da monografia e os trabalhos futuros. 
 \end{itemize}
