@@ -14,11 +14,11 @@ Dependendo do padrão arquitetural utilizado, as especificações bem como as op
 
 O MVC é um padrão arquitetural para sistemas interativos, que divide a aplicação em componentes: a \textit{Model}, que contém a implementação das funcionalidades principais e os dados da aplicação, ou seja as entidades de domínio; a \textit{View}, que exibe as informações da aplicação ao usuário, sendo, portanto, a camada mais próxima desse último, e a \textit{Controller}, que lida com as entradas do usuário \cite{buschmann1996system}, sendo um componente intermediário entre \textit{Model} e \textit{View}.  
 
-Existem alguns \textit{frameworks} conceituais centrados na especificação de RNFs. Dentre eles, destacam-se: NFR Framework \cite{chung2009non}, i* \cite{istarwiki20} e FURPS \cite{umar2011analyzing}. Detalhes sobre esses frameworks serão cobertos no Capítulo \ref{chap:referencialTeorico} desse trabalho, Referencial Teórico. Em um primeiro momento, pode-se destacar que os dois primeiros, NFR Framework e i*, fazem uso de uma abordagem mais emergente para especificação desses RNFs. Já o FURPS pode ser entendido como um documento simples, especificado em linguagem natural, que se orienta por alguns RNFs comumente encontrados na literatura, no caso (em inglês): \textit{Functionality}, \textit{Usability}, \textit{Reliability}, \textit{Performance} e \textit{Supportability}.
+Existem alguns \textit{frameworks} conceituais centrados na especificação de RNFs. Dentre eles, destacam-se: NFR \textit{Framework} \cite{chung2009non}, i* \cite{istarwiki20} e FURPS \cite{umar2011analyzing}. Detalhes sobre esses \textit{frameworks} serão cobertos no Capítulo \ref{chap:referencialTeorico} desse trabalho, Referencial Teórico. Em um primeiro momento, pode-se destacar que os dois primeiros, NFR \textit{Framework} e i*, fazem uso de uma abordagem mais emergente para especificação desses RNFs. Já o FURPS pode ser entendido como um documento simples, especificado em linguagem natural, que se orienta por alguns RNFs comumente encontrados na literatura, no caso (em inglês): \textit{Functionality}, \textit{Usability}, \textit{Reliability}, \textit{Performance} e \textit{Supportability}.
 
 A abordagem mais emergente, mencionada para os \textit{frameworks} NFR e i*, usa modelos específicos, focados na especificação de requisitos usando princípios da \textit{Goal-Oriented Requirements Engineering} (GORE) \cite{horkoff2016goal}. Rastreabilidade de requisitos \cite{wiegers2013software}; especificação de impactos e interdependências entre os requisitos; registro de alternativas quanto aos requisitos analisados, e definição de operacionalizações para viabilizar a realização dos requisitos são algumas vantagens que ficam evidentes no uso desses modelos mais específicos, como, por exemplo: o \textit{Softgoal Interdependency Graphs} (SIGs) \cite{chung2012non} ou, em português, Grafos de Interdependências entre Requisitos Não Funcionais. 
 
-Portanto, esse trabalho propôs a definição de um Catálogo de SIGs centrado no RNF Segurança, especificamente desenhado para o Padrão Arquitetural MVC, usando a notação do NFR Framework. Dentre as contribuições, procura-se auxiliar na tarefa de especificação de requisitos, quando uma arquitetura é imposta. Como o catálogo ficaria muito abrangente e generalista, caso fosse definido para qualquer RNF e padrão arquitetural, não sendo, portanto, útil, focou-se: (i) no RNF mais preocupante - Segurança, segundo a literatura - em aplicações de software de cunho comercial; (ii) em aplicações Web, e (iii) no padrão arquitetural MVC.  Vale ressaltar ainda que os termos RNFs, atributos de qualidade, critérios de qualidade e metas flexíveis serão utilizados como sinônimos ao longo desse trabalho.
+Portanto, esse trabalho propôs a definição de um Catálogo de SIGs centrado no RNF Segurança, especificamente desenhado para o Padrão Arquitetural MVC, usando a notação do NFR \textit{Framework}. Dentre as contribuições, procura-se auxiliar na tarefa de especificação de requisitos, quando uma arquitetura é imposta. Como o catálogo ficaria muito abrangente e generalista, caso fosse definido para qualquer RNF e padrão arquitetural, não sendo, portanto, útil, focou-se: (i) no RNF mais preocupante - Segurança, segundo a literatura - em aplicações de software de cunho comercial; (ii) em aplicações Web, e (iii) no padrão arquitetural MVC.  Vale ressaltar ainda que os termos RNFs, atributos de qualidade, critérios de qualidade e metas flexíveis serão utilizados como sinônimos ao longo desse trabalho.
 
 
 \section{Questão de Pesquisa}
@@ -31,7 +31,7 @@ Entretanto, é também relevante considerar que esse contexto de desenvolvimento
 
 \begin{itemize}
 	\item População: “\textit{..Engenheiros de Requisitos e Engenheiros de Software na especificação de requisitos associados ao RNF Segurança, em aplicações Web desenvolvidas orientando-se pelo padrão arquitetural MVC..}”
-	\item Intervenção: “\textit{..utilização de notação específica, NFR Framework, para modelagem dos Grafos de Interdependências de Requisitos Não Funcionais centrados no critério de qualidade Segurança, especificando impactos, interdependências e operacionalizações cabíveis  ..}”
+	\item Intervenção: “\textit{..utilização de notação específica, NFR \textit{Framework}, para modelagem dos Grafos de Interdependências de Requisitos Não Funcionais centrados no critério de qualidade Segurança, especificando impactos, interdependências e operacionalizações cabíveis  ..}”
 	\item Saídas: “\textit{.. catálogo de soluções centrado em Segurança e no padrão arquitetural MVC..}”
 \end{itemize}
 \section{Justificativa}
@@ -57,7 +57,7 @@ Com intuito de alcançar o objetivo geral, foram considerados relevantes os segu
 	
 	\item Investigar - na literatura: (i) formas recomendadas para lidar com o RNF Segurança em aplicações web desenvolvidas com base no padrão arquitetural MVC, permitindo identificar alternativas e operacionalizações para concretização desse RNF de forma satisfatória, e (ii) RNFs associados à Segurança, permitindo identificar as interdependências e os impactos entre eles;
 	
-	\item Elaborar o catálogo de SIGs, com base nos resultados da etapa de investigação (supracitada) bem como orientando-se pela notação do NFR Framework;
+	\item Elaborar o catálogo de SIGs, com base nos resultados da etapa de investigação (supracitada) bem como orientando-se pela notação do NFR \textit{Framework};
 	
 	\item Realizar a correspondência entre o  catálogo e as camadas do padrão arquitetural MVC;
 	
@@ -79,7 +79,7 @@ Este trabalho está dividido nos respectivos capítulos, sendo eles:
 	
 	\item O Capítulo \ref{chap:proposta} \textbf{Catálogo de Segurança}, o qual descreve o catálogo bem como detalha o grafo de interdependência entre as metas flexíveis (SIGs);
 	
-	\item  O Capítulo  \ref{chap:resultadosObtidos} \textbf{Resultados Obtidos}, o qual apresenta a aplicação e a evolução do Catálogo de Segurança, considerando cenários de uso diferentes. Por fim, confere-se ênfase no mapeamento entre o Catálogo de Segurança e as camadas do Padrão Arquitetural MVC.. 
+	\item  O Capítulo  \ref{chap:resultadosObtidos} \textbf{Resultados Obtidos}, o qual apresenta a aplicação e a evolução do Catálogo de Segurança, considerando cenários de uso diferentes. Por fim, confere-se ênfase no mapeamento entre o Catálogo de Segurança e as camadas do Padrão Arquitetural MVC;
 	
 	\item  O Capítulo \ref{chap:consideracoesFinais} \textbf{Conclusão}, o qual acorda os resultados alcançados com o desenvolvimento desse trabalho bem como os principais trabalhos futuros almejados. 
 \end{itemize}
