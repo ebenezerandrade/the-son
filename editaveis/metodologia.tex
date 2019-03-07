@@ -74,48 +74,38 @@ O Kanban é um método ágil que promove ao \textit{scrum team} e aos \textit{st
 \section{Procedimentos Metodológicos}
 \label{sec:procedimentosMetodológicos}
 
-Para o desenvolvimento dessa monografia, foram realizadas várias atividades. Essas atividades foram então organizadas como um processo de desenvolvimento, conforme ilustrado nas Figura \ref{PDM-TCC1} e \ref{PDM-TCC2}. 
-
-Pelas diretrizes do curso de graduação em Engenharia de Software, é necessária à aprovação nas disciplinas de TCC1 e TCC2. Assim, nas próximas seções, procurou-se detalhar o fluxo de atividades que conduziu a execução da elaboração da monografia como um todo. 
-
-\subsection{Fluxo de Atividades do o TCC1}
-
-Este fluxo de atividades teve como principal objetivo a fundamentação, a elaboração e a estruturação do Catálogo de Segurança para o padrão arquitetural MVC. 
+Para o desenvolvimento desse trabalho, foram realizadas um conjunto de atividades para que o Catálogo de Segurança pudesse ser elaborado e aplicado em cenários. Portanto, essas atividades foram modeladas em notação BPMN com intuito de detalhar o fluxo de execução.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/PDM-TCC1.PNG}
-	\caption{Atividades realizadas no TCC1.}
-	\label{PDM-TCC1}
+	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/fluxodeatividades.PNG}
+	\caption{Atividades realizadas.}
+	\label{fluxoDeExecuçãoTCC}
 \end{figure}
 
-As atividades são:
+Segue abaixo a descrição das atividades:
 
 \begin{itemize}
-	\item \textbf{Definir tema}: Em conjunto com os professores orientadores dessa monografia, essa atividade teve como principal objetivo o refinamento sobre os conceitos teóricos referentes à área de interesse do autor.   
+	\item \textbf{Definir tema}: em conjunto com os professores orientadores dessa monografia, essa atividade teve como principal objetivo o refinamento sobre os conceitos teóricos referentes à área de interesse do autor;
 	
-	\item \textbf{Realizar levantamento teórico}: Com base nos resultados obtidos na execução da atividade anterior, iniciou-se o levantamento teórico, seguindo as orientações dos orientadores. Discutiu-se sobre os aspectos fundamentais do GORE, os \textit{frameworks} que se apoiam nos conceitos do GORE, os conceitos de Arquitetura de Software e os atributos de qualidade mais relevantes para o mercado e para a academia. 
+	\item \textbf{Realizar levantamento teórico}: com base nos resultados obtidos na execução da atividade anterior, iniciou-se o levantamento teórico, seguindo as orientações dos orientadores. Discutiu-se sobre os aspectos fundamentais do GORE, os \textit{frameworks} que se apoiam nos conceitos do GORE, os conceitos de Arquitetura de Software e os atributos de qualidade mais relevantes para o mercado e para a academia;
 	
-	\item \textbf{Elaborar proposta}: Com o conhecimento das necessidades da área de atuação dessa monografia, iniciou a elaboração da proposta de pequisa. Ficou acordado que seria utilizado o NFR \textit{Framework}, bem como, que seria aplicado ao mercado, tomando Segurança como o principal atributo de qualidade.  
+	\item \textbf{Elaborar proposta}: com o conhecimento das necessidades da área de atuação desse trabalho, iniciou-se a elaboração da proposta de pequisa, acordando que seria utilizado o NFR \textit{Framework}, bem como, que seria aplicado ao mercado, tomando Segurança como o principal atributo de qualidade;  
 	
-	\item \textbf{Elaborar referencial teórico}: Foi realizada a redação dos conceitos teóricos a serem aplicados no desenvolvimento dessa monografia. 
+	\item \textbf{Elaborar referencial teórico}: foi realizada a redação dos conceitos teóricos a serem aplicados no desenvolvimento desse trabalho; 
 	
-	\item \textbf{Classificar pesquisa}: Redação  da classificação da pesquisa em suas dimensões. Sendo especificada quanto (i) à abordagem de pesquisa, (ii) à natureza de pesquisa, (iii) aos objetivos de pesquisa, e (iv) aos procedimentos técnicos de pesquisa.
+	\item \textbf{Classificar pesquisa}: redação  da classificação da pesquisa em suas dimensões sendo especificada quanto (i) à abordagem, (ii) à natureza, (iii) aos objetivos, e (iv) aos procedimentos técnicos;
 	
-	\item \textbf{Definir ferramentas de suporte}: Definição e descrição das ferramentas utilizadas no desenvolvimento desse trabalho.  
+	\item \textbf{Definir ferramentas de suporte}: definição e descrição das ferramentas utilizadas no desenvolvimento desse trabalho;
 	
-	\item \textbf{Estruturar catálogo de tipos de segurança}: Com base nos conceitos de Segurança apresentados por Lawrence Chung, Brian A. Nixon, Eric Yu e John Mylopoulos, no  livro: \textit{NON-FUNCTIONAL REQUIREMENTS
-	IN SOFTWARE ENGINEERING}, iniciou-se a elaboraçao  do catálogo de tipos de RNFs para Segurança, e expandindo o catálogo com base em definições de subtipos de RNFs.
+	\item \textbf{Estruturar catálogo de tipos de RNFs para Segurança}: com base nos conceitos de Segurança apresentados por Lawrence Chung, Brian A. Nixon, Eric Yu e John Mylopoulos, no  livro: \textit{NON-FUNCTIONAL REQUIREMENTS
+	IN SOFTWARE ENGINEERING}, iniciou-se a elaboraçao  do catálogo de tipos de RNFs para Segurança, expandindo o catálogo com base em definições de subtipos de RNFs;
 	
-	\item \textbf{Elaborar SIG}: A partir do catálogo de Segurança, iniciou-se o processo de identificação das metas flexíveis que podem ser satisfeitas, orientando-se também pelo livro supracitado.
+	\item \textbf{Elaborar Catálogo de Segurança}: a partir do Catálogo de Segurança, iniciou-se o processo de identificação das metas flexíveis que podem ser satisfeitas, orientando-se também pelo livro supracitado;
 	
-	\item \textbf{Realizar o mapeamento entre metas flexíveis e o padrão MVC}: Iniciou-se a comparação das metas flexíveis que possuiam tipo arquitetural e gerariam impactos positivos ou negativos na Segurança dos dados e da arquitetura. Caso ocorresse a identificação de outro subtipo para Segurança à atividade, ``Estruturar catálogo de tipos para Segurança`` era realizada novamente e consequentemente as atividades seguintes de acordo com a Figura \ref{PDM-TCC1}. 
+	\item \textbf{Realizar mapeamento do Catálogo de Segurança no primeiro e segundo nível de abstração com o padrão MVC}: iniciou-se a comparação das metas flexíveis que possuíam relação com o Padrão Arquitetural MVC e gerariam impactos positivos ou negativos na Segurança dos dados e da arquitetura. Durante a execução dessa atividade caso ocorresse a identificação de outro subtipo para Segurança à atividade, “Estruturar catálogo de tipos para Segurança” era realizada novamente e consequentemente as atividades seguintes de acordo com a Figura \ref{fluxoDeExecuçãoTCC}, e
 	
-	\item \textbf{Definir tecnologia de desenvolvimento de software}: Definir ferramentas para o desenvolvimento do software de exemplo, desenvolvido utilizando o padrão arquitetural MVC.
-	
-	\item \textbf{Definir metodologia de desenvolvimento de software}: Definir metodologia de desenvolvimento de software a ser utilizada.
-	
-	\item \textbf{Apresentar TCC 1}: Defesa do TCC1 para a banca. 
+	\item \textbf{Aplicar Catálogo de Segurança ao cenário}: essa atividade respeitou o processo de desenvolvimento de software descrito na seção \ref{sec:metodologiaDeDesenvolvimentoDeSoftware}
 \end{itemize}
 
 \subsection{Fluxo de Atividades do TCC2}
