@@ -36,16 +36,16 @@ Ao conjunto de tarefas e técnicas utilizadas para promover o entendimento dos r
 
 A Engenharia de Requisitos abrange sete fases distintas: concepção, levantamento, elaboração, negociação, especificação, verificação e validação \cite{pressman2011engenharia}. De acordo com \cite{kotonya1998requirements}, durante a execução das atividades nas fases da Engenharia de Requisitos, alguns problemas são relatados como: (i) os requisitos não refletem as reais necessidades do cliente, de acordo com o sistema a ser desenvolvido; (ii) os requisitos são inconsistentes e/ou incompletos; (iii) a Engenharia de Requisitos é complexa e possui alto custo, principalmente, quando há necessidade de mudanças após os requisitos serem ditos acordados/elicitados entre as partes; e (iv) os requisitos são comumente interpretados de maneira errada pela equipe de desenvolvimento, diante do que foi solicitado pelo cliente. Apesar de parecer algo acordado em uma referência antiga da área. Tais problemas continuam ocorrendo em desenvolvimentos atuais, conforme apontado em palestras recentes de autores da área \cite{palestrasilvio}. 
 
-Boa parte dos modelos utilizados na Engenharia de Requisitos não possuem tratamento adequado para lidar com os critérios de qualidade. Logo, o tratamento desses critérios tem sido uma preocupação para a comunidade da Engenharia de Requisitos. Atualmente, existem esforços no sentido de aprimorar os modelos e especificações desses requisitos, e são fortemente associados à comunidade de pesquisadores da Engenharia de Requisitos Orientada à Meta (GORE) \cite{chung2012non}. Nesta monografia, é abordado o uso de uma notação específica para tratar RNFs, proposta por essa comunidade, no caso, trata-se do NFR \textit{framework} \cite{chung2012non}. 
+Boa parte dos modelos utilizados na Engenharia de Requisitos não possuem tratamento adequado para lidar com os critérios de qualidade. Logo, o tratamento desses critérios tem sido uma preocupação para a comunidade da Engenharia de Requisitos. Atualmente, existem esforços no sentido de aprimorar os modelos e as especificações desses requisitos, e são fortemente associados à comunidade de pesquisadores da Engenharia de Requisitos Orientada à Meta (GORE) \cite{chung2012non}. Neste trabalho, é abordado o uso de uma notação específica para tratar RNFs, proposta por essa comunidade, no caso, trata-se do NFR \textit{framework} \cite{chung2012non}. 
 
 O NFR \textit{framework} é um \textit{Framework} conceitual que procura lidar com os requisitos não funcionais, permitindo especificar os mesmos em um alto nível de abstração e, gradualmente, fornecendo insumos para que essa especificação seja trazida para um nível mais baixo de abstração. Nesse último nível, são especificadas as operacionalizações, as quais evidenciam alternativas para viabilizar a implementação desses requisitos no nível de código. Mais adiante, serão apresentados detalhes dessa notação.
 
 \subsection{Engenharia de Requisitos Orientada à Meta}
 \label{subsec:orientacaoMeta}
 
-A Engenharia de Requisitos Orientada à Meta (GORE) tem-se popularizado nos últimos anos e foca seus esforços no tratamento dos requisitos funcionais e não funcionais, como metas a serem alcançadas \cite{van2001goal}, Seus modelos possuem como objetivo a modelagem da razão pela qual determinado requisito existe. Essa modelagem promove ao engenheiro de requisitos uma estratégia mais detalhada do problema, podendo encontrar uma solução mais adequada \cite{van2001goal}\cite{chung2012non}. O GORE é uma abordagem cada vez mais reconhecida na comunidade de Engenharia de Requisitos \cite{van2001goal}.
+A Engenharia de Requisitos Orientada à Meta (GORE) tem-se popularizado nos últimos anos e foca seus esforços no tratamento dos requisitos, como metas a serem alcançadas \cite{van2001goal}. Seus modelos possuem como objetivo a modelagem da razão pela qual determinado requisito existe. Essa modelagem promove ao Engenheiro de Requisitos uma estratégia mais detalhada do problema, podendo encontrar uma solução mais adequada \cite{van2001goal}\cite{chung2012non}. O GORE é uma abordagem cada vez mais reconhecida na comunidade de Engenharia de Requisitos \cite{van2001goal}.
 
-Nas definições do GORE, existem as metas que são componentes essenciais. De acordo com \cite{van2001goal}, uma meta é definida como uma propriedade do sistema, a qual é expressa pelos \textit{stakeholders} através de determinadas questões como, através de determinadas questões como, o “\textbf{porquê}” uma meta é exigida, “\textbf{como}” ela pode ser atingida, e “\textbf{quem}” será o responsável pela meta no sistema e no ambiente.
+Nas definições do GORE, existem as metas que são componentes essenciais. De acordo com \cite{van2001goal}, uma meta é definida como uma propriedade do sistema, a qual é expressa pelos \textit{stakeholders} através de determinadas questões como: “\textbf{Porquê}” uma meta é exigida, “\textbf{como}” ela pode ser atingida, e “\textbf{quem}” será o responsável pela meta no sistema e no ambiente.
 
 \begin{figure}[h!]
 	\centering
@@ -57,15 +57,17 @@ Nas definições do GORE, existem as metas que são componentes essenciais. De a
 
 \pagebreak
 
- Com base na Figura \ref{Gore}, pode-se entender como são os comportamentos das metas na abordagem GORE. Representada pelo simbolo de uma nuvem, uma meta, quando está sob a responsabilidade de um único software, pode se tornar um requisito. De forma semelhante, quando uma meta está sob a responsabilidade de um ambiente, ela pode se tornar uma suposição. Diferentemente de um requisito, uma suposição não pode ser aplicada pelo software. Mas, pode ser satisfeita devidos às normas, aos regulamentos organizacionais e às leis físicas\cite{van2001goal}. Essa monografia focou apenas nas responsabilidades voltadas ao software.
+ Com base na Figura \ref{Gore}, pode-se entender como são os comportamentos das metas na abordagem GORE. Representada pelo símbolo de uma nuvem, uma meta, quando está sob a responsabilidade de um único software, pode se tornar um requisito. De forma semelhante, quando uma meta está sob a responsabilidade de um ambiente, ela pode se tornar uma suposição. Diferentemente de um requisito, uma suposição não pode ser aplicada pelo software. Mas, pode ser satisfeita devidos às normas, aos regulamentos organizacionais e às leis físicas\cite{van2001goal}. Esse trabalho focou apenas nas responsabilidades voltadas ao software.
 
+\begin{comment}
+	Existem diversos \textit{frameworks} orientados à meta. Os principais  são o NFR \textit{Framework} \cite{chung2012non} e o i* \cite{istarwiki20}. Ambos esses \textit{frameworks} serão detalhados nas seções \ref{sec:NFR} e \ref{sec:i*}, respectivamente.
+\end{comment}
 
-Existem diversos \textit{frameworks} orientados à meta. Os principais  são o NFR \textit{Framework} \cite{chung2012non} e o i* \cite{istarwiki20}. Ambos esses \textit{frameworks} serão detalhados nas seções \ref{sec:NFR} e \ref{sec:i*}, respectivamente.
 
 \subsection{Requisitos Não-Funcionais}
 \label{subsec:requisitosNaoFuncionais}
 
-A visão do software como um produto fez com que os aspectos que avaliam a qualidade de um software passassem a possuir maior atenção. Apenas satisfazer requisitos funcionais não é o suficiente. Logo, tem-se dado maior atenção para o RNFs, tais como: Segurança, Integridade, Disponibilidade, dentre outros \cite{cysneiros1997definindo}.
+A visão do software como um produto fez com que os aspectos que avaliam a qualidade de um software passassem a possuir maior atenção. Apenas satisfazer requisitos funcionais não é o suficiente. Logo, tem-se maior atenção para o RNFs, tais como: Segurança, Integridade, Disponibilidade, dentre outros \cite{cysneiros1997definindo}.
 
 Os RNFs podem ser entendidos como restrições sobre como os requisitos funcionais devem ser implementados, e determinam como o software deve realizar suas funções \cite{sommerville1997requirements}.
 
@@ -105,22 +107,22 @@ As classes de NFRs \cite{eckhardt2016non} podem ser compreendidas como subtipos 
 \section{NFR Framework}
 \label{sec:NFR}
 
-O NFR \textit{Framework}  é um modelo intencional, criado para ajudar engenheiros de software e engenheiros de requisitos a lidarem com requisitos não-funcionais, através de um grafo chamado de \textit{Softgoal Interdependency Graphs} (SIGs). Neste tipo de grafo, os requisitos podem ser analisados, uma vez que o SIG permite uma visão vertical desde a estratégia de alto nível até os detalhes operacionais;  possuindo operadores lógicos AND (E) e OR (OU) que promovem uma melhor tomada de decisão. Os RNFs são escritos através de uma notação formal. Essa notação permite comprovar a precisão e a completude de cada NFR \cite{chung2012non}. 
+O NFR \textit{Framework}  é um modelo intencional, criado para ajudar os especialistas a lidarem com requisitos não-funcionais, através de um grafo chamado de \textit{Softgoal Interdependency Graphs} (SIGs). Neste tipo de grafo, os requisitos podem ser analisados, uma vez que o SIG permite uma visão vertical desde a estratégia de alto nível até os detalhes operacionais;  possuindo operadores lógicos AND (E) e OR (OU) que promovem uma melhor tomada de decisão. Os RNFs são escritos através de uma notação formal. Essa notação permite comprovar a precisão e a completude de cada NFR \cite{chung2012non}. 
 
-O \textit{framework} também pode ser orientado por processo, dando suporte às atividades e fases do processo de engenharia de requisitos. Nesse caso, sendo utilizado como complemento nas abordagens de desenvolvimento de software \cite{chung2012non}.
+O \textit{framework} também pode ser orientado por processo, dado seu suporte às atividades e fases do processo de Engenharia de Requisitos. Nesse caso, sendo utilizado como complemento nas abordagens de desenvolvimento de software \cite{chung2012non}.
 
 O NFR \textit{Framework} utiliza o conceito de metas  flexíveis. Por definição, uma meta flexível é uma condição ou um estado no mundo real que deseja ser alcançado, podendo assumir natureza subjetiva, uma vez que o RNF pode variar de acordo com o julgamento de cada pessoa; e natureza relativa, uma vez que o RNF pode depender de algum tipo de relação com outro RNF \cite{chung2012non}.
 
-A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de uma nuvem, conforme apresentado pela Figura \ref{fig01}. Esse simbolo possui pequenas variações na forma, podendo representar uma \textbf{operacionalização} (nuvem em negrito), e também uma \textbf{reivindicação} (nuvem tracejada). Mais adiante, na Figura \ref{exemploNFR}, é apresentada a decomposição de uma meta flexível em outras metas.  
+A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de uma nuvem, conforme apresentado pela Figura \ref{fig01}. Esse símbolo possui pequenas variações na forma, podendo representar uma \textbf{operacionalização} (nuvem em negrito), e também uma \textbf{Alegação} (nuvem tracejada). Mais adiante, na Figura \ref{exemploNFR}, é apresentada a decomposição de uma meta flexível em outras metas.  
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/tiposDeSoftgoals.png}
-	\caption{Representação gráfica dos tipos de metas flexíveis.}
+	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/elementosSIG.png}
+	\caption{Representações gráficas de Meta Flexível, Operacionalização e Alegação.}
 	\label{fig01}
 \end{figure} 
 
-Para facilitar no entendimento das decisões tomadas, a meta flexível possui \textit{labels}, que determinam o grau de satisfação para uma meta flexível, de acordo com um conjunto de decisões do projeto. As \textit{labels} são: satisfeita, fracamente satisfeita,  negada, fracamente negada, indecidida e crítica \cite{chung2012non}. Outra notação importante, e que apresenta o grau de prioridade de uma meta flexível, é representada por “\textbf{!}” ou “\textbf{!!}” para um grau de prioridade maior, onde o ponto de afirmação é desenhado à esquerda da nuvem.
+Para facilitar o entendimento das decisões tomadas, a meta flexível possui \textit{labels}, que determinam o grau de satisfação para uma meta flexível, de acordo com um conjunto de decisões do projeto. As \textit{labels} são: satisfeita, fracamente satisfeita,  negada, fracamente negada, indecidida e crítica \cite{chung2012non}. Outra notação importante, e que apresenta o grau de prioridade de uma meta flexível, é representada por “\textbf{!}” ou “\textbf{!!}” permitindo especificar um grau de prioridade maior, sendo o ponto de afirmação desenhado à esquerda da nuvem..
 
 \begin{figure}[h]
 	\centering
@@ -131,7 +133,7 @@ Para facilitar no entendimento das decisões tomadas, a meta flexível possui \t
 
 As relações que as metas flexíveis possuem umas com as outras são estabelecidas através de \textit{links} de interdependências, sendo esses \textit{links} que realizam o registro da decomposição das metas flexíveis em metas flexíveis mais específicas (filhos). De certa forma, a decomposição em outras metas contribui para o nível de satisfação da meta flexível mais genérica (pai).
 
-Os \textit{links} de interdependências também podem ser entendidos como tipos de contribuições, e possuem uma notação simbólica para cada tipo, e cada tipo possui ainda um significado.  Tais tipos de contribuição são apresentados na Tabela \ref{tiposDeContribuições} adaptado de  \cite{chung2012non}.
+Os \textit{links} de interdependências também podem ser entendidos como tipos de contribuições, e possuem uma notação simbólica para cada tipo, e cada tipo possui ainda um significado.  Tais tipos de contribuição são apresentados na Tabela \ref{tiposDeContribuições}, adaptados de  \cite{chung2012non}.
 
 
 
@@ -163,7 +165,7 @@ Os \textit{links} de interdependências também podem ser entendidos como tipos 
 
 \pagebreak
 
-Os \textit{links} entre as metas flexíveis representam a contribuição que uma meta flexível tem com outra meta flexível, ou meta flexível de operacionalização, ou meta flexível de reivindicação. Logo, a Figura \ref{catalogoDeAvaliação} apresenta a forma como as \textit{labels} são propagadas, de acordo com seu tipo de relacionamento. A propagação das \textit{labels} aplica-se a todos os tipos de metas flexíveis. 
+Os \textit{links} entre as metas flexíveis representam a contribuição que uma meta flexível tem com outra meta flexível, ou operacionalização, ou alegação. Logo, a Figura \ref{catalogoDeAvaliação} apresenta a forma como as \textit{labels} são propagadas, de acordo com seu tipo de relacionamento. A propagação das \textit{labels} aplica-se a todos os tipos de representações da notação, sendo essas: metas flexíveis, operacionalizações ou alegações.. 
 
 \begin{figure}[h!]
 	\centering
@@ -174,7 +176,7 @@ Os \textit{links} entre as metas flexíveis representam a contribuição que uma
 
 \pagebreak
 
-A Figura \ref{exemploNFR} apresenta uma decomposição de uma meta flexível em outras metas de mesma natureza. Consideramos, nesse exemplo, o RNF: “manter as contas com boa segurança”. Usando a notação do NFR \textit{Framework}, representou-se a meta flexível  “segurança de contas”, no nível mais generalista do grafo. Em segundo nível, são especificadas as principais metas flexíveis que merecem ser consideradas para que a meta generalista seja "satisfeita", no caso: “Integridade de contas”, “Confidencialidade de contas” e “Disponibilidade de contas” \cite{chung2012non}.
+A Figura \ref{exemploNFR} apresenta uma decomposição de uma meta flexível em diferentes níveis de abstração. Consideramos, nesse exemplo, o RNF: “manter as contas com boa segurança”. Usando a notação do NFR \textit{Framework}, representou-se a meta flexível  “segurança de contas”, no nível mais generalista do grafo. Em segundo nível, são especificadas as principais metas flexíveis que merecem ser consideradas para que a meta generalista seja "satisfeita", no caso: “Integridade de contas”, “Confidencialidade de contas” e “Disponibilidade de contas” \cite{chung2012non}.
 
 \begin{figure}[h!]
 	\centering
@@ -187,6 +189,9 @@ Confidencialidade de contas é operacionalizada em ``Autorizar acesso à informa
 
 
 Para Disponibilidade de contas, a mesma é operacionalizada em “Duplicar servidor” e “Espelhar banco de dados”. Essas operacionalizações possuem contribuições do tipo HELP e mesmo pai. Para a meta flexível ser satisfeita, ambas as operacionalizações devem ser satisfeitas \cite{affleck2012supporting}. 
+
+
+\begin{comment}
 
 
 \section{Framework i*}
@@ -303,12 +308,14 @@ De acordo com \cite{istarwiki20}, os tipos de \textit{links} são definidos como
 \begin{itemize}		
 	\item \textbf{\textit{links} de contribuição}: Os tipos de contribuições\footnote[1]{A definição de cada tipo de contribuição é a mesma dada por Chung em \cite{chung2012non}, como visto na Tabela \ref{tiposDeContribuições}, que detalha os tipos de contribuições para o NFR Framework.} entre as metas flexíveis são: \textit{Make}, \textit{Some+}, \textit{Help}, \textit{Unknown}, \textit{Break}, \textit{Some-}, \textit{Hurt}, \textit{Or} e \textit{And}. 
 \end{itemize}
+\end{comment}
 
+A comunidade científica dedicada à abordagem GORE, conforme exposto nas últimas seções, centraliza seus esforços e contribuições na especificação de metas flexíveis, com modelos que detalham essa especificação em diferentes níveis de abstração. Entretanto, essa preocupação com os RNFs é ainda mais antiga, visto que temos especificações anteriores às iniciativas orientadas à meta, como é o caso do FURPs. Conforme será notado com a leitura da próxima seção, FURPS tem um rigor na especificação de metas flexíveis muito inferior à notação do NFR e similares adotadas pela comunidade GORE. Diante dessas colocações, e dada a importância dos RNFs para o escopo desse trabalho, justifica-se o uso do NFR \textit{Framework} nesse caso.
 
 \section{FURPS}
 \label{sec:furps}
 
-O termo FURPS é um acrônimo que define um modelo de atributo de qualidade, esse acrônimo é composto por cinco atributos de qualidade, sendo eles: (i) Funcionalidade (do inglês, \textit{Functionality}), (ii) Usabilidade (do inglês, \textit{Usability}), Confiabilidade (do inglês, \textit{Reliability}), Desempenho (do inglês, \textit{Performance}) e Suportabilidade (do inglês, \textit{Supportability}) \cite{umar2011analyzing}.
+O termo FURPS é um acrônimo que define um modelo de atributo de qualidade. Esse acrônimo é composto por cinco atributos de qualidade, sendo eles: (i) Funcionalidade (do inglês, \textit{Functionality}), (ii) Usabilidade (do inglês, \textit{Usability}), Confiabilidade (do inglês, \textit{Reliability}), Desempenho (do inglês, \textit{Performance}) e \textit{Supportability} (manteve-se o termo em inglês, pois o mesmo significa considerar testabilidade, adaptabilidade, manutenibilidade, compatibilidade, configurabilidade, escalabilidade e outros aspectos associados, não sendo, portanto, possível encontrar um único termo em português capaz de representar todos esses aspectos). \cite{umar2011analyzing}.
 
 \subsection{Funcionalidade}
 \label{subsec:funcionalidade}
@@ -320,7 +327,7 @@ Por definição, funcionalidade é a capacidade do software de promover funçõe
 \subsection{Usabilidade}
 \label{subsec:usabilidade}
 
-A usabilidade faz parte do conjunto dos RNFs de uma aplicação de software. Considera-se a experiência do usuário em manipular um computador, a experiência do usuário na utilização do software, a estética da interface para o usuário e para o contexto ao qual a aplicação foi desenvolvida \cite{cintra2006implementaccao}.
+Quando se pensa em usabilidade, tem-se uma preocupação com a satisfação do usuário, levando em conta, por exemplo, sua experiência em manipular um computador, utilizar um software, questões de ergonomia, design da interface gráfica, e até mesmo o contexto para o qual a solução computacional está sendo desenvolvida \cite{cintra2006implementaccao}.
 
 Por definição, usabilidade é a capacidade do software de ser compreendido, aprendido, operado e atraente ao usuário, quando o software estiver sendo utilizado de acordo com os cenários especificados \cite{qualidadeDeProdutoNBR}.
 
@@ -328,26 +335,28 @@ Por definição, usabilidade é a capacidade do software de ser compreendido, ap
 \subsection{Confiabilidade}
 \label{subsec:confiabilidade}
 
-A confiabilidade faz parte do conjunto dos RNFs de uma aplicação de software. Considera-se a prevenção de falhas, capacidade, do software se recuperar de um erro, a precisão e o tempo entre falhas (\textit{Mean Time Between Failure} (MTBF)) \cite{cintra2006implementaccao}.
+No caso da Confiabilidade, considera-se a prevenção de falhas, capacidade do software se recuperar de um erro, a precisão e o tempo entre falhas (\textit{Mean Time Between Failure} (MTBF)) \cite{cintra2006implementaccao}.
 
-Por definição confiabilidade, é a capacidade do software em manter o nível de desempenho esperado, quando o software estiver sendo utilizado de acordo com os cenários especificados \cite{qualidadeDeProdutoNBR}.  
+Por definição, confiabilidade é a capacidade do software em manter o nível de estabilidade esperado, garantindo, por exemplo, tolerância a falhas e até mesmo recuperação rápida diante da ocorrência dessas falhas, quando o software estiver sendo utilizado de acordo com os cenários especificados \cite{qualidadeDeProdutoNBR}.  
 
 \subsection{Desempenho}
 \label{subsec:desempenho}
 
-O desempenho faz parte do conjunto dos RNFs de uma aplicação de software. Considera-se o tempo de recuperação e o tempo de resposta do software, a taxa de transferência de dados (do inglês, \textit{troughput}) \footnote[1]{Quantidade de dados que pode ser tranferidos de um lugar para o outro em um espaço de tempo previamente especificado.}. Capacidade do software de utilizar os recursos do sistema operacional, dentre outros \cite{cintra2006implementaccao}.
+Em desempenho, são relevantes vários aspectos. Alguns deles, como garantir tempo de recuperação adequado, são necessidades sombreadas e desejadas em outros critérios também, no caso, confiabilidade. Outros aspectos chave, inerentes ao escopo do critério desempenho, são: taxas de transferência e transmissão de dados (do inglês, \textit{troughput})\footnote[1]{Quantidade de dados que pode ser tranferidos de um lugar para o outro em um espaço de tempo previamente especificado.}, e consumo de recursos (energia, memória, processamento, cache, uso balanceado/otimizado do sistema operacional, entre outros \cite{cintra2006implementaccao}.
 
-Por definição desempenho, é o nível como o software atende às necessidades, representado por um conjunto específico da valores para cada característica especificada para a execução do software. \cite{qualidadeDeProdutoNBR}.  
+Por definição, desempenho é o nível como o software atende ao conjunto específico de valores, especificado para cada característica atrelada à execução desse software \cite{qualidadeDeProdutoNBR}.  
 
-\subsection{Suportabilidade}
+\subsection{\textit{Supportability}}
 \label{subsec:suportabilidade}
 
-Suportabilidade faz parte do conjunto dos RNFs de uma aplicação de software. Considera-se a capacidade de adaptabilidade, a possibilidade de realizar manutenções corretivas e evolutivas, a flexibilidade de configuração, de instalação e a internacionalização no sistema \cite{cintra2006implementaccao}.
+Em \textit{Supportability}, considera-se a capacidade de adaptabilidade, a possibilidade de realizar manutenções corretivas e evolutivas, a flexibilidade de configuração, de instalação e a internacionalização no sistema \cite{cintra2006implementaccao}.
+
+Dado que esse trabalho abrange duas áreas, Engenharia de Requisitos e Arquitetura de Software, e que o maior olhar até o momento foi na primeira área, seguem seções que acordam referenciais associados à Arquitetura de Software. 
 
 \section{Arquitetura de Software}
 \label{sec:arquitetura}
 
-O conceito de \textit{design} de software surgiu da década de 1970, quando os pesquisadores da época acreditavam que o \textit{design} era uma atividade separada da implementação, exigindo notações, técnicas e ferramentas específicas. Foi somente a partir da década de 1990 que se utilizou o termo arquitetura de software em contraste com \textit{design} de software, para indicar noções de codificação, abstrações, padrões e treinamentos formais de arquitetos de software \cite{perry1992foundations}.
+O conceito de \textit{design} de software surgiu da década de 1970, quando os pesquisadores da época acreditavam que o \textit{design} era uma atividade separada da implementação, exigindo notações, técnicas e ferramentas específicas. Foi somente a partir da década de 1990 que se utilizou o termo arquitetura de software, em contraste com \textit{design} de software, para indicar noções de codificação, abstrações, padrões e treinamentos formais de arquitetos de software \cite{perry1992foundations}.
 
 O termo arquitetura de software é definido por \cite{shaw1996software}, como o entendimento do sistema em termos de seus componentes computacionais e os relacionamentos entre os componentes, os padrões que guiam a composição organizacional dos componentes, bem como as decisões de restrições arquiteturais. 
 
@@ -355,21 +364,21 @@ As arquiteturas de software são projetadas de acordo com algum princípio de es
 
 Os padrões arquiteturais são modelos para arquiteturas concretas de software, expressando a estrutura essencial para o desenvolvimento de um produto de software. O padrão fornece um conjunto de subsistemas predefinidos, incluindo regras e diretrizes para organizar as relações entre eles, além de especificar suas responsabilidades \cite{buschmann1996system}. 
 
-A seleção de um padrão arquitetural é uma atividade fundamental ao desenvolver um sistema de software, sendo apropriado entender que cada padrão auxilia o desenvolvedor a alcançar uma propriedade de sistema específica. Dentre o conjunto dos padrões arquiteturais, existem padrões que auxiliam em propriedades similares e podem ser agrupados em categoria, sendo elas \cite{buschmann1996system}:.
+A seleção de um padrão arquitetural é uma atividade fundamental ao desenvolver um sistema de software, sendo apropriado entender que cada padrão auxilia o desenvolvedor a alcançar uma propriedade de sistema específica. Dentre o conjunto dos padrões arquiteturais, existem padrões que auxiliam em propriedades similares, e podem ser agrupados em categoria, sendo elas \cite{buschmann1996system}:.
 
 \begin{itemize}
 	
-	\item Da lama à estrutura;
+	\item da lama à estrutura;
 	
-	\item Sistemas distribuídos;
+	\item sistemas distribuídos;
 	
-	\item Sistemas interativos, e
+	\item sistemas interativos, e
 	
-	\item Sistemas adaptáveis.
+	\item sistemas adaptáveis.
 
 \end{itemize}
 
-A Tabela \ref{categoriasDePadroesArquiteturais} apresenta detalhadamente os quatro tipos de categorias para os padrões arquiteturais, definidos por \cite{buschmann1996system} e seus respectivos padrões.
+A Tabela \ref{categoriasDePadroesArquiteturais} apresenta detalhadamente os quatro tipos de categorias para os padrões arquiteturais, definidos por \cite{buschmann1996system}, e seus respectivos padrões.
 
 \begin{table}[h!]
 	\centering
@@ -378,16 +387,16 @@ A Tabela \ref{categoriasDePadroesArquiteturais} apresenta detalhadamente os quat
 	\begin{tabular}{@{}ccc@{}}
 		\hline
 		\textbf{Categoria} & \textbf{Descrição} & \textbf{Padrões} \\ \hline
-		\begin{tabular}[c]{@{}c@{}}Da lama à \\ estrutura\end{tabular} & \begin{tabular}[c]{@{}c@{}}Confere suporte ao desenvolvedor, evitando um \\ "mar" de componentes ou objetos. Os padrões\\ dessa categoria suportam uma decomposição\\  controlada de uma tarefa geral em\\  subtarefas cooperantes.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Padrão Layers\\ \\ \\ Padrão \\ Pipe-and-Filter\\ \\ \\ Padrão Blackboard\end{tabular} \\ \hline
-		\begin{tabular}[c]{@{}c@{}}Sistemas \\ distribuídos\end{tabular} & \begin{tabular}[c]{@{}c@{}}O conjunto de sistemas interligados \\ que compartilham\\ processamento entre si.\end{tabular} & Broker \\ \hline
-		\begin{tabular}[c]{@{}c@{}}Sistemas \\ interativos\end{tabular} & \begin{tabular}[c]{@{}c@{}}O conjunto de padrões que suportam a \\ estruturação de sistemas de software \\ os quais apresentam \\ a interação humano-computador.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Model-View-\\ Controller\\ \\ \\ Presentation-\\ Abstraction-\\ Control\end{tabular} \\ \hline
-		\begin{tabular}[c]{@{}c@{}}Sistemas \\ adaptáveis\end{tabular} & \begin{tabular}[c]{@{}c@{}}O conjunto de padrões que suportam, \\a adaptabilidade, a evolução tecnológica\\ e a alteração nos requisitos funcionais.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Mircokernel\\ \\ \\ Reflection\end{tabular} \\ \hline
+		\begin{tabular}[c]{@{}c@{}}da lama à \\ estrutura\end{tabular} & \begin{tabular}[c]{@{}c@{}}Confere suporte ao desenvolvedor, evitando um \\ “mar” de componentes ou objetos. Os padrões\\ dessa categoria suportam uma decomposição\\  controlada de uma tarefa geral em\\  subtarefas cooperantes.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Padrão Layers\\ \\ \\ Padrão \\ Pipe-and-Filter\\ \\ \\ Padrão Blackboard\end{tabular} \\ \hline
+		\begin{tabular}[c]{@{}c@{}}sistemas \\ distribuídos\end{tabular} & \begin{tabular}[c]{@{}c@{}}O conjunto de sistemas interligados \\ que compartilham\\ processamento entre si.\end{tabular} & Broker \\ \hline
+		\begin{tabular}[c]{@{}c@{}}sistemas \\ interativos\end{tabular} & \begin{tabular}[c]{@{}c@{}}O conjunto de padrões que suportam a \\ estruturação de sistemas de software, \\ os quais apresentam \\ a interação humano-computador.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Model-View-\\ Controller\\ \\ \\ Presentation-\\ Abstraction-\\ Control\end{tabular} \\ \hline
+		\begin{tabular}[c]{@{}c@{}}sistemas \\ adaptáveis\end{tabular} & \begin{tabular}[c]{@{}c@{}}O conjunto de padrões que suportam \\a adaptabilidade, a evolução tecnológica\\ e a alteração nos requisitos funcionais.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Mircokernel\\ \\ \\ Reflection\end{tabular} \\ \hline
 	\end{tabular}
 \end{table}
 
 \pagebreak
 
-Devido ao foco da presente monografia ser a construção do Catálogo de Segurança para o padrão arquitetural MVC, a Subseção \ref{subsec:mvc} detalha este padrão arquitetural. 
+Devido ao foco desse trabalho ser a construção do Catálogo de Segurança para o Padrão Arquitetural MVC, a Subseção \ref{subsec:mvc} detalha este Padrão Arquitetural. 
 
 
 \subsection{MVC: Model-View-Controller}
@@ -461,7 +470,7 @@ Tão importante quanto a compreensão de cada componente é compreender o fluxo 
 
 \pagebreak
 
-A Figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que representa o fluxo dos eventos em um cenário exemplo, no qual a \textit{Controller} interage diretamente com a \textit{Model} e \textit{View}, sendo que o usuário entra com alguma informação e aguarda o retorno da aplicação. 
+A Figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que representa o fluxo dos eventos em um cenário exemplo, no qual a \textit{Controller} interage diretamente com a \textit{Model} e a \textit{View}, sendo que o usuário entra com alguma informação e aguarda o retorno da aplicação. 
 
 
 \begin{figure}[h!]
@@ -476,9 +485,9 @@ A Figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que represent
 \section{Segurança vista como um RNF}
 \label{sec:seguranca}
 
-Tratando a Segurança como um RNF, pode-se entender a mesma como estando associadas a vários outros RNFs. Dessa forma, podemos entender os RNFs associados à Segurança como sendo restrições, as quais realizam operacionalizações e satisfazem as metas de segurança, estabelecidas pelos engenheiros de requisitos e/ou engenheiros de software. Esse conjunto de  RNFs devem expressar de maneira precisa e não ambígua as metas de segurança de uma aplicação, fornecendo uma especificação para alcançar a meta deseja \cite{haley2006framework}.  
+Tratando a Segurança como um RNF, pode-se entender a mesma como estando associada a vários outros RNFs. Dessa forma, podemos entender os RNFs associados à Segurança como sendo restrições, as quais realizam operacionalizações e satisfazem as metas de segurança, estabelecidas pelos Engenheiros de Requisitos e/ou Engenheiros de Software. Esse conjunto de  RNFs devem expressar de maneira precisa e não ambígua as metas de segurança de uma aplicação, fornecendo uma especificação para alcançar a meta deseja \cite{haley2006framework}.  
 
-Existem diversas definições de Segurança. De forma simplificada, Segurança, no contexto de Segurança da Informação, significa proteger a informação \cite{chung2012non}. A presente monografia fundamenta-se nos conceitos de \cite{chung2012non} e \cite{sullivan2011web} como base para conceituar, Segurança, orientando-se por três conceitos conhecidos como CIA (\textit{Confidentiality}, \textit{Integrity}, \textit{Availability}) . 
+Existem variadas definições de Segurança. De forma simplificada, Segurança, no contexto de Segurança da Informação, significa proteger a informação \cite{chung2012non}. O presente trabalho fundamenta-se nos conceitos de \cite{chung2012non} e \cite{sullivan2011web} como base para definir Segurança, orientando-se por três conceitos conhecidos como CIA (\textit{Confidentiality}, \textit{Integrity}, \textit{Availability}) . 
 
 Diante do exposto, para a definição seguindo os fundamentos de \cite{chung2012non}, segurança se baseia em: 
 
@@ -492,11 +501,12 @@ Diante do exposto, para a definição seguindo os fundamentos de \cite{chung2012
 \end{itemize}
 
 
-O CIA pode ser abstraído em metas flexíveis de Segurança. Logo após, essas metas flexíveis devem ser capturadas e organizadas em um catálogo de Segurança, promovendo um conjunto rico de alternativas e pontos de verificação para se proteger contra a negligencia de pontos relevantes, e para a segurança da informação em uma aplicação. Como apresentado na Figura \ref{catalogoSegurancaChung},  abaixo de cada conceito chave de Segurança, existem seus subtipos. 
+O CIA pode ser abstraído em metas flexíveis associadas à Segurança. Logo após, essas metas flexíveis devem ser capturadas e organizadas em um catálogo de Segurança, promovendo um conjunto rico de alternativas e pontos de verificação para se proteger contra possíveis negligencias de pontos relevantes, e para assegurar informações em uma aplicação. Como apresentado na Figura \ref{catalogoSegurancaChung}, abaixo de cada conceito chave de Segurança, existem seus subtipos. 
 
-Apresentados em  verde na Figura \ref{catalogoSegurancaChung} estão outras características dos requisitos de Segurança, sendo um dos mais relevantes o ``operacional``, que possui como subtipo ``segurança operacional`` referindo-se, diretamente, à Segurança da Informação \cite{chung2012non}.
+Apresentados em  verde na Figura \ref{catalogoSegurancaChung}, estão outras características dos requisitos de Segurança, sendo um dos mais relevantes o ``operacional``, que possui como subtipo ``segurança operacional`` referindo-se, diretamente, à Segurança da Informação \cite{chung2012non}.
 
-Os subtipos das ``características dos RNF``, de acordo com \cite{chung2012non}, podem ser ``ciclo de vida``, ``operacional \footnote[1]{Operação realizada por uma aplicação de software em tempo de execução \cite{chung2012non}.}``, ``desenvolvimento \footnote[2]{Estágios de desenvolvimento \cite{chung2012non}.}``, ``interna-externa \footnote[3]{Refere-se a confidencialidade dos itens de informação do sistema \cite{chung2012non}.}``, ``interna `` e ``externa``.
+
+Os subtipos das “características dos RNFs”, de acordo com \cite{chung2012non}, podem ser “ciclo de vida”, “operacional\footnote[1]{Operação realizada por uma aplicação de software em tempo de execução \cite{chung2012non}.}”, “desenvolvimento\footnote[2]{Estágios de desenvolvimento \cite{chung2012non}.}”, “interna-externa\footnote[3]{Refere-se a confidencialidade dos itens de informação do sistema \cite{chung2012non}.}”, “interna” e “externa”.
 
 \begin{figure}[h!]
 	\centering
@@ -505,7 +515,7 @@ Os subtipos das ``características dos RNF``, de acordo com \cite{chung2012non},
 	\label{catalogoSegurancaChung}
 \end{figure}
 
-É de extrema importância entender os subtipos de cada conceito. Portanto, as subseções a seguir fazem uma breve apresentação sobre os conceitos de Confiabilidade e Integridade. 
+É de extrema importância entender os subtipos de cada conceito. Portanto, as subseções a seguir fazem uma breve apresentação sobre os conceitos de Confidencialidade e Integridade. 
 
 \subsection{Confidencialidade}
 \label{subsec:confidencialidade}
@@ -513,36 +523,38 @@ Os subtipos das ``características dos RNF``, de acordo com \cite{chung2012non},
 De acordo com \cite{reis10classificaccao}, em Confidencialidade, podem ser definidos conceitos sobre o tipo de Segurança, sendo eles:
 
 \begin{itemize}
-	\item \textbf{Irrestrito}: Tipo de informação pública. 
+	\item \textbf{Irrestrito}: tipo de informação pública; 
 	
-	\item \textbf{Interna}: Tipo de informação que seu acesso deve ser evitado por público externo. Caso este tipo de informação seja disponibilizado, por erro interno ou por ataque malicioso, não causa impacto algum ao mantenedor da informação.
+	\item \textbf{Interna}: tipo de informação que seu acesso deve ser evitado por público externo. Caso este tipo de informação seja disponibilizado, por erro interno ou por ataque malicioso, não causa impacto algum ao mantenedor da informação;
 	
-	\item \textbf{Confidencial}: Tipo de informação interna, a qual, uma vez disponibilizada ao público externo, por erro interno ou ataque malicioso, pode gerar vantagens a concorrentes e, consequentemente perda de usuários/clientes. 
+	\item \textbf{Confidencial}: tipo de informação interna, a qual, uma vez disponibilizada ao público externo, por erro interno ou ataque malicioso, pode gerar vantagens a concorrentes e, consequentemente, perda de usuários/clientes; 
 	
-	\item \textbf{Secreta}: Tipo de informação interna, restrita a um conjunto específico de usuários, a qual, uma vez disponibilizada tanto ao público externo, quanto ao público interno não definidos, pode causar grandes danos. A integridade dessa informação deve ser mantida a qualquer custo.
+	\item \textbf{Secreta}: tipo de informação interna, restrita a um conjunto específico de usuários, a qual, uma vez disponibilizada tanto ao público externo, quanto ao público interno não definidos, pode causar grandes danos. A integridade dessa informação deve ser mantida a qualquer custo.
 \end{itemize} 
 
-A Confidencialidade possui os subtipos ``confidencialidade interna`` e ``confidencialidade externa`` conforme ilustra a Figura \ref{catalogoSegurancaChung}.
+A Confidencialidade possui os subtipos “confidencialidade interna” e “confidencialidade externa” conforme ilustra a Figura \ref{catalogoSegurancaChung}.
  
 
 \subsection{Integridade}
 \label{subsec:integridade}
  
-Definida através dos conceitos Precisão e Completude, por \cite{chung2012non}, onde: 
+Integridade pode ser definida através dos conceitos Precisão e Completude, por \cite{chung2012non}, onde: 
 
-\textbf{Precisão}: Pode ser entendida como qualquer atributo semântico, que fundamenta uma informação \cite{chung2012non}, ou seja, a garantia que um requisito da informação seja descrito com precisão de acordo com, suas especificações. 
+\textbf{Precisão}: pode ser entendida como qualquer atributo semântico que fundamenta uma informação \cite{chung2012non}, ou seja, a garantia de que um requisito da informação seja descrito com precisão de acordo com suas especificações; 
 
 \begin{itemize}
-	\item \textbf{Propriedade da precisão}: Garantir que objetos sejam instanciados da maneira correta. 
+	\item \textbf{Propriedade da precisão}: garantir que objetos sejam instanciados da maneira correta; 
 	
-	\item \textbf{Valor de precisão}: Garantir que os valores retornados pelas operações possuem a precisão desejada.
+	\item \textbf{Valor de precisão}: garantir que os valores retornados pelas operações possuam a precisão desejada;
 	
 	\item \textbf{Precisão de um para um}: Garantir que um único objeto esteja ligado a uma única entidade do domínio. 
 	
-	\item \textbf{Consistência interna}: Garantir que os valores do mundo real sejam correspondentes aos valores do sistema.
+	\item \textbf{Consistência interna}: garantir que os valores do mundo real sejam correspondentes aos valores do sistema, e
 \end{itemize}
 
-\textbf{Completude}: Garantir que o RNF esteja completo \cite{chung2012non}. 
+\textbf{Completude}: garantir que o RNF esteja completo \cite{chung2012non}. 
+
+Um vez introduzidas as áreas de interesse  desse trabalho, bem como o conceito de Segurança sob o ponto de vista de um RNF, cabe ainda comentar sobre o conceito de Personas. Esse conceito foi utilizado no trabalho visando auxiliar na elaboração bem como na evolução do Catálogo de Segurança, considerando diferentes cenários de uso. O conceito de Persona é tratado a seguir, nesse capítulo. Já a aplicação desse conceito nos cenários de uso para elaboração e evolução do catálogo será detalhada no Capítulo \ref{chap:resultadosObtidos} de Resultados Obtidos.
 
 \section{Personas}
 \label{sec:personas}
