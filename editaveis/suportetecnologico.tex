@@ -1,97 +1,106 @@
 \chapter{Suporte Tecnológico}
 \label{chap:suporteTecnologico}
 
-Neste Capítulo, são apresentadas as ferramentas de software que foram utilizadas para dar suporte ao desenvolvimento deste trabalho. A seção \ref{sec:ferramentasModelagem} apresenta uma breve descrição das ferramentas utilizadas na modelagem dos diagramas e mapas mentais. A seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas de suporte à escrita, e para a realização do controle de versão. A seção \ref{sec:ferramentasParaDesenvolvimentoWebApp} apresenta as ferramentas utilizadas no desenvolvimento das aplicações nos cenários.   
+Neste Capítulo, são apresentadas as ferramentas de software que apoiaram o desenvolvimento desse trabalho. A seção \ref{sec:ferramentasModelagem} apresenta uma breve descrição das ferramentas utilizadas na modelagem dos diagramas e mapas mentais. A seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas de apoio à escrita, e para a realização do controle de versão. A seção \ref{sec:ferramentasParaDesenvolvimentoWebApp} apresenta as ferramentas utilizadas no desenvolvimento de diferentes cenários de uso para aplicação e evolução do Catálogo de Segurança.   
 
 \section{Ferramentas de Modelagem}
 \label{sec:ferramentasModelagem}
 
+Parte das contribuições desse trabalho é dedicada à elaboração do Catálogo de Segurança, o qual é apoiado no referencial teórico de GORE, conforme acordado na seção \ref{subsec:orientacaoMeta}. Visando a representação desse catálogo em diferentes níveis de abstração, foram utilizadas algumas notações, no caso, UML, NFR \textit{Framework}, Mapa Mental \cite{xMind} e BPMN \cite{white2004introduction}.
+ 
+A UML foi utilizada para especificação de alguns detalhes atrelados, principalmente, ao uso do Padrão Arquitetural MVC, evidenciando as correlações entre suas camadas, conforme consta na seção \ref{subsubsec:fluxoDeInteracaoEntreOsComponentes}. O NFR \textit{Framework} foi utilizado como base para especificação do Catálogo de Segurança como um todo, fazendo-se uso das abstrações de metas flexíveis, operacionalizações, alegações, dentre outras mais específicas dessa notação. Mapas mentais permitiram documentar \textit{brainstorming}, o qual representou uma técnica de elicitação muito utilizada ao longo desse trabalho. Por fim, para ilustrar as típicas atividades que conduziram a realização desse trabalho, optou-se por representar os fluxos de atividades em BPMN. Diante do exposto, foram necessários suportes tecnológicos que apoiassem as modelagens supracitadas, nas diferentes notações, conforme acordado a seguir:
+
+
 \begin{itemize}
-	\item \textbf{Astah Professional}: é uma ferramenta de modelagem de diagramas dinâmicos e estáticos, que suporta a UML 2.x, \textit{Entity Relationship Diagram} (ERD), \textit{Data Flow Diagram} (DFD), fluxogramas, mapas mentais, e a engenharia reversa para as linguagens Java, C\# e C++ \cite{astah}. A versão utilizada foi a v7.2.0 com licença de estudante, para modelagem dos diagramas da UML e mapas mentais.   
+	\item \textbf{Astah Professional}: é uma ferramenta de modelagem de diagramas dinâmicos e estáticos, que se orienta pelas notações UML 2.x, \textit{Entity Relationship Diagram} (ERD), \textit{Data Flow Diagram} (DFD), fluxogramas, mapas mentais, e apoia a Engenharia Reversa para as linguagens Java, C\# e C++ \cite{astah}. A versão utilizada foi a v7.2.0, com licença de estudante, para modelagem dos diagramas da UML e mapas mentais;   
 	
-	\item \textbf{StarUML}: É um software \textit{open source} para modelagem de diagramas, na notação UML/\textit{Model Driven Architecture} (MDA). A proposta da ferramenta é tornar-se uma ferramenta gratuita que substitua as plataformas comerciais \cite{starUML}. A versão utilizada foi a versão v1.0, pois suporta o \textit{plug-in} RE-Tools, o qual permite a modelagem do SIGs para o NFR Framework. 
+	\item \textbf{StarUML}: é um software \textit{open source} para modelagem de diagramas na notação UML/\textit{Model Driven Architecture} (MDA). A proposta da ferramenta é tornar-se uma ferramenta gratuita que substitua as plataformas comerciais \cite{starUML}. A versão utilizada foi a versão v1.0, pois é compatível com o\textit{plug-in} RE-\textit{Tools}, o qual permite a modelagem do SIGs para o NFR Framework;
 	
-	\item \textbf{OpenOME}: É uma ferramenta \textit{open source} de modelagem para apoiar a Engenharia Requisitos Orientada à Meta, orientada a agente e orientada a aspectos. Promove ao desenvolvedor um vínculo entre os requisitos e as especificações e as fases do \textit{design} arquitetural \cite{openOME}. A versão utilizada foi a v3.4.1, para modelagem na notação do i*. 
+	\begin{comment}
+		\item \textbf{OpenOME}: É uma ferramenta \textit{open source} de modelagem para apoiar a Engenharia Requisitos Orientada à Meta, orientada a agente e orientada a aspectos. Promove ao desenvolvedor um vínculo entre os requisitos e as especificações e as fases do \textit{design} arquitetural \cite{openOME}. A versão utilizada foi a v3.4.1, para modelagem na notação do i*.
+	\end{comment}
 	
-	\item \textbf{Xmind}: É um software proprietário para criação de mapas mentais e suporte na criação de \textit{brainstorming} \cite{xMind}. A versão utilizada foi o XMind 8 Update 2, permitindo a criação de mapas mentais. 
+	\item \textbf{Xmind}: é um software proprietário para criação de mapas mentais e documentação de \textit{brainstorming} \cite{xMind}. A versão utilizada foi o XMind 8 Update 2, permitindo a criação de mapas mentais; 
 	
-	\item \textbf{Bizagi Modeler}: É uma ferramenta gratuita utilizada para modelagem de processos de negócio, utilizando notação BPMN. É eleita pela comunidade a mais potente e fácil de utilizar do mercado. A versão utilizada foi a versão 3.1, para a modelagem do fluxo de desenvolvimento da monografia \cite{bizagi}. 
+	\item \textbf{Bizagi Modeler}: é uma ferramenta gratuita utilizada para modelagem de processos de negócio, utilizando a notação BPMN. A versão utilizada foi a versão 3.1, para a modelagem do fluxo de atividades que conduziram o desenvolvimento desse trabalho \cite{bizagi}, e 
 	
-	\item \textbf{RE-Tools}: É um conjunto de ferramentas \textit{open source} utilizado para a modelagem de diferentes aspectos das organizações e de seus sistemas, durante a realização das atividades da engenharia de requisitos, possuindo suporte para as notações do (i) NFR Framework, (ii) i*, (iii) \textit{Knowledge Acquisition in autOmated Specification} (KAOS), (iv) \textit{Problem Frames}, (v) UML e (vi) BPMN \cite{reTools} \cite{supakkul2012re}.
+	\item \textbf{RE-\textit{Tools}}: é um conjunto de ferramentas \textit{open source} utilizado para a modelagem de diferentes aspectos das organizações e de seus sistemas, durante a realização das atividades da Engenharia de Requisitos, conferindo apoio às notações do (i) NFR \textit{Framework}, (ii) i* \cite{istarwiki20}, (iii) \textit{Knowledge Acquisition in autOmated Specification} (KAOS) \cite{van2001goal}, (iv) \textit{Problem Frames} \cite{jackson2005problem}, (v) UML e (vi) BPMN \cite{reTools} \cite{supakkul2012re}.
 	
-	Esse conjunto de ferramentas vem sendo utilizado para o ensino da Engenharia de Requisitos em cursos na Universidade de Trento (Itália), Universidade do Texas em Dallas (Estados Unidos) e na Universidade de Brasília (Brasil), além de estar envolvida em pesquisas no Brasil, Austrália, Canadá, China, França, Reino Unido e Estados Unidos \cite{supakkul2012re}. 
+	Esse conjunto de ferramentas vem sendo utilizado para o ensino da Engenharia de Requisitos em cursos na Universidade de Trento (Itália), Universidade do Texas em Dallas (Estados Unidos) e na Universidade de Brasília (Brasil). Além disso, essas ferramentas constam em pesquisas realizadas em: Brasil, Austrália, Canadá, China, França, Reino Unido e Estados Unidos \cite{supakkul2012re}.
 	
-	No presente trabalho a versão do \textit{plug-in} utilizada foi a v3.0.2, para modelagem do gráfico de SIGs. 
+	No presente trabalho, a versão do \textit{plug-in} utilizada foi a v3.0.2, para modelagem do gráfico de SIGs. 
 \end{itemize}
 
-\section{Ferramentas para Desenvolvimento da Monografia}
+\section{Ferramentas para Desenvolvimento do Trabalho}
 \label{sec:ferramentasDesenvolvimento}
+
+A escrita da monografia também demandou suportes tecnológicos específicos, sendo os principais:
 
 \begin{itemize}
 	
-	\item \textbf{Git}: É um sistema \textit{open source} que suporta o controle de versão distribuído \cite{git}. A versão utilizada foi a v2.13.0 para realizar o controle de versão da parte escrita da monografia. 
+	\item \textbf{Git}: é um sistema \textit{open source} que permite manter o controle de versão distribuído \cite{git}. A versão utilizada foi a v2.13.0, para realizar, o controle de versão da parte escrita do trabalho;
 	
-	\item \textbf{GitHub}: O GitHub é uma plataforma de hospedagem de código para controle de versão utilizando o Git, através do GitHub é possível criar uma conta para armazenar o código fonte de projetos em repositórios gratuitos e privados \cite{github}. Utilizado para hospedar o repositório público para o controle de versão da monografia, a versão utilizada é a v1.0.13.
+	\item \textbf{GitHub}: o GitHub é uma plataforma de hospedagem de código para controle de versão utilizando o Git, através do GitHub, é possível criar uma conta para armazenar o código fonte de projetos em repositórios gratuitos e privados \cite{github}. Utilizado para hospedar o repositório público para o controle de versão da monografia, sendo a versão utilizada a v1.0.13, e
 	
-	\item \LaTeX\ : É um sistema que permite a elaboração de textos em alta qualidade, através do programa de diagramação de textos TEX \cite{latex}. A versão utilizada foi a v5.6.2 utilizado no desenvolvimento da parte escrita da monografia. 
+	\item \LaTeX\ : é um sistema que permite a elaboração de textos em alta qualidade, através do programa de diagramação de textos TEX \cite{latex}. A versão utilizada foi a v5.6.2, para documentação da parte escrita.
 	
 \end{itemize}
 
 \section{Ferramentas para o Desenvolvimento da Aplicação Web}
 \label{sec:ferramentasParaDesenvolvimentoWebApp}
 
-O Git e o GitHub também serão utilizados para realização do controle de versão de código no desenvolvimento dos softwares nos cenários.
+Por fim, constam os suportes tecnológicos que viabilizaram o desenvolvimento dos cenários de uso, nos quais o Catálogo de Segurança foi aplicado. Isso permitiu evoluir o catálogo, obtendo versões do mesmo cada vez mais refinadas. Cabe ressaltar que, o Git e o GitHub também foram utilizados para controle das versões de código, oriundas dos produtos de software de cada cenário de uso. Seguem esses suportes:
 
 \begin{itemize}
 	
-	\item \textbf{Linux Mint 18.3 Sylvia}: É uma distribuição linux baseada no Ubuntu 16.04 LTS é a terceira e última versão do ciclo da série 18 \cite{Mint}. Essa versão do sistema operacional foi utilizada para suportar o ambiente de desenvolvimento dos cenários,  até o momento da escrita do presente trabalho a versão encontra-se disponível através da URL \url{https://linuxmint.com/download.php}.
+	\item \textbf{Linux Mint 18.3 Sylvia}: é uma distribuição linux, baseada no Ubuntu 16.04 LTS, sendo a terceira e última versão do ciclo da série 18 \cite{Mint}. Essa versão do sistema operacional foi utilizada em atendimento ao ambiente de desenvolvimento dos cenário, A versão utilizada encontra-se disponível em  \url{https://linuxmint.com/download.php};
 	
-	\item \textbf{Sublime Text:} É um editor de textos multiplataforma. Possuindo recursos que facilitam a escrita de código, como: Minimap, edição de textos em multi-painel, salvamento automático, autocompletar, correspondência entre parenteses, dentre outros \cite{SublimeText}. A versão utilizada foi a versão 3.0.
+	\item \textbf{Sublime Text:} é um editor de textos multiplataforma. Esse editor possui recursos que facilitam a escrita de código, como: Minimap, edição de textos em multi-painel, salvamento automático, autocompletar, correspondência entre parenteses, dentre outros \cite{SublimeText}. A versão utilizada foi a versão 3.0;
 	
-	\item \textbf{Ruby:} É uma linguagem de programação interpretada e multiparadigma, desenvolvida por Yukihiro “Matz” Matsumoto, unificando caraterísticas de suas linguagens favoritas (Perl, Smalltalk, Eiffel, Ada e Lisp), para formar uma linguagem que equilibra a programação funcional com a programação imperativa \cite{Ruby}. A versão da linguagem utilizada foi a versão 2.5.0.
+	\item \textbf{Ruby:} é uma linguagem de programação interpretada e multiparadigma, desenvolvida por Yukihiro “Matz” Matsumoto, unificando caraterísticas de suas linguagens favoritas (Perl, Smalltalk, Eiffel, Ada e Lisp), para formar uma linguagem que equilibra a programação funcional com a programação imperativa \cite{Ruby}. A versão da linguagem utilizada foi a versão 2.5.0;
 	
-	\item \textbf{Ruby on Rails - (RoR):} É um  \textit{framework open source} de desenvolvimento de aplicações web, escrito em \textbf{Ruby} e baseado no padrão arquitetural MVC \cite{RoR}. A versão do \textit{framework} utilizada no TCC2 foi versão 5.1.5.
+	\item \textbf{Ruby on Rails - (RoR):} é um  \textit{framework open source} de desenvolvimento de aplicações web, escrito em \textbf{Ruby}, e baseado no Padrão Arquitetural MVC \cite{RoR}. A versão do \textit{framework} utilizada foi versão 5.1.5;
 	
-	\item \textbf{MySQL}: De acordo com a Oracle o MySQL é o Sistema de Gerenciamento de Banco de Dados (SGBD) \textit{open source} mais conhecido do mundo, além de ser uma das principais tecnologias de SGBD para desenvolvimento de aplicações web \cite{MySQL}. A versão do MySQL utilizada foi o MySQL \textit{Community Server}, sob licença GPL disponível na versão 5.7.21.
+	\item \textbf{MySQL}: de acordo com a Oracle, o MySQL é o Sistema de Gerenciamento de Banco de Dados (SGBD) \textit{open source} mais conhecido do mundo, além de ser uma das principais tecnologias de SGBD para desenvolvimento de aplicações web \cite{MySQL}. A versão do MySQL utilizada foi o MySQL \textit{Community Server}, sob licença GPL, disponível na versão 5.7.21, e
 	
-	\item \textbf{Bootstrap:} É um \textit{framework open source} de desenvolvimento dos componentes responsivos para interface gráfica de aplicações web, que utiliza as Linguagens HTML, CSS e JavaScript \cite{Bootstrap}. A versão utilizada foi a versão 4.0.0. 
+	\item \textbf{Bootstrap:} é um \textit{framework open source} de desenvolvimento dos componentes responsivos para interface gráfica de aplicações web, que utiliza as Linguagens HTML, CSS e JavaScript \cite{Bootstrap}. A versão utilizada foi a versão 4.0.0. 
 	
 \end{itemize}
 
+
 \section{Resumo do Capítulo}
 
-Neste capítulo, foram descritas as principais ferramentas que apoiaram o desenvolvimento do trabalho. Na seção \ref{sec:ferramentasModelagem} foi apresentada as versões e a utilização de cada ferramenta; a seção \ref{sec:ferramentasDesenvolvimento} apresenta as ferramentas utilizadas no desenvolvimento da parte escrita e o controle de versão da mesma, e a seção \ref{sec:ferramentasParaDesenvolvimentoWebApp} apresenta as ferramentas que foram utilizadas no desenvolvimento dos cenários de aplicação do catálogo. 
+Neste capítulo, foram descritas as principais ferramentas que apoiaram o desenvolvimento do trabalho. Na seção \ref{sec:ferramentasModelagem} foram apresentadas as versões e a utilização de cada ferramenta; a seção \ref{sec:ferramentasDesenvolvimento} descreveu as ferramentas utilizadas no desenvolvimento da parte escrita e o controle de versão da mesma, e a seção \ref{sec:ferramentasParaDesenvolvimentoWebApp} acordou as ferramentas que foram utilizadas no desenvolvimento dos cenários de aplicação do catálogo. 
 
-A tabela \ref{resumo-cap-3}, resume as principais ferramentas que foram utilizadas no trabalho.
 
-\begin{table}[]
+A tabela \ref{resumo-cap-3} resume as principais ferramentas que foram utilizadas no trabalho.
+
+\begin{table}[h!]
 	\centering
-	\caption{Resumo das ferramentas de suporte.}
+	\caption{Resumo das ferramentas de apoio.}
 	\label{resumo-cap-3}
 	\begin{tabular}{@{}cccc@{}}
 		\toprule
-		\textbf{Ferramenta} & \textbf{Versão} & \textbf{Suporte} & \textbf{Aplicabilidade} \\ \midrule
+		\textbf{Ferramenta} & \textbf{Versão} & \textbf{Apoio} & \textbf{Aplicabilidade} \\ \midrule
 		\begin{tabular}[c]{@{}c@{}}Astah \\ Professional\end{tabular} & v7.2.0 & Modelagem & Modelagem de diagramas dinâmicos e estáticos. \\
 		\rowcolor[HTML]{C0C0C0} 
-		StarUML & v1.0 & Modelagem & Modelagem de diagramas na notação UML/MDA. \\
-		OpenOME & v3.4.1 & Modelagem & Modelagem na notação do i*. \\
-		\rowcolor[HTML]{C0C0C0} 
+		StarUML & v1.0 & Modelagem & Modelagem de diagramas na notação UML/MDA. \\ 
 		Xmind & \begin{tabular}[c]{@{}c@{}}XMind 8 \\ Update 2\end{tabular} & Modelagem & Modelagem de mapas mentais. \\
-		\begin{tabular}[c]{@{}c@{}}Bizagi \\ Modeler\end{tabular} & v3.1 & Modelagem & \begin{tabular}[c]{@{}c@{}}Modelagem de processos de negócio, \\ utilizando notação BPMN.\end{tabular} \\
-		\rowcolor[HTML]{C0C0C0} 
+		\rowcolor[HTML]{C0C0C0}
+		\begin{tabular}[c]{@{}c@{}}Bizagi \\ Modeler\end{tabular} & v3.1 & Modelagem & \begin{tabular}[c]{@{}c@{}}Modelagem de processos de negócio, \\ utilizando a notação BPMN.\end{tabular} \\ 
 		RE-Tools & v3.0.2 & Modelagem & Modelagem do gráfico de SIGs. \\
-		Git & v2.13.0 & \begin{tabular}[c]{@{}c@{}}Controle de\\ versão\end{tabular} & \begin{tabular}[c]{@{}c@{}}Realização do controle de versão da escrita e \\  dos códigos das aplicações nos cenários.\end{tabular} \\
+		\rowcolor[HTML]{C0C0C0} Git & v2.13.0 & \begin{tabular}[c]{@{}c@{}}Controle de\\ versão\end{tabular} & \begin{tabular}[c]{@{}c@{}}Realização do controle de versão da escrita e \\  dos códigos das aplicações nos cenários.\end{tabular} \\ 
+		GitHub & v1.0.13 & \begin{tabular}[c]{@{}c@{}}Hospedagem\\ de código fonte\end{tabular} & \begin{tabular}[c]{@{}c@{}}Armazenamento de código fonte da parte escrita do \\ trabalho e das aplicação web desenvolvidas \\ com base nos cenários de uso estabelecidos.\end{tabular} \\
+		\rowcolor[HTML]{C0C0C0}
+		LaTeX & v5.6.2 & \begin{tabular}[c]{@{}c@{}}Escrita/\\ formatação\end{tabular} & Escrita e formatação do texto. \\ 
+		Linux Mint & \begin{tabular}[c]{@{}c@{}}v18.3 \\ Sylvia\end{tabular} & \begin{tabular}[c]{@{}c@{}}Sistema \\ Operacional\end{tabular} & \begin{tabular}[c]{@{}c@{}} Sistema operacional para o desenvolvimento\\ dos cenários de uso.\end{tabular} \\
+		\rowcolor[HTML]{C0C0C0}
+		Sublime Text & v3.0 & \begin{tabular}[c]{@{}c@{}}Escrita de \\ código\end{tabular} & \begin{tabular}[c]{@{}c@{}} Edição de textos para escrita do \\ código fonte das aplicações dos cenários de uso.\end{tabular} \\ 
+		Ruby & v2.5.0 & \begin{tabular}[c]{@{}c@{}}Linguagem \\ de programação\end{tabular} & \begin{tabular}[c]{@{}c@{}}Linguagem de programação para desenvolvimento\\ das aplicações nos cenários de uso.\end{tabular} \\
+		\rowcolor[HTML]{C0C0C0}
+		RoR & v5.1.5 & Desenvolvimento & \begin{tabular}[c]{@{}c@{}}\textit{Framework} de desenvolvimento web de acordo\\ com o Padrão Arquitetural MVC.\end{tabular} \\
+		MySQL & v5.7.21 & Desenvolvimento & \begin{tabular}[c]{@{}c@{}}SGBD para desenvolvimento das aplicações nos \\ cenários de uso.\end{tabular} \\
 		\rowcolor[HTML]{C0C0C0} 
-		GitHub & v1.0.13 & \begin{tabular}[c]{@{}c@{}}Hospedagem\\ de código fonte\end{tabular} & \begin{tabular}[c]{@{}c@{}}Armazenar o código fonte da parte escrita do \\ trabalho e da aplicação web que será desenvolvida.\end{tabular} \\
-		LaTeX & v5.6.2 & \begin{tabular}[c]{@{}c@{}}Escrita/\\ formatação\end{tabular} & Utilizado para a escrita e formatação do texto. \\
-		\rowcolor[HTML]{C0C0C0} 
-		Linux Mint & \begin{tabular}[c]{@{}c@{}}v18.3 \\ Sylvia\end{tabular} & \begin{tabular}[c]{@{}c@{}}Sistema \\ Operacional\end{tabular} & \begin{tabular}[c]{@{}c@{}}Será o sistema operacional para o desenvolvimento\\ da aplicação web.\end{tabular} \\
-		Sublime Text & v3.0 & \begin{tabular}[c]{@{}c@{}}Escrita de \\ código\end{tabular} & \begin{tabular}[c]{@{}c@{}}Editor de textos para escrita do código fonte \\ da aplicação web.\end{tabular} \\
-		\rowcolor[HTML]{C0C0C0} 
-		Ruby & v2.5.0 & \begin{tabular}[c]{@{}c@{}}Linguagem \\ de programação\end{tabular} & \begin{tabular}[c]{@{}c@{}}Linguagem de programação para desenvolvimento\\ da aplicação web.\end{tabular} \\
-		RoR & v5.1.5 & Desenvolvimento & \begin{tabular}[c]{@{}c@{}}Framework de desenvolvimento web de acordo\\ com o padrão arquitetural MVC.\end{tabular} \\
-		\rowcolor[HTML]{C0C0C0} 
-		MySQL & v5.7.21 & Desenvolvimento & \begin{tabular}[c]{@{}c@{}}SGBD que foi utilizado no desenvolvimento da \\ aplicação web.\end{tabular} \\
-		Bootstrap & v4.0.0 & Desenvolvimento & \begin{tabular}[c]{@{}c@{}}Framework que foi utilizado para desenvolver\\ o \textit{front-end} das aplicações para os cenários.\end{tabular} \\ \bottomrule
+		Bootstrap & v4.0.0 & Desenvolvimento & \begin{tabular}[c]{@{}c@{}}\textit{Framework} para desenvolvimento das aplicações\\ no cenários de uso.\end{tabular} \\ \bottomrule
 	\end{tabular}
 \end{table}

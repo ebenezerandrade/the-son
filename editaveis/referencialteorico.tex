@@ -458,6 +458,7 @@ A Tabela \ref{responsabilidadeColaboradorController} resume os principais aspect
 \end{table}
 
 \subsubsection{Fluxo de Interação entre os Componentes}
+\label{subsubsec:fluxoDeInteracaoEntreOsComponentes}
 
 Tão importante quanto a compreensão de cada componente é compreender o fluxo de interação entre esses componentes e suas interações diretas e indiretas. A Figura \ref{DiagramaDeClasseMVC} representa os três componentes e suas interações, através da notação da UML. Conforme representado, dentro de um pacote da \textit{Model} existe uma classe exemplo, cujo o nome é \textit{Model.Class}, possuindo relações de contribuição com o pacote \textit{Controller}, através da classe \textit{ManipuladoraDeDados.Class}. De forma semelhante, existe a relação entre a \textit{Controller} e a \textit{View} entre as classes  \textit{ManipuladoraDeDados.Class} e \textit{GUI.Class}. Os nomes atribuídos na diagramação são para auxiliar a compreensão. 
 
@@ -480,7 +481,8 @@ A Figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que represent
 	\label{DiagramaDeSequenciaMVC}
 \end{figure}
 
-\pagebreak
+Agora que as principais áreas atreladas ao trabalho foram apresentadas, segue um detalhamento do critério Segurança, também chave para esse trabalho, sendo esse critério tratado como um RNF.
+
 
 \section{Segurança vista como um RNF}
 \label{sec:seguranca}
@@ -515,7 +517,7 @@ Os subtipos das “características dos RNFs”, de acordo com \cite{chung2012no
 	\label{catalogoSegurancaChung}
 \end{figure}
 
-É de extrema importância entender os subtipos de cada conceito. Portanto, as subseções a seguir fazem uma breve apresentação sobre os conceitos de Confidencialidade e Integridade. 
+É de extrema importância entender os subtipos de cada conceito. Portanto, as subseções a seguir fazem uma breve apresentação sobre os conceitos de Confidencialidade, Integridade e Disponibilidade. 
 
 \subsection{Confidencialidade}
 \label{subsec:confidencialidade}
@@ -554,23 +556,31 @@ Integridade pode ser definida através dos conceitos Precisão e Completude, por
 
 \textbf{Completude}: garantir que o RNF esteja completo \cite{chung2012non}. 
 
+\subsection{Disponibilidade}
+\label{subsec:disponibilidade}
+
 Um vez introduzidas as áreas de interesse  desse trabalho, bem como o conceito de Segurança sob o ponto de vista de um RNF, cabe ainda comentar sobre o conceito de Personas. Esse conceito foi utilizado no trabalho visando auxiliar na elaboração bem como na evolução do Catálogo de Segurança, considerando diferentes cenários de uso. O conceito de Persona é tratado a seguir, nesse capítulo. Já a aplicação desse conceito nos cenários de uso para elaboração e evolução do catálogo será detalhada no Capítulo \ref{chap:resultadosObtidos} de Resultados Obtidos.
 
 \section{Personas}
 \label{sec:personas}
 
-Personas são especificações comportamentais que incorporam as metas e necessidades de usuários, este conceito foi introduzido para auxiliar os desenvolvedores a entender melhor os usuários para um sistema, podendo ser aplicada na Engenharia de Software cobrindo áreas importantes desde a engenharia de requisitos até a entrega do produto \cite{ford2017characterizing}. 
+Personas são especificações comportamentais que incorporam as metas e necessidades de usuários, esse conceito foi introduzido para auxiliar os desenvolvedores a entender melhor os usuários diante da necessidade de especificação de um sistema. Personas podem ser aplicadas na Engenharia de Software desde as atividades inerentes à Engenharia de Requisitos, até a entrega do produto propriamente dito \cite{ford2017characterizing}. 
 
-Auxiliando em temas como segurança e privacidade com o objetivo de diminuir as dificuldades enfrentadas no entendimento dos perfis de usuários. Sendo possível modelar aspectos sociais quanto aspectos psicológicos para promover o entendimento do perfil do usuário e suas possíveis motivações que permeiam suas ações \cite{ford2017characterizing} \cite{daelaboraccao}. 
+Mais especificamente nesse trabalho, Personas foram utilizadas para levantamento de aspectos chave de segurança, privacidade e outras metas flexíveis de interesse, o que mitigou um pouco as dificuldades enfrentadas no entendimento bem como na especificação dos perfis de usuários compreendidos no escopo dessa pesquisa. Isso viabilizou, dentre outras contribuições, a modelagem de aspectos sociais e psicológicos, promovendo o entendimento dos perfis de usuários, e suas possíveis motivações, as quais permeiam suas ações \cite{ford2017characterizing} \cite{daelaboraccao}. 
 
-No processo de construção do produto, começamos a imaginar como esse produto irá funcionar e como poderíamos aplicar esse produto\cite{soegaard2012encyclopedia}. Se os integrantes de uma equipe obtiverem um número de descrições de personas na frente deles durante a execução do projeto, as personas auxiliam a manter o produto de acordo com as perspectivas dos usuários. Durante a construção do produto imagina-se como ele deverá ser utilizado por uma persona, portanto a utilização do método de personas não é descrever a persona, mas potencializar a capacidade da equipe de imaginar o produto adequando-se ao perfil dos possíveis usuários \cite{soegaard2012encyclopedia}.  
+
+
+Ao longo do processo de construção de uma solução computacional - sob a perspectiva de um produto, tem-se a necessidade de imaginar como esse produto irá funcionar, e como seria possível aplicar esse produto \cite{soegaard2012encyclopedia}. Nesse contexto, se os integrantes de uma equipe de desenvolvimento fizerem uso de Personas, o mesmos serão auxiliados, e terão maiores chances de manter o produto de acordo com os pontos de vista acordados, permitindo maior aderência desse produto às perspectivas dos usuários.Isso é possível, pois se pode imaginar como o produto será utilizado por uma Persona, a qual representa as metas e necessidades de um possível interessado nesse produto. Portanto, a intenção do uso de Personas não é descrever a persona em si, mas sim potencializar a capacidade da equipe no que tange a compreensão do produto, sendo esse idealizado sob diferentes pontos de vista \cite{soegaard2012encyclopedia}.
+
+
+No presente trabalho, apesar de se reconhecer a relevância do uso do conceito de Personas para mapeamento de aspectos sociais e psicológicos, não foi esse o maior foco. No caso, o uso de Personas contribuiu significativamente para construir o catálogo considerando pontos de vista diferentes, ora com maior olhar em Confiabilidade, ora em Integridade, ora em Disponibilidade, ora focado no Padrão Arquitetural MVC, dentre outras perspectivas. Esse exercício de considerar o catálogo sob diferentes pontos de vista possibilitou um aprofundamento de suas metas flexíveis, e mais ainda, um maior detalhamento das operacionalizações. Operacionalizações representam ações concretas, possíveis de serem de fato alcançadas, implementadas e atendidas pelos especialistas. Uma vez atendidas, propagam-se suas contribuições em atendimento aos aspectos mais abstratos, no caso, as metas flexíveis. Diante dessas colocações, tem-se que o uso de Personas, em cenários de uso variados, contribuiu para a concretização do Catálogo de Segurança elaborado nesse trabalho.
 
 
 \section{Resumo do Capítulo}
 
-Neste Capítulo, foi abordado os conceitos fundamentais para a construção do catálogo de segurança, foi introduzidos os conceitos chaves da Engenharia de Requisitos e aprofundando em uma de suas áreas que é a Engenharia de Requisitos Orientada à Meta, para compreendermos o conceito de meta e as suas responsabilidades, partimos então para uma visão dos requisitos, focando somente nos requisitos não-funcionais, logo em seguida foi apresentado as características e notações dos modelos intencionais NFR \textit{Framework} e o i*, bem como a apresentação do FURPS. 
-
-Os conceitos de arquitetura de software também, foram apresentados neste Capítulo, pois são de extrema importância, para o entendimento do padrão arquitetural MVC, ao qual o catálogo de segurança é voltado, Por fim foi apresentado a visão dos requisitos de segurança como RNFs, onde foi apresentado os conceitos chave e suas definições na área de segurança, para a construção do catálogo e a conceituação das personas utilizada para criação dos cenários de validação do Catálogo de Segurança. 
+Neste Capítulo, foram abordados os conceitos fundamentais para a construção do Catálogo de Segurança, introduzindo conceitos chave da Engenharia de Requisitos, mais especificamente da Engenharia de Requisitos Orientada à Meta, com foco em metas flexíveis; bem como considerando conceitos chave de Arquitetura de Software, mais precisamente do Padrão Arquitetural MVC.
+Dada a relevância do critério de Segurança para o escopo do trabalho, no capítulo, tem-se uma seção dedicada à apresentação desse critério como um RNF. Conforme acordado, Confiabilidade, Integridade e Disponibilidade são metas flexíveis que impactam diretamente em Segurança. Por fim, comentou-se sobre o conceito de Personas, o qual representou um recurso relevante na elaboração bem como na evolução do Catálogo de Segurança sob diferentes pontos de vista, e considerando variados cenários de uso. 
+ 
 
 
 
