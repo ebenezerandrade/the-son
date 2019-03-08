@@ -71,14 +71,16 @@ As reuniões de retrospectiva e revisão de \textit{sprint} ocorreram duas vezes
 
 O Kanban é um método ágil que promove ao \textit{scrum team} e aos \textit{stakeholders} a visão geral da gestão do estado de implementação das funcionalidades \cite{prikladnicki2014metodos}. Foi utilizado para controle visual do fluxo das atividades do desenvolvimento das funcionalidades para os cenários, dividindo suas colunas da seguinte maneira: “A fazer”, “Fazendo” e “Feito”.
 
+\pagebreak
+
 \section{Procedimentos Metodológicos}
 \label{sec:procedimentosMetodológicos}
 
-Para o desenvolvimento desse trabalho, foram realizadas um conjunto de atividades para que o Catálogo de Segurança pudesse ser elaborado e aplicado em cenários. Portanto, essas atividades foram modeladas em notação BPMN com intuito de detalhar o fluxo de execução.
+Para o desenvolvimento deste trabalho foi realizado um conjunto de atividades para que o Catálogo de Segurança pudesse ser elaborado e aplicado em cenários. Portanto, essas atividades foram modeladas em notação BPMN, com intuito de detalhar o fluxo de execução.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/fluxodeatividades.PNG}
+	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/fluxodeatividades.PNG}
 	\caption{Atividades realizadas.}
 	\label{fluxoDeExecuçãoTCC}
 \end{figure}
@@ -88,96 +90,58 @@ Segue abaixo a descrição das atividades:
 \begin{itemize}
 	\item \textbf{Definir tema}: em conjunto com os professores orientadores dessa monografia, essa atividade teve como principal objetivo o refinamento sobre os conceitos teóricos referentes à área de interesse do autor;
 	
-	\item \textbf{Realizar levantamento teórico}: com base nos resultados obtidos na execução da atividade anterior, iniciou-se o levantamento teórico, seguindo as orientações dos orientadores. Discutiu-se sobre os aspectos fundamentais do GORE, os \textit{frameworks} que se apoiam nos conceitos do GORE, os conceitos de Arquitetura de Software e os atributos de qualidade mais relevantes para o mercado e para a academia;
+	\item \textbf{Realizar levantamento teórico}: iniciou-se com base nos resultados obtidos na execução da atividade anterior, seguindo as orientações dos orientadores. Discutiu-se sobre os aspectos fundamentais do GORE, os \textit{frameworks} que se apoiam nos conceitos do GORE, os conceitos de Arquitetura de Software e os atributos de qualidade mais relevantes para o mercado e para a academia;
 	
 	\item \textbf{Elaborar proposta}: com o conhecimento das necessidades da área de atuação desse trabalho, iniciou-se a elaboração da proposta de pequisa, acordando que seria utilizado o NFR \textit{Framework}, bem como, que seria aplicado ao mercado, tomando Segurança como o principal atributo de qualidade;  
 	
-	\item \textbf{Elaborar referencial teórico}: foi realizada a redação dos conceitos teóricos a serem aplicados no desenvolvimento desse trabalho; 
+	\item \textbf{Elaborar referencial teórico}: foi realizada a redação dos conceitos teóricos a serem aplicados no desenvolvimento deste trabalho; 
 	
-	\item \textbf{Classificar pesquisa}: redação  da classificação da pesquisa em suas dimensões sendo especificada quanto (i) à abordagem, (ii) à natureza, (iii) aos objetivos, e (iv) aos procedimentos técnicos;
+	\item \textbf{Classificar pesquisa}: redação  da classificação da pesquisa em suas dimensões, sendo especificada quanto (i) à abordagem, (ii) à natureza, (iii) aos objetivos, e (iv) aos procedimentos técnicos;
 	
-	\item \textbf{Definir ferramentas de suporte}: definição e descrição das ferramentas utilizadas no desenvolvimento desse trabalho;
+	\item \textbf{Definir ferramentas de suporte}: definição e descrição das ferramentas utilizadas no desenvolvimento deste trabalho;
 	
-	\item \textbf{Estruturar catálogo de tipos de RNFs para Segurança}: com base nos conceitos de Segurança apresentados por Lawrence Chung, Brian A. Nixon, Eric Yu e John Mylopoulos, no  livro: \textit{NON-FUNCTIONAL REQUIREMENTS
-	IN SOFTWARE ENGINEERING}, iniciou-se a elaboraçao  do catálogo de tipos de RNFs para Segurança, expandindo o catálogo com base em definições de subtipos de RNFs;
+	\item \textbf{Estruturar catálogo de tipos de RNFs para Segurança}: com base nos conceitos de Segurança apresentados por Lawrence Chung, Brian A. Nixon, Eric Yu e John Mylopoulos, no  livro: \textit{NON-FUNCTIONAL REQUIREMENTS IN SOFTWARE ENGINEERING}, iniciou-se a elaboração do catálogo de tipos de RNFs para Segurança, expandindo o catálogo com base em definições de subtipos de RNFs;
 	
-	\item \textbf{Elaborar Catálogo de Segurança}: a partir do Catálogo de Segurança, iniciou-se o processo de identificação das metas flexíveis que podem ser satisfeitas, orientando-se também pelo livro supracitado;
+	\item \textbf{Elaborar Catálogo de Segurança}: a partir do Catálogo de Segurança apresentado na Figura \ref{catalogoSegurancaChung}, iniciou-se o processo de identificação das metas flexíveis que podem ser suficientemente satisfeitas, orientando-se também pelo livro supracitado;
 	
-	\item \textbf{Realizar mapeamento do Catálogo de Segurança no primeiro e segundo nível de abstração com o padrão MVC}: iniciou-se a comparação das metas flexíveis que possuíam relação com o Padrão Arquitetural MVC e gerariam impactos positivos ou negativos na Segurança dos dados e da arquitetura. Durante a execução dessa atividade caso ocorresse a identificação de outro subtipo para Segurança à atividade, “Estruturar catálogo de tipos para Segurança” era realizada novamente e consequentemente as atividades seguintes de acordo com a Figura \ref{fluxoDeExecuçãoTCC}, e
+	\item \textbf{Realizar mapeamento do Catálogo de Segurança no primeiro e segundo nível de abstração com o padrão MVC}: iniciou-se a comparação das metas flexíveis que possuíam relação com o Padrão Arquitetural MVC, a fim de verificar se estas geram impactos, positivos ou negativos, na Segurança dos dados e da arquitetura. Durante a execução dessa atividade, caso ocorresse a identificação de outro subtipo de RNF para Segurança, a atividade “Estruturar catálogo de tipos para Segurança” seria realizada novamente e, consequentemente, as atividades seguintes, de acordo com a Figura \ref{fluxoDeExecuçãoTCC};
 	
-	\item \textbf{Aplicar Catálogo de Segurança ao cenário}: essa atividade respeitou o processo de desenvolvimento de software descrito na seção \ref{sec:metodologiaDeDesenvolvimentoDeSoftware}
+	\item \textbf{Aplicar Catálogo de Segurança ao cenário}: esta macroatividade respeitou o processo de desenvolvimento de software descrito na seção \ref{sec:metodologiaDeDesenvolvimentoDeSoftware}. Haja vista que, em cada ciclo foi definido um cenário com a descrição da persona, identificando, caso necessário, uma possível solução e realizando a aplicação do catálogo. Com isso, realizou-se o desenvolvimento do software, evidenciando a aplicação do catálogo e possibilitando a análise do quanto a Segurança do software pode ser satisfeita, e
+	
+	\item  \textbf{Realizar mapeamento em terceiro nível de abstração com padrão MVC}:
 \end{itemize}
 
-\subsection{Fluxo de Atividades do TCC2}
-
-Este processo tem como principal objetivo a validação do catálogo proposto, através do desenvolvimento de uma aplicação de software. 
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/PDM-TCC2.PNG}
-	\caption{Atividades a serem realizadas no TCC2.}
-	\label{PDM-TCC2}
-\end{figure}
-
-As atividades são:
-
-\begin{itemize}
-		
-	\item \textbf{Definir metas flexíveis a serem alcançadas}: Definir as metas flexíveis a serem alcançadas de acordo com o cenário exemplo do software a ser desenvolvido.  
-	
-	\item \textbf{Macro atividade: Realizar desenvolvimento do software}: Realizar as etapas de desenvolvimento de acordo com a metodologia selecionada.
-	
-	\item \textbf{Verificar o nível de satisfação das metas flexíveis}: Verificar se as metas flexíveis foram alcançadas após o desenvolvimento do software.
-	
-	\item \textbf{Coletar as primeiras impressões da aplicação do catálogo}: Validar o catálogo de segurança porposto no TCC1 de acordo com o cenário especificado. 
-	
-	\item \textbf{Apresentar TCC 2}: Apresentar TCC 2 para a banca.
-\end{itemize}
 
 \subsection{Cronograma das Atividades}
 
-O cronograma apresentado no Tabela \ref{cronograma-tcc1}, organizado em meses,  procura expor como se deu a execução das atividades do TCC1. 
+O cronograma apresentado na Tabela \ref{cronograma-tcc1}, organizado em meses,  procura expor como se deu a execução das atividades deste trabalho
 
-Observa-se que foram utilizados, além do prazo base, os meses de Janeiro e Fevereiro. Isso ocorreu para um melhor aprofundamento do tema, o qual demandou a leitura de vários materiais bibliográficos. Adicionalmente, as notações envolvidas nessa pesquisa são complexas, necessitando de um cuidado maior na escrita, facilitando o entendimento por parte dos interessados.
+Observa-se que foram utilizados, além do prazo base para a construção do Catálogo de Segurança, os meses de Janeiro/2018 e Fevereiro/2018. Isso ocorreu para um melhor aprofundamento do tema, o qual demandou a leitura de vários materiais bibliográficos. Adicionalmente, as notações envolvidas nessa pesquisa são complexas, necessitando de um cuidado maior na escrita, facilitando o entendimento por parte dos interessados.
+
+Com o Catálogo de Segurança pronto portanto iniciou o ciclo de aplicação em cada cenário. 
 
 \begin{table}[h!]
-	\centering
-	\caption{Cronograma das atividades para desenvolvimento do TCC1.}
-	\label{cronograma-tcc1}
-	\begin{tabular}{@{}lccccccc@{}}
-		\hline
-		\textbf{Atividade} & \multicolumn{1}{l}{\textbf{Ago}} & \multicolumn{1}{l}{\textbf{Set}} & \multicolumn{1}{l}{\textbf{Out}} & \multicolumn{1}{l}{\textbf{Nov}} & \multicolumn{1}{l}{\textbf{Dez}} & \multicolumn{1}{l}{\textbf{Jan}} & \multicolumn{1}{l}{\textbf{Fev}} \\ \hline
-		Definir tema & \textbf{x} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \hline
-		Realizar levantamento teórico & \textbf{x} & \textbf{x} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \hline
-		Elaborar proposta & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \hline
-		Elaborar referencial teórico & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{} & \textbf{} \\ \hline
-		Classificar pesquisa & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{} & \textbf{} \\ \hline
-		Definir ferramentas de suporte & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{} & \textbf{} \\ \hline
-		\begin{tabular}[c]{@{}l@{}}Estruturar catálogo de tipos \\ para segurança\end{tabular} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{} \\ \hline
-		Elaborar SIG & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{} \\ \hline
-		\begin{tabular}[c]{@{}l@{}}Realizar mapeamento entre metas\\ flexíveis e o padrão MVC\end{tabular} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} \\ \hline
-		\begin{tabular}[c]{@{}l@{}}Definir metodologia de\\ desenvolvimento de software MVC\end{tabular} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} \\ \hline
-		\begin{tabular}[c]{@{}l@{}}Definir tecnologia de desenvolvimento\\ de software\end{tabular} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} \\ \hline
-		Apresentar TCC1 & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} \\ \hline
+	\tiny
+	\label{cronogramaDoTrabalho}
+	\caption{Cronograma de execução do trabalho.}
+	\begin{tabular}{@{}lccccccccccccccc@{}}
+		\toprule
+		\multicolumn{1}{l|}{Ano} & \multicolumn{5}{c|}{\textbf{2017}} & \multicolumn{7}{c|}{\textbf{2018}} & \multicolumn{3}{c}{\textbf{2019}} \\ \midrule
+		Atividade/Mês & \textbf{Ago} & \textbf{Set} & \textbf{Out} & \textbf{Nov} & \textbf{Dez} & \textbf{Jan} & \textbf{Fev} & - & \textbf{Ago} & \textbf{Set} & \textbf{Out} & \textbf{Dez} & \textbf{Jan} & \textbf{Fev} & \textbf{Mar} \\ \midrule
+		Definir tema & \textbf{x} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & - & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \midrule
+		Elaborar proposta & \textbf{x} & \textbf{x} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & - & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \midrule
+		\begin{tabular}[c]{@{}l@{}}Elaborar referencial\\  teórico\end{tabular} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{} & \textbf{} & - & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \midrule
+		Classificar pesquisa & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{} & \textbf{} & - & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \midrule
+		\begin{tabular}[c]{@{}l@{}}Definir ferramentas\\ de suporte\end{tabular} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{} & \textbf{} & - & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \midrule
+		\begin{tabular}[c]{@{}l@{}}Estruturar Catálogo\\  de Segurança\end{tabular} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{} & - & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \midrule
+		\begin{tabular}[c]{@{}l@{}}Elaborar Catálogo\\ de Segurança\end{tabular} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{} & - & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \midrule
+		\begin{tabular}[c]{@{}l@{}}Realizar Mapeamento\\ do Catálogo de\\  Segurança no \\ primeiro e segundo \\ nível de abstração\\ com padrão MVC.\end{tabular} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & - & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \midrule
+		\begin{tabular}[c]{@{}l@{}}Aplicar Catálogo de\\ Segurança ao cenário\end{tabular} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & \textbf{} & - & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{} \\ \midrule
+		\begin{tabular}[c]{@{}l@{}}Realizar mapeamento \\ em terceiro nível de \\ abstração\end{tabular} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{-} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} \\ \bottomrule
 	\end{tabular}
 \end{table}
 
 Na Tabela, é apresentado um planejamento para execução das atividades referentes ao TCC2. Trata-se de uma previsão, podendo ocorrer pequenos ajustes ao longo da realização do trabalho.
-
-\begin{table}[h!]
-	\centering
-	\caption{Cronograma das atividades para desenvolvimento do TCC2.}
-	\label{cronograma-tcc2}
-	\begin{tabular}{@{}lccccc@{}}
-		\hline
-		\textbf{Atividade} & \multicolumn{1}{l}{\textbf{Mar}} & \multicolumn{1}{l}{\textbf{Abr}} & \multicolumn{1}{l}{\textbf{Mai}} & \multicolumn{1}{l}{\textbf{Jun}} & \multicolumn{1}{l}{\textbf{Jul}} \\ \hline
-		Definir metas flexíveis a serem alcançadas & \textbf{x} & \textbf{} & \textbf{} & \textbf{} & \textbf{} \\ \hline
-		Realizar desenvolvimento do software & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{} \\ \hline
-		\begin{tabular}[c]{@{}l@{}}Verificar o nível de satisfação das metas\\ flexíveis\end{tabular} & \textbf{} & \textbf{} & \textbf{x} & \textbf{x} & \textbf{} \\ \hline
-		Coletar as primeiras impressões da \\ aplicação do catálogo & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{} \\ \hline
-		Apresentar TCC 2 & \textbf{} & \textbf{} & \textbf{} & \textbf{x} & \textbf{} \\ \hline
-	\end{tabular}
-\end{table} 
 
 \section{Resumo do Capítulo}
 

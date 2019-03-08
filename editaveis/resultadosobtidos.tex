@@ -1,26 +1,26 @@
 \chapter{Resultados Obtidos}
 \label{chap:resultadosObtidos}
 
-Neste capítulo, é apresentado as primeiras aplicações do catálogo, para isso então foi utilizado o conceito de personas \ref{sec:personas} buscando demonstrar os cenários em que o catálogo pode ser aplicável. Portanto, realizou-se a simulação de cinco cenários para validar a aplicação do Catálogo de Segurança. 
+Neste capítulo são apresentadas as primeiras aplicações do Catálogo de Segurança. Para isso, foi utilizado o conceito de personas, apresentado na seção \ref{sec:personas}, com o objetivo de demonstrar os cenários nos quais o catálogo pode ser aplicável. Portanto, realizou-se a simulação de cinco cenários para validar a aplicação do Catálogo de Segurança. 
 
-O capítulo é divido inicialmente pelos cenários contextualizados dentro de cada persona. Os cenários tem, a descrição da persona, identificação da possível solução (Quando necessário descrever para o cenário) e aplicação do catálogo, finalizando o capítulo é apresentado a primeira visão da aplicação do catálogo.  
+O capítulo é dividido, inicialmente, pelos cenários contextualizados dentro de cada persona. Os cenários têm a descrição da persona, identificação da possível solução (Quando necessário descrever para o cenário) e a aplicação do catálogo. Ao final do capítulo é apresentada a primeira visão da aplicação do Catálogo de Segurança.  
 
 
 \section{Cenário 1}
 \label{subsec:persona1}
 
-Heleno, 24 anos, Engenheiro de Requisitos está assumindo a função de elicitar os requisitos não funcionais para um novo projeto na empresa em que trabalha, o projeto será desenvolvido em \textit{Rails} e seu chefe pediu que devesse ter perfis diferentes dentro da aplicação sendo os perfis de membro e administrador. O sistema ao qual seu chefe está solicitando deve principalmente ser um sistema seguro para autenticação do usuário com capacidade de redefinir a senha do usuário, ser possível monitorar a quantidade de entradas do usuário e por final validar email do usuário.
+Heleno, 24 anos, Engenheiro de Requisitos, assumiu a função de elicitar os requisitos não funcionais para um novo projeto na empresa em que trabalha. O projeto será desenvolvido em \textit{Rails} e seu chefe solicitou perfis diferentes de membro e administrador. O sistema solicitado pelo chefe deve, principalmente, ser seguro para autenticação do usuário, bem como, com capacidade de redefinição da senha, monitoramento da quantidade de entradas e, por fim, validação do email do mesmo.
 
 \begin{itemize}
-	\item O problema: Mapear os métodos de autenticação relevantes na autenticação do usuário. 
-	\item Objetivo: Verificar o nível de satisfação de segurança da autenticação. 
-	\item Desafio: Análise dos impactos entre os requisitos não funcionais para autenticar os usuários.
+	\item O problema: mapear os métodos de autenticação relevantes para autenticar o usuário; 
+	\item Objetivo: verificar o nível de satisfação de segurança da aplicação, e
+	\item Desafio: analisar os impactos entre os requisitos não funcionais para autenticar os usuários.
 \end{itemize}
 
 
-\subsubsection{Identificar possível solução}
+\subsection{Identificar possível solução}
 
-O problema principal do usuário é a realização da autenticação do usuário o primeiro passo a ser adotado é identificar qual \textit{gem} é a mais adequada, segundo o \textit{The Ruby Toolbox} na categoria \textit{Rails Authentication} o ranking de popularidade das três \textit{gems} mais utilizadas para autenticação é \cite{rubytoolbox}:
+O problema principal do usuário é a realização da autenticação do mesmo. O primeiro passo a ser adotado é identificar qual \textit{gem} é a mais adequada. Segundo o \textit{The Ruby Toolbox}, na categoria \textit{Rails Authentication}, o ranking de popularidade das três \textit{gems} mais utilizadas para autenticação é \cite{rubytoolbox}:
 
 \begin{enumerate}
 	\item devise: 38.982.741 downloads
@@ -28,24 +28,33 @@ O problema principal do usuário é a realização da autenticação do usuário
 	\item doorkeeper: 7.091.328 downloads
 \end{enumerate}
 
-Portanto, a \textit{gem} selecionada para ser aplicada ao projeto por Heleno é a \textit{devise}, pois além da posição do ranking é a \textit{gem} mais recomendada pela comunidade. As vantagens da utilização do \textit{devise} é  (i) uma solução baseada no padrão arquitetural MVC, (ii) permite a criação e a utilização de vários perfis de usuários conectados ao mesmo tempo, (iii) basea-se no conceito de modularidade, utilizando somente o que é necessário. Essa \textit{gem} possui 10 módulos \cite{gemdevise}: 
+Portanto, a \textit{gem} selecionada por Heleno para ser aplicada ao projeto é a \textit{devise}, pois além da sua posição no ranking, é a \textit{gem} mais recomendada pela comunidade \textit{Rails}. As vantagens da utilização do \textit{devise} são  (i) solução baseada no padrão arquitetural MVC, (ii) criação e a utilização de vários perfis de usuários conectados ao mesmo tempo, e (iii) utilização somente daquilo que é necessário, baseando-se no conceito de modularidade. Essa \textit{gem} possui 10 módulos \cite{gemdevise}: 
 
 \begin{enumerate}
-	\item \textit{Database Authenticatable}: \textit{Hashes} que armazenam a senha no banco de dados para serem validadas durante o \textit{login}. A autenticação pode ser realizada via método POST ou HTTP \textit{basic authentication}. 
-	\item \textit{Omniauthable}: Suporte adicional ao \textit{omniauth}.
-	\item \textit{Confirmable}: Envio automático de email para confirmação da conta e verificação da confirmação da conta durante o \textit{login}.
-	\item \textit{Recoverable}: Envia instruções de redefinição de senha para o usuário e redefine a senha do usuário.
-	\item \textit{Registerable}: Permite a inscrição de usuários por meio do processo de registros, permitindo a edição e a remoção de suas contas.
-	\item \textit{Rememberable}: Gerenciador de \textit{token} para notificar o usuário da existência de \textit{cookie} salvo.
-	\item \textit{Trackable}: contador de entradas, mantendo o registro de data, hora e endereço de IP.
-	\item \textit{Timeoutable}: Expira as sessões inativas em um período de tempo especificado. 
-	\item \textit{Validatable}: Validações de email e senha. 
-	\item \textit{Lockable}: Bloqueia a conta após exceder o número de tentativas especificado, portanto o desbloqueio pode ocorrer via email ou após um período de tempo. 
+	\item \textit{Database Authenticatable}: \textit{hashes} que armazenam a senha no banco de dados para serem validadas durante o \textit{login}. A autenticação pode ser realizada via método POST ou HTTP \textit{basic authentication}; 
+	
+	\item \textit{Omniauthable}: suporte adicional ao \textit{omniauth};
+	
+	\item \textit{Confirmable}: envio automático de email para confirmação da conta e verificação da confirmação da conta durante o \textit{login};
+	
+	\item \textit{Recoverable}: envia instruções de redefinição de senha para o usuário e redefine a senha do usuário;
+	
+	\item \textit{Registerable}: permite a inscrição de usuários por meio do processo de registros, permitindo a edição e a remoção de suas contas;
+	
+	\item \textit{Rememberable}: gerenciador de \textit{token} para notificar o usuário da existência de \textit{cookie} salvo;
+	
+	\item \textit{Trackable}: contador de entradas, mantendo o registro de data, hora e endereço de IP;
+	
+	\item \textit{Timeoutable}: expira as sessões inativas em um período de tempo especificado;
+	
+	\item \textit{Validatable}: validações de email e senha, e
+	 
+	\item \textit{Lockable}: bloqueia a conta após exceder o número de tentativas especificado. Portanto, o desbloqueio pode ocorrer via email ou após um período de tempo. 
 \end{enumerate}
 
-\subsubsection{Aplicação do Catálogo de Segurança}
+\subsection{Aplicação do Catálogo de Segurança}
 
-Através dos módulos apresentados anteriormente é possível realizar o mapeamento deles utilizando o catálogo, então, modelou-se a \textit{gem devise} e seus respectivos métodos como operacionalizações no catálogo. 
+A partir do uso do Catálogo de Segurança, foi possível realizar o mapeamento dos módulos apresentados anteriormente. Então, modelou-se a \textit{gem devise} e seus respectivos métodos como operacionalizações no catálogo. 
 
 \pagebreak
 
@@ -57,21 +66,23 @@ Através dos módulos apresentados anteriormente é possível realizar o mapeame
 \end{figure}
 
 
-O Catálogo de Segurança aplicado no cenário 1 é apresentado na \ref{catalogoPersona1}, onde as operacionalizações são incrementadas no Catálogo de Segurança respeitando os módulos da \textit{gem devise}, a operacionalização  “autorizar acesso a contas” passou a possuir grau de prioridade alto, porquê é uma das operacionalizações que impactam diretamente a solução para o problema. 
+O Catálogo de Segurança aplicado no cenário 1 é apresentado na Figura \ref{catalogoPersona1}, na qual as operacionalizações foram incrementadas ao catálogo inicial. Respeitando os módulos da \textit{gem devise}, a operacionalização  “autorizar acesso a contas” passou a possuir alto grau de prioridade devido ao cenário, pois esta é uma das operacionalizações que impactam diretamente a solução para o problema. 
 
-É então possível utilizando a notação do NFR \textit{Framework} realizar a modelagem da \textit{gem devise} como uma operacionalização, representando a existência de alguma contribuição positiva (SOME+) com as operacionalizações  “autorizar acesso a contar” e “utilizar senha para contas”.
+É possível, então, utilizando a notação do NFR \textit{Framework}, realizar a modelagem da \textit{gem devise} como uma operacionalização, representando a existência de alguma contribuição positiva (SOME+) com as operacionalizações  “autorizar acesso a contar” e “utilizar senha para contas”.
  
 As operacionalizações filhas de “utilizar \textit{gem devise}” e que atendem as necessidades da persona descrita no cenário 1 são:
 
 \begin{itemize}
-	\item “habilitar \textit{Database Authenticable}”: É um dos requisitos mínimos para que ocorra a persistência da senha no banco de dados.
-	\item “habilitar \textit{Recoverable}”: Capacidade de redefinir a senha do usuário.
-	\item “habilitar \textit{Registrable}”: É um dos requisitos mínimos e que permite a inscrição de usuários. 
-	\item “habilitar \textit{Trackable}”: monitorar a quantidade de entradas do usuário. 
-	\item “habilitar \textit{Validatable}”: Validar conta via email do usuário. 
+	\item “habilitar \textit{Database Authenticatable}”: é um dos requisitos mínimos para que ocorra a persistência da senha no banco de dados;
+	\item “habilitar \textit{Recoverable}”: capacidade de redefinir a senha do usuário;
+	\item “habilitar \textit{Registrable}”: é um dos requisitos mínimos e que permite a inscrição de usuários; 
+	\item “habilitar \textit{Trackable}”: monitorar a quantidade de entradas do usuário, e 
+	\item “habilitar \textit{Validatable}”: validar conta via email do usuário. 
 \end{itemize}
 
-Portanto ao habilitar os módulos da \textit{gem devise} dentro da camada \textit{model} nas classes \textit{Admins} e \textit{Members}, as operacionalizações são satisfeitas. Podemos então verificar qual nível de satisfação da segurança do software pode alcançado com a utilização da \textit{gem devise}. O trecho de código abaixo apresenta como habilita-se os módulos.  
+Portanto, ao habilitar os módulos da \textit{gem devise} dentro da camada \textit{model}, nas classes \textit{Admins} e \textit{Members}, as operacionalizações são satisfeitas. Podemos então, verificar qual nível de satisfação da segurança do software pode ser alcançado com a utilização da \textit{gem devise}. 
+
+O trecho de código abaixo apresenta como pode ser os módulos podem ser habilitados.  
  
 
 \begin{lstlisting} 
@@ -81,75 +92,68 @@ devise :database_authenticatable, :registerable,
 end 
 \end{lstlisting} 
 
-A implementação dos padrões de projeto \textit{strategy}, \textit{observer} e \textit{composite} já estão satisfeitos pois a aplicação é desenvolvida com o framework rails que obedece o padrão MVC e a \textit{gem} que está sendo utilizada também percorre todas as camadas. 
+A implementação dos padrões de projeto \textit{strategy}, \textit{observer} e \textit{composite} já estão suficientemente satisfeitos, pois a aplicação é desenvolvida com o \textit{framework rails} que obedece o padrão MVC e a \textit{gem} que está sendo utilizada também percorre todas as camadas. 
 
 \section{Cenário 2}
 \label{subsec:persona2}
 
-Pedro, 23 anos, Engenheiro de Software, trabalha em empresa privada e possui a necessidade de desenvolver o sistema da ouvidoria da instituição, tal sistema deverá ser desenvolvido em plataforma web para atender os processos de manifestação (denúncia, reclamação, solicitação, sugestão e elogio) realizados pela ouvidoria. Esse tipo de informação deve ser estritamente confidencial, podendo ou não o manifestante ser anonimo.  
+Pedro, 23 anos, Engenheiro de Software, trabalha em empresa privada e possui a necessidade de desenvolver o sistema da ouvidoria da instituição. Tal sistema deverá ser desenvolvido em plataforma web para atender os processos de manifestação (denúncia, reclamação, solicitação, sugestão e elogio) realizados pela ouvidoria. Esse tipo de informação deve ser estritamente confidencial, podendo ou não, o manifestante ser anônimo.  
 
 \subsection{Identificar possível solução}
 
-Uma possível solução é gerar um número de protocolo durante o registro da manifestação para que possa ser realizado o acompanhamento, o número de protocolo será utilizado tanto para a manifestação anônima quando para a manifestação formal. O manifestante poderá acompanhar o status de sua manifestação através da visão de acompanhamento de manifestação, onde ficará registrado as respostas dadas pela ouvidora.
+Uma possível solução é gerar um número de protocolo, durante o registro da manifestação, para que possa ser realizado o acompanhamento. Tal número será utilizado tanto para a manifestação anônima, quanto para a manifestação formal. O manifestante poderá acompanhar o status de sua manifestação através da visão de acompanhamento, na qual ficarão registradas as respostas dadas pela ouvidora.
 
-A Ouvidora no caso acessará o sistema de forma diferente, utilizando a área administrativa do sistema através de autenticação de usuário, onde permite que a mesma visualize todas as manifestações permitindo então a seleção da manifestação desejada para que seja possível a redação da resposta para o manifestante.  
-
+A Ouvidora, no caso, acessará o sistema de forma diferente, utilizando a área administrativa do sistema através da autenticação de usuário. Ao fazer isso, a mesma estará apta a visualizar todas as manifestações e selecionar a desejada, para que seja possível a redação da resposta para o manifestante.  
 
 \subsection{Aplicação do Catálogo de Segurança}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.65]{figuras/catalogoPersona2.PNG}
+	\includegraphics[keepaspectratio=true,scale=0.6]{figuras/catalogoPersona2.PNG}
 	\caption{Catálogo de segurança aplicado ao sistema de ouvidoria.}
 	\label{catalogoPersona2}
 \end{figure}
 
 
 
-Na aplicação do Catálogo de Segurança da figura \ref{catalogoPersona2} teve-se a necessidade de focar em  “auditoria e controle”, pois o cenário demandava  o acompanhamento das manifestações pelos ouvidores, portanto foi expandido no catálogo uma nova meta flexível “Realizar acompanhamento das manifestações” e uma operacionalização “Criar método para gerir manifestação”, a operacionalização é definida pelos métodos implementados na \textit{controller - ManagerManifestationsController}. Portanto a meta flexível “auditoria e controle” é suficientemente satisfeita para este contexto.
+Na aplicação do Catálogo de Segurança da figura \ref{catalogoPersona2}, surgiu a necessidade de focar em  “auditoria e controle”, pois o cenário demandava  o acompanhamento das manifestações pelos ouvidores. Com isso, foi expandido no Catálogo de Segurança uma nova meta flexível “Realizar acompanhamento das manifestações” e uma operacionalização “Criar método para gerir manifestação”. A operacionalização é definida pelos métodos implementados na \textit{controller - ManagerManifestationsController}. Portanto, a meta flexível “auditoria e controle” é suficientemente satisfeita para este contexto.
 
-Para que a meta flexível “controle de acesso dos usuários” seja suficientemente satisfeita temos três operacionalizações que são suficientemente satisfeitas e que estão no nível mais baixo no Catálogo de Segurança, são elas: (i) “Implementar método de geração do protocolo”: Trata-se do método para gerar os números de protocolos com caracteres (de “a” à “z”), (de “A” à “Z”) e (de “0” à “9”) utilizado para compor um número de protocolo de 10 digitos; (ii) “utilizar senha única para senha”: Para cada usuário administrador/ouvidor cadastrado no sistema é gerada uma única senha para autenticação; e (iii) “utilizar bcrypt”: Trata-se de uma \textit{gem} que utiliza algoritmo de \textit{hashing} criptográfico que trata um trecho do dado para gerar um \textit{hash}, pois ao gerar uma senha dessa maneira trata-se da execução de um processo não reversível porquê não há como voltar da \textit{hash} para a senha \cite{brcypt}.
+Para que a meta flexível “controle de acesso dos usuários” seja suficientemente satisfeita, as três operacionalizações que estão no nível mais baixo no Catálogo de Segurança também serão, sendo elas: (i) “implementar método de geração do protocolo”: trata-se de um método para gerar os números de protocolos com caracteres (de “a” à “z”), (de “A” à “Z”) e (de “0” à “9”) composto por 10 dígitos; (ii) “utilizar senha única para senha”: para cada usuário administrador/ouvidor cadastrado no sistema é gerada uma única senha para autenticação; e (iii) “utilizar bcrypt”: refere-se a uma \textit{gem} que utiliza algoritmo de \textit{hashing} criptográfico trata um trecho do dado para gerar um \textit{hash}. Considerando que, ao gerar uma senha dessa maneira, trata-se da execução de um processo não reversível, visto que não há como retornar da \textit{hash} para a senha \cite{brcypt}.
 
-A operacionalização “realizar precisão de um para um” é suficientemente satisfeita pois para cada manifestação ocasionada por determinado evento de manifestação do mundo real existirá uma única manifestação no sistema.
+A operacionalização “realizar precisão de um para um” é suficientemente satisfeita, pois para cada manifestação ocasionada por determinado evento de manifestação do mundo real existirá uma única manifestação no sistema.
 
-Observa-se portanto que a segurança do software é parcialmente satisfeita devido a satisfação parcial da integridade do software e da confidencialidade, ocorridos devido aos níveis de satisfação das metas flexíveis e operacionalizações em níveis mais baixos do Catálogo de Segurança. 
+Diante do exposto, observa-se que a segurança do software é parcialmente satisfeita devido a satisfação parcial da integridade e da confidencialidade do mesmo.
 
 \section{Cenário 3}
 \label{subsec:persona3}
 
-
-
-Milena, 22 anos, Engenheira de Software, possui várias atividades no seu dia-a-dia, sentiu-se então a necessidade de organizar as atividades e para isso devido suas habilidades decidiu escrever um programa para obter maior controle. Esse programa permite a inserção com descrição da atividade, a data de início, a previsão de conclusão e o status da atividade. Portanto, Milena optou por fazer seu sistema em rails e decidiu verificar as relações entre as camadas do sistema com o foco em segurança.
+Milena, 22 anos, Engenheira de Software, possuindo várias atividades no seu dia-a-dia, sentiu a necessidade de organizá-las e para isso, considerando as suas habilidades, decidiu escrever um programa com o objetivo de obter melhor controle sobre as mesmas. Esse programa permite a inserção da atividade com sua descrição, a data de início, a previsão de conclusão e seu status. Consequentemente, Milena optou por fazer seu sistema em \textit{Rails} e decidiu verificar as relações entre as camadas do sistema com o foco em segurança.
 
 \begin{itemize}
-	\item O problema: Atividades diárias desorganizadas;
-	\item Objetivo: Desenvolvimento de sistema para auxiliar na organização das atividades;
-	\item Desafio: Verificar as relações entre as camadas do sistema com foco em segurança.
+	\item O problema: desorganização das atividades diárias;
+	\item Objetivo: desenvolvimento de sistema para auxiliar na organização das atividades, e
+	\item Desafio: verificar as relações entre as camadas do sistema com foco em segurança.
 \end{itemize}
 
 \subsubsection{Aplicação do Catálogo de Segurança}
 
-Na descrição da persona tem se a necessidade de vincular cada atividade do mundo real com uma entidade no sistema, para isso utilizou-se o comando \textit{scaffold} do rails, tal comando gera a estrutura de arquivos de acordo com o padrão MVC, gerando o \textit{model}, o \textit{controller}, as \textit{views} necessárias \cite{railscommunity}. 
+Na descrição da persona, houve a necessidade de vincular cada atividade do mundo real com ao menos uma entidade no sistema. Para isso utilizou-se o comando \textit{scaffold} do \textit{Rails}. Tal comando gera a estrutura de arquivos de acordo com o padrão MVC, gerando o \textit{model}, o \textit{controller}, os \textit{views} necessários \cite{railscommunity}. 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoPersona3.PNG}
-	\caption{O scaffolding do rails no Catálogo de Segurança.}
+	\caption{O \textit{scaffolding} do \textit{Rails} no Catálogo de Segurança.}
 	\label{catalogoPersona3}
 \end{figure}
-
 
 \section{Cenário 4}
 \label{subsec:persona4}
 
-
-Gustavo, 23 anos, Engenheiro de Requisitos de empresa privada, possui a demanda de analisar os requisitos do sistema de solicitação de documentos digitais via plataforma web, tal sistema possui arquitetura MVC e está em constante evolução. 
-
-Portanto seu chefe solicitou que o mesmo fizesse uma analise dos requisitos com foco na segurança do sistema, devido a emissão de documentos com assinatura digital. 
+Gustavo, 23 anos, Engenheiro de Requisitos de empresa privada, possui a demanda de analisar os requisitos do sistema de solicitação de documentos digitais via plataforma web. Tal sistema possui arquitetura MVC e está em constante evolução. Assim sendo, seu chefe solicitou que o mesmo fizesse uma análise dos RNFs com foco na segurança do sistema, devido a emissão de documentos com assinatura digital. 
 
 \subsection{Identificar possível solução}
 
-A aplicação do Catálogo de Segurança pode ser uma das maneiras em que pode demonstrar a relação entre os RNF do sistema, principalmente quando o RNF que está em foco é segurança.
+A aplicação do Catálogo de Segurança pode ser uma das maneiras de demonstrar a relação entre os RNFs do sistema, principalmente, quando o RNF que está em foco é segurança.
 
 \pagebreak
 
@@ -158,24 +162,24 @@ A aplicação do Catálogo de Segurança pode ser uma das maneiras em que pode d
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoPersona4.PNG}
-	\caption{Catálogo aplicado a sistema de geração de documentos digitais.}
+	\caption{Catálogo de Segurança aplicado a sistema de geração de documentos digitais.}
 	\label{catalogoPersona4}
 \end{figure}
 
-A aplicação do catálogo apresentado na figura \ref{catalogoPersona4} possui uma extensão devido a utilização de assinatura digital nos documentos, que é modelada como uma meta flexível que está suficientemente satisfeita, pois depende de duas operacionalizações. As operacionalizações fazem uma relação do tipo AND com a meta flexível e ambas estão suficientemente satisfeitas sendo elas “método de geração de (\textit{Quick Response} Quick) QR” e o  “método de autenticação” que utiliza valores como o identificador do usuário e a \textit{string} do QR. Essas relações satisfazem suficientemente meta flexível para autenticidade da informação. 
+A aplicação do Catálogo de Segurança apresentado na Figura \ref{catalogoPersona4} possui uma extensão devido a utilização de assinatura digital nos documentos, que é modelada como uma meta flexível que está suficientemente satisfeita, pois depende de duas operacionalizações. As operacionalizações fazem uma relação do tipo AND com a meta flexível e ambas estão suficientemente satisfeitas, sendo elas “método de geração de (\textit{Quick Response} Quick) QR” e o  “método de autenticação” que utiliza valores como o identificador do usuário e a \textit{string} do QR. Essas relações satisfazem suficientemente a meta flexível para autenticidade da informação. 
 
-O controle de acesso do software é satisfeito devido a relação das metas flexíveis e operacionalizações da mesma forma que os cenários \ref{subsec:persona2} e \ref{subsec:persona1} anteriores que já apresentaram os mesmos relacionamentos, com mesmos níveis de satisfação.  
+O controle de acesso do software é satisfeito devido a relação das metas flexíveis e operacionalizações, da mesma forma que os cenários \ref{subsec:persona2} e \ref{subsec:persona1} anteriores, que já apresentaram os mesmos relacionamentos, com mesmos níveis de satisfação.  
 
-Já a operacionalização “definir propriedades de precisão para instanciação de objetos”, é escrita em cada \textit{model} onde o \textit{rails} permite escrever os parâmetros para controle de instanciação dos objetos, neste cenário foi aplicado que o atributo da classe tem que existir no banco de dados, não podendo colocar vazio ou nulo. 
+Já a operacionalização “definir propriedades de precisão para instanciação de objetos” é escrita em cada \textit{model}, onde o \textit{Rails} permite escrever os parâmetros para controle de instanciação dos objetos. Neste cenário, foi aplicado que o atributo da classe tem que existir no banco de dados, não podendo colocar vazio ou nulo. 
 
-A aplicação está em um servidor do google na nuvem, garantindo sua disponibilidade, satisfazendo então suficientemente a operacionalização “realizar deploy em nuvem”. 
+A aplicação está em um servidor da Google, na nuvem, garantindo sua disponibilidade e satisfazendo então, suficientemente a operacionalização “realizar deploy em nuvem”. 
 
 Semelhante as aplicações dos cenários \ref{subsec:persona2} e \ref{subsec:persona3} a “precisão de um para um” é suficientemente satisfeita. 
 
 \section{Cenário 5}
 \label{subsec:persona5}
 
-Chung, 40 anos, Engenheiro de Software possui em seu quadro de responsabilidades a função de realizar manutenção e evolução de um dos sistemas ao qual é responsável. Portanto percebeu que um de seus sistemas poderia ficar indisponível caso ocorre-se algum problema no servidor de banco de dados, preocupado então com a segurança de seus sistemas, utilizou se o catálogo para analisar o impacto que o espelhamento da base de dados poderia afetar na segurança do software como um todo. 
+Chung, 40 anos, Engenheiro de Software possui em seu quadro de responsabilidades a função de realizar manutenção e evolução de um dos sistemas pelo qual é responsável. Desse modo, percebeu que um de seus sistemas poderia ficar indisponível caso ocorresse algum problema no servidor de banco de dados. Preocupado com a segurança de seus sistemas, utilizou o Catálogo de Segurança para analisar o impacto que o espelhamento da base de dados causaria na segurança do software como um todo. 
 
 \subsection{Aplicação do Catálogo de Segurança}
 
@@ -186,17 +190,17 @@ Chung, 40 anos, Engenheiro de Software possui em seu quadro de responsabilidades
 	\label{catalogoPersona5}
 \end{figure}
 
-Logo a operacionalização “espelhamento da base de dados” é suficientemente satisfeita, satisfazendo parcialmente a disponibilidade do software. Este cenário em especial foi modelado justamente para demonstrar o impacto de ações realizadas na base de dados na segurança do software.
+A operacionalização “espelhamento da base de dados” é suficientemente satisfeita, satisfazendo parcialmente a disponibilidade do software. Esse cenário, em especial, foi modelado justamente para demonstrar o impacto de ações realizadas na base de dados na segurança do software.
 
 
 \section{Primeira visão do Catálogo de Segurança após as aplicações nos cenários}
 \label{sec: aplicacaoDoCatalogo}
 
-Ao modelar o catálogo de segurança pela primeira vez sem ter realizado nenhuma interação com algum tipo de cenário obteve-se visão preliminar sobre Segurança devido a subjetividade e o conjunto de conceitos abstratos presentes na literatura. Isso é demonstrado no Capítulo \ref{chap:proposta} que detalha a construção do catálogo, permitindo chegar somente no primeiro e segundo nível de detalhamento. 
+Ao modelar o Catálogo de Segurança pela primeira vez sem ter realizado nenhuma interação com algum tipo de cenário, obteve-se visão preliminar sobre Segurança devido à subjetividade e ao conjunto de conceitos abstratos presentes na literatura.  
 
-Ao aplicar os cenários para demonstrar a aplicação do catálogo observou-se que o Catálogo de Segurança permite não somente a visão preliminar da segurança de software, mas também de segurança da informação.
+Ao demonstrar a aplicação do Catálogo de Segurança nos cenários, observou-se que o mesmo permite, não somente a visão preliminar da segurança de software, mas também de segurança da informação.
 
-Como o Catálogo de Segurança foi aplicado em cenários onde a ferramenta de suporte ao desenvolvimento era o \textit{rails}, pode-se abstrair o Catálogo de Segurança para aplicações em \textit{rails}, demonstrando então a adaptabilidade do catálogo, como pode ser visualizado na Figura \ref{catalogoFull}.
+Como o Catálogo de Segurança foi aplicado em cenários onde a ferramenta de apoio ao desenvolvimento era o \textit{Rails}, foi possível abstraí-lo para aplicações em \textit{Rails}, demonstrando então, a adaptabilidade do mesmo, como pode ser visualizado na Figura \ref{catalogoFull}.
 
 \begin{figure}[h!]
 	\centering
@@ -207,7 +211,7 @@ Como o Catálogo de Segurança foi aplicado em cenários onde a ferramenta de su
 
 \pagebreak
 
-No entanto durante a validação do catálogo foi utilizado projetos reais e abstrações de possíveis usuários e cenários tornando o catálogo mais abrangente caso a tecnologia utilizada seja o \textit{rails}, como um exemplo de evolução do catálogo e as evidências comprovadas da relação entre as operacionalizações e as camadas do padrão arquitetural MVC é possível unificar com fins de demonstração o Catálogo de Segurança com um diagrama de componentes do padrão MVC, onde as operacionalizações estão dentro do componente ao qual possui relacionamento, como pode ser visualizado na Figura \ref{catalogoMapeado}. 
+Entretanto, durante a validação do Catálogo de Segurança, foram utilizados projetos em cenários reais e abstrações de possíveis usuários e cenários, tornando-o mais abrangente, caso a tecnologia utilizada seja o \textit{Rails}. Como um exemplo de evolução do Catálogo de Segurança e as evidências comprovadas da relação entre as operacionalizações e as camadas do Padrão Arquitetural MVC, é possível unificar com fins de demonstração o Catálogo de Segurança com um diagrama de componentes do padrão MVC, onde as operacionalizações estão dentro do componente ao qual possui relacionamento, como pode ser visualizado na Figura \ref{catalogoMapeado}. 
 
 
 \begin{comment}
@@ -220,6 +224,42 @@ No entanto durante a validação do catálogo foi utilizado projetos reais e abs
 	\caption{Mapeamento das metas flexíveis e operacionalizações com as camadas do MVC.}
 	\label{catalogoMapeado}
 \end{figure}
+
+\begin{table}[h!]
+	\centering
+	\caption{Mapeamento das metas flexíveis com as camadas do MVC - Parte 1.}
+	\label{mapeamento1}
+	\tiny
+	\begin{tabular}{@{}cccp{5cm}cc@{}}
+		\toprule
+		\multicolumn{1}{l}{\textbf{id}} & \multicolumn{1}{l}{\textbf{Meta flexível}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Nível de\\ satisfação\end{tabular}}} & \multicolumn{1}{l}{\textbf{Descrição}} & \multicolumn{1}{l}{\textbf{Referência}} & \multicolumn{1}{l}{\textbf{Camada}} \\ \midrule
+		1 & \begin{tabular}[c]{@{}c@{}}``precisão\\ {[}software{]}``\end{tabular} & Satisfeita & Se razoavelmente satisfeita, garante garante que um único objeto esteja ligado a somente uma única entidade do domínio. A model representa os aspectos do domínio da aplicação. - Atributo de precisão: precisão de um para um. & \begin{tabular}[c]{@{}c@{}}\cite{chung2012non}\\ \cite{buschmann1996system}\end{tabular} & \textit{Model} \\
+		\rowcolor[HTML]{C0C0C0} 
+		2 & \begin{tabular}[c]{@{}c@{}}``precisão\\ {[}software{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & Se razoavelmente satisfeita, garante que os objetos estejam sendo instanciados da maneira correta dentro da model. -Atributo de precisão: Propriedade da precisão & \begin{tabular}[c]{@{}c@{}}\cite{chung2012non}\\ \cite{buschmann1996system}\end{tabular} & \textit{Model} \\
+		3 & \begin{tabular}[c]{@{}c@{}}``autenticidade\\ {[}software{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & A utilização de triggers em banco de dados promove a autenticidade e a verificação da integridade do dado, também pode ser utilizada para  realização de auditoria em tabelas. &  &  \\
+		\cellcolor[HTML]{C0C0C0}4 & \cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}``ìntegridade\\ {[}software{]}``\end{tabular} & \cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & \cellcolor[HTML]{FFFFFF} &  &  \\
+		5 & \begin{tabular}[c]{@{}c@{}}``auditoria e\\  controle\\ {[}software{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & \multicolumn{1}{l}{} & \multirow{-3}{*}{\cite{date2004introduccao}} & \multirow{-3}{*}{\begin{tabular}[c]{@{}c@{}}Banco \\ de Dados\end{tabular}} \\
+		\rowcolor[HTML]{C0C0C0} 
+		\multicolumn{1}{l}{\cellcolor[HTML]{C0C0C0}6} & \begin{tabular}[c]{@{}c@{}}``controle\\  de acesso usuário\\ {[}software{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Parcialmente\\ Satisfeita\end{tabular} & O método de autenticação dos dados retorna a instância usuário, quando a senha está correta. Esse aspecto é implementado diretamente na \textit{Controller}. Entretanto, possui clara relação com a \textit{View} e com a base de dados. Considera-se "parcialmente satisfeita", pois há dependência com a operacionalização "Autorizar Acesso a Contas", a qual contribui para a satisfação dessa meta flexível "controle de acesso {[}software{]}". & \cite{fuentes2014ruby} & \textit{Controller} \\
+		\multicolumn{1}{l}{7} & \begin{tabular}[c]{@{}c@{}}``confiabilidade\\ {[}informação{]}``\end{tabular} & Satisfeita & Se razoavelmente satisfeita, garante que o conjunto de dados a serem armazenados na base de dados estejam relativamente fidedignos. Usa-se "relativamente", pois não há como garantir algo pleno em se tratando de critérios tão abstratos. Nesse caso, "relativamente" sugere que seja "o mais fidedigno/confiável possível". & \cite{fuentes2014ruby} & \textit{View} \\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[p]
+	\centering
+	\caption{Mapeamento das metas flexíveis com as camadas do MVC - Parte 2.}
+	\label{mapeamento2}
+	\tiny
+	\begin{tabular}{@{}cccp{5cm}cc@{}}
+		\hline
+		\multicolumn{1}{l}{\textbf{id}} & \multicolumn{1}{l}{\textbf{Meta flexível}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Nível de\\ satisfação\end{tabular}}} & \multicolumn{1}{l}{\textbf{Descrição}} & \multicolumn{1}{l}{\textbf{Referência}} & \multicolumn{1}{l}{\textbf{Camada}} \\ \hline
+		\rowcolor[HTML]{C0C0C0} 
+		8 & \begin{tabular}[c]{@{}c@{}}``controle de \\ acesso dos \\ componentes \\ MVC\\ {[}nível arquitetural{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}parcialmente\\ satisfeita\end{tabular} & Se parcialmente satisfeita, tende a garantir que os componentes da \textit{View}, os quais dependem de outros componentes que se encontram em outras camadas do modelo MVC, reconheçam a necessidade de atualizar as telas, adequando-as às demandas encaminhadas via \textit{Controller} (por exemplo) e em compatibilidade com os dados especificados na \textit{Model}. Considera-se "parcialmente satisfeita", pois há dependência com a implementação do padrão de projeto estrutural \textit{Composite}. A implementação é sugerida como operacionalização que contribue para satisfação dessa meta flexível, "controle de acesso dos componentes MVC {[}nível arquitetural{]}" & \begin{tabular}[c]{@{}c@{}}\cite{baptistella2011abordando} \\ \cite{buschmann1996system}\end{tabular} & \textit{View} \\
+		9 & \begin{tabular}[c]{@{}c@{}}``controle de\\ acesso dos \\ componentes\\ MVC\\ {[}nível arquitetural{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}parcialmente\\ satisfeita\end{tabular} & Se parcialmente satisfeita, tende a garantir que a \textit{Model} esteja menos acoplada em relação à \textit{View} e à \textit{Controller}, viabilizando essa relação através de boas práticas da Engenharia de Software. Uma dessas práticas é sugerida como operacionalização na Figura \ref{DetalhamentoPrimeiroNivel}, apoiando-se no uso de Padrões de Projeto. Considera-se parcialmente satisfeita, pois há dependência com a implementação do padrão de projeto comportamental \textit{Observer}, por exemplo. Essa implementação é sugerida como uma operacionalização possível em atendimento a essa demanda, e contribui para a satisfação dessa meta flexível, "controle de acesso dos componentes MVC{[}nível arquitetural{]}". & \begin{tabular}[c]{@{}c@{}}\cite{baptistella2011abordando} \\ \cite{buschmann1996system}\end{tabular} & \textit{Model} \\
+		\rowcolor[HTML]{C0C0C0} 
+		10 & \begin{tabular}[c]{@{}c@{}}``controle de\\ acesso dos \\ componentes\\ MVC\\ {[}nível arquitetural{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}parcialmente\\ satisfeita\end{tabular} & Se parcialmente satisfeita, tende a garantir menor acoplamento entre as camadas MVC. Sugere-se que tal aspecto seja apoiado no uso de Padrões de Projeto. Portanto, acredita-se que o padrão de projeto \textit{Strategy}, implementado na \textit{Controller}, permita menor acoplamento entre \textit{View} e \textit{Model}, sendo de fato responsabilidade da \textit{Controller} intermediar essa relação utilizando-se de decisões estratégicas. Vale ressaltar que com o uso desse padrão de projeto, tem-se que essas decisões podem ser tomadas em tempo de execução, alterando o comportamento do software em função das demandas conhecidas dinamicamente. Dessa forma, há tendência é de maior cumprimento de boas práticas já acordadas no padrão arquitetural MVC. Considera-se parcialmente satisfeita, pois há dependência com a implementação do padrão de projeto comportamental \textit{Strategy}, por exemplo. Essa implementação é sugerida como uma operacionalização possível em atendimento a essa demanda, e contribui para a satisfação dessa meta flexível, "controle de acesso dos componentes MVC{[}nível arquitetural{]}". & \begin{tabular}[c]{@{}c@{}}\cite{baptistella2011abordando} \\ \cite{buschmann1996system}\end{tabular} & \textit{Controller} \\ \hline
+	\end{tabular}
+\end{table}
 
 
 \begin{comment}

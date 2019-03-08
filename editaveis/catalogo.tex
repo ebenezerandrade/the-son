@@ -131,42 +131,6 @@ O segundo nível de detalhamento procura correlacionar as metas flexíveis mais 
 
 Conforme comentado na introdução desse capítulo, pretende-se ter mais um nível de detalhamento na apresentação do catálogo proposto. Nesse nível, será possível correlacionar/mapear as operacionalizações e as camadas do Padrão Arquitetural MVC. Portanto, o conteúdo das Tabelas \ref{mapeamento1} e \ref{mapeamento2} poderá - sendo muito provável que ocorra - evoluir continuamente, junto ao andamento do TCC2. Acredita-se que ao desenvolver um software, com base no catálogo proposto até o momento, será possível compreender mais facilmente as correlações entre metas flexíveis, operacionalizações e camadas do Padrão Arquitetural MVC, permitindo refinar ainda mais o próprio catálogo (seção \ref{sub:primeiroNivel}) e seus níveis de mapeamento (seção \ref{sub:segundoNivel}) bem como ampliar as contribuições desse trabalho.
 
-\begin{table}[h!]
-	\centering
-	\caption{Mapeamento das metas flexíveis com as camadas do MVC - Parte 1.}
-	\label{mapeamento1}
-	\tiny
-	\begin{tabular}{@{}cccp{5cm}cc@{}}
-		\toprule
-		\multicolumn{1}{l}{\textbf{id}} & \multicolumn{1}{l}{\textbf{Meta flexível}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Nível de\\ satisfação\end{tabular}}} & \multicolumn{1}{l}{\textbf{Descrição}} & \multicolumn{1}{l}{\textbf{Referência}} & \multicolumn{1}{l}{\textbf{Camada}} \\ \midrule
-		1 & \begin{tabular}[c]{@{}c@{}}``precisão\\ {[}software{]}``\end{tabular} & Satisfeita & Se razoavelmente satisfeita, garante garante que um único objeto esteja ligado a somente uma única entidade do domínio. A model representa os aspectos do domínio da aplicação. - Atributo de precisão: precisão de um para um. & \begin{tabular}[c]{@{}c@{}}\cite{chung2012non}\\ \cite{buschmann1996system}\end{tabular} & \textit{Model} \\
-		\rowcolor[HTML]{C0C0C0} 
-		2 & \begin{tabular}[c]{@{}c@{}}``precisão\\ {[}software{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & Se razoavelmente satisfeita, garante que os objetos estejam sendo instanciados da maneira correta dentro da model. -Atributo de precisão: Propriedade da precisão & \begin{tabular}[c]{@{}c@{}}\cite{chung2012non}\\ \cite{buschmann1996system}\end{tabular} & \textit{Model} \\
-		3 & \begin{tabular}[c]{@{}c@{}}``autenticidade\\ {[}software{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & A utilização de triggers em banco de dados promove a autenticidade e a verificação da integridade do dado, também pode ser utilizada para  realização de auditoria em tabelas. &  &  \\
-		\cellcolor[HTML]{C0C0C0}4 & \cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}``ìntegridade\\ {[}software{]}``\end{tabular} & \cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & \cellcolor[HTML]{FFFFFF} &  &  \\
-		5 & \begin{tabular}[c]{@{}c@{}}``auditoria e\\  controle\\ {[}software{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & \multicolumn{1}{l}{} & \multirow{-3}{*}{\cite{date2004introduccao}} & \multirow{-3}{*}{\begin{tabular}[c]{@{}c@{}}Banco \\ de Dados\end{tabular}} \\
-		\rowcolor[HTML]{C0C0C0} 
-		\multicolumn{1}{l}{\cellcolor[HTML]{C0C0C0}6} & \begin{tabular}[c]{@{}c@{}}``controle\\  de acesso usuário\\ {[}software{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Parcialmente\\ Satisfeita\end{tabular} & O método de autenticação dos dados retorna a instância usuário, quando a senha está correta. Esse aspecto é implementado diretamente na \textit{Controller}. Entretanto, possui clara relação com a \textit{View} e com a base de dados. Considera-se "parcialmente satisfeita", pois há dependência com a operacionalização "Autorizar Acesso a Contas", a qual contribui para a satisfação dessa meta flexível "controle de acesso {[}software{]}". & \cite{fuentes2014ruby} & \textit{Controller} \\
-		\multicolumn{1}{l}{7} & \begin{tabular}[c]{@{}c@{}}``confiabilidade\\ {[}informação{]}``\end{tabular} & Satisfeita & Se razoavelmente satisfeita, garante que o conjunto de dados a serem armazenados na base de dados estejam relativamente fidedignos. Usa-se "relativamente", pois não há como garantir algo pleno em se tratando de critérios tão abstratos. Nesse caso, "relativamente" sugere que seja "o mais fidedigno/confiável possível". & \cite{fuentes2014ruby} & \textit{View} \\ \bottomrule
-	\end{tabular}
-\end{table}
-
-\begin{table}[p]
-	\centering
-	\caption{Mapeamento das metas flexíveis com as camadas do MVC - Parte 2.}
-	\label{mapeamento2}
-	\tiny
-	\begin{tabular}{@{}cccp{5cm}cc@{}}
-		\hline
-		\multicolumn{1}{l}{\textbf{id}} & \multicolumn{1}{l}{\textbf{Meta flexível}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Nível de\\ satisfação\end{tabular}}} & \multicolumn{1}{l}{\textbf{Descrição}} & \multicolumn{1}{l}{\textbf{Referência}} & \multicolumn{1}{l}{\textbf{Camada}} \\ \hline
-		\rowcolor[HTML]{C0C0C0} 
-		8 & \begin{tabular}[c]{@{}c@{}}``controle de \\ acesso dos \\ componentes \\ MVC\\ {[}nível arquitetural{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}parcialmente\\ satisfeita\end{tabular} & Se parcialmente satisfeita, tende a garantir que os componentes da \textit{View}, os quais dependem de outros componentes que se encontram em outras camadas do modelo MVC, reconheçam a necessidade de atualizar as telas, adequando-as às demandas encaminhadas via \textit{Controller} (por exemplo) e em compatibilidade com os dados especificados na \textit{Model}. Considera-se "parcialmente satisfeita", pois há dependência com a implementação do padrão de projeto estrutural \textit{Composite}. A implementação é sugerida como operacionalização que contribue para satisfação dessa meta flexível, "controle de acesso dos componentes MVC {[}nível arquitetural{]}" & \begin{tabular}[c]{@{}c@{}}\cite{baptistella2011abordando} \\ \cite{buschmann1996system}\end{tabular} & \textit{View} \\
-		9 & \begin{tabular}[c]{@{}c@{}}``controle de\\ acesso dos \\ componentes\\ MVC\\ {[}nível arquitetural{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}parcialmente\\ satisfeita\end{tabular} & Se parcialmente satisfeita, tende a garantir que a \textit{Model} esteja menos acoplada em relação à \textit{View} e à \textit{Controller}, viabilizando essa relação através de boas práticas da Engenharia de Software. Uma dessas práticas é sugerida como operacionalização na Figura \ref{DetalhamentoPrimeiroNivel}, apoiando-se no uso de Padrões de Projeto. Considera-se parcialmente satisfeita, pois há dependência com a implementação do padrão de projeto comportamental \textit{Observer}, por exemplo. Essa implementação é sugerida como uma operacionalização possível em atendimento a essa demanda, e contribui para a satisfação dessa meta flexível, "controle de acesso dos componentes MVC{[}nível arquitetural{]}". & \begin{tabular}[c]{@{}c@{}}\cite{baptistella2011abordando} \\ \cite{buschmann1996system}\end{tabular} & \textit{Model} \\
-		\rowcolor[HTML]{C0C0C0} 
-		10 & \begin{tabular}[c]{@{}c@{}}``controle de\\ acesso dos \\ componentes\\ MVC\\ {[}nível arquitetural{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}parcialmente\\ satisfeita\end{tabular} & Se parcialmente satisfeita, tende a garantir menor acoplamento entre as camadas MVC. Sugere-se que tal aspecto seja apoiado no uso de Padrões de Projeto. Portanto, acredita-se que o padrão de projeto \textit{Strategy}, implementado na \textit{Controller}, permita menor acoplamento entre \textit{View} e \textit{Model}, sendo de fato responsabilidade da \textit{Controller} intermediar essa relação utilizando-se de decisões estratégicas. Vale ressaltar que com o uso desse padrão de projeto, tem-se que essas decisões podem ser tomadas em tempo de execução, alterando o comportamento do software em função das demandas conhecidas dinamicamente. Dessa forma, há tendência é de maior cumprimento de boas práticas já acordadas no padrão arquitetural MVC. Considera-se parcialmente satisfeita, pois há dependência com a implementação do padrão de projeto comportamental \textit{Strategy}, por exemplo. Essa implementação é sugerida como uma operacionalização possível em atendimento a essa demanda, e contribui para a satisfação dessa meta flexível, "controle de acesso dos componentes MVC{[}nível arquitetural{]}". & \begin{tabular}[c]{@{}c@{}}\cite{baptistella2011abordando} \\ \cite{buschmann1996system}\end{tabular} & \textit{Controller} \\ \hline
-	\end{tabular}
-\end{table}
-
 \pagebreak
 
 \section{Resumo do Capítulo}
