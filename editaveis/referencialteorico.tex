@@ -22,7 +22,7 @@ Antes mesmo de apresentar os conceitos relevantes para o desenvolvimento do cat�
 	\label{BigPicture}
 \end{figure}
 
-Cabe ressaltar que o presente trabalho atua mais especificamente no requisito não funcional Segurança, dada a sua relevância, conforme pesquisa na literatura. Segundo \cite{chung2012non}, Segurança pode ser entendida como a satisfação de três conceitos: Integridade, Confidencialidade, e Disponibilidade. Portanto, o Catálogo de Segurança parte desses conceitos, seguindo a expressão \ref{eq:EstruturaLogicaDeSeguranca}. Segurança, sobre a ótica de um RNF, será tratada na seção \ref{sec:seguranca}. Por fim, visando apoiar a elaboração bem como a documentação dos cenários de uso para aplicação do Catálogo de Segurança, foi utilizado o conceito de personas, o qual será tratado na seção \ref{sec:personas}.
+Cabe ressaltar que o presente trabalho atua mais especificamente no requisito não funcional Segurança, dada a sua relevância, conforme pesquisa na literatura. Segundo \cite{chung2012non}, Segurança pode ser entendida como a satisfação de três conceitos: Integridade, Confidencialidade, e Disponibilidade. Portanto, o Catálogo de Segurança parte desses conceitos, seguindo a expressão \ref{eq:EstruturaLogicaDeSeguranca}. Segurança, sobre a ótica de um RNF, será tratada na seção \ref{sec:seguranca}. Por fim, visando apoiar a elaboração bem como a documentação dos cenários de uso para aplicação do Catálogo de Segurança, foi utilizado o conceito de \textit{personas}, o qual será tratado na seção \ref{sec:personas}.
 
 \begin{equation}
 	\label{eq:EstruturaLogicaDeSeguranca}
@@ -320,9 +320,10 @@ O termo FURPS é um acrônimo que define um modelo de atributo de qualidade. Ess
 \subsection{Funcionalidade}
 \label{subsec:funcionalidade}
 
-São os requisitos funcionais de uma aplicação de software. A funcionalidade está diretamente ligada ao comportamento do software e à interação do usuário com o software \cite{cintra2006implementaccao}.
+A Funcionalidade está diretamente ligada ao comportamento do software e à interação do usuário com ele \cite{cintra2006implementaccao}. Representando os principais recursos do produto de software, as funcionalidades de um software nem sempre estão diretamente ligada ao domínio \cite{pressman2011engenharia}. 
 
-Por definição, funcionalidade é a capacidade do software de promover funções que atendam às necessidades explícitas e implícitas quando o software estiver sendo utilizado, de acordo com os cenários especificados \cite{qualidadeDeProdutoNBR}.
+Por definição, funcionalidade é a capacidade do software de promover funções que atendam às necessidades explícitas e implícitas quando o software estiver sendo utilizado, de acordo com os cenários especificados \cite{qualidadeDeProdutoNBR}. De acordo com a ISO 25010 a Funcionalidade pode ser entendida como: (i) grau em que o conjunto de funções do software abrange todas as tarefas especificadas e objetivos do usuário, (ii) grau em que as funções fornecem os resultados corretos com o grau de precisão necessário e (iii) grau em que as funções facilitam a realização de tarefas e objetivos específicos \cite{gordieiev2014evolution}.
+
 
 \subsection{Usabilidade}
 \label{subsec:usabilidade}
@@ -399,12 +400,12 @@ A Tabela \ref{categoriasDePadroesArquiteturais} apresenta detalhadamente os quat
 Devido ao foco desse trabalho ser a construção do Catálogo de Segurança para o Padrão Arquitetural MVC, a Subseção \ref{subsec:mvc} detalha este Padrão Arquitetural. 
 
 
-\subsection{MVC: Model-View-Controller}
+\subsection{MVC: \textit{Model-View-Controller}}
 \label{subsec:mvc}
 
 O MVC divide a aplicação em três componentes: (i) a \textit{Model}, a qual contém os dados e as funcionalidades, entendida como a camada de manipulação dos dados, (ii) a \textit{View}, componente responsável por apresentar as informações para o usuário, e (iii) a \textit{Controller}, responsável por receber e controlar as requisições de entrada do usuário, realizando o controle de qual \textit{model} usar e qual \textit{view} será mostrada ao usuário \cite{buschmann1996system}.  
 
-\subsubsection{Model}
+\subsubsection{\textit{Model}}
 
 A \textit{Model} realiza o encapsulamento dos dados da aplicação, e detalha todo o comportamento funcional da aplicação. Este componente também realiza a exportação dos procedimentos para que a \textit{Controller} possa chamar esses procedimentos de acordo com as necessidades do usuário \cite{buschmann1996system}.
 
@@ -423,7 +424,7 @@ A Tabela \ref{responsabilidadeColaboradorModel} resume os principais aspectos da
 	\end{tabular}
 \end{table}
 
-\subsubsection{View}
+\subsubsection{\textit{View}}
 
 A \textit{View} é o componente responsável por apresentar as informações ao usuário, recuperando os dados da \textit{Model} através de procedimentos de atualização que são ativados pelo mecanismo de propagação de mudanças. A \textit{View} também possui um relacionamento de 1 para 1, com a \textit{Controller}, pois fornece procedimentos para a \textit{Controller} manipular as exibições da \textit{View} \cite{buschmann1996system}.
 
@@ -440,7 +441,7 @@ A Tabela \ref{responsabilidadeColaboradorView} resume os principais aspectos da 
 	\end{tabular}
 \end{table}
 
-\subsubsection{Controller}
+\subsubsection{\textit{Controller}}
 
 A \textit{Controller} trata as entradas do usuário como eventos. As controladoras desses eventos recebem um pedido da \textit{View}. Nesse caso, um procedimento específico na \textit{Controller} trata esse pedido e realiza uma chamada de um procedimento na \textit{Model}. A \textit{Controller} basicamente traduz os pedidos de eventos para a \textit{Model}, sendo que, a cada pedido existe uma \textit{view} associada. 
 
@@ -481,8 +482,18 @@ A Figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que represent
 	\label{DiagramaDeSequenciaMVC}
 \end{figure}
 
-Agora que as principais áreas atreladas ao trabalho foram apresentadas, segue um detalhamento do critério Segurança, também chave para esse trabalho, sendo esse critério tratado como um RNF.
+Agora que as principais áreas atreladas ao trabalho foram apresentadas, segue um detalhamento do conceito de Segurança da informação, que permite abstrair em nível mais alto o conceito, promovendo maior abrangência caso necessário aos conceitos de segurança de software e da informação.
 
+\section{ISO 27001}
+\label{sec:iso27001}
+
+A ISO 27001 determina os padrões que podem ser aplicados em Sistemas de Gestão de Segurança da Informação (do inglês, \textit{Information Security Management System}), intitulada como:“ Tecnologia da informação - técnicas de segurança - sistemas de gerência da segurança da informação - requisitos”. Tal Norma, orienta como pode ser realizada a definição de um comitê multidisciplinar que possui como objetivo principal estabelecer as políticas de segurança dentro das organizações, determinando as medidas cabíveis dentro dos limites de atuação \cite{documentation2005information}.
+
+A ISO 27001 define aspectos para segurança da informação, como: a preservação da confidencialidade, integridade e disponibilidade da informação, adicionando outras propriedades como autenticidade, responsabilidade, confiabilidade e auditória e controle \cite{documentation2005information}. 
+
+A relação da segurança da informação com a segurança de software se apoiam nos mesmos pilares sendo eles disponibilidade, confidencialidade e integridade \cite{chung2012non} \cite{documentation2005information}.
+
+Com a utilização da norma é possível evoluir os conceitos de aplicação do Catálogo de Segurança para que possa ser alcançadas áreas de segurança da informação, caso necessário. Logo, como segurança vista como um RNF é chave para esse trabalho, esse critério será tratado como um RNF. 
 
 \section{Segurança vista como um RNF}
 \label{sec:seguranca}
@@ -560,27 +571,30 @@ Integridade pode ser definida através dos conceitos Completude e Precisão, por
 \subsection{Disponibilidade}
 \label{subsec:disponibilidade}
 
-Uma vez introduzidas as áreas de interesse  deste trabalho, bem como, o conceito de Segurança sob o ponto de vista de um RNF, cabe ainda comentar sobre o conceito de Personas. Esse conceito foi utilizado no trabalho visando auxiliar na elaboração bem como, na evolução do Catálogo de Segurança, considerando diferentes cenários de uso. O conceito de Persona é tratado na seção a seguir, nesse capítulo. Já a aplicação desse conceito nos cenários de uso para elaboração e evolução do catálogo será detalhada no Capítulo \ref{chap:resultadosObtidos} de Resultados Obtidos.
+A disponibilidade do software pode ser entendida como o software se assegura diante de qualquer interrupção no serviço e que possa impedir o acesso ao mesmo, isto é, o quão disponível o sistema estaria para efetuar uma função solicitada \cite{chung2012non}
 
-\section{Personas}
+
+Uma vez introduzidas as áreas de interesse  deste trabalho, bem como, o conceito de Segurança sob o ponto de vista de um RNF, cabe ainda comentar sobre o conceito de \textit{Personas}. Esse conceito foi utilizado no trabalho visando auxiliar na elaboração bem como, na evolução do Catálogo de Segurança, considerando diferentes cenários de uso. O conceito de Persona é tratado na seção a seguir, nesse capítulo. Já a aplicação desse conceito nos cenários de uso para elaboração e evolução do catálogo será detalhada no Capítulo \ref{chap:resultadosObtidos} de Resultados Obtidos.
+
+\section{\textit{Personas}}
 \label{sec:personas}
 
-Personas são especificações comportamentais que incorporam as metas e necessidades de usuários, esse conceito foi introduzido para auxiliar os desenvolvedores a entender melhor os usuários diante da necessidade de especificação de um sistema. Personas podem ser aplicadas na Engenharia de Software desde as atividades inerentes à Engenharia de Requisitos, até a entrega do produto propriamente dito \cite{ford2017characterizing}. 
+\textit{Personas} são especificações comportamentais que incorporam as metas e necessidades de usuários, esse conceito foi introduzido para auxiliar os desenvolvedores a entender melhor os usuários diante da necessidade de especificação de um sistema. \textit{Personas} podem ser aplicadas na Engenharia de Software desde as atividades inerentes à Engenharia de Requisitos, até a entrega do produto propriamente dito \cite{ford2017characterizing}. 
 
-Mais especificamente nesse trabalho, Personas foram utilizadas para levantamento de aspectos chave de segurança, privacidade e outras metas flexíveis de interesse, o que mitigou um pouco as dificuldades enfrentadas no entendimento bem como na especificação dos perfis de usuários compreendidos no escopo dessa pesquisa. Isso viabilizou, dentre outras contribuições, a modelagem de aspectos sociais e psicológicos, promovendo o entendimento dos perfis de usuários, e suas possíveis motivações, as quais permeiam suas ações \cite{ford2017characterizing} \cite{daelaboraccao}. 
-
-
-
-Ao longo do processo de construção de uma solução computacional - sob a perspectiva de um produto, tem-se a necessidade de imaginar como esse produto irá funcionar, e como seria possível aplicar esse produto \cite{soegaard2012encyclopedia}. Nesse contexto, se os integrantes de uma equipe de desenvolvimento fizerem uso de Personas, o mesmos serão auxiliados, e terão maiores chances de manter o produto de acordo com os pontos de vista acordados, permitindo maior aderência desse produto às perspectivas dos usuários.Isso é possível, pois se pode imaginar como o produto será utilizado por uma Persona, a qual representa as metas e necessidades de um possível interessado nesse produto. Portanto, a intenção do uso de Personas não é descrever a persona em si, mas sim potencializar a capacidade da equipe no que tange a compreensão do produto, sendo esse idealizado sob diferentes pontos de vista \cite{soegaard2012encyclopedia}.
+Mais especificamente nesse trabalho, \textit{Personas} foram utilizadas para levantamento de aspectos chave de segurança, privacidade e outras metas flexíveis de interesse, o que mitigou um pouco as dificuldades enfrentadas no entendimento bem como na especificação dos perfis de usuários compreendidos no escopo dessa pesquisa. Isso viabilizou, dentre outras contribuições, a modelagem de aspectos sociais e psicológicos, promovendo o entendimento dos perfis de usuários, e suas possíveis motivações, as quais permeiam suas ações \cite{ford2017characterizing} \cite{daelaboraccao}. 
 
 
-No presente trabalho, apesar de se reconhecer a relevância do uso do conceito de Personas para mapeamento de aspectos sociais e psicológicos, não foi esse o maior foco. No caso, o uso de Personas contribuiu significativamente para construir o catálogo considerando pontos de vista diferentes, ora com maior olhar em Confiabilidade, ora em Integridade, ora em Disponibilidade, ora focado no Padrão Arquitetural MVC, dentre outras perspectivas. Esse exercício de considerar o catálogo sob diferentes pontos de vista possibilitou um aprofundamento de suas metas flexíveis, e mais ainda, um maior detalhamento das operacionalizações. Operacionalizações representam ações concretas, possíveis de serem de fato alcançadas, implementadas e atendidas pelos especialistas. Uma vez atendidas, propagam-se suas contribuições em atendimento aos aspectos mais abstratos, no caso, as metas flexíveis. Diante dessas colocações, tem-se que o uso de Personas, em cenários de uso variados, contribuiu para a concretização do Catálogo de Segurança elaborado nesse trabalho.
+
+Ao longo do processo de construção de uma solução computacional - sob a perspectiva de um produto, tem-se a necessidade de imaginar como esse produto irá funcionar, e como seria possível aplicar esse produto \cite{soegaard2012encyclopedia}. Nesse contexto, se os integrantes de uma equipe de desenvolvimento fizerem uso de \textit{Personas}, o mesmos serão auxiliados, e terão maiores chances de manter o produto de acordo com os pontos de vista acordados, permitindo maior aderência desse produto às perspectivas dos usuários.Isso é possível, pois se pode imaginar como o produto será utilizado por uma Persona, a qual representa as metas e necessidades de um possível interessado nesse produto. Portanto, a intenção do uso de \textit{Personas} não é descrever a persona em si, mas sim potencializar a capacidade da equipe no que tange a compreensão do produto, sendo esse idealizado sob diferentes pontos de vista \cite{soegaard2012encyclopedia}.
+
+
+No presente trabalho, apesar de se reconhecer a relevância do uso do conceito de \textit{Personas} para mapeamento de aspectos sociais e psicológicos, não foi esse o maior foco. No caso, o uso de \textit{Personas} contribuiu significativamente para construir o catálogo considerando pontos de vista diferentes, ora com maior olhar em Confiabilidade, ora em Integridade, ora em Disponibilidade, ora focado no Padrão Arquitetural MVC, dentre outras perspectivas. Esse exercício de considerar o catálogo sob diferentes pontos de vista possibilitou um aprofundamento de suas metas flexíveis, e mais ainda, um maior detalhamento das operacionalizações. Operacionalizações representam ações concretas, possíveis de serem de fato alcançadas, implementadas e atendidas pelos especialistas. Uma vez atendidas, propagam-se suas contribuições em atendimento aos aspectos mais abstratos, no caso, as metas flexíveis. Diante dessas colocações, tem-se que o uso de \textit{Personas}, em cenários de uso variados, contribuiu para a concretização do Catálogo de Segurança elaborado nesse trabalho.
 
 
 \section{Resumo do Capítulo}
 
 Neste Capítulo, foram abordados os conceitos fundamentais para a construção do Catálogo de Segurança, introduzindo conceitos chave da Engenharia de Requisitos, mais especificamente da Engenharia de Requisitos Orientada à Meta, com foco em metas flexíveis; bem como considerando conceitos chave de Arquitetura de Software, mais precisamente do Padrão Arquitetural MVC.
-Dada a relevância do critério de Segurança para o escopo do trabalho, no capítulo, tem-se uma seção dedicada à apresentação desse critério como um RNF. Conforme acordado, Confiabilidade, Integridade e Disponibilidade são metas flexíveis que impactam diretamente em Segurança. Por fim, comentou-se sobre o conceito de Personas, o qual representou um recurso relevante na elaboração bem como na evolução do Catálogo de Segurança sob diferentes pontos de vista, e considerando variados cenários de uso. 
+Dada a relevância do critério de Segurança para o escopo do trabalho, no capítulo, tem-se uma seção dedicada à apresentação desse critério como um RNF. Conforme acordado, Confiabilidade, Integridade e Disponibilidade são metas flexíveis que impactam diretamente em Segurança. Por fim, comentou-se sobre o conceito de \textit{Personas}, o qual representou um recurso relevante na elaboração bem como na evolução do Catálogo de Segurança sob diferentes pontos de vista, e considerando variados cenários de uso. 
  
 
 

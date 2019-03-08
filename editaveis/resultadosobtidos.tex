@@ -1,7 +1,7 @@
 \chapter{Resultados Obtidos}
 \label{chap:resultadosObtidos}
 
-Neste capítulo são apresentadas as primeiras aplicações do Catálogo de Segurança. Para isso, foi utilizado o conceito de personas, apresentado na seção \ref{sec:personas}, com o objetivo de demonstrar os cenários nos quais o catálogo pode ser aplicável. Portanto, realizou-se a simulação de cinco cenários para validar a aplicação do Catálogo de Segurança. 
+Neste capítulo são apresentadas as primeiras aplicações do Catálogo de Segurança e o mapeamento no terceiro nível de abstração (entre operacionalizações e as camadas do Padrão Arquitetural MVC). Para isso, foi utilizado o conceito de \textit{personas}, apresentado na seção \ref{sec:personas}, com o objetivo de demonstrar os cenários nos quais o catálogo pode ser aplicável. Portanto, realizou-se a simulação de cinco cenários para validar a aplicação do Catálogo de Segurança. 
 
 O capítulo é dividido, inicialmente, pelos cenários contextualizados dentro de cada persona. Os cenários têm a descrição da persona, identificação da possível solução (Quando necessário descrever para o cenário) e a aplicação do catálogo. Ao final do capítulo é apresentada a primeira visão da aplicação do Catálogo de Segurança.  
 
@@ -84,7 +84,6 @@ Portanto, ao habilitar os módulos da \textit{gem devise} dentro da camada \text
 
 O trecho de código abaixo apresenta como pode ser os módulos podem ser habilitados.  
  
-
 \begin{lstlisting} 
 class Admins < ApplicationRecord
 devise :database_authenticatable, :registerable,
@@ -186,15 +185,15 @@ Chung, 40 anos, Engenheiro de Software possui em seu quadro de responsabilidades
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoPersona5.PNG}
-	\caption{Catálogo de Segurança aplicado ao contexto de duplicação de base de dados.}
+	\caption{Catálogo de Segurança com foco em disponibilidade aplicado ao contexto de duplicação de base de dados.}
 	\label{catalogoPersona5}
 \end{figure}
 
-A operacionalização “espelhamento da base de dados” é suficientemente satisfeita, satisfazendo parcialmente a disponibilidade do software. Esse cenário, em especial, foi modelado justamente para demonstrar o impacto de ações realizadas na base de dados na segurança do software.
+A operacionalização “espelhamento da base de dados” é suficientemente satisfeita, satisfazendo parcialmente a disponibilidade do software. Esse cenário, em especial, foi modelado justamente para demonstrar o impacto de ações realizadas na base de dados na segurança do software, como apresentado na Figura \ref{catalogoPersona5}.
 
 
 \section{Primeira visão do Catálogo de Segurança após as aplicações nos cenários}
-\label{sec: aplicacaoDoCatalogo}
+\label{sec:aplicacaoDoCatalogo}
 
 Ao modelar o Catálogo de Segurança pela primeira vez sem ter realizado nenhuma interação com algum tipo de cenário, obteve-se visão preliminar sobre Segurança devido à subjetividade e ao conjunto de conceitos abstratos presentes na literatura.  
 
@@ -204,12 +203,11 @@ Como o Catálogo de Segurança foi aplicado em cenários onde a ferramenta de ap
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoFull.PNG}
+	\includegraphics[keepaspectratio=true,scale=0.65]{figuras/catalogoFull.PNG}
 	\caption{Versão extendida do catálogo focada em projetos \textit{rails}}
 	\label{catalogoFull}
 \end{figure}
 
-\pagebreak
 
 Entretanto, durante a validação do Catálogo de Segurança, foram utilizados projetos em cenários reais e abstrações de possíveis usuários e cenários, tornando-o mais abrangente, caso a tecnologia utilizada seja o \textit{Rails}. Como um exemplo de evolução do Catálogo de Segurança e as evidências comprovadas da relação entre as operacionalizações e as camadas do Padrão Arquitetural MVC, é possível unificar com fins de demonstração o Catálogo de Segurança com um diagrama de componentes do padrão MVC, onde as operacionalizações estão dentro do componente ao qual possui relacionamento, como pode ser visualizado na Figura \ref{catalogoMapeado}. 
 
@@ -225,42 +223,9 @@ Entretanto, durante a validação do Catálogo de Segurança, foram utilizados p
 	\label{catalogoMapeado}
 \end{figure}
 
-\begin{table}[h!]
-	\centering
-	\caption{Mapeamento das metas flexíveis com as camadas do MVC - Parte 1.}
-	\label{mapeamento1}
-	\tiny
-	\begin{tabular}{@{}cccp{5cm}cc@{}}
-		\toprule
-		\multicolumn{1}{l}{\textbf{id}} & \multicolumn{1}{l}{\textbf{Meta flexível}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Nível de\\ satisfação\end{tabular}}} & \multicolumn{1}{l}{\textbf{Descrição}} & \multicolumn{1}{l}{\textbf{Referência}} & \multicolumn{1}{l}{\textbf{Camada}} \\ \midrule
-		1 & \begin{tabular}[c]{@{}c@{}}``precisão\\ {[}software{]}``\end{tabular} & Satisfeita & Se razoavelmente satisfeita, garante garante que um único objeto esteja ligado a somente uma única entidade do domínio. A model representa os aspectos do domínio da aplicação. - Atributo de precisão: precisão de um para um. & \begin{tabular}[c]{@{}c@{}}\cite{chung2012non}\\ \cite{buschmann1996system}\end{tabular} & \textit{Model} \\
-		\rowcolor[HTML]{C0C0C0} 
-		2 & \begin{tabular}[c]{@{}c@{}}``precisão\\ {[}software{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & Se razoavelmente satisfeita, garante que os objetos estejam sendo instanciados da maneira correta dentro da model. -Atributo de precisão: Propriedade da precisão & \begin{tabular}[c]{@{}c@{}}\cite{chung2012non}\\ \cite{buschmann1996system}\end{tabular} & \textit{Model} \\
-		3 & \begin{tabular}[c]{@{}c@{}}``autenticidade\\ {[}software{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & A utilização de triggers em banco de dados promove a autenticidade e a verificação da integridade do dado, também pode ser utilizada para  realização de auditoria em tabelas. &  &  \\
-		\cellcolor[HTML]{C0C0C0}4 & \cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}``ìntegridade\\ {[}software{]}``\end{tabular} & \cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & \cellcolor[HTML]{FFFFFF} &  &  \\
-		5 & \begin{tabular}[c]{@{}c@{}}``auditoria e\\  controle\\ {[}software{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & \multicolumn{1}{l}{} & \multirow{-3}{*}{\cite{date2004introduccao}} & \multirow{-3}{*}{\begin{tabular}[c]{@{}c@{}}Banco \\ de Dados\end{tabular}} \\
-		\rowcolor[HTML]{C0C0C0} 
-		\multicolumn{1}{l}{\cellcolor[HTML]{C0C0C0}6} & \begin{tabular}[c]{@{}c@{}}``controle\\  de acesso usuário\\ {[}software{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}Parcialmente\\ Satisfeita\end{tabular} & O método de autenticação dos dados retorna a instância usuário, quando a senha está correta. Esse aspecto é implementado diretamente na \textit{Controller}. Entretanto, possui clara relação com a \textit{View} e com a base de dados. Considera-se "parcialmente satisfeita", pois há dependência com a operacionalização "Autorizar Acesso a Contas", a qual contribui para a satisfação dessa meta flexível "controle de acesso {[}software{]}". & \cite{fuentes2014ruby} & \textit{Controller} \\
-		\multicolumn{1}{l}{7} & \begin{tabular}[c]{@{}c@{}}``confiabilidade\\ {[}informação{]}``\end{tabular} & Satisfeita & Se razoavelmente satisfeita, garante que o conjunto de dados a serem armazenados na base de dados estejam relativamente fidedignos. Usa-se "relativamente", pois não há como garantir algo pleno em se tratando de critérios tão abstratos. Nesse caso, "relativamente" sugere que seja "o mais fidedigno/confiável possível". & \cite{fuentes2014ruby} & \textit{View} \\ \bottomrule
-	\end{tabular}
-\end{table}
+\section{Resumo do Capítulo}
 
-\begin{table}[p]
-	\centering
-	\caption{Mapeamento das metas flexíveis com as camadas do MVC - Parte 2.}
-	\label{mapeamento2}
-	\tiny
-	\begin{tabular}{@{}cccp{5cm}cc@{}}
-		\hline
-		\multicolumn{1}{l}{\textbf{id}} & \multicolumn{1}{l}{\textbf{Meta flexível}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Nível de\\ satisfação\end{tabular}}} & \multicolumn{1}{l}{\textbf{Descrição}} & \multicolumn{1}{l}{\textbf{Referência}} & \multicolumn{1}{l}{\textbf{Camada}} \\ \hline
-		\rowcolor[HTML]{C0C0C0} 
-		8 & \begin{tabular}[c]{@{}c@{}}``controle de \\ acesso dos \\ componentes \\ MVC\\ {[}nível arquitetural{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}parcialmente\\ satisfeita\end{tabular} & Se parcialmente satisfeita, tende a garantir que os componentes da \textit{View}, os quais dependem de outros componentes que se encontram em outras camadas do modelo MVC, reconheçam a necessidade de atualizar as telas, adequando-as às demandas encaminhadas via \textit{Controller} (por exemplo) e em compatibilidade com os dados especificados na \textit{Model}. Considera-se "parcialmente satisfeita", pois há dependência com a implementação do padrão de projeto estrutural \textit{Composite}. A implementação é sugerida como operacionalização que contribue para satisfação dessa meta flexível, "controle de acesso dos componentes MVC {[}nível arquitetural{]}" & \begin{tabular}[c]{@{}c@{}}\cite{baptistella2011abordando} \\ \cite{buschmann1996system}\end{tabular} & \textit{View} \\
-		9 & \begin{tabular}[c]{@{}c@{}}``controle de\\ acesso dos \\ componentes\\ MVC\\ {[}nível arquitetural{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}parcialmente\\ satisfeita\end{tabular} & Se parcialmente satisfeita, tende a garantir que a \textit{Model} esteja menos acoplada em relação à \textit{View} e à \textit{Controller}, viabilizando essa relação através de boas práticas da Engenharia de Software. Uma dessas práticas é sugerida como operacionalização na Figura \ref{DetalhamentoPrimeiroNivel}, apoiando-se no uso de Padrões de Projeto. Considera-se parcialmente satisfeita, pois há dependência com a implementação do padrão de projeto comportamental \textit{Observer}, por exemplo. Essa implementação é sugerida como uma operacionalização possível em atendimento a essa demanda, e contribui para a satisfação dessa meta flexível, "controle de acesso dos componentes MVC{[}nível arquitetural{]}". & \begin{tabular}[c]{@{}c@{}}\cite{baptistella2011abordando} \\ \cite{buschmann1996system}\end{tabular} & \textit{Model} \\
-		\rowcolor[HTML]{C0C0C0} 
-		10 & \begin{tabular}[c]{@{}c@{}}``controle de\\ acesso dos \\ componentes\\ MVC\\ {[}nível arquitetural{]}``\end{tabular} & \begin{tabular}[c]{@{}c@{}}parcialmente\\ satisfeita\end{tabular} & Se parcialmente satisfeita, tende a garantir menor acoplamento entre as camadas MVC. Sugere-se que tal aspecto seja apoiado no uso de Padrões de Projeto. Portanto, acredita-se que o padrão de projeto \textit{Strategy}, implementado na \textit{Controller}, permita menor acoplamento entre \textit{View} e \textit{Model}, sendo de fato responsabilidade da \textit{Controller} intermediar essa relação utilizando-se de decisões estratégicas. Vale ressaltar que com o uso desse padrão de projeto, tem-se que essas decisões podem ser tomadas em tempo de execução, alterando o comportamento do software em função das demandas conhecidas dinamicamente. Dessa forma, há tendência é de maior cumprimento de boas práticas já acordadas no padrão arquitetural MVC. Considera-se parcialmente satisfeita, pois há dependência com a implementação do padrão de projeto comportamental \textit{Strategy}, por exemplo. Essa implementação é sugerida como uma operacionalização possível em atendimento a essa demanda, e contribui para a satisfação dessa meta flexível, "controle de acesso dos componentes MVC{[}nível arquitetural{]}". & \begin{tabular}[c]{@{}c@{}}\cite{baptistella2011abordando} \\ \cite{buschmann1996system}\end{tabular} & \textit{Controller} \\ \hline
-	\end{tabular}
-\end{table}
-
+Neste capítulo, foram apresentadas as primeiras aplicações do Catálogo de Segurança, realizadas através de cinco cenários, onde foi possível demonstrar a aplicabilidade e a adaptabilidade do Catálogo de Segurança, de acordo com o contexto. A partir da seção \ref{sec:aplicacaoDoCatalogo}, foi possível evidenciar a evolução do Catálogo de Segurança para as aplicações em projetos em \textit{Rails} e, por fim, o mapeamento em terceiro nível de abstração, sendo possível identificar as operacionalizações relacionadas com as camadas do Padrão Arquitetural MVC para projetos em \textit{Rails}.
 
 \begin{comment}
 	\begin{table}[h!]
