@@ -3,13 +3,45 @@
 
 
 
-Dada a complexidade do tema abordado, em especial por procurar contribuir a partir de critérios de qualidade que são intrinsecamente abstratos e subjetivos, observou-se que o Catálogo de Segurança reflete uma visão preliminar sobre Segurança. Partindo disso, com o Catálogo de Segurança espera-se que, a contribuição evidenciada neste trabalho possa ser atendida e aplicada dentro dos vários cenários da Engenharia de Software (Ex: Arquitetura e Desenho de Software, Engenharia de Requisitos e Desenvolvimento de Software), visto que, trabalha critérios abstratos (os requisitos não funcionais ou metas flexíveis e suas dependências e seus impactos), trazendo-os para uma visão bem mais concreta, as operacionalizações. Tudo acima descrito é garantido devido ao uso de uma notação bastante rica e emergente, a qual é  mais conhecida e compreendida na subárea de Engenharia de Requisitos. Esse trabalho aproximou esses conhecimentos, considerando níveis de abstração cada vez mais técnicos. Assim, ao decorrer do trabalho foram apresentados detalhamentos que deixam evidentes as correlações entre esses níveis de abstração, Requisitos Não-Funcionais e Código, os quais parecem distantes. Essa distância comumente reflete em esquecimento, ou seja, não atendimento desses critérios de qualidade no desenvolvimento do software desejado. Prática essa que pode levar a muitos insucessos em projetos de software. 
+Dada a complexidade do tema abordado, em especial por procurar contribuir a partir de critérios de qualidade que são intrinsecamente abstratos e subjetivos, observou-se que o Catálogo de Segurança reflete uma visão preliminar sobre Segurança. Partindo disso, com o Catálogo de Segurança espera-se que, a contribuição evidenciada neste trabalho possa ser atendida e aplicada dentro dos vários cenários da Engenharia de Software (Ex: Arquitetura e Desenho de Software, Engenharia de Requisitos e Desenvolvimento de Software), visto que, trabalha critérios abstratos (os requisitos não funcionais ou metas flexíveis e suas dependências e seus impactos), trazendo-os para uma visão bem mais concreta, as operacionalizações. Tudo acima descrito é garantido devido ao uso de uma notação bastante rica e emergente, a qual é  mais conhecida e compreendida na subárea de Engenharia de Requisitos. Esse trabalho aproximou esses conhecimentos, considerando níveis de abstração cada vez mais técnicos.
 
-Portanto o Catálogo de Segurança, pode ser relacionado com outros catálogos voltados aos atributos de qualidade (Ex: usabilidade, desempenho, etc.) e que utilizam a mesma notação, permitindo realizar o mapeamento, verificar o impacto que as outras áreas de qualidade de software impactam a Segurança do mesmo. O Catálogo de Segurança, apresentado neste trabalho, também pode evoluir a níveis cada vez mais baixos de abstração, sendo capaz de entrar na seguinte questão, por exemplo, qual método de criptografia pode ser mais eficiente para uma determinada operacionalização?, ou até mesmo ser expandido para indagações na área de segurança da informação.  
+Assim, ao decorrer do trabalho foram apresentados detalhamentos que deixam evidentes as correlações entre esses níveis de abstração, Requisitos Não-Funcionais e Código, os quais parecem distantes. Essa distância comumente reflete em esquecimento, ou seja, não atendimento desses critérios de qualidade no desenvolvimento do software desejado. Prática essa que pode levar a muitos insucessos em projetos de software. 
+
+
+A Tabela \ref{resultadosObtidos} apresenta de acordo com os objetivos específicos do trabalho, os níveis de satisfação e os motivos pelos quais os mesmos foram atendidos. 
+
+
+\begin{table}[h!]
+	\centering
+	\caption{Níveis de satisfação dos objetivos específicos.}
+	\label{resultadosObtidos}
+	\tiny
+	\begin{tabular}{@{}p{6cm}p{3cm}p{6cm}@{}}
+		\toprule
+		\textbf{Objetivo} & \textbf{Nível de satisfação} & \textbf{Motivo} \\ \midrule
+		Investigar na literatura formas de lidar com o RNF Segurança  em aplicações Web desenvolvidas utilizando o MVC. &  Atendido & Atendido pela existência de fontes confiáveis que comprovam o impacto do RNF Segurança em seus níveis de abstração, quando aplicado em aplicações web desenvolvidas utilizando o Padrão Arquitetural MVC. \\
+		\rowcolor[HTML]{C0C0C0} 
+		Investigar na literatura os RNF associados a segurança e identificar o impacto e as interdepêndencias entre eles. & Atendido &  Atendido pela existência de fontes que evidenciam a relação entre os RNFs de segurança \\
+		Elaborar SIG & Atendido & Atendido, pois tem-se a primeira versão do catálogo elaborado com sucesso. \\
+		\rowcolor[HTML]{C0C0C0} 
+		Realizar correspondência entre o Catálogo de Segurança e as camadas do Padrão Arquitetural MVC & Atendido & Atendido, pois o presente trabalho demonstrou a existência e os impactos das relações entre os RNFs que geram impacto na Segurança do Software em três níveis de abstração \\
+		
+		Elaborar cenários e desenvolver aplicações web exemplo, no padrão arquitetural MVC, orientando-se pelo Catálogo de Segurança & Atendido & Atendido, pois para validação do Catálogo de Segurança o mesmo foi aplicado em cinco cenários, que podem ser vistos como cenários de uso ou um estudo de caso \\
+		 \bottomrule
+	\end{tabular}
+\end{table}
+
+\section*{Trabalhos Futuros}
+
+Portanto o Catálogo de Segurança, pode ser relacionado com outros catálogos voltados para outros atributos de qualidade (Ex: usabilidade, desempenho, etc.) e que utilizam a mesma notação, permitindo realizar o mapeamento, verificar o impacto que as outras áreas de qualidade de software impactam a Segurança e permitindo evoluir o Catálogo de Segurança apresentado neste trabalho. 
+
+O Catálogo de Segurança, apresentado neste trabalho, também pode evoluir a níveis cada vez mais baixos de abstração, sendo capaz de entrar na seguinte questão, por exemplo, “qual método de criptografia pode ser mais eficiente para uma determinada operacionalização e que está diretamente ligado a segurança do software?”, ou até mesmo ser expandido para indagações na área de segurança da informação como auditoria e controle, contestabilidade e responsabilização, autenticidade ou confiabilidade.  
 
 
 \begin{comment}
 	Prática essa que pode levar a muitos insucessos, tais como o Caso da Ambulância de Londres \cite{finkelstein1996comedy}.
+	
+	“”
 \end{comment}
  
 
@@ -45,6 +77,6 @@ Portanto o Catálogo de Segurança, pode ser relacionado com outros catálogos v
 	\section{Resumo do Capítulo}
 	
 	Acredita-se que o principal intuito dessa pesquisa esteja sendo alcançado, uma vez que o catálogo de Segurança pode ser visto como um exemplo de como aproximar a especificação de algo tão abstrato, como são os RNFs ou critérios de qualidade, de insumos mais concretos - operacionalizações, os quais podem ser mais bem compreendidos bem como mais úteis aos membros da equipe de desenvolvimento. Lembrando que esses membros atuam em atividades que se encontram em níveis mais baixos de abstração - ou seja, mais próximos de código. A intenção é ajudá-los no cumprimento dessas especificações de requisitos não-funcionais, comumente negligenciados \cite{eckhardt2016non}.
-	
+		
 \end{comment}
 

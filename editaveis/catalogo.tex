@@ -3,7 +3,7 @@
 
 Neste Capítulo, é apresentada uma primeira versão do Catálogo de Segurança. Dado o volume de aspectos associados à Segurança, procurou-se focar nos tópicos mais relevantes, tendo como base a literatura. Dessa forma, o autor está ciente de que o Catalogo de Segurança não acorda todo e qualquer aspecto associado à Segurança. Mas, a intenção de demonstrar que, um catálogo construído para especificar RNFs, utilizando uma notação adequada, mesmo que em alto nível de abstração, pode colaborar no entendimento das necessidades inerentes aos aspectos não-funcionais de um software, comumente colocados em segundo plano, ou apenas especificados em documentos, em linguagem natural. Esses documentos, como a Especificação Suplementar \cite{sommerville1997requirements}, carecem de uma notação que permita especificar os RNFs com toda a complexidade envolvida, ou seja, partindo de um alto nível de abstração, mas permitindo acordar operacionalizações, as quais de fato tornarão aquele RNF algo implementável, tratável a nível de código. Para a equipe de desenvolvedores, ter especificadas as operacionalizações, pode promover soluções concretas para viabilizar a implementação de aspectos considerados abstratos. Para atingir esse objetivo, o Catálogo de Segurança foi especificado utilizando a notação do NFR \textit{Framework}, já comentada em capítulos anteriores. Essa notação propõe a elaboração de um grafo de interdependências entre os RNFs. Adicionalmente, deixa evidente as principais correlações entre esses RNFs, seus impactos e suas operacionalizações. Conforme justificado no Capítulo \ref{chap:introducao}, dada a relevância do RNF Segurança, têm-se que esse Catálogo de Segurança foca seus esforços na especificação desse RNF.
 
-Para tornar mais compreensível o Catálogo de Segurança, optou-se por apresentá-lo, inicialmente, em dois níveis de abstração. Neste sentido, a seção \ref{sub:primeiroNivel} apresenta o primeiro nível de abstração. Nesse nível, são acordadas as metas flexíveis (representando os RNFs), seus impactos e suas operacionalizações. Utilizou-se a notação do NFR \textit{Framework}, com a elaboração de um grafo, SIG (\textit{Softgoal Interdependence Graph}). Na seção \ref{sub:segundoNivel}, é apresentado um mapeamento, procurando correlacionar as metas flexíveis e as camadas do Padrão Arquitetural MVC. Um terceiro nível de abstração também é mapeado e descritro no Capítulo \ref{chap:resultadosObtidos}, pois para alcançá-lo foi necessário realizar a aplicação do Catálogo de Segurança em cenários. Sendo este, o terceiro nível de abstração entre as operacionalizações e as camadas do Padrão Arquitetural MVC, devido ao fato de envolver aspectos em um nível mais baixo de abstração (implementando de fato as operacionalizações nas camadas \textit{Model-View-Controller})
+Para tornar mais compreensível o Catálogo de Segurança, optou-se por apresentá-lo, inicialmente, em dois níveis de abstração. Neste sentido, a seção \ref{sub:primeiroNivel} apresenta o primeiro nível de abstração. Nesse nível, são acordadas as metas flexíveis (representando os RNFs), seus impactos e suas operacionalizações. Utilizou-se a notação do NFR \textit{Framework}, com a elaboração de um grafo, SIG (\textit{Softgoal Interdependence Graph}). Na seção \ref{sub:segundoNivel}, é apresentado um mapeamento, procurando correlacionar as metas flexíveis e as camadas do Padrão Arquitetural MVC. Um terceiro nível de abstração também é mapeado e descritro no Capítulo \ref{chap:resultadosObtidos}, pois para alcançá-lo foi necessário realizar a aplicação do Catálogo de Segurança em cenários. Sendo este, o terceiro nível de abstração entre as operacionalizações e as camadas do Padrão Arquitetural MVC, devido ao fato de envolver aspectos em um nível mais baixo de abstração (implementando de fato as operacionalizações nas camadas \textit{Model-View-Controller}).
 
 \section{O Catálogo de Segurança}
 
@@ -117,9 +117,9 @@ As definições das metas flexíveis e operacionalizações são:
  		
  	\end{itemize}
  	
- 	\item \textbf{autenticidade:} capacidade do software em identificar que um objeto ou recurso é o que ele realmente declara ser \cite{benitti2015taxonomia}; 
+ 	\item \textbf{autenticidade:} capacidade do software em identificar que um objeto ou recurso é o que ele realmente declara ser \cite{benitti2015taxonomia}, e
  	
- 	\item \textbf{confiabilidade:} capacidade do software em realizar e manter seu funcionamento quando submetido em circunstâncias de rotina \cite{benitti2015taxonomia}; 
+ 	\item \textbf{confiabilidade:} capacidade do software em realizar e manter seu funcionamento quando submetido em circunstâncias de rotina \cite{benitti2015taxonomia}. 
  	
 \end{itemize}
 
@@ -137,7 +137,7 @@ O segundo nível de abstração procura correlacionar as metas flexíveis mais g
 	\begin{tabular}{@{}cccp{5cm}cc@{}}
 		\toprule
 		\multicolumn{1}{l}{\textbf{id}} & \multicolumn{1}{l}{\textbf{Meta flexível}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Nível de\\ satisfação\end{tabular}}} & \multicolumn{1}{l}{\textbf{Descrição}} & \multicolumn{1}{l}{\textbf{Referência}} & \multicolumn{1}{l}{\textbf{Camada}} \\ \midrule
-		1 & \begin{tabular}[c]{@{}c@{}}“precisão\\ {[}software{]}”\end{tabular} & \begin{tabular}[c]{@{}c@{}}Suficientemente\\ Satisfeita\end{tabular} & Garante que um único objeto esteja ligado a uma única entidade do domínio. Além disso, impacta diretamente a \textit{model} pois é a camada que representa os aspectos do domínio da aplicação.
+		1 & \begin{tabular}[c]{@{}c@{}}“precisão\\ {[}software{]}”\end{tabular} & \begin{tabular}[c]{@{}c@{}}Suficientemente\\ Satisfeita\end{tabular} & Garante que um ou mais objetos estejam ligados a uma única entidade do domínio. Além disso, impacta diretamente a \textit{Model} pois é a camada que representa os aspectos do domínio da aplicação.
 		
 		
 		- Atributo de precisão: precisão de um para um. & \begin{tabular}[c]{@{}c@{}}\cite{chung2012non}\\ \cite{buschmann1996system}\end{tabular} & \textit{model} \\
@@ -146,7 +146,7 @@ O segundo nível de abstração procura correlacionar as metas flexíveis mais g
 		
 		- Atributo de precisão: Propriedade da precisão. & \begin{tabular}[c]{@{}c@{}}\cite{chung2012non}\\ \cite{buschmann1996system}\end{tabular} & \textit{Model} \\
 		
-		3 & \begin{tabular}[c]{@{}c@{}}“autenticidade\\ {[}software{]}”\end{tabular} & \begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & A utilização de \textit{triggers} em banco de dados promove a autenticidade e a verificação da integridade do dado. Além disso, pode ser utilizada para realização de auditoria em tabelas. &  &  \\
+		3 & \begin{tabular}[c]{@{}c@{}}“autenticidade\\ {[}informação{]}”\end{tabular} & \begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & A utilização de \textit{triggers} em banco de dados promove a autenticidade e a verificação da integridade do dado. Além disso, pode ser utilizada para realização de auditoria em tabelas. &  &  \\
 		\cellcolor[HTML]{C0C0C0}4 & \cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}“integridade\\ {[}software{]}”\end{tabular} & \cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & \cellcolor[HTML]{FFFFFF} &  &  \\
 		5 & \begin{tabular}[c]{@{}c@{}}“auditoria e\\  controle\\ {[}informação{]}”\end{tabular} & \begin{tabular}[c]{@{}c@{}}Satisfeita\\ Suficientemente\end{tabular} & \multicolumn{1}{l}{} & \multirow{-3}{*}{\cite{date2004introduccao}} & \multirow{-3}{*}{\begin{tabular}[c]{@{}c@{}}Banco \\ de Dados\end{tabular}} \\
 		
@@ -181,7 +181,7 @@ O segundo nível de abstração procura correlacionar as metas flexíveis mais g
 \pagebreak
 \pagebreak
 
-\section{Resumo do Capítulo}
+\section*{Resumo do Capítulo}
 
 Neste capítulo, foi apresentada uma primeira versão do Catálogo de Segurança proposto nessa pesquisa. Adicionalmente, foram apontados os principais impactos e as contribuições das informações do Catálogo de Segurança em relação às camadas do Padrão Arquitetural MVC. Ressalta-se que, o Catálogo foi especificado apoiando-se na literatura, conforme pode ser observado considerando a rastreabilidade, apresentada na seção \ref{sub:primeiroNivel} evidenciando o primeiro nível de abstração, onde foi descrito as metas flexíveis associadas à Segurança. o Catálogo de Segurança especificou as correlações e os impactos entre as metas flexíveis bem como, as operacionalizações. O segundo nível de abstração foi apresentado na seção \ref{sub:segundoNivel}, demonstrando o mapeamento entre as metas flexiveis e as camadas do Padrão Arquitetural.
 

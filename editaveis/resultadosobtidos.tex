@@ -3,7 +3,7 @@
 
 Neste capítulo são apresentadas as primeiras aplicações do Catálogo de Segurança e o mapeamento no terceiro nível de abstração (entre operacionalizações e as camadas do Padrão Arquitetural MVC). Para isso, foi utilizado o conceito de \textit{personas}, apresentado na seção \ref{sec:personas}, com o objetivo de demonstrar os cenários nos quais o catálogo pode ser aplicável. Portanto, realizou-se a simulação de cinco cenários para validar a aplicação do Catálogo de Segurança. 
 
-O capítulo é dividido, inicialmente, pelos cenários contextualizados dentro de cada persona. Os cenários têm a descrição da persona, identificação da possível solução (Quando necessário descrever para o cenário) e a aplicação do catálogo. Ao final do capítulo é apresentada a primeira visão da aplicação do Catálogo de Segurança.  
+O capítulo é dividido, inicialmente, pelos cenários contextualizados dentro de cada persona. Os cenários têm a descrição da persona, identificação da possível solução (quando necessário descrever para o cenário) e a aplicação do catálogo. Ao final do capítulo é apresentada a primeira visão da aplicação do Catálogo de Segurança.  
 
 
 \section{Cenário 1}
@@ -98,6 +98,12 @@ A implementação dos padrões de projeto \textit{strategy}, \textit{observer} e
 
 Pedro, 23 anos, Engenheiro de Software, trabalha em empresa privada e possui a necessidade de desenvolver o sistema da ouvidoria da instituição. Tal sistema deverá ser desenvolvido em plataforma web para atender os processos de manifestação (denúncia, reclamação, solicitação, sugestão e elogio) realizados pela ouvidoria. Esse tipo de informação deve ser estritamente confidencial, podendo ou não, o manifestante ser anônimo.  
 
+\begin{itemize}
+	\item O problema: sobrecarga de manifestações sem interação com os manifestantes; 
+	\item Objetivo: promover a interação anônima ou forma entre a ouvidora e o manifestante, e
+	\item Desafio: realizar a interação anônima entre ouvidora e manifestante, que permita a execução dos processos de auditória e controle das manifestações.
+\end{itemize}
+
 \subsection{Identificar possível solução}
 
 Uma possível solução é gerar um número de protocolo, durante o registro da manifestação, para que possa ser realizado o acompanhamento. Tal número será utilizado tanto para a manifestação anônima, quanto para a manifestação formal. O manifestante poderá acompanhar o status de sua manifestação através da visão de acompanhamento, na qual ficarão registradas as respostas dadas pela ouvidora.
@@ -134,6 +140,7 @@ Milena, 22 anos, Engenheira de Software, possuindo várias atividades no seu dia
 	\item Desafio: verificar as relações entre as camadas do sistema com foco em segurança.
 \end{itemize}
 
+
 \subsubsection{Aplicação do Catálogo de Segurança}
 
 Na descrição da persona, houve a necessidade de vincular cada atividade do mundo real com ao menos uma entidade no sistema. Para isso utilizou-se o comando \textit{scaffold} do \textit{Rails}. Tal comando gera a estrutura de arquivos de acordo com o padrão MVC, gerando o \textit{model}, o \textit{controller}, os \textit{views} necessários \cite{railscommunity}. 
@@ -145,22 +152,29 @@ Na descrição da persona, houve a necessidade de vincular cada atividade do mun
 	\label{catalogoPersona3}
 \end{figure}
 
+Como pode ser observado na Figura \ref{catalogoPersona3}, a operacionalização “utilizar scaffolding” foi extendida ao Catálogo de Segurança, e suficientemente satisfeita devido a implementação ao cenário, satisfazendo parcialmente a operacionalização  “realizar precisão de um para um”. Portanto as outras metas flexíveis e operacionalizações foram satisfeitas de maneira semelhante aos cenários anteriores. 
+
 \section{Cenário 4}
 \label{subsec:persona4}
 
 Gustavo, 23 anos, Engenheiro de Requisitos de empresa privada, possui a demanda de analisar os requisitos do sistema de solicitação de documentos digitais via plataforma web. Tal sistema possui arquitetura MVC e está em constante evolução. Assim sendo, seu chefe solicitou que o mesmo fizesse uma análise dos RNFs com foco na segurança do sistema, devido a emissão de documentos com assinatura digital. 
 
+\begin{itemize}
+	\item O problema: alta demanda de solicitação de documentos pelos setores; 
+	\item Objetivo: promover a geração de documentos digitais via plataforma web, e
+	\item Desafio: garantir a autenticidade dos documentos solicitados.
+\end{itemize}
+
 \subsection{Identificar possível solução}
 
 A aplicação do Catálogo de Segurança pode ser uma das maneiras de demonstrar a relação entre os RNFs do sistema, principalmente, quando o RNF que está em foco é segurança.
 
-\pagebreak
 
 \subsection{Aplicação do Catálogo de Segurança}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoPersona4.PNG}
+	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/catalogoPersona4.PNG}
 	\caption{Catálogo de Segurança aplicado a sistema de geração de documentos digitais.}
 	\label{catalogoPersona4}
 \end{figure}
@@ -179,6 +193,12 @@ Semelhante as aplicações dos cenários \ref{subsec:persona2} e \ref{subsec:per
 \label{subsec:persona5}
 
 Chung, 40 anos, Engenheiro de Software possui em seu quadro de responsabilidades a função de realizar manutenção e evolução de um dos sistemas pelo qual é responsável. Desse modo, percebeu que um de seus sistemas poderia ficar indisponível caso ocorresse algum problema no servidor de banco de dados. Preocupado com a segurança de seus sistemas, utilizou o Catálogo de Segurança para analisar o impacto que o espelhamento da base de dados causaria na segurança do software como um todo. 
+
+\begin{itemize}
+	\item O problema: indisponibilidade do sistema; 
+	\item Objetivo: garantir a base disponível para ser utilizada pelo sistema, e
+	\item Desafio: manter a base de dados disponível diante de qualquer interrupção de serviço e que possa impedir acesso ao mesmo.
+\end{itemize}
 
 \subsection{Aplicação do Catálogo de Segurança}
 
@@ -204,7 +224,7 @@ Como o Catálogo de Segurança foi aplicado em cenários onde a ferramenta de ap
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.65]{figuras/catalogoFull.PNG}
-	\caption{Versão extendida do catálogo focada em projetos \textit{rails}}
+	\caption{Versão extendida do Catálogo de Segurança focada em projetos \textit{Rails}.}
 	\label{catalogoFull}
 \end{figure}
 
@@ -223,26 +243,10 @@ Entretanto, durante a validação do Catálogo de Segurança, foram utilizados p
 	\label{catalogoMapeado}
 \end{figure}
 
-\section{Resumo do Capítulo}
+\pagebreak
+
+\section*{Resumo do Capítulo}
 
 Neste capítulo, foram apresentadas as primeiras aplicações do Catálogo de Segurança, realizadas através de cinco cenários, onde foi possível demonstrar a aplicabilidade e a adaptabilidade do Catálogo de Segurança, de acordo com o contexto. A partir da seção \ref{sec:aplicacaoDoCatalogo}, foi possível evidenciar a evolução do Catálogo de Segurança para as aplicações em projetos em \textit{Rails} e, por fim, o mapeamento em terceiro nível de abstração, sendo possível identificar as operacionalizações relacionadas com as camadas do Padrão Arquitetural MVC para projetos em \textit{Rails}.
 
-\begin{comment}
-	\begin{table}[h!]
-	\centering
-	\caption{Resultados obtidos de acordo com os objetivos específicos.}
-	\label{resultadosObtidos}
-	\tiny
-	\begin{tabular}{@{}p{6cm}p{3cm}p{6cm}@{}}
-	\toprule
-	\textbf{Objetivo} & \textbf{Nível de satisfação} & \textbf{Motivo} \\ \midrule
-	Investigar na literatura formas de lidar com o RNF Segurança  em aplicações Web desenvolvidas utilizando o MVC. & Parcialmente atendido & Parcialmente atendido, pois existem fontes não confiáveis que comprovam o impacto do RNF Segurança com aplicações web desenvolvidas utilizando o MVC, um exemplo claro de fonte não confiável são os fóruns de dúvidas. Considera-se que ao desenvolver a aplicação fica mais evidente e possível comprovar as formas de lidar com o RNF segurança no Padrão arquitetural MVC. \\
-	\rowcolor[HTML]{C0C0C0} 
-	Investigar na literatura os RNF associados a segurança e identificar o impacto e as interdepêndencias entre eles. & Parcialmente atendido & Parcialmente atendido, pois a subjetividade dos RNFs para Segurança dificulta o tratamento, além de dificultar a identificação do impacto entre eles. \\
-	Elaborar SIG & Atendido & Atendido, pois tem-se a primeira versão do catálogo elaborado com sucesso. \\
-	\rowcolor[HTML]{C0C0C0} 
-	Realizar correspondência entre o catálogo e as camadas do padrão arquitetural MVC & Atendido & Atendido, pois essa correspondência foi analisada de acordo com a base teórica já levantada. \\ \bottomrule
-	\end{tabular}
-	\end{table}
-\end{comment}
 

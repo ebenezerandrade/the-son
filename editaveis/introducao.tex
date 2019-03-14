@@ -7,7 +7,7 @@ Neste capítulo, são descritos o contexto, no qual esse trabalho está inserido
 
 Os requisitos não-funcionais (RNFs) e funcionais descrevem as características de um software, focando nas questões: \textbf{como esse software deve fazer?} e \textbf{o que esse software deve fazer?}  \cite{sommerville1997requirements}. Frequentemente, os RNFs são especificados de forma equivocada ou ainda são negligenciados, não sendo especificados \cite{eckhardt2016non}. Visando auxiliar os Engenheiros de Requisitos na tarefa de especificar os RNFs, os autores, em \cite{mairiza2010investigation}, destacam 114 classes de RNFs. Dentre essas classes, as mais mencionadas na literatura são: 1º Desempenho, 2º Confiabilidade e  3º Usabilidade. No contexto empresarial, ou seja, mais aplicado e comercial, as classes de RNFs mais utilizadas nas especificações são: 1º Segurança, 2º Confiabilidade e 3º Usabilidade \cite{eckhardt2016non}. Como o foco desse trabalho é atuar especificamente em suportes aplicáveis no contexto empresarial, o foco de contribuição desse trabalho concentra-se na especificação do RNF de segurança, dado que é a classe de RNF mais relevante para o mercado, de acordo com a literatura investigada.
 
-Ao desenvolver um software, os RNFs impactam, segundo \cite{eckhardt2016non}, na implementação, manutenção, operacionalização e utilização de recursos. Adicionalmente, impactam em aspectos arquiteturais de uma aplicação de software, sendo necessário especificar a arquitetura orientando-se não apenas pelos requisitos funcionais, mas também pelos RNFs \cite{buschmann1996system}
+Ao desenvolver um software, os RNFs impactam, segundo \cite{eckhardt2016non}, na implementação, manutenção, operacionalização e utilização de recursos. Adicionalmente, impactam em aspectos arquiteturais de uma aplicação de software, sendo necessário especificar a arquitetura orientando-se não apenas pelos requisitos funcionais, mas também pelos RNFs \cite{buschmann1996system}.
 
 Dependendo do padrão arquitetural utilizado, as especificações bem como as operacionalizações dos RNFs podem variar \cite{chung2012non}. Diante do exposto, e visando focar em um padrão arquitetural comumente utilizado, o presente trabalho orientar-se pelo padrão arquitetural \textit{Model-View-Controller} (MVC). Trata-se de um padrão bem aceito, bem como utilizado no desenvolvimento de aplicações Web, sendo inclusive base para o desenvolvimento dessas aplicações em \textit{frameworks} e plataformas de geração de código mais emergentes, orientadas à Convenção sobre Configuração \cite{jailia2016behavior}.
 
@@ -40,7 +40,11 @@ Entretanto, é também relevante considerar que esse contexto de desenvolvimento
 Observou-se que, mesmo com uma \textit{baseline}  arquitetural definida, os RNFs, chamados também de atributos ou critérios de qualidade, são negligenciados ou tratados de forma equivocada \cite{eckhardt2016non}. Entretanto, esses critérios evidenciam preocupações, as quais impactam na qualidade do software em desenvolvimento \cite{schneidewind1990standard}.  
 Portanto, são necessários esforços para auxiliar os Engenheiros de Requisitos e os Engenheiros de Software na especificação desses RNFs, em particular em aplicações tipicamente comerciais, cujas arquiteturas são, normalmente, impostas pelas empresas de desenvolvimento.
 
-Esse trabalho teve como resultado a especificação de um catálogo centrado no RNF Segurança, no escopo das aplicações web, e no padrão arquitetural MVC aplicado em cenários de desenvolvimento onde a tecnologia utilizada foi \textit{rails} que trata-se de um \textit{framework} de desenvolvimento web baseado no padrão arquitetural MVC. Para aferir a aderência do catálogo, o mesmo foi aplicado em diferentes cenários de uso, permitindo evoluir o grafo de interdependências em níveis de abstração. Foi possível obter, com essa estratégia, não apenas um catálogo de alto nível de abstração, orientado exclusivamente por critérios de qualidade. Mais precisamente, obteve-se um catálogo até o nível de operacionalizações. Esse nível é mais concreto e possível de ser implementado. Para tanto, foram padronizadas essas operacionalizações com base na tecnologia rails \cite{railscommunity}.
+
+\begin{comment}
+	Esse trabalho teve como resultado a especificação de um catálogo centrado no RNF Segurança, no escopo das aplicações web, e no padrão arquitetural MVC aplicado em cenários de desenvolvimento ao qual utilizou-se o \textit{Rails} que trata-se de um \textit{framework} de desenvolvimento web baseado no padrão arquitetural MVC. Para aferir a aderência do catálogo, aplicou-se o mesmo em diferentes cenários de uso, permitindo evoluir o grafo de interdependências em níveis de abstração. Foi possível obter, com essa estratégia, não apenas um catálogo de alto nível de abstração, orientado exclusivamente por critérios de qualidade. Mais precisamente, obteve-se um catálogo até o nível de operacionalizações. Esse nível é mais concreto e possível de ser implementado. Para tanto, foram padronizadas essas operacionalizações com base na tecnologia rails \cite{railscommunity}.
+		
+\end{comment}
 
 
 \section{Objetivos}
@@ -71,11 +75,12 @@ Com intuito de alcançar o objetivo geral, foram considerados relevantes os segu
 Este trabalho está dividido nos respectivos capítulos, sendo eles:
  
 \begin{itemize}
-	\item O Capítulo \ref{chap:referencialTeorico} \textbf{Referencial Teórico}, o qual explora os conceitos chave para elaboração desse trabalho, partindo da Engenharia de Requisitos e seus conceitos, perpassando por referenciais associados à Arquitetura de Software, e concentrando no NFR Segurança de Software. Ainda nesse capítulo, é acordado o conceito de \textit{personas}, o qual foi utilizado na elaboração e na evolução do catálogo usando como base diferentes cenários de uso.
+	\item O Capítulo \ref{chap:referencialTeorico} \textbf{Referencial Teórico}, o qual explora os conceitos chave para elaboração desse trabalho, partindo da Engenharia de Requisitos e seus conceitos, perpassando por referenciais associados à Arquitetura de Software, e concentrando no NFR Segurança de Software. Ainda nesse capítulo, é acordado o conceito de \textit{personas}, o qual foi utilizado na elaboração e na evolução do catálogo usando como base diferentes cenários de uso;
+	
+	\item O Capítulo \ref{chap:metodologia} \textbf{Metodologia}, o qual foca nas questões da classificação da pesquisa e nos procedimentos metodológicos para o desenvolvimento desse trabalho;
 	
 	\item  O Capítulo \ref{chap:suporteTecnologico} \textbf{Suporte Tecnológico}, o qual apresenta as ferramentas de modelagem dos diagramas e mapas mentais, e as ferramentas de suporte à escrita utilizadas para a elaboração desse trabalho;
 	
-	\item O Capítulo \ref{chap:metodologia} \textbf{Metodologia}, o qual foca nas questões da classificação da pesquisa e nos procedimentos metodológicos para o desenvolvimento desse trabalho;
 	
 	\item O Capítulo \ref{chap:proposta} \textbf{Catálogo de Segurança}, o qual descreve o catálogo bem como detalha o grafo de interdependência entre as metas flexíveis (SIGs);
 	

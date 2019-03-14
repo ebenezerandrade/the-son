@@ -3,13 +3,13 @@
 
 Neste capítulo, serão apresentados os conceitos teóricos utilizados como base para o desenvolvimento do Catálogo de Segurança para o Padrão Arquitetural MVC.
 
-Antes mesmo de apresentar os conceitos relevantes para o desenvolvimento do catálogo, é importante entender a definição de software. Este, segundo \cite{sommerville2003engenharia}, pode ser entendido como programas de computador e toda documentação associada. Para realização do desenvolvimento de um software, considerando as boas práticas da área, existem preocupações que merecem menção, sendo essas estabelecidas pela comunidade da Engenharia de Software, incluindo aspectos inerentes à produção \cite{sommerville2003engenharia}. A Figura \ref{BigPicture} apresenta o escopo de atuação desse trabalho, partindo da Engenharia de Software e apoiando-se, principalmente, em duas disciplinas: 
+Antes mesmo de apresentar os conceitos relevantes para o desenvolvimento do Catálogo de Segurança, é importante entender a definição de software. Este, segundo \cite{sommerville2003engenharia}, pode ser entendido como programas de computador e toda documentação associada. Para realização do desenvolvimento de software, considerando as boas práticas da área, existem preocupações que merecem menção, como os RNFs e os aspectos arquiteturais inerentes à produção, sendo essas estabelecidas pela comunidade da Engenharia de Software \cite{sommerville2003engenharia}. A Figura \ref{BigPicture} apresenta o escopo de atuação desse trabalho, partindo da Engenharia de Software e apoiando-se, principalmente, em duas disciplinas: 
 
 \begin{itemize}
 	
-	\item Engenharia de Requisitos, que estabelece um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, sendo uma disciplina detalhada na seção \ref{sec:requisitos}. Será observado que esse trabalho concentra-se em uma abordagem orientada à meta. Portanto, tem-se a Engenharia de Requisitos Orientada à Meta. Essa abordagem trata os requisitos como metas a serem alcançadas, sendo esse estudo apresentado na subseção \ref{subsec:orientacaoMeta}. Especificando ainda mais a área de atuação, como esse trabalho centraliza seus esforços nos RNFs, em particular para elaboração do catálogo, a subseção \ref{subsec:requisitosNaoFuncionais} define conceitos associados aos RNFs, preparando o leitor para a apresentação de um \textit{framework} conceitual especificamente proposto para detalhamento de RNFs. Trata-se do NFR \textit{Framework}, o qual será acordado na seção \ref{sec:NFR}, e
+	\item Engenharia de Requisitos, que estabelece um conjunto de tarefas e técnicas que auxiliam a promoção do entendimento dos requisitos, sendo uma disciplina detalhada na seção \ref{sec:requisitos}. Será observado que o Catálogo de Segurança concentra-se em uma abordagem orientada à meta. Portanto, tem-se a Engenharia de Requisitos Orientada à Meta. Essa abordagem trata os requisitos como metas a serem alcançadas, sendo esse estudo apresentado na subseção \ref{subsec:orientacaoMeta}. Especificando ainda mais a área de atuação, como esse trabalho centraliza seus esforços nos RNFs, em particular para elaboração do catálogo, a subseção \ref{subsec:requisitosNaoFuncionais} define conceitos associados aos RNFs, preparando o leitor para a apresentação de um \textit{framework} conceitual especificamente proposto para detalhamento de RNFs. Trata-se do NFR \textit{Framework}, o qual será acordado na seção \ref{sec:NFR}, e
 	
-	\item Desenho de Software, que se preocupa, dentre outras atividades, com o planejamento e a definição da Arquitetura de Software utilizada. Para fins desse trabalho, o foco será no Padrão Arquitetural MVC. Conceitos associados à Arquitetura de Software bem como ao Padrão Arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e não subseção \ref{subsec:mvc}, respectivamente.
+	\item Desenho de Software, que se preocupa, dentre outras atividades, com o planejamento e a definição da Arquitetura de Software utilizada. Para fins desse trabalho, o foco será no Padrão Arquitetural MVC. Conceitos associados à Arquitetura de Software bem como ao Padrão Arquitetural MVC serão detalhados na seção \ref{sec:arquitetura} e na subseção \ref{subsec:mvc}, respectivamente.
 	
 \end{itemize}
 
@@ -22,7 +22,7 @@ Antes mesmo de apresentar os conceitos relevantes para o desenvolvimento do cat�
 	\label{BigPicture}
 \end{figure}
 
-Cabe ressaltar que o presente trabalho atua mais especificamente no requisito não funcional Segurança, dada a sua relevância, conforme pesquisa na literatura. Segundo \cite{chung2012non}, Segurança pode ser entendida como a satisfação de três conceitos: Integridade, Confidencialidade, e Disponibilidade. Portanto, o Catálogo de Segurança parte desses conceitos, seguindo a expressão \ref{eq:EstruturaLogicaDeSeguranca}. Segurança, sobre a ótica de um RNF, será tratada na seção \ref{sec:seguranca}. Por fim, visando apoiar a elaboração bem como a documentação dos cenários de uso para aplicação do Catálogo de Segurança, foi utilizado o conceito de \textit{personas}, o qual será tratado na seção \ref{sec:personas}.
+Cabe ressaltar que o presente trabalho atua mais especificamente no requisito não funcional Segurança, dada a sua relevância, conforme pesquisa na literatura. Segundo \cite{chung2012non}, Segurança pode ser entendida como a satisfação de três conceitos: Integridade, Confidencialidade, e Disponibilidade. Portanto, o Catálogo de Segurança parte desses conceitos, seguindo a expressão \ref{eq:EstruturaLogicaDeSeguranca}. Segurança, sobre a ótica de um RNF, será tratada na seção \ref{sec:seguranca}. Por fim, o conceito de \textit{Personas} será tratado na seção \ref{sec:personas}.
 
 \begin{equation}
 	\label{eq:EstruturaLogicaDeSeguranca}
@@ -34,11 +34,11 @@ Cabe ressaltar que o presente trabalho atua mais especificamente no requisito n�
 
 Ao conjunto de tarefas e técnicas utilizadas para promover o entendimento dos requisitos é denominado Engenharia de Requisitos \cite{pressman2011engenharia}. No desenvolvimento de software, ela pode ser vista como uma disciplina importante da Engenharia de Software, que se inicia nas atividades de comunicação com os \textit{stakeholders}, e continua até a entrega do produto, sendo adaptada de acordo com as necessidades do processo de desenvolvimento, do produto e dos \textit{stakeholders} \cite{pressman2011engenharia}.
 
-A Engenharia de Requisitos abrange sete fases distintas: concepção, levantamento, elaboração, negociação, especificação, verificação e validação \cite{pressman2011engenharia}. De acordo com \cite{kotonya1998requirements}, durante a execução das atividades nas fases da Engenharia de Requisitos, alguns problemas são relatados como: (i) os requisitos não refletem as reais necessidades do cliente, de acordo com o sistema a ser desenvolvido; (ii) os requisitos são inconsistentes e/ou incompletos; (iii) a Engenharia de Requisitos é complexa e possui alto custo, principalmente, quando há necessidade de mudanças após os requisitos serem ditos acordados/elicitados entre as partes; e (iv) os requisitos são comumente interpretados de maneira errada pela equipe de desenvolvimento, diante do que foi solicitado pelo cliente. Apesar de parecer algo acordado em uma referência antiga da área. Tais problemas continuam ocorrendo em desenvolvimentos atuais, conforme apontado em palestras recentes de autores da área \cite{palestrasilvio}. 
+A Engenharia de Requisitos abrange sete fases sendo elas: Concepção, Levantamento, Elaboração, Negociação, Especificação, Verificação e Validação \cite{pressman2011engenharia}. De acordo com \cite{kotonya1998requirements}, durante a execução das atividades nas fases da Engenharia de Requisitos, alguns problemas são relatados como: (i) os requisitos não refletem as reais necessidades do cliente, de acordo com o sistema a ser desenvolvido; (ii) os requisitos são inconsistentes e/ou incompletos; (iii) a Engenharia de Requisitos é complexa e possui alto custo, principalmente, quando há necessidade de mudanças após os requisitos serem ditos acordados/elicitados entre as partes; e (iv) os requisitos são comumente interpretados de maneira errada pela equipe de desenvolvimento, diante do que foi solicitado pelo cliente. Apesar de parecer algo acordado em uma referência antiga da área. Tais problemas continuam ocorrendo em desenvolvimentos atuais, conforme apontado em palestras recentes de autores da área \cite{palestrasilvio}. 
 
-Boa parte dos modelos utilizados na Engenharia de Requisitos não possuem tratamento adequado para lidar com os critérios de qualidade. Logo, o tratamento desses critérios tem sido uma preocupação para a comunidade da Engenharia de Requisitos. Atualmente, existem esforços no sentido de aprimorar os modelos e as especificações desses requisitos, e são fortemente associados à comunidade de pesquisadores da Engenharia de Requisitos Orientada à Meta (GORE) \cite{chung2012non}. Neste trabalho, é abordado o uso de uma notação específica para tratar RNFs, proposta por essa comunidade, no caso, trata-se do NFR \textit{framework} \cite{chung2012non}. 
+Boa parte dos modelos utilizados na Engenharia de Requisitos não possuem tratamento adequado para lidar com os critérios de qualidade. Logo, o tratamento desses critérios tem sido uma preocupação para a comunidade da Engenharia de Requisitos. Atualmente, existem esforços no sentido de aprimorar os modelos e as especificações desses requisitos, e são fortemente associados à comunidade de pesquisadores da Engenharia de Requisitos Orientada à Meta (GORE) \cite{chung2012non}. Neste trabalho, foi abordado o uso de uma notação específica para tratar RNFs, proposta por essa comunidade, no caso, trata-se do NFR \textit{framework} \cite{chung2012non}. 
 
-O NFR \textit{framework} é um \textit{Framework} conceitual que procura lidar com os requisitos não funcionais, permitindo especificar os mesmos em um alto nível de abstração e, gradualmente, fornecendo insumos para que essa especificação seja trazida para um nível mais baixo de abstração. Nesse último nível, são especificadas as operacionalizações, as quais evidenciam alternativas para viabilizar a implementação desses requisitos no nível de código. Mais adiante, serão apresentados detalhes dessa notação.
+O NFR \textit{framework} é um \textit{Framework} conceitual que procura lidar com os requisitos não funcionais, permitindo especificar os mesmos em um alto nível de abstração e, gradualmente, fornecendo insumos para que essa especificação seja trazida para um nível mais baixo de abstração. Nesse último nível, são especificadas as operacionalizações, as quais evidenciam alternativas para viabilizar a implementação desses requisitos no nível de código. Mais adiante na seção \ref{sec:NFR}, serão apresentados detalhes dessa notação.
 
 \subsection{Engenharia de Requisitos Orientada à Meta}
 \label{subsec:orientacaoMeta}
@@ -122,11 +122,19 @@ A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de u
 	\label{fig01}
 \end{figure} 
 
-Para facilitar o entendimento das decisões tomadas, a meta flexível possui \textit{labels}, que determinam o grau de satisfação para uma meta flexível, de acordo com um conjunto de decisões do projeto. As \textit{labels} são: satisfeita, fracamente satisfeita,  negada, fracamente negada, indecidida e crítica \cite{chung2012non}. Outra notação importante, e que apresenta o grau de prioridade de uma meta flexível, é representada por “\textbf{!}” ou “\textbf{!!}” permitindo especificar um grau de prioridade maior, sendo o ponto de afirmação desenhado à esquerda da nuvem..
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/prioridadeMeta.PNG}
+	\caption{Representações gráficas para o grau de prioridade da meta flexível.}
+	\label{prioridadedameta}
+\end{figure}
+
+Para facilitar o entendimento das decisões tomadas, a meta flexível possui \textit{labels}, conforme apresentadas na Figura \ref{fig01}, que determinam o grau de satisfação para uma meta flexível, de acordo com um conjunto de decisões do projeto. As \textit{labels} são: suficientemente satisfeita, fracamente satisfeita,  negada, fracamente negada, indecidida e crítica \cite{chung2012non}, conforme apresentadas na \ref{fig02}. Outra notação importante apresentada na Figura \ref{prioridadedameta}, e que representa o grau de prioridade para a meta flexível, é representada por “\textbf{!}” (média) ou “\textbf{!!}” (alta) permitindo especificar um grau de prioridade maior, sendo o ponto de afirmação desenhado à esquerda da nuvem. Tal notação aplica-se também a operacionalizações e alegações.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/labelsSoftgoals.png}
+	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/labelsSoftgoalsold.PNG}
 	\caption{Representação gráfica das \textit{labels} em metas flexíveis.}
 	\label{fig02}
 \end{figure} 
@@ -152,7 +160,7 @@ Os \textit{links} de interdependências também podem ser entendidos como tipos 
 		&  \\ \hline
 		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Break.png}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}BREAK: Fornece apoio negativo, pois, se o filho é satisfeito, o \\ pai pode ser negado.\end{tabular}} \\
 		&  \\ \hline
-		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Help.png}} & \multirow{2}{*}{HELP: Se todos os filhos são satisfeitos, o pai também será satisfeito.} \\
+		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Help.png}} & \multirow{2}{*}{HELP: Se todos os filhos são satisfeitos, o pai também será parcialmente satisfeito.} \\
 		&  \\ \hline
 		\multirow{2}{*}{\includegraphics[scale=0.9]{figuras/Hurt.png}} & \multirow{2}{*}{HURT: Se todos os filhos são satisfeitos, o pai será fracamente negado.} \\
 		&  \\ \hline
@@ -163,9 +171,8 @@ Os \textit{links} de interdependências também podem ser entendidos como tipos 
 	\end{tabular}
 \end{table}
 
-\pagebreak
 
-Os \textit{links} entre as metas flexíveis representam a contribuição que uma meta flexível tem com outra meta flexível, ou operacionalização, ou alegação. Logo, a Figura \ref{catalogoDeAvaliação} apresenta a forma como as \textit{labels} são propagadas, de acordo com seu tipo de relacionamento. A propagação das \textit{labels} aplica-se a todos os tipos de representações da notação, sendo essas: metas flexíveis, operacionalizações ou alegações.. 
+Os \textit{links} entre as metas flexíveis representam a contribuição que uma meta flexível tem com outra meta flexível, ou operacionalização, ou alegação. Logo, a Figura \ref{catalogoDeAvaliação} apresenta a forma como as \textit{labels} são propagadas, de acordo com seu tipo de relacionamento. A propagação das \textit{labels} aplica-se a todos os tipos de representações da notação, sendo essas: metas flexíveis, operacionalizações ou alegações. 
 
 \begin{figure}[h!]
 	\centering
@@ -315,7 +322,7 @@ A comunidade científica dedicada à abordagem GORE, conforme exposto nas últim
 \section{FURPS}
 \label{sec:furps}
 
-O termo FURPS é um acrônimo que define um modelo de atributo de qualidade. Esse acrônimo é composto por cinco atributos de qualidade, sendo eles: (i) Funcionalidade (do inglês, \textit{Functionality}), (ii) Usabilidade (do inglês, \textit{Usability}), Confiabilidade (do inglês, \textit{Reliability}), Desempenho (do inglês, \textit{Performance}) e \textit{Supportability} (manteve-se o termo em inglês, pois o mesmo significa considerar testabilidade, adaptabilidade, manutenibilidade, compatibilidade, configurabilidade, escalabilidade e outros aspectos associados, não sendo, portanto, possível encontrar um único termo em português capaz de representar todos esses aspectos). \cite{umar2011analyzing}.
+O termo FURPS é um acrônimo que define um modelo de atributo de qualidade. Esse acrônimo é composto por cinco atributos de qualidade, sendo eles: (i) Funcionalidade (do inglês, \textit{Functionality}), (ii) Usabilidade (do inglês, \textit{Usability}), Confiabilidade (do inglês, \textit{Reliability}), Desempenho (do inglês, \textit{Performance}) e \textit{Supportability} (manteve-se o termo em inglês, pois o mesmo significa considerar testabilidade, adaptabilidade, manutenibilidade, compatibilidade, configurabilidade, escalabilidade e outros aspectos associados, não sendo, portanto, possível encontrar um único termo em português capaz de representar todos esses aspectos). \cite{umar2011analyzing}. Diante da definição exposta sobre o FURPS, as subseções abaixo apresentam o conceito de cada um dos cinco atributos de qualidade.
 
 \subsection{Funcionalidade}
 \label{subsec:funcionalidade}
@@ -397,7 +404,9 @@ A Tabela \ref{categoriasDePadroesArquiteturais} apresenta detalhadamente os quat
 
 \pagebreak
 
-Devido ao foco desse trabalho ser a construção do Catálogo de Segurança para o Padrão Arquitetural MVC, a Subseção \ref{subsec:mvc} detalha este Padrão Arquitetural. 
+\begin{comment}
+	Devido ao foco desse trabalho ser a construção do Catálogo de Segurança para o Padrão Arquitetural MVC, a Subseção \ref{subsec:mvc} detalha este Padrão Arquitetural. 
+\end{comment}
 
 
 \subsection{MVC: \textit{Model-View-Controller}}
@@ -484,6 +493,7 @@ A Figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que represent
 
 Agora que as principais áreas atreladas ao trabalho foram apresentadas, segue um detalhamento do conceito de Segurança da informação, que permite abstrair em nível mais alto o conceito, promovendo maior abrangência caso necessário aos conceitos de segurança de software e da informação.
 
+
 \section{ISO 27001}
 \label{sec:iso27001}
 
@@ -500,7 +510,7 @@ Com a utilização da norma é possível evoluir os conceitos de aplicação do 
 
 Tratando a Segurança como um RNF, pode-se entender a mesma como estando associada a vários outros RNFs. Dessa forma, podemos entender os RNFs associados à Segurança como sendo restrições, as quais realizam operacionalizações e satisfazem as metas de segurança, estabelecidas pelos Engenheiros de Requisitos e/ou Engenheiros de Software. Esse conjunto de  RNFs devem expressar de maneira precisa e não ambígua as metas de segurança de uma aplicação, fornecendo uma especificação para alcançar a meta deseja \cite{haley2006framework}.  
 
-Existem variadas definições de Segurança. De forma simplificada, Segurança, no contexto de Segurança da Informação, significa proteger a informação \cite{chung2012non}. O presente trabalho fundamenta-se nos conceitos de \cite{chung2012non} e \cite{sullivan2011web} como base para definir Segurança, orientando-se por três conceitos conhecidos como CIA (\textit{Confidentiality}, \textit{Integrity}, \textit{Availability}) . 
+Existem variadas definições de Segurança. De forma simplificada, Segurança, no contexto de Segurança da Informação, significa proteger a informação \cite{chung2012non}. O presente trabalho fundamenta-se nos conceitos de \cite{chung2012non} e \cite{sullivan2011web} como base para definir Segurança, orientando-se por três conceitos conhecidos como CIA (\textit{Confidentiality}, \textit{Integrity}, \textit{Availability}). 
 
 Diante do exposto, para a definição seguindo os fundamentos de \cite{chung2012non}, segurança se baseia em: 
 
@@ -553,7 +563,7 @@ A Confidencialidade possui os subtipos “confidencialidade interna” e “conf
  
 Integridade pode ser definida através dos conceitos Completude e Precisão, por \cite{chung2012non}, onde: 
 
-\textbf{Completude}: garantir que o RNF esteja completo \cite{chung2012non}
+\textbf{Completude}: garantir que o RNF esteja completo \cite{chung2012non}.
 
 \textbf{Precisão}: pode ser entendida como qualquer atributo semântico que fundamenta uma informação \cite{chung2012non}, ou seja, a garantia de que um requisito da informação seja descrito com precisão de acordo com suas especificações; 
 
@@ -573,15 +583,16 @@ Integridade pode ser definida através dos conceitos Completude e Precisão, por
 
 A disponibilidade pode ser entendida como o software se assegura diante de qualquer interrupção no serviço e que possa impedir o acesso ao mesmo, isto é, o quão disponível o sistema estaria para efetuar uma função solicitada \cite{chung2012non}.
 
-
-Uma vez introduzidas as áreas de interesse  deste trabalho, bem como, o conceito de Segurança, sob o ponto de vista de um RNF, cabe ainda comentar sobre o conceito de \textit{Personas}. Esse conceito foi utilizado no trabalho com o objetivo de auxiliar na elaboração bem como, na evolução do Catálogo de Segurança, considerando diferentes cenários de uso. O conceito de \textit{Personas} é tratado na seção a seguir. Já a aplicação desse conceito nos cenários de uso para elaboração e evolução do catálogo será detalhada no Capítulo \ref{chap:resultadosObtidos} de Resultados Obtidos.
+\begin{comment}
+	Uma vez introduzidas as áreas de interesse  deste trabalho, bem como, o conceito de Segurança, sob o ponto de vista de um RNF, cabe ainda comentar sobre o conceito de \textit{Personas}. Esse conceito foi utilizado no trabalho com o objetivo de auxiliar na elaboração bem como, na evolução do Catálogo de Segurança, considerando diferentes cenários de uso. O conceito de \textit{Personas} é tratado na seção a seguir. Já a aplicação desse conceito nos cenários de uso para elaboração e evolução do catálogo será detalhada no Capítulo \ref{chap:resultadosObtidos} de Resultados Obtidos.
+\end{comment}
 
 \section{\textit{Personas}}
 \label{sec:personas}
 
 \textit{Personas} são especificações comportamentais que incorporam as metas e necessidades de usuários, esse conceito foi introduzido para auxiliar os desenvolvedores a entender melhor os usuários diante da necessidade de especificação de um sistema. \textit{Personas} podem ser aplicadas na Engenharia de Software desde as atividades inerentes à Engenharia de Requisitos, até a entrega do produto propriamente dito \cite{ford2017characterizing}. 
 
-Mais especificamente nesse trabalho, \textit{Personas} foram utilizadas para levantamento de aspectos chave de segurança, privacidade e outras metas flexíveis de interesse, o que mitigou um pouco as dificuldades enfrentadas no entendimento bem como na especificação dos perfis de usuários compreendidos no escopo dessa pesquisa. Isso viabilizou, dentre outras contribuições, a modelagem de aspectos sociais e psicológicos, promovendo o entendimento dos perfis de usuários, e suas possíveis motivações, as quais permeiam suas ações \cite{ford2017characterizing} \cite{daelaboraccao}. 
+Mais especificamente nesse trabalho, \textit{Personas} foram utilizadas para a construção dos cenários, onde aplica-se os aspectos chave de segurança, privacidade e outras metas flexíveis de interesse, o que mitigou um pouco as dificuldades enfrentadas no entendimento bem como na especificação dos perfis de usuários compreendidos no escopo dessa pesquisa. Isso viabilizou, dentre outras contribuições, a modelagem de aspectos sociais e psicológicos, promovendo o entendimento dos perfis de usuários, e suas possíveis motivações, as quais permeiam suas ações \cite{ford2017characterizing} \cite{daelaboraccao}. 
 
 
 
@@ -591,7 +602,7 @@ Ao longo do processo de construção de uma solução computacional - sob a pers
 No presente trabalho, apesar de se reconhecer a relevância do uso do conceito de \textit{Personas} para mapeamento de aspectos sociais e psicológicos, não foi esse o maior foco. No caso, o uso de \textit{Personas} contribuiu significativamente para construir o catálogo considerando pontos de vista diferentes, ora com maior olhar em Confiabilidade, ora em Integridade, ora em Disponibilidade, ora focado no Padrão Arquitetural MVC, dentre outras perspectivas. Esse exercício de considerar o catálogo sob diferentes pontos de vista possibilitou um aprofundamento de suas metas flexíveis, e mais ainda, um maior detalhamento das operacionalizações. Operacionalizações representam ações concretas, possíveis de serem de fato alcançadas, implementadas e atendidas pelos especialistas. Uma vez atendidas, propagam-se suas contribuições em atendimento aos aspectos mais abstratos, no caso, as metas flexíveis. Diante dessas colocações, tem-se que o uso de \textit{Personas}, em cenários de uso variados, contribuiu para a concretização do Catálogo de Segurança elaborado nesse trabalho.
 
 
-\section{Resumo do Capítulo}
+\section*{Resumo do Capítulo}
 
 Neste Capítulo, foram abordados os conceitos fundamentais para a construção do Catálogo de Segurança, introduzindo conceitos chave da Engenharia de Requisitos, mais especificamente da Engenharia de Requisitos Orientada à Meta, com foco em metas flexíveis; bem como considerando conceitos chave de Arquitetura de Software, mais precisamente do Padrão Arquitetural MVC.
 Dada a relevância do critério de Segurança para o escopo do trabalho, no capítulo, tem-se uma seção dedicada à apresentação desse critério como um RNF. Conforme acordado, Confiabilidade, Integridade e Disponibilidade são metas flexíveis que impactam diretamente em Segurança. Por fim, comentou-se sobre o conceito de \textit{Personas}, o qual representou um recurso relevante na elaboração bem como na evolução do Catálogo de Segurança sob diferentes pontos de vista, e considerando variados cenários de uso. 
