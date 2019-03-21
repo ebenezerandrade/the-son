@@ -113,7 +113,7 @@ O \textit{framework} também pode ser orientado por processo, dado seu suporte �
 
 O NFR \textit{Framework} utiliza o conceito de metas  flexíveis. Por definição, uma meta flexível é uma condição ou um estado no mundo real que deseja ser alcançado, podendo assumir natureza subjetiva, uma vez que o RNF pode variar de acordo com o julgamento de cada pessoa; e natureza relativa, uma vez que o RNF pode depender de algum tipo de relação com outro RNF \cite{chung2012non}.
 
-A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de uma nuvem, conforme apresentado pela Figura \ref{fig01}. Esse símbolo possui pequenas variações na forma, podendo representar uma \textbf{operacionalização} (nuvem em negrito), e também uma \textbf{Alegação} (nuvem tracejada). Mais adiante, na Figura \ref{exemploNFR}, é apresentada a decomposição de uma meta flexível em outras metas.  
+A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de uma nuvem, conforme apresentado pela Figura \ref{fig01}. Esse símbolo possui pequenas variações na forma, podendo representar uma \textbf{operacionalização} (nuvem em negrito), e também uma \textbf{alegação} (nuvem tracejada). 
 
 \begin{figure}[h!]
 	\centering
@@ -122,6 +122,12 @@ A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de u
 	\label{fig01}
 \end{figure} 
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/labelsSoftgoalsold.PNG}
+	\caption{Representações gráficas das \textit{labels} em metas flexíveis.}
+	\label{fig02}
+\end{figure} 
 
 \begin{figure}[h!]
 	\centering
@@ -130,14 +136,9 @@ A notação no SIG para a \textbf{meta flexível} é um símbolo similar ao de u
 	\label{prioridadedameta}
 \end{figure}
 
-Para facilitar o entendimento das decisões tomadas, a meta flexível possui \textit{labels}, conforme apresentadas na Figura \ref{fig01}, que determinam o grau de satisfação para uma meta flexível, de acordo com um conjunto de decisões do projeto. As \textit{labels} são: suficientemente satisfeita, fracamente satisfeita,  negada, fracamente negada, indecidida e crítica \cite{chung2012non}, conforme apresentadas na \ref{fig02}. Outra notação importante apresentada na Figura \ref{prioridadedameta}, e que representa o grau de prioridade para a meta flexível, é representada por “\textbf{!}” (média) ou “\textbf{!!}” (alta) permitindo especificar um grau de prioridade maior, sendo o ponto de afirmação desenhado à esquerda da nuvem. Tal notação aplica-se também a operacionalizações e alegações.
+Para facilitar o entendimento das decisões tomadas, a meta flexível possui \textit{labels}, conforme apresentadas na Figura \ref{fig01}, que determinam o grau de satisfação para uma meta flexível, de acordo com um conjunto de decisões do projeto. As \textit{labels} são: suficientemente satisfeita, fracamente satisfeita,  negada, fracamente negada, indecidida e crítica \cite{chung2012non}, conforme apresentadas na Figura \ref{fig02}. A Figura \ref{prioridadedameta} apresenta outra notação importante, e que representa o grau de prioridade para a meta flexível, é representada por “\textbf{!}” (média) ou “\textbf{!!}” (alta), permitindo especificar um grau de prioridade maior, sendo o ponto de afirmação desenhado à esquerda da nuvem. Tal notação aplica-se também a operacionalizações e alegações.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[keepaspectratio=true,scale=0.9]{figuras/labelsSoftgoalsold.PNG}
-	\caption{Representação gráfica das \textit{labels} em metas flexíveis.}
-	\label{fig02}
-\end{figure} 
+
 
 As relações que as metas flexíveis possuem umas com as outras são estabelecidas através de \textit{links} de interdependências, sendo esses \textit{links} que realizam o registro da decomposição das metas flexíveis em metas flexíveis mais específicas (filhos). De certa forma, a decomposição em outras metas contribui para o nível de satisfação da meta flexível mais genérica (pai).
 
@@ -317,7 +318,11 @@ De acordo com \cite{istarwiki20}, os tipos de \textit{links} são definidos como
 \end{itemize}
 \end{comment}
 
-A comunidade científica dedicada à abordagem GORE, conforme exposto nas últimas seções, centraliza seus esforços e contribuições na especificação de metas flexíveis, com modelos que detalham essa especificação em diferentes níveis de abstração. Entretanto, essa preocupação com os RNFs é ainda mais antiga, visto que temos especificações anteriores às iniciativas orientadas à meta, como é o caso do FURPs. Conforme será notado com a leitura da próxima seção, FURPS tem um rigor na especificação de metas flexíveis muito inferior à notação do NFR e similares adotadas pela comunidade GORE. Diante dessas colocações, e dada a importância dos RNFs para o escopo desse trabalho, justifica-se o uso do NFR \textit{Framework} nesse caso.
+
+\begin{comment}
+	A comunidade científica dedicada à abordagem GORE, conforme exposto nas últimas seções, centraliza seus esforços e contribuições na especificação de metas flexíveis, com modelos que detalham essa especificação em diferentes níveis de abstração. Entretanto, essa preocupação com os RNFs é ainda mais antiga, visto que temos especificações anteriores às iniciativas orientadas à meta, como é o caso do FURPs. Conforme será notado com a leitura da próxima seção, FURPS tem um rigor na especificação de metas flexíveis muito inferior à notação do NFR e similares adotadas pela comunidade GORE. Diante dessas colocações, e dada a importância dos RNFs para o escopo desse trabalho, justifica-se o uso do NFR \textit{Framework} nesse caso.
+\end{comment}
+
 
 \section{FURPS}
 \label{sec:furps}
@@ -359,7 +364,9 @@ Por definição, desempenho é o nível como o software atende ao conjunto espec
 
 Em \textit{Supportability}, considera-se a capacidade de adaptabilidade, a possibilidade de realizar manutenções corretivas e evolutivas, a flexibilidade de configuração, de instalação e a internacionalização no sistema \cite{cintra2006implementaccao}.
 
-Dado que esse trabalho abrange duas áreas, Engenharia de Requisitos e Arquitetura de Software, e que o maior olhar até o momento foi na primeira área, seguem seções que acordam referenciais associados à Arquitetura de Software. 
+\begin{comment}
+	Dado que esse trabalho abrange duas áreas, Engenharia de Requisitos e Arquitetura de Software, e que o maior olhar até o momento foi na primeira área, seguem seções que acordam referenciais associados à Arquitetura de Software. 
+\end{comment}
 
 \section{Arquitetura de Software}
 \label{sec:arquitetura}
@@ -491,7 +498,9 @@ A Figura \ref{DiagramaDeSequenciaMVC} é um diagrama de sequência que represent
 	\label{DiagramaDeSequenciaMVC}
 \end{figure}
 
-Agora que as principais áreas atreladas ao trabalho foram apresentadas, segue um detalhamento do conceito de Segurança da informação, que permite abstrair em nível mais alto o conceito, promovendo maior abrangência caso necessário aos conceitos de segurança de software e da informação.
+\begin{comment}
+	Agora que as principais áreas atreladas ao trabalho foram apresentadas, segue um detalhamento do conceito de Segurança da informação, que permite abstrair em nível mais alto o conceito, promovendo maior abrangência caso necessário aos conceitos de segurança de software e da informação.
+\end{comment}
 
 
 \section{ISO 27001}
@@ -502,8 +511,10 @@ A ISO 27001 determina os padrões que podem ser aplicados em Sistemas de Gestão
 A ISO 27001 define aspectos para segurança da informação, como: a preservação da confidencialidade, integridade e disponibilidade da informação, adicionando outras propriedades como autenticidade, responsabilidade, confiabilidade e auditória e controle \cite{documentation2005information}. 
 
 A relação da segurança da informação com a segurança de software se apoia nos mesmos pilares, sendo eles, disponibilidade, confidencialidade e integridade \cite{chung2012non} \cite{documentation2005information}.
+\begin{comment}
+	Com a utilização da norma é possível evoluir os conceitos de aplicação do Catálogo de Segurança para que possam ser alcançadas áreas de segurança da informação, caso necessário. Logo, segurança vista como um RNF de software é chave para este trabalho.
+\end{comment}
 
-Com a utilização da norma é possível evoluir os conceitos de aplicação do Catálogo de Segurança para que possam ser alcançadas áreas de segurança da informação, caso necessário. Logo, segurança vista como um RNF de software é chave para este trabalho.
 
 \section{Segurança de software vista como um RNF}
 \label{sec:seguranca}

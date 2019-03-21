@@ -1,14 +1,14 @@
-\chapter{Conclusão}
+\chapter[Conclusão]{Conclusão}
 \label{chap:consideracoesFinais}
 
 
 
-Dada a complexidade do tema abordado, em especial por procurar contribuir a partir de critérios de qualidade que são intrinsecamente abstratos e subjetivos, observou-se que o Catálogo de Segurança reflete uma visão preliminar sobre Segurança. Partindo disso, com o Catálogo de Segurança espera-se que, a contribuição evidenciada neste trabalho possa ser atendida e aplicada dentro dos vários cenários da Engenharia de Software (Ex: Arquitetura e Desenho de Software, Engenharia de Requisitos e Desenvolvimento de Software), visto que, trabalha critérios abstratos (os requisitos não funcionais ou metas flexíveis e suas dependências e seus impactos), trazendo-os para uma visão bem mais concreta, as operacionalizações. Tudo acima descrito é garantido devido ao uso de uma notação bastante rica e emergente, a qual é  mais conhecida e compreendida na subárea de Engenharia de Requisitos. Esse trabalho aproximou esses conhecimentos, considerando níveis de abstração cada vez mais técnicos.
+Dada a complexidade do tema abordado, em especial por procurar contribuir a partir de critérios de qualidade que são intrinsecamente abstratos e subjetivos, observou-se que o Catálogo de Segurança reflete uma visão preliminar sobre Segurança. Espera-se ainda, com o Catálogo de Segurança, que as contribuições desse trabalho possam ser compreendidas, ajustadas e aplicadas para e em outros cenários de uso. A ideia foi demonstrar como é possível tratar aspectos subjetivos, como os RNFs, permitindo satisfazê-los com a implementação de operacionalizações. Ou seja, demonstrar os elos de ligação entre um RNF e algo mais viável de ser concretizado em termos de arquitetura e código. Além disso, tudo fica anotado, utilizando uma notação em diferentes níveis de abstração, e deixando claro os impactos e as correlações entre esses níveis.
 
-Assim, ao decorrer do trabalho foram apresentados detalhamentos que deixam evidentes as correlações entre esses níveis de abstração, Requisitos Não-Funcionais e Código, os quais parecem distantes. Essa distância comumente reflete em esquecimento, ou seja, não atendimento desses critérios de qualidade no desenvolvimento do software desejado. Prática essa que pode levar a muitos insucessos em projetos de software. 
+Uma vez evidenciadas as correlações entre os níveis de abstração, dos requisitos ao código, procurou-se conferir uma ligação entre algo muito abstrato (requisitos), com algo muito concreto (código). Esses níveis de abstração são comumente vistos como muito distantes, envolvendo e demandando - muitas vezes - equipes técnicas diferentes. Tal distanciamento, pode incorrer no não entendimento, ou não atendimento correto, ou ainda no próprio esquecimento de alguns desses aspectos subjetivos. Essa prática, conforme acordado no referencial teórico desse trabalho, o qual foi apoiado na literatura da área, pode levar - e recorrentemente leva - a insucessos nos projetos de software. 
 
 
-A Tabela \ref{resultadosObtidos} apresenta de acordo com os objetivos específicos do trabalho, os níveis de satisfação e os motivos pelos quais os mesmos foram atendidos. 
+A Tabela \ref{resultadosObtidos} apresenta, de acordo com os objetivos específicos do trabalho, os níveis de satisfação e os motivos pelos quais os mesmos foram atendidos. 
 
 
 \begin{table}[h!]
@@ -19,24 +19,27 @@ A Tabela \ref{resultadosObtidos} apresenta de acordo com os objetivos específic
 	\begin{tabular}{@{}p{6cm}p{3cm}p{6cm}@{}}
 		\toprule
 		\textbf{Objetivo} & \textbf{Nível de satisfação} & \textbf{Motivo} \\ \midrule
-		Investigar na literatura formas de lidar com o RNF Segurança  em aplicações Web desenvolvidas utilizando o MVC. &  Atendido & Atendido pela existência de fontes confiáveis que comprovam o impacto do RNF Segurança em seus níveis de abstração, quando aplicado em aplicações web desenvolvidas utilizando o Padrão Arquitetural MVC. \\
+		Investigar na literatura formas de lidar com o RNF Segurança  em aplicações Web desenvolvidas utilizando o MVC. &  Atendido & Atendido com base em estudos realizados na área de interesse, com os quais referências foram levantadas e sustentam a necessidade de se considerar o RNF Segurança bem como seus impactos em aplicações Web, desenvolvidas com base no Padrão Arquitetural MVC. \\
 		\rowcolor[HTML]{C0C0C0} 
-		Investigar na literatura os RNF associados a segurança e identificar o impacto e as interdepêndencias entre eles. & Atendido &  Atendido pela existência de fontes que evidenciam a relação entre os RNFs de segurança \\
+		Investigar na literatura os RNF associados à segurança, e identificar o impacto e as interdependências entre eles. & Atendido &  Atendido pela existência de fontes que evidenciam a relação entre os RNFs de segurança em diferentes níveis de abstração. \\
 		Elaborar SIG & Atendido & Atendido, pois tem-se a primeira versão do catálogo elaborado com sucesso. \\
 		\rowcolor[HTML]{C0C0C0} 
 		Realizar correspondência entre o Catálogo de Segurança e as camadas do Padrão Arquitetural MVC & Atendido & Atendido, pois o presente trabalho demonstrou a existência e os impactos das relações entre os RNFs que geram impacto na Segurança do Software em três níveis de abstração \\
 		
-		Elaborar cenários e desenvolver aplicações web exemplo, no padrão arquitetural MVC, orientando-se pelo Catálogo de Segurança & Atendido & Atendido, pois para validação do Catálogo de Segurança o mesmo foi aplicado em cinco cenários, que podem ser vistos como cenários de uso ou um estudo de caso \\
+		Elaborar cenários e desenvolver aplicações web exemplo, no padrão arquitetural MVC, orientando-se pelo Catálogo de Segurança & Atendido & Atendido, pois, para validação do Catálogo de Segurança, o mesmo foi aplicado em cinco cenários, que podem ser vistos como cenários de uso, em alguns casos, e estudo de casos, em outros. \\
 		 \bottomrule
 	\end{tabular}
 \end{table}
 
 \section*{Trabalhos Futuros}
 
-Portanto o Catálogo de Segurança, pode ser relacionado com outros catálogos voltados para outros atributos de qualidade (Ex: usabilidade, desempenho, etc.) e que utilizam a mesma notação, permitindo realizar o mapeamento, verificar o impacto que as outras áreas de qualidade de software impactam a Segurança e permitindo evoluir o Catálogo de Segurança apresentado neste trabalho. 
+Muitos trabalhos futuros podem ser desenhados a partir das contribuições e iniciativas desse trabalho. Dentre as ideias para projetos futuros, destacam-se:
 
-O Catálogo de Segurança, apresentado neste trabalho, também pode evoluir a níveis cada vez mais baixos de abstração, sendo capaz de entrar na seguinte questão, por exemplo, “qual método de criptografia pode ser mais eficiente para uma determinada operacionalização e que está diretamente ligado a segurança do software?”, ou até mesmo ser expandido para indagações na área de segurança da informação como auditoria e controle, contestabilidade e responsabilização, autenticidade ou confiabilidade.  
+Podem ser realizadas correlações desse catálogo, focado em Segurança, com outros catálogo, em diferentes critérios de qualidade. De acordo com o levantamento realizado nesse trabalho, têm-se que os primeiros critérios candidatos à investigação, dada à relevância dos mesmos na literatura, são Desempenho e Usabilidade. Anotar os impactos entre esses catálogos e o presente catálogo poderá conferir uma série de novas colocações. Por exemplo, é claro que se segurança for respeitada ao extremo, isso impactará em aspectos de usabilidade. Solicitar nome do pai, nome da mãe, digital e data de nascimento, conferem maior segurança em um caixa eletrônico, mas comprometem aspectos de usabilidade. Essas e outras conclusões poderiam ser mapeadas, acordadas, permitindo estudos mais aprofundados desses aspectos subjetivos no desenvolvimento de software.  
 
+O Catálogo de Segurança, apresentado neste trabalho, também pode evoluir a níveis cada vez mais baixos de abstração, sendo capaz de conferir respostas a questionamentos bem específicos, como: “qual método de criptografia pode ser mais eficiente para uma determinada operacionalização e que está diretamente ligado à segurança do software?”, ou ainda ser expandido para indagações na área de segurança da informação como auditoria e controle, contestabilidade e responsabilização, autenticidade ou confiabilidade.  
+
+Por fim, poderiam ser mencionados suportes computacionais que permitissem que o catálogo fosse disponibilizado para a comunidade interessada, conferindo - inclusive - mecanismos de compartilhamento de conhecimento e possibilidades de evoluções colaborativas do catálogo. 
 
 \begin{comment}
 	Prática essa que pode levar a muitos insucessos, tais como o Caso da Ambulância de Londres \cite{finkelstein1996comedy}.

@@ -1,9 +1,9 @@
 \chapter{Resultados Obtidos}
 \label{chap:resultadosObtidos}
 
-Neste capítulo são apresentadas as primeiras aplicações do Catálogo de Segurança e o mapeamento no terceiro nível de abstração (entre operacionalizações e as camadas do Padrão Arquitetural MVC). Para isso, foi utilizado o conceito de \textit{personas}, apresentado na seção \ref{sec:personas}, com o objetivo de demonstrar os cenários nos quais o catálogo pode ser aplicável. Portanto, realizou-se a simulação de cinco cenários para validar a aplicação do Catálogo de Segurança. 
+Neste capítulo, são apresentadas as primeiras aplicações do Catálogo de Segurança e o mapeamento no terceiro nível de abstração (entre operacionalizações e as camadas do Padrão Arquitetural MVC). Para isso, foi utilizado o conceito de \textit{personas}, apresentado na seção \ref{sec:personas}, com o objetivo de demonstrar os cenários nos quais o catálogo pode ser aplicado. Portanto, realizou-se a simulação de cinco cenários para validar a aplicação do Catálogo de Segurança. 
 
-O capítulo é dividido, inicialmente, pelos cenários contextualizados dentro de cada persona. Os cenários têm a descrição da persona, identificação da possível solução (quando necessário descrever para o cenário) e a aplicação do catálogo. Ao final do capítulo é apresentada a primeira visão da aplicação do Catálogo de Segurança.  
+O capítulo é dividido, inicialmente, pelos cenários contextualizados dentro de cada \textit{persona}. Os cenários têm a descrição da \textit{persona}, identificação da possível solução (quando necessário descrever para o cenário), e a aplicação do catálogo. Ao final do capítulo, são apresentadas as primeiras impressões sobre a aplicação do catálogo.  
 
 
 \section{Cenário 1}
@@ -20,15 +20,15 @@ Heleno, 24 anos, Engenheiro de Requisitos, assumiu a função de elicitar os req
 
 \subsection{Identificar possível solução}
 
-O problema principal do usuário é a realização da autenticação do mesmo. O primeiro passo a ser adotado é identificar qual \textit{gem} é a mais adequada. Segundo o \textit{The Ruby Toolbox}, na categoria \textit{Rails Authentication}, o ranking de popularidade das três \textit{gems} mais utilizadas para autenticação é \cite{rubytoolbox}:
+O problema principal do usuário é a realização da autenticação do mesmo. O primeiro passo a ser adotado é identificar qual \textit{gem} é a mais adequada. Segundo o \textit{The Ruby Toolbox}, na categoria \textit{Rails Authentication}, o \textit{ranking} de popularidade das três \textit{gems} mais utilizadas para autenticação é \cite{rubytoolbox}:
 
 \begin{enumerate}
-	\item devise: 38.982.741 downloads
-	\item omniauth: 23.524.509 downloads
-	\item doorkeeper: 7.091.328 downloads
+	\item devise: 38.982.741 \textit{downloads}
+	\item omniauth: 23.524.509 \textit{downloads}
+	\item doorkeeper: 7.091.328 \textit{downloads}
 \end{enumerate}
 
-Portanto, a \textit{gem} selecionada por Heleno para ser aplicada ao projeto é a \textit{devise}, pois além da sua posição no ranking, é a \textit{gem} mais recomendada pela comunidade \textit{Rails}. As vantagens da utilização do \textit{devise} são  (i) solução baseada no padrão arquitetural MVC, (ii) criação e a utilização de vários perfis de usuários conectados ao mesmo tempo, e (iii) utilização somente daquilo que é necessário, baseando-se no conceito de modularidade. Essa \textit{gem} possui 10 módulos \cite{gemdevise}: 
+Portanto, a \textit{gem} selecionada por Heleno para ser aplicada ao projeto é a \textit{devise}, pois além da sua posição no \textit{ranking}, é a \textit{gem} mais recomendada pela comunidade \textit{Rails}. As vantagens da utilização do \textit{devise} são  (i) solução baseada no padrão arquitetural MVC, (ii) criação e a utilização de vários perfis de usuários conectados ao mesmo tempo, e (iii) utilização somente daquilo que é necessário, baseando-se no conceito de modularidade. Essa \textit{gem} possui 10 módulos \cite{gemdevise}: 
 
 \begin{enumerate}
 	\item \textit{Database Authenticatable}: \textit{hashes} que armazenam a senha no banco de dados para serem validadas durante o \textit{login}. A autenticação pode ser realizada via método POST ou HTTP \textit{basic authentication}; 
@@ -70,7 +70,7 @@ O Catálogo de Segurança aplicado no cenário 1 é apresentado na Figura \ref{c
 
 É possível, então, utilizando a notação do NFR \textit{Framework}, realizar a modelagem da \textit{gem devise} como uma operacionalização, representando a existência de alguma contribuição positiva (SOME+) com as operacionalizações  “autorizar acesso a contar” e “utilizar senha para contas”.
  
-As operacionalizações filhas de “utilizar \textit{gem devise}” e que atendem as necessidades da persona descrita no cenário 1 são:
+As operacionalizações filhas de “utilizar \textit{gem devise}”, e que atendem as necessidades da \textit{persona}, descrita no cenário 1 são:
 
 \begin{itemize}
 	\item “habilitar \textit{Database Authenticatable}”: é um dos requisitos mínimos para que ocorra a persistência da senha no banco de dados;
@@ -82,7 +82,7 @@ As operacionalizações filhas de “utilizar \textit{gem devise}” e que atend
 
 Portanto, ao habilitar os módulos da \textit{gem devise} dentro da camada \textit{model}, nas classes \textit{Admins} e \textit{Members}, as operacionalizações são satisfeitas. Podemos então, verificar qual nível de satisfação da segurança do software pode ser alcançado com a utilização da \textit{gem devise}. 
 
-O trecho de código abaixo apresenta como pode ser os módulos podem ser habilitados.  
+O trecho de código abaixo apresenta como os módulos podem ser habilitados.  
  
 \begin{lstlisting} 
 class Admins < ApplicationRecord
@@ -91,7 +91,7 @@ devise :database_authenticatable, :registerable,
 end 
 \end{lstlisting} 
 
-A implementação dos padrões de projeto \textit{strategy}, \textit{observer} e \textit{composite} já estão suficientemente satisfeitos, pois a aplicação é desenvolvida com o \textit{framework rails} que obedece o padrão MVC e a \textit{gem} que está sendo utilizada também percorre todas as camadas. 
+A implementação dos padrões de projeto \textit{strategy}, \textit{observer} e \textit{composite} já estão suficientemente satisfeitos, pois a aplicação é desenvolvida com o \textit{framework rails} que obedece o padrão MVC \cite{railscommunity} e a \textit{gem} que está sendo utilizada também percorre todas as camadas \cite{gemdevise}. 
 
 \section{Cenário 2}
 \label{subsec:persona2}
@@ -101,7 +101,7 @@ Pedro, 23 anos, Engenheiro de Software, trabalha em empresa privada e possui a n
 \begin{itemize}
 	\item O problema: sobrecarga de manifestações sem interação com os manifestantes; 
 	\item Objetivo: promover a interação anônima ou forma entre a ouvidora e o manifestante, e
-	\item Desafio: realizar a interação anônima entre ouvidora e manifestante, que permita a execução dos processos de auditória e controle das manifestações.
+	\item Desafio: realizar a interação anônima entre ouvidora e manifestante, que permita a execução dos processos de auditoria e controle das manifestações.
 \end{itemize}
 
 \subsection{Identificar possível solução}
@@ -114,25 +114,25 @@ A Ouvidora, no caso, acessará o sistema de forma diferente, utilizando a área 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.6]{figuras/catalogoPersona2.PNG}
+	\includegraphics[keepaspectratio=true,scale=0.65]{figuras/catalogoPersona2.PNG}
 	\caption{Catálogo de segurança aplicado ao sistema de ouvidoria.}
 	\label{catalogoPersona2}
 \end{figure}
 
 
 
-Na aplicação do Catálogo de Segurança da figura \ref{catalogoPersona2}, surgiu a necessidade de focar em  “auditoria e controle”, pois o cenário demandava  o acompanhamento das manifestações pelos ouvidores. Com isso, foi expandido no Catálogo de Segurança uma nova meta flexível “Realizar acompanhamento das manifestações” e uma operacionalização “Criar método para gerir manifestação”. A operacionalização é definida pelos métodos implementados na \textit{controller - ManagerManifestationsController}. Portanto, a meta flexível “auditoria e controle” é suficientemente satisfeita para este contexto.
+Na aplicação do Catálogo de Segurança da Figura \ref{catalogoPersona2}, surgiu a necessidade de focar em  “auditoria e controle”, pois o cenário demandava  o acompanhamento das manifestações pelos ouvidores. Com isso, foi expandido no Catálogo de Segurança uma nova meta flexível “acompanhamento[manifestações]” e uma operacionalização “Criar método para gerir manifestação”. A operacionalização é definida pelos métodos implementados na \textit{controller - ManagerManifestationsController}. Portanto, a meta flexível “auditoria e controle” é suficientemente satisfeita para este contexto.
 
-Para que a meta flexível “controle de acesso dos usuários” seja suficientemente satisfeita, as três operacionalizações que estão no nível mais baixo no Catálogo de Segurança também serão, sendo elas: (i) “implementar método de geração do protocolo”: trata-se de um método para gerar os números de protocolos com caracteres (de “a” à “z”), (de “A” à “Z”) e (de “0” à “9”) composto por 10 dígitos; (ii) “utilizar senha única para senha”: para cada usuário administrador/ouvidor cadastrado no sistema é gerada uma única senha para autenticação; e (iii) “utilizar bcrypt”: refere-se a uma \textit{gem} que utiliza algoritmo de \textit{hashing} criptográfico trata um trecho do dado para gerar um \textit{hash}. Considerando que, ao gerar uma senha dessa maneira, trata-se da execução de um processo não reversível, visto que não há como retornar da \textit{hash} para a senha \cite{brcypt}.
+Para que a meta flexível “controle de acesso dos usuários” seja suficientemente satisfeita, as três operacionalizações que estão no nível mais baixo no Catálogo de Segurança também serão, sendo elas: (i) “implementar método de geração do protocolo”: trata-se de um método para gerar os números de protocolos com caracteres (de “a” à “z”), (de “A” à “Z”) e (de “0” à “9”) composto por dez dígitos; (ii) “utilizar senha única para senha”: para cada usuário administrador/ouvidor cadastrado no sistema, é gerada uma única senha para autenticação; e (iii) “utilizar bcrypt”: refere-se a uma \textit{gem} que utiliza algoritmo de \textit{hashing} criptográfico tratando um trecho do dado para gerar um \textit{hash}. Considerando que, ao gerar uma senha dessa maneira, trata-se a execução de um processo não reversível, visto que não há como retornar da \textit{hash} para a senha \cite{brcypt}.
 
-A operacionalização “realizar precisão de um para um” é suficientemente satisfeita, pois para cada manifestação ocasionada por determinado evento de manifestação do mundo real existirá uma única manifestação no sistema.
+A operacionalização “realizar precisão de um para um” é suficientemente satisfeita, pois para cada manifestação ocasionada por determinado evento de manifestação do mundo real, existirá uma única manifestação no sistema.
 
 Diante do exposto, observa-se que a segurança do software é parcialmente satisfeita devido a satisfação parcial da integridade e da confidencialidade do mesmo.
 
 \section{Cenário 3}
 \label{subsec:persona3}
 
-Milena, 22 anos, Engenheira de Software, possuindo várias atividades no seu dia-a-dia, sentiu a necessidade de organizá-las e para isso, considerando as suas habilidades, decidiu escrever um programa com o objetivo de obter melhor controle sobre as mesmas. Esse programa permite a inserção da atividade com sua descrição, a data de início, a previsão de conclusão e seu status. Consequentemente, Milena optou por fazer seu sistema em \textit{Rails} e decidiu verificar as relações entre as camadas do sistema com o foco em segurança.
+Milena, 22 anos, Engenheira de Software, possuindo várias atividades no seu dia-a-dia, sentiu a necessidade de organizá-las e para isso, considerando as suas habilidades, decidiu escrever um programa com o objetivo de obter melhor controle sobre as mesmas. Esse programa permite a inserção da atividade com sua descrição, a data de início, a previsão de conclusão e seu status. Consequentemente, Milena optou por fazer seu sistema em \textit{Rails}, e decidiu verificar as relações entre as camadas do sistema com o foco em segurança.
 
 \begin{itemize}
 	\item O problema: desorganização das atividades diárias;
@@ -143,7 +143,7 @@ Milena, 22 anos, Engenheira de Software, possuindo várias atividades no seu dia
 
 \subsubsection{Aplicação do Catálogo de Segurança}
 
-Na descrição da persona, houve a necessidade de vincular cada atividade do mundo real com ao menos uma entidade no sistema. Para isso utilizou-se o comando \textit{scaffold} do \textit{Rails}. Tal comando gera a estrutura de arquivos de acordo com o padrão MVC, gerando o \textit{model}, o \textit{controller}, os \textit{views} necessários \cite{railscommunity}. 
+Na descrição da \textit{persona}, houve a necessidade de vincular cada atividade do mundo real com ao menos uma entidade no sistema. Para isso, utilizou-se o comando \textit{scaffold} do \textit{Rails}. Tal comando gera a estrutura de arquivos de acordo com o padrão MVC, permitindo obter a \textit{model}, a \textit{controller}, as \textit{views} necessárias \cite{railscommunity}. 
 
 \begin{figure}[h!]
 	\centering
@@ -152,12 +152,12 @@ Na descrição da persona, houve a necessidade de vincular cada atividade do mun
 	\label{catalogoPersona3}
 \end{figure}
 
-Como pode ser observado na Figura \ref{catalogoPersona3}, a operacionalização “utilizar scaffolding” foi extendida ao Catálogo de Segurança, e suficientemente satisfeita devido a implementação ao cenário, satisfazendo parcialmente a operacionalização  “realizar precisão de um para um”. Portanto as outras metas flexíveis e operacionalizações foram satisfeitas de maneira semelhante aos cenários anteriores. 
+Como pode ser observado na Figura \ref{catalogoPersona3}, a operacionalização “utilizar scaffolding” foi estendida ao Catálogo de Segurança, e suficientemente satisfeita devido a implementação ao cenário, satisfazendo parcialmente a operacionalização  “realizar precisão de um para um”. Portanto as outras metas flexíveis e operacionalizações foram satisfeitas de maneira semelhante aos cenários anteriores. 
 
 \section{Cenário 4}
 \label{subsec:persona4}
 
-Gustavo, 23 anos, Engenheiro de Requisitos de empresa privada, possui a demanda de analisar os requisitos do sistema de solicitação de documentos digitais via plataforma web. Tal sistema possui arquitetura MVC e está em constante evolução. Assim sendo, seu chefe solicitou que o mesmo fizesse uma análise dos RNFs com foco na segurança do sistema, devido a emissão de documentos com assinatura digital. 
+Gustavo, 23 anos, Engenheiro de Requisitos de empresa privada, possui a demanda de analisar os requisitos do sistema de solicitação de documentos digitais via plataforma web. Tal sistema possui arquitetura MVC, e está em constante evolução. Assim sendo, seu chefe solicitou que o mesmo fizesse uma análise dos RNFs com foco na segurança do sistema, devido à emissão de documentos com assinatura digital. 
 
 \begin{itemize}
 	\item O problema: alta demanda de solicitação de documentos pelos setores; 
@@ -174,25 +174,25 @@ A aplicação do Catálogo de Segurança pode ser uma das maneiras de demonstrar
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/catalogoPersona4.PNG}
+	\includegraphics[keepaspectratio=true,scale=0.75]{figuras/catalogoPersona4.PNG}
 	\caption{Catálogo de Segurança aplicado a sistema de geração de documentos digitais.}
 	\label{catalogoPersona4}
 \end{figure}
 
-A aplicação do Catálogo de Segurança apresentado na Figura \ref{catalogoPersona4} possui uma extensão devido a utilização de assinatura digital nos documentos, que é modelada como uma meta flexível que está suficientemente satisfeita, pois depende de duas operacionalizações. As operacionalizações fazem uma relação do tipo AND com a meta flexível e ambas estão suficientemente satisfeitas, sendo elas “método de geração de (\textit{Quick Response} Quick) QR” e o  “método de autenticação” que utiliza valores como o identificador do usuário e a \textit{string} do QR. Essas relações satisfazem suficientemente a meta flexível para autenticidade da informação. 
+A aplicação do Catálogo de Segurança apresentado na Figura \ref{catalogoPersona4} possui uma extensão devido à utilização de assinatura digital nos documentos, que é modelada como uma meta flexível que está suficientemente satisfeita, pois depende de duas operacionalizações. As operacionalizações fazem uma relação do tipo AND com a meta flexível e ambas estão suficientemente satisfeitas, sendo elas “método de geração de (\textit{Quick Response} Quick) QR” e o  “método de autenticação” que utiliza valores como o identificador do usuário e a \textit{string} do QR. Essas relações satisfazem suficientemente a meta flexível para autenticidade da informação. 
 
-O controle de acesso do software é satisfeito devido a relação das metas flexíveis e operacionalizações, da mesma forma que os cenários \ref{subsec:persona2} e \ref{subsec:persona1} anteriores, que já apresentaram os mesmos relacionamentos, com mesmos níveis de satisfação.  
+O controle de acesso do software é satisfeito devido à relação das metas flexíveis e operacionalizações, da mesma forma que os cenários \ref{subsec:persona2} e \ref{subsec:persona1} anteriores, que já apresentaram os mesmos relacionamentos, com mesmos níveis de satisfação.  
 
 Já a operacionalização “definir propriedades de precisão para instanciação de objetos” é escrita em cada \textit{model}, onde o \textit{Rails} permite escrever os parâmetros para controle de instanciação dos objetos. Neste cenário, foi aplicado que o atributo da classe tem que existir no banco de dados, não podendo colocar vazio ou nulo. 
 
-A aplicação está em um servidor da Google, na nuvem, garantindo sua disponibilidade e satisfazendo então, suficientemente a operacionalização “realizar deploy em nuvem”. 
+A aplicação está em um servidor da Google, na nuvem, garantindo sua disponibilidade e satisfazendo então, suficientemente, a operacionalização “realizar \textit{deploy} em nuvem”. 
 
-Semelhante as aplicações dos cenários \ref{subsec:persona2} e \ref{subsec:persona3} a “precisão de um para um” é suficientemente satisfeita. 
+Semelhante às aplicações dos cenários \ref{subsec:persona2} e \ref{subsec:persona3}, a “precisão de um para um” é suficientemente satisfeita. 
 
 \section{Cenário 5}
 \label{subsec:persona5}
 
-Chung, 40 anos, Engenheiro de Software possui em seu quadro de responsabilidades a função de realizar manutenção e evolução de um dos sistemas pelo qual é responsável. Desse modo, percebeu que um de seus sistemas poderia ficar indisponível caso ocorresse algum problema no servidor de banco de dados. Preocupado com a segurança de seus sistemas, utilizou o Catálogo de Segurança para analisar o impacto que o espelhamento da base de dados causaria na segurança do software como um todo. 
+Chung, 40 anos, Engenheiro de Software, possui em seu quadro de responsabilidades a função de realizar manutenção e evolução de um dos sistemas pelo qual é responsável. Desse modo, percebeu que um de seus sistemas poderia ficar indisponível, caso ocorresse algum problema no servidor de banco de dados. Preocupado com a segurança de seus sistemas, utilizou o Catálogo de Segurança para analisar o impacto que o espelhamento da base de dados causaria na segurança do software como um todo. 
 
 \begin{itemize}
 	\item O problema: indisponibilidade do sistema; 
@@ -200,11 +200,13 @@ Chung, 40 anos, Engenheiro de Software possui em seu quadro de responsabilidades
 	\item Desafio: manter a base de dados disponível diante de qualquer interrupção de serviço e que possa impedir acesso ao mesmo.
 \end{itemize}
 
+\pagebreak
+
 \subsection{Aplicação do Catálogo de Segurança}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[keepaspectratio=true,scale=0.7]{figuras/catalogoPersona5.PNG}
+	\includegraphics[keepaspectratio=true,scale=0.8]{figuras/catalogoPersona5.PNG}
 	\caption{Catálogo de Segurança com foco em disponibilidade aplicado ao contexto de duplicação de base de dados.}
 	\label{catalogoPersona5}
 \end{figure}
@@ -221,6 +223,8 @@ Ao demonstrar a aplicação do Catálogo de Segurança nos cenários, observou-s
 
 Como o Catálogo de Segurança foi aplicado em cenários onde a ferramenta de apoio ao desenvolvimento era o \textit{Rails}, foi possível abstraí-lo para aplicações em \textit{Rails}, demonstrando então, a adaptabilidade do mesmo, como pode ser visualizado na Figura \ref{catalogoFull}.
 
+\pagebreak
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[keepaspectratio=true,scale=0.65]{figuras/catalogoFull.PNG}
@@ -229,12 +233,9 @@ Como o Catálogo de Segurança foi aplicado em cenários onde a ferramenta de ap
 \end{figure}
 
 
-Entretanto, durante a validação do Catálogo de Segurança, foram utilizados projetos em cenários reais e abstrações de possíveis usuários e cenários, tornando-o mais abrangente, caso a tecnologia utilizada seja o \textit{Rails}. Como um exemplo de evolução do Catálogo de Segurança e as evidências comprovadas da relação entre as operacionalizações e as camadas do Padrão Arquitetural MVC, é possível unificar com fins de demonstração o Catálogo de Segurança com um diagrama de componentes do padrão MVC, onde as operacionalizações estão dentro do componente ao qual possui relacionamento, como pode ser visualizado na Figura \ref{catalogoMapeado}. 
+Entretanto, durante a validação do Catálogo de Segurança, foram utilizados projetos em cenários reais e abstrações de possíveis usuários e cenários, tornando-o mais abrangente, caso a tecnologia utilizada seja o \textit{Rails}. Como um exemplo de evolução do Catálogo de Segurança e as evidências comprovadas da relação entre as operacionalizações e as camadas do Padrão Arquitetural MVC, é possível correlacionar, com fins de demonstração, o Catálogo de Segurança com um diagrama de componentes do padrão MVC, onde as operacionalizações estão dentro do componente ao qual possui relacionamento, como pode ser visualizado na Figura \ref{catalogoMapeado}. 
 
 
-\begin{comment}
-	A Tabela \ref{resultadosObtidos} apresenta de acordo com os objetivos específicos do trabalho, usando "atendido", "parcialmente atendido" e "não atendido", os principais resultados obtidos até o momento, com a realização do TCC1.	
-\end{comment}
 
 \begin{figure}[h!]
 	\centering
@@ -247,6 +248,5 @@ Entretanto, durante a validação do Catálogo de Segurança, foram utilizados p
 
 \section*{Resumo do Capítulo}
 
-Neste capítulo, foram apresentadas as primeiras aplicações do Catálogo de Segurança, realizadas através de cinco cenários, onde foi possível demonstrar a aplicabilidade e a adaptabilidade do Catálogo de Segurança, de acordo com o contexto. A partir da seção \ref{sec:aplicacaoDoCatalogo}, foi possível evidenciar a evolução do Catálogo de Segurança para as aplicações em projetos em \textit{Rails} e, por fim, o mapeamento em terceiro nível de abstração, sendo possível identificar as operacionalizações relacionadas com as camadas do Padrão Arquitetural MVC para projetos em \textit{Rails}.
-
+Neste capítulo, foram apresentadas as primeiras aplicações do Catálogo de Segurança, realizadas através de cinco cenários, onde foi possível demonstrar a aplicabilidade e a adaptabilidade do Catálogo de Segurança, de acordo com o contexto. A partir da seção \ref{sec:aplicacaoDoCatalogo}, foi possível evidenciar a evolução do Catálogo de Segurança para as aplicações em projetos em \textit{Rails} e, por fim, o mapeamento em terceiro nível de abstração, sendo viável identificar as operacionalizações relacionadas com as camadas do Padrão Arquitetural MVC para projetos em \textit{Rails}.
 
